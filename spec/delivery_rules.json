@@ -1,5 +1,5 @@
 {
-  "prd_version": "7.3",
+  "prd_version": "7.4",
   "root_relative": "交付",
   "topic_directory": "{topic_id}_{topic_short_name}",
   "part_directory": "{part_number:02d}_第{part_number:02d}集_{part_short_title}",
@@ -50,7 +50,22 @@
   },
   "repository": "https://github.com/KAtOReNA7/tiktok",
   "branch": "main",
-  "handoff_mode": "git_clone_or_safe_fast_forward",
+  "handoff_mode": "select_first_setup_or_local_continue",
+  "execution": {
+    "modes": ["first_setup", "local_continue", "rules_update"],
+    "default_when_local_files_available": "local_continue",
+    "explicit_user_mode_takes_priority": true,
+    "new_session_requires_remote_sync": false,
+    "new_topic_or_part_requires_remote_sync": false,
+    "local_continue_github_access": false,
+    "local_continue_requires_latest_remote": false,
+    "local_continue_requires_full_handoff_validation": false,
+    "missing_local_file_auto_initializes": false,
+    "remote_sync_triggers": ["first_setup_when_not_initialized", "explicit_rules_sync_or_update"],
+    "mode_record_location": "existing_local_production_log_or_execution_index",
+    "instruction_files_separate_by_mode": true,
+    "instruction_files_local_only": true
+  },
   "local_workspace_default": "../tiktok-local",
   "repository_scope": [
     "PRD与项目方向",

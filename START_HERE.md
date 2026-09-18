@@ -1,6 +1,16 @@
-# 从这里开始｜古今人物锐评 V7.3
+# 从这里开始｜古今人物锐评 V7.4
 
-先安全同步main，再读取AGENTS.md、CHAT_HANDOFF.md、PRD_V7.md与PROJECT_STATE.md。唯一仓库：https://github.com/KAtOReNA7/tiktok 。旧本地改动必须保留，不自动stash、覆盖或强推。
+先判断执行模式，再决定是否访问仓库。唯一规范仓库：https://github.com/KAtOReNA7/tiktok 。新对话、新选题、新集数不等于新电脑。
+
+| 本次任务 | 执行入口 |
+| --- | --- |
+| 新电脑首次初始化 `first_setup` | 按PRD 13.1安全取得main，再读取AGENTS、CHAT_HANDOFF、PRD、PROJECT_STATE和所需spec，核对资产并记录本地路径；已初始化则跳过 |
+| 老电脑继续制作 `local_continue` | 默认日常入口。只读本地规范、本期稿件和制作记录，复用素材，从未完成处继续，不访问GitHub |
+| 用户要求同步或修改规范 `rules_update` | 独立按PRD 13.1.2维护；仅实际改动规范／接续时提交，不夹带本期内容 |
+
+老电脑禁止例行clone／fetch／pull／ls-remote、浏览器／API／连接器远端检查和GitHub登录探测。缺件先找本地副本，报告具体缺口并继续独立步骤，不自行转入初始化。网络或GitHub凭证不作为本地制作前提。用户明确模式优先；未明确而本地文件齐全时，默认本地继续制作。
+
+需要同步的模式中必须保留旧本地改动，不自动stash、覆盖或强推。规范发布不代表另一台电脑已自动更新。
 
 ## 存放边界
 
@@ -24,6 +34,6 @@
 
 空白episode/只供复制到本地填写；不把本期内容写回模板。新机器没有本地稿件时，按实际任务索取需要的文件，不要求重搬所有历史资料。
 
-克隆后可运行python tools/validate_handoff.py。规范或接续实际变化时修改关联文件、刷新manifest、校验并正常提交推送，远端读回后给提交号。普通内容交付只给本地结果。
+首次克隆后可运行python tools/validate_handoff.py，老电脑不每集重跑首次全量校验。规范或接续实际变化且属于明确维护任务时修改关联文件、刷新manifest、校验并正常提交推送，远端读回后给提交号。普通内容交付只给本地结果，不进行远端读回。
 
 Figma资产页：https://www.figma.com/design/gc9VEwuG01X8ZsMTHg7HsQ?node-id=50-2 。母版50:60，制作副本50:4；不因接续自动修改远端Figma。

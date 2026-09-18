@@ -1,7 +1,7 @@
 {
   "package": "history_review_git_handoff",
   "format": "git_repository",
-  "prd_version": "7.3",
+  "prd_version": "7.4",
   "layout_template": "RYP_WHITE_SINGLE_V1_1",
   "created_date": "2026-09-17",
   "remote_figma_updated": false,
@@ -19,38 +19,38 @@
     },
     {
       "path": "AGENTS.md",
-      "bytes": 2458,
-      "sha256": "93e3ca07feeb618c48d792436821d14a7e89d1cdda60f5b396c1728be9477705"
+      "bytes": 3175,
+      "sha256": "85018ba4348207069881a93f614642152ca11a64b6b2d0090afbe746b45257ed"
     },
     {
       "path": "CHANGELOG.md",
-      "bytes": 2376,
-      "sha256": "4c4a86256b26c52814832b774e7d723c5f2639e65c9a59352753702a67ce44ad"
+      "bytes": 3114,
+      "sha256": "828fe9deb83ea611bce4f74f0df8328a2b2a9cea911f231b965352991ad8d2e7"
     },
     {
       "path": "CHAT_HANDOFF.md",
-      "bytes": 6881,
-      "sha256": "dc67e11da78639af6b93df2dfd1719424c616f2c1c572f6ecf41ea59487d645a"
+      "bytes": 8430,
+      "sha256": "9a5916a0893f6d7614233cb674cdccc962761e05c4df9a79803ac8abf696af78"
     },
     {
       "path": "PRD_V7.md",
-      "bytes": 57516,
-      "sha256": "31808321cce5dc540fe762b83b92825a57199e9da43f4c972f5408b134841c65"
+      "bytes": 63951,
+      "sha256": "10c42a87a93cb8b03d8d12830364500cb0b94dedeec41d83214251845c0fa609"
     },
     {
       "path": "PROJECT_STATE.md",
-      "bytes": 1202,
-      "sha256": "651382dbc32ee6012e2ef76b56e272ca09f88d421864c0d97f5b9f677aa53a87"
+      "bytes": 1484,
+      "sha256": "323232c0377523df7fab2859d5364dbf4f8dcaf1a519ec95accf8b1714cadde3"
     },
     {
       "path": "README.md",
-      "bytes": 2028,
-      "sha256": "4b1abe14449d6d142b80a9223646dff6c544d751d8b1a1c3ba6b0dae34c1bc28"
+      "bytes": 2828,
+      "sha256": "6e0aab6fd9d643fd2f0c52d9b955b922071cdd83c7e78c70c830b9285354c686"
     },
     {
       "path": "START_HERE.md",
-      "bytes": 2498,
-      "sha256": "ac3266824675827f855deb338c180911d5a7f0b9f17920c32bd18668a4cde29f"
+      "bytes": 3627,
+      "sha256": "4a9fcbc5e2ac49ee84c37961d3b4c7e1f5fbf54017ca964a1aca2ca1b848cb1b"
     },
     {
       "path": "assets/hosts_qin_reference/doro_qin_edge.png",
@@ -79,8 +79,8 @@
     },
     {
       "path": "episode/README.md",
-      "bytes": 1474,
-      "sha256": "b838c6422b1d521c9dda3aa0c69a4d047e4fa598ca4c9e66daeb65a30984da12"
+      "bytes": 1809,
+      "sha256": "615a9ce0b8a7456986ec47e8c750d36b79e3ac01c9dafbfc90a3abffb658597f"
     },
     {
       "path": "episode/brief.yaml",
@@ -159,8 +159,8 @@
     },
     {
       "path": "spec/delivery_rules.json",
-      "bytes": 2280,
-      "sha256": "085a6340a977fc80e3576016187dda2232ceb910ca661ee9cad193a84f4c9565"
+      "bytes": 3054,
+      "sha256": "77278f75e19d55fc46095a2e673023b41ffbbd02451a10849cfecddcecf62bd1"
     },
     {
       "path": "spec/template.json",
