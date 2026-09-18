@@ -1,0 +1,54 @@
+{
+  "prd_version": "7.2",
+  "root_relative": "交付",
+  "topic_directory": "{topic_id}_{topic_short_name}",
+  "part_directory": "{part_number:02d}_第{part_number:02d}集_{part_short_title}",
+  "file_pattern": "{topic_id}_P{part_number:02d}_{shot_id_if_applicable}_{purpose}_v{revision:02d}.{ext}",
+  "compress": false,
+  "shared_directory": "00_共享素材",
+  "old_versions_directory": "90_历史版本",
+  "manifest_name": "00_交付清单.md",
+  "required_per_part": [
+    "口播稿_含开头正文结尾",
+    "封面.png",
+    "发布文案.txt_含一句话简介",
+    "黑底字幕.mp4_收到最终人声后",
+    "字幕放置说明.txt",
+    "素材映射.csv",
+    "实际漫画与套版素材"
+  ],
+  "cancelled": [
+    "音效",
+    "配乐",
+    "轻动效",
+    "音效配乐动效建议",
+    "压缩包"
+  ],
+  "caption_spec": "spec/caption_style.json",
+  "max_duration_s": 40,
+  "intro_mode_default": "per_part",
+  "intro_mode_allowed": [
+    "per_part",
+    "shared_topic"
+  ],
+  "outro_mode": "per_part",
+  "scene_map": {
+    "template": "episode/scene_map.csv",
+    "columns": [
+      "插图编号",
+      "对应口播"
+    ],
+    "column_count": 2,
+    "row_order": "口播顺序",
+    "narration_text": "完整定稿原文，不用摘要、省略号或指代",
+    "image_number_matches_filename": true,
+    "extra_columns_allowed": false,
+    "empty_placeholder_columns_allowed": false,
+    "append_timing_after_voice": false,
+    "subtitle_timing_location": "字幕制作文件及字幕放置说明，独立于素材映射",
+    "updated_date": "2026-09-18"
+  },
+  "repository": "https://github.com/KAtOReNA7/tiktok",
+  "branch": "main",
+  "handoff_mode": "git_clone_or_safe_fast_forward"
+}

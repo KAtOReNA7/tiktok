@@ -1,0 +1,27 @@
+# 本机交付、渲染结果与缓存
+/交付/
+/runs/
+/tmp/
+/exports/
+/local/
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
+
+# 配音、成片和工程副本默认不随规范仓库同步
+*.mp4
+*.mov
+*.wav
+*.mp3
+*.zip
+*.rar
+*.7z
+
+# 登录信息不进入仓库
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+

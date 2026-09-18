@@ -1,0 +1,47 @@
+# 空白任务模板。下一选题尚未由本包确定。
+prd_version: '7.1'
+episode_id: null
+topic: null
+core_claim: null
+title: null
+format: single_claim
+script_approved: false
+script_version: null
+part_count: null
+scope: null
+human_editor: user
+template_id: RYP_WHITE_SINGLE_V1_1
+ai_video: false
+jianying_assistant: false
+full_gui_assembly: false
+voice_name: 曼波讲故事
+voice_rate_from_original: 1.25
+rate_already_applied: null
+final_voice_path: null
+timing_reference_file: null
+figma_working_node: null
+hosts_cast:
+  doro: null
+  gugu: null
+  mambo: null
+user_locked_items: []
+requested_deliverables: []
+missing_dependencies: []
+# 时间和路径只有真实存在时再填；不默认继续EP01。
+
+default_max_duration_s: 40
+include_intro_outro_in_duration: true
+intro_mode: per_part # 可用shared_topic，须适用于本选题各集
+shared_intro_text_path: null
+shared_intro_asset_path: null
+outro_per_part: true
+cover_per_part: true
+one_sentence_description_per_part: true
+caption_delivery: black_background_mp4
+srt_only_delivery: false
+sound_effects: false
+background_music: false
+light_motion: false
+sound_motion_suggestions: false
+delivery_root: 交付
+compress_delivery: false

@@ -1,0 +1,236 @@
+{
+  "package": "history_review_git_handoff",
+  "format": "git_repository",
+  "prd_version": "7.2",
+  "layout_template": "RYP_WHITE_SINGLE_V1_1",
+  "created_date": "2026-09-17",
+  "remote_figma_updated": false,
+  "includes_jianying_project": false,
+  "next_topic_selected": false,
+  "files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 94,
+      "sha256": "fedfd02d3aab31a689c290ffaecbcbfe268385381d2fcd0b83b76678b1d86a98"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 293,
+      "sha256": "3d3e679e4f41de94b55c71431886efc69bbb78ebb8a8cde0414c83b52c852ade"
+    },
+    {
+      "path": "AGENTS.md",
+      "bytes": 1908,
+      "sha256": "51aab72baa6ab800a1cded5800b1888a3e653b6aa3f86ad99b3af1a0fb95afa4"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "bytes": 1318,
+      "sha256": "23cbe7b4a2e4c25fd3ccb9f1449c89e1628813dd80968d1a0a15d2b12147be49"
+    },
+    {
+      "path": "CHAT_HANDOFF.md",
+      "bytes": 6728,
+      "sha256": "067ab95dc9669345b0607ef47242265cb2684509abdfea5b498c45206fd137c2"
+    },
+    {
+      "path": "PRD_V7.md",
+      "bytes": 56361,
+      "sha256": "4d8e606616654a113fd71526dfc89d377ebe2a5fd4a0b890d8110c302f3e6519"
+    },
+    {
+      "path": "PROJECT_STATE.md",
+      "bytes": 1849,
+      "sha256": "f4ae7b19cf9c6942895e83e280414f9d2216e3e5158c62227bdc75d4a42b66af"
+    },
+    {
+      "path": "README.md",
+      "bytes": 2564,
+      "sha256": "c044089d69abe6d788c765655dc121a22866729942b8f8a5c1f519282dc97d61"
+    },
+    {
+      "path": "START_HERE.md",
+      "bytes": 3764,
+      "sha256": "f6cf777fd71f3a3f0cf106e37b090d6fea141d7bb9a92efa041d75ac7c53ce60"
+    },
+    {
+      "path": "archive/README.md",
+      "bytes": 627,
+      "sha256": "b8e737287f517c96bf0a506ac1434236f5a38b927e61d9b9854cae087e00053a"
+    },
+    {
+      "path": "archive/figma_archive_ledger.json",
+      "bytes": 9413,
+      "sha256": "bbe133ecf5821569f231e3bebf7ae560f4e8d5d57b56d065802369958851c63d"
+    },
+    {
+      "path": "archive/figma_v1_1_ledger.json",
+      "bytes": 2861,
+      "sha256": "9cad711ed03193b04de03a648fa0e3f34c3567d6ef66a0a19811bfc19657f774"
+    },
+    {
+      "path": "archive/obsolete_sfx_cues_V7_0.csv",
+      "bytes": 124,
+      "sha256": "8432bcb7c34e5cb69b6413fe3d48943c3d120125101f145d8e4552dd6d9ab320"
+    },
+    {
+      "path": "archive/template_V1_1_original.json",
+      "bytes": 5627,
+      "sha256": "68052aaec8be572ad45f43f809645b242bd28ce1a994ce67b44df7e0828ac9c9"
+    },
+    {
+      "path": "assets/hosts_qin_reference/doro_qin_edge.png",
+      "bytes": 323003,
+      "sha256": "0068efb5cf947d6a732bd984576f4af0223a88654866b18255075757c0ef6a42"
+    },
+    {
+      "path": "assets/hosts_qin_reference/gugu_qin_edge.png",
+      "bytes": 284567,
+      "sha256": "536418d3b0452381ac635f4b5879a94c4b26c80148041a58639a3f362995bfb2"
+    },
+    {
+      "path": "assets/hosts_qin_reference/hosts_qin_overlay_1080x1920.png",
+      "bytes": 123564,
+      "sha256": "a3b716da84c0da7d8e0e31c3f1a2fcff16b4e5f5018cf20084547fd47581c172"
+    },
+    {
+      "path": "assets/hosts_qin_reference/mambo_qin_edge.png",
+      "bytes": 476956,
+      "sha256": "3f3bd90ef210d4f7d2625732c4ac292dc561644168b790736d791113fadb0ff8"
+    },
+    {
+      "path": "assets/template/base_plate_1080x1920.png",
+      "bytes": 24420,
+      "sha256": "cb03cb3da2db1e333037b067d08a013476d5f4b03a7a164a319fffa6852face9"
+    },
+    {
+      "path": "episode/README.md",
+      "bytes": 1360,
+      "sha256": "7444d4f5345499a3005f8e51a9f557f8636e152dfa2f8f448b0ccd088d6ea038"
+    },
+    {
+      "path": "episode/brief.yaml",
+      "bytes": 1197,
+      "sha256": "69301ab7c66f877f5847d4ed69af5b8e27a85bbc4f895eb5d051082a1c05c25f"
+    },
+    {
+      "path": "episode/parts.csv",
+      "bytes": 265,
+      "sha256": "81b2a59402e7d72ec393cc7b8667ea9d9754aa3ef940173414a8662906b10991"
+    },
+    {
+      "path": "episode/scene_map.csv",
+      "bytes": 29,
+      "sha256": "b2feaf90c9d8a2b8b3d9ae6cb5a2e726221ca6f6742d442758b444dc10de1df4"
+    },
+    {
+      "path": "episode/sources.csv",
+      "bytes": 131,
+      "sha256": "fbe128ddee8bf3ff0b86af09fc5a8b5cc9d32164724cd8b66bbe2422f0d4d2de"
+    },
+    {
+      "path": "episode/storyboard.csv",
+      "bytes": 267,
+      "sha256": "504f2ff30c4a60bdd25220f796d273dc5d909738af77be44d0d12ac02297ddce"
+    },
+    {
+      "path": "episodes/SY001_商鞅/SY001_01_策划初稿_待确认.md",
+      "bytes": 6339,
+      "sha256": "93fe1ad2be04f46ef9ffa2fbb4419008da31a22cc9228608352a26211e0b718c"
+    },
+    {
+      "path": "episodes/WS001_武松/WS001_01_论点与口播定稿.md",
+      "bytes": 3425,
+      "sha256": "29e714e8d5110ac6201783479778953f55b66411e771cde7657739e0103eed3d"
+    },
+    {
+      "path": "episodes/WS001_武松/WS001_02_Codex完整制作指令.md",
+      "bytes": 12309,
+      "sha256": "07da9ca6f03611400902d89a8e849f341c4596e3422f74f79cc6043c9bd2d2f1"
+    },
+    {
+      "path": "episodes/WS001_武松/WS001_03_插图与口播对应.md",
+      "bytes": 706,
+      "sha256": "f23e4d6cf7f0bd1e64dad7496cf64972ad82afe72a4e73226cdc3663af5045a0"
+    },
+    {
+      "path": "episodes/WS001_武松/WS001_04_成片审核.md",
+      "bytes": 2991,
+      "sha256": "618c4bbb733047f76f9fac74744ac8c49f6870e4654cc72ad82f28045ffc56d7"
+    },
+    {
+      "path": "refs/README.md",
+      "bytes": 1558,
+      "sha256": "9f3c0f10c7b35920f015d5db677f4e0734453a01a88272dfa50e7e970101a5da"
+    },
+    {
+      "path": "refs/comic_language/axe_action_reference.png",
+      "bytes": 1665185,
+      "sha256": "f6c827a8986a01b1099e1e8f51eb6cde9f0a914413af7a6a8cf78589d391305e"
+    },
+    {
+      "path": "refs/comic_language/liuzongyuan_writing_reference.png",
+      "bytes": 1380066,
+      "sha256": "8905b203b235f73779af7edc6070eb4d6f2c1f9ab8c5b0d8091a59262fef4d99"
+    },
+    {
+      "path": "refs/comic_language/meteor_closeup_reference.png",
+      "bytes": 1713462,
+      "sha256": "f32d97a767e582b9781be012d78aa3a4090b3bbf5fef699e615a6a19bddc9263"
+    },
+    {
+      "path": "refs/comic_language/weilio_reaction_reference.png",
+      "bytes": 1597334,
+      "sha256": "cb8ec692cb1304287d74319046242501bf521b3d0523d35c8608aff2817ce40c"
+    },
+    {
+      "path": "refs/identity/doro_expression_user.png",
+      "bytes": 770919,
+      "sha256": "2690d0ce46fba54a780845121511675274ee1995db9347aeaac02af4123ab367"
+    },
+    {
+      "path": "refs/identity/doro_primary_user.png",
+      "bytes": 470904,
+      "sha256": "67d23051b65ad0a00b54de2faddfe518f28ff619cd16de8eaf356bd89e5a51bd"
+    },
+    {
+      "path": "refs/layout/EP01_V5_human_edit.png",
+      "bytes": 1440296,
+      "sha256": "ab28ca933c50a7ef17b95c8adba8c067152a72644fe5593b8b4eca96a433cf59"
+    },
+    {
+      "path": "refs/layout/V1_1_layout_only.png",
+      "bytes": 976700,
+      "sha256": "36ff6adfe9d23167cbefb9908ce33b6263f0f1b41acb39d2e53a5447abc19115"
+    },
+    {
+      "path": "spec/caption_style.json",
+      "bytes": 1889,
+      "sha256": "1dc3b84de92e98acf076111e722b77a8a989e24b629ae5571fd99119a80d7bb5"
+    },
+    {
+      "path": "spec/delivery_rules.json",
+      "bytes": 1721,
+      "sha256": "e7f0ea758a5d5f1b65bf55db6baf6314eeca39c3b6fefbf111994ffb16c16eee"
+    },
+    {
+      "path": "spec/template.json",
+      "bytes": 6623,
+      "sha256": "598fe2f64a10036c143a8f6550dba522f5e5348214248e00ffa64712d174631c"
+    },
+    {
+      "path": "tools/validate_handoff.py",
+      "bytes": 3552,
+      "sha256": "e3c3fd55095759cfffae762feb98f446a53890600545872cc72d9af7f303fe3c"
+    }
+  ],
+  "mapping_schema_updated_date": "2026-09-18",
+  "scene_map_columns": [
+    "插图编号",
+    "对应口播"
+  ],
+  "handoff_updated_date": "2026-09-18",
+  "repository": "https://github.com/KAtOReNA7/tiktok",
+  "branch": "main",
+  "contains_completed_video": false
+}

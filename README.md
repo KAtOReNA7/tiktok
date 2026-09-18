@@ -23,6 +23,7 @@ cd tiktok
 
 | 文件／目录 | 用途 |
 | --- | --- |
+| [CHAT_HANDOFF.md](CHAT_HANDOFF.md) | 新对话粘贴指令、沟通背景和全部迁移文件索引 |
 | [START_HERE.md](START_HERE.md) | 开工顺序及当前交付规则 |
 | [PRD_V7.md](PRD_V7.md) | 唯一现行主PRD，内部版本V7.2 |
 | [PROJECT_STATE.md](PROJECT_STATE.md) | 已完成事项、待确认选题、下一步 |
@@ -47,4 +48,3 @@ python tools/validate_handoff.py
 ```
 
 检查改动、只暂存本次文件、正常提交并推送。协作冲突和分支保护按PRD第13.1.1节处理。每次交付回报提交号，不能把“本地已改”当成“远端已同步”。
-

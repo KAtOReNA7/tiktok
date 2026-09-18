@@ -1,0 +1,78 @@
+{
+  "schema_version": "1.1",
+  "template_id": "RYP_WHITE_SINGLE_V1_1",
+  "coordinate_system": "1080x1920_canvas_pixels_not_jianying_panel_units",
+  "background": {
+    "bounds": [
+      96,
+      1408,
+      776,
+      128
+    ],
+    "fill": "#1C1C1C",
+    "already_in_base_plate": true
+  },
+  "text": {
+    "bounds": [
+      120,
+      1420,
+      728,
+      104
+    ],
+    "font_family": "Noto Sans SC",
+    "font_style": "Bold",
+    "font_size_px": 44,
+    "line_height_px": 52,
+    "fill": "#FFFFFF",
+    "opacity": 1,
+    "align": "center",
+    "max_lines": 2,
+    "auto_shrink": false
+  },
+  "srt": {
+    "encoding": "UTF-8",
+    "timebase": "current_final_voice_or_named_video",
+    "start_at_zero_only_for_new_video": true,
+    "patch_retains_existing_video_timebase": true,
+    "contains_style": false,
+    "required": false,
+    "role": "optional_auxiliary_or_render_input"
+  },
+  "calibration": "渲染时对齐固定字幕文字框；用户提供更新黑框规格时据其校准，不让用户逐条设置字幕样式。",
+  "transparent_export": "not_default_black_background_requested",
+  "prd_version": "7.1",
+  "delivery": {
+    "primary": "black_background_mp4",
+    "srt_is_auxiliary": true,
+    "srt_only_is_complete": false,
+    "video_width": 776,
+    "video_height": 128,
+    "video_fps": 30,
+    "video_codec": "H.264",
+    "pixel_format": "yuv420p",
+    "background": "#1C1C1C",
+    "transparent": false,
+    "audio_track": false,
+    "frame_origin": "local_video_zero",
+    "full_part_timing": "starts_at_part_zero_and_matches_full_part",
+    "patch_timing": "local_zero_with_explicit_original_start_s_end_s",
+    "placement_in_1080x1920": {
+      "bounds": [
+        96,
+        1408,
+        776,
+        128
+      ],
+      "center": [
+        484,
+        1472
+      ]
+    },
+    "text_box_within_strip": [
+      24,
+      12,
+      728,
+      104
+    ]
+  }
+}
