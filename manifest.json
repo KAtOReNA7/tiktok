@@ -19,18 +19,18 @@
     },
     {
       "path": "AGENTS.md",
-      "bytes": 2350,
-      "sha256": "15a7cf9973b71f7d12b15c8f778e29342d26bc6efed849b5cbd00cd398ca96d3"
+      "bytes": 2458,
+      "sha256": "93e3ca07feeb618c48d792436821d14a7e89d1cdda60f5b396c1728be9477705"
     },
     {
       "path": "CHANGELOG.md",
-      "bytes": 2084,
-      "sha256": "7e7c400972ad842f57f02a0591455c93ca57b76598369c4e77f601ed3197c0c9"
+      "bytes": 2376,
+      "sha256": "4c4a86256b26c52814832b774e7d723c5f2639e65c9a59352753702a67ce44ad"
     },
     {
       "path": "CHAT_HANDOFF.md",
-      "bytes": 6845,
-      "sha256": "3a464ac2dffc2a4b92dcfbff1560754011c3c2b659e583bba1dcd8dc186e8458"
+      "bytes": 6881,
+      "sha256": "dc67e11da78639af6b93df2dfd1719424c616f2c1c572f6ecf41ea59487d645a"
     },
     {
       "path": "PRD_V7.md",
@@ -39,8 +39,8 @@
     },
     {
       "path": "PROJECT_STATE.md",
-      "bytes": 1169,
-      "sha256": "42d623ab5801cbb6d449ce725c0e33949f1b48096b4d4a2e0ebcb239af2a8f38"
+      "bytes": 1202,
+      "sha256": "651382dbc32ee6012e2ef76b56e272ca09f88d421864c0d97f5b9f677aa53a87"
     },
     {
       "path": "README.md",
