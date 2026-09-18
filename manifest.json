@@ -25,13 +25,13 @@
     },
     {
       "path": "CHANGELOG.md",
-      "bytes": 1688,
-      "sha256": "f58215cb370698ff3c11c0461b276099a8b6d56bcfc098c46852492a988b0790"
+      "bytes": 2058,
+      "sha256": "24dfad252d5e76eae876822dc6cd532c793a47baa63869ec78aec4f8e1d1c6c7"
     },
     {
       "path": "CHAT_HANDOFF.md",
-      "bytes": 7109,
-      "sha256": "b0d4be4e9032d440964fb5b9963af2fd05f031f394fc21cc1b5b54ad552cceda"
+      "bytes": 7468,
+      "sha256": "1626b61230e97910646df47a68b257b9c83bfe2784e1c747a53034c8791f59a2"
     },
     {
       "path": "PRD_V7.md",
@@ -40,8 +40,8 @@
     },
     {
       "path": "PROJECT_STATE.md",
-      "bytes": 2118,
-      "sha256": "f1cddf4a5153687fd17f7bc2019b3c7910b866ed1ef5e0f4c9b4bdd6fac5f73d"
+      "bytes": 2358,
+      "sha256": "372b1fcc50f67178bc39c6e95dc171c123d0ea7cbb05888890b1e0d7c9830ec0"
     },
     {
       "path": "README.md",
@@ -132,6 +132,21 @@
       "path": "episode/storyboard.csv",
       "bytes": 267,
       "sha256": "504f2ff30c4a60bdd25220f796d273dc5d909738af77be44d0d12ac02297ddce"
+    },
+    {
+      "path": "episodes/LB001_李白/LB001_01_论点与口播初稿_待确认.md",
+      "bytes": 3532,
+      "sha256": "a49239033547b60d74aac2ef1cd8bb33bd1342570d168ea6e26787c3582d8997"
+    },
+    {
+      "path": "episodes/LB001_李白/sources.csv",
+      "bytes": 924,
+      "sha256": "69be2447c55329265a2128550e78d66b2d4552355a9dc54e59d2588acb231aae"
+    },
+    {
+      "path": "episodes/LB001_李白/voice_script.txt",
+      "bytes": 634,
+      "sha256": "4fa7ddb3c8241e214c3894824be6bb036edb9dd77d89a27de7b56a1b29aa4ad2"
     },
     {
       "path": "episodes/SY001_商鞅/SY001_01_策划初稿_待确认.md",
