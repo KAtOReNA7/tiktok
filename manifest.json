@@ -25,13 +25,13 @@
     },
     {
       "path": "CHANGELOG.md",
-      "bytes": 1318,
-      "sha256": "23cbe7b4a2e4c25fd3ccb9f1449c89e1628813dd80968d1a0a15d2b12147be49"
+      "bytes": 1688,
+      "sha256": "f58215cb370698ff3c11c0461b276099a8b6d56bcfc098c46852492a988b0790"
     },
     {
       "path": "CHAT_HANDOFF.md",
-      "bytes": 6728,
-      "sha256": "067ab95dc9669345b0607ef47242265cb2684509abdfea5b498c45206fd137c2"
+      "bytes": 7109,
+      "sha256": "b0d4be4e9032d440964fb5b9963af2fd05f031f394fc21cc1b5b54ad552cceda"
     },
     {
       "path": "PRD_V7.md",
@@ -40,8 +40,8 @@
     },
     {
       "path": "PROJECT_STATE.md",
-      "bytes": 1849,
-      "sha256": "f4ae7b19cf9c6942895e83e280414f9d2216e3e5158c62227bdc75d4a42b66af"
+      "bytes": 2118,
+      "sha256": "f1cddf4a5153687fd17f7bc2019b3c7910b866ed1ef5e0f4c9b4bdd6fac5f73d"
     },
     {
       "path": "README.md",
@@ -157,6 +157,11 @@
       "path": "episodes/WS001_武松/WS001_04_成片审核.md",
       "bytes": 2991,
       "sha256": "618c4bbb733047f76f9fac74744ac8c49f6870e4654cc72ad82f28045ffc56d7"
+    },
+    {
+      "path": "episodes/research/2026-09-18_douyin_topics_pending.md",
+      "bytes": 6820,
+      "sha256": "c18632cc7f6c19d1d0b85e470f37b14acc7465c91f2a7b84e024ea402ecdf9bc"
     },
     {
       "path": "refs/README.md",
