@@ -1,5 +1,5 @@
 {
-  "prd_version": "7.2",
+  "prd_version": "7.3",
   "root_relative": "交付",
   "topic_directory": "{topic_id}_{topic_short_name}",
   "part_directory": "{part_number:02d}_第{part_number:02d}集_{part_short_title}",
@@ -50,5 +50,24 @@
   },
   "repository": "https://github.com/KAtOReNA7/tiktok",
   "branch": "main",
-  "handoff_mode": "git_clone_or_safe_fast_forward"
+  "handoff_mode": "git_clone_or_safe_fast_forward",
+  "local_workspace_default": "../tiktok-local",
+  "repository_scope": [
+    "PRD与项目方向",
+    "接续说明与必要状态摘要",
+    "通用spec与空白episode模板",
+    "固定assets与refs",
+    "校验工具与清单"
+  ],
+  "local_only_content": [
+    "选题调研",
+    "论点与口播含定稿",
+    "来源表",
+    "分镜与素材映射",
+    "单集制作审片记录",
+    "生成素材配音字幕成片工程",
+    "旧生产归档"
+  ],
+  "upload_episode_content_on_approval": false,
+  "commit_for_every_content_delivery": false
 }

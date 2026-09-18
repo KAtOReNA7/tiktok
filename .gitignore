@@ -4,6 +4,11 @@
 /tmp/
 /exports/
 /local/
+/episodes/
+/research/
+/archive/
+/选题/
+/素材/
 __pycache__/
 *.pyc
 .DS_Store
@@ -24,4 +29,3 @@ Thumbs.db
 !.env.example
 *.pem
 *.key
-

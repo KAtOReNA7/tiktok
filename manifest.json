@@ -1,12 +1,11 @@
 {
   "package": "history_review_git_handoff",
   "format": "git_repository",
-  "prd_version": "7.2",
+  "prd_version": "7.3",
   "layout_template": "RYP_WHITE_SINGLE_V1_1",
   "created_date": "2026-09-17",
   "remote_figma_updated": false,
   "includes_jianying_project": false,
-  "next_topic_selected": false,
   "files": [
     {
       "path": ".gitattributes",
@@ -15,68 +14,43 @@
     },
     {
       "path": ".gitignore",
-      "bytes": 293,
-      "sha256": "3d3e679e4f41de94b55c71431886efc69bbb78ebb8a8cde0414c83b52c852ade"
+      "bytes": 342,
+      "sha256": "5451eede3fbb1ae55fca28749bd6926dba0a3561a16f2aaea6d2b254d2a0e126"
     },
     {
       "path": "AGENTS.md",
-      "bytes": 1908,
-      "sha256": "51aab72baa6ab800a1cded5800b1888a3e653b6aa3f86ad99b3af1a0fb95afa4"
+      "bytes": 2350,
+      "sha256": "15a7cf9973b71f7d12b15c8f778e29342d26bc6efed849b5cbd00cd398ca96d3"
     },
     {
       "path": "CHANGELOG.md",
-      "bytes": 2058,
-      "sha256": "24dfad252d5e76eae876822dc6cd532c793a47baa63869ec78aec4f8e1d1c6c7"
+      "bytes": 2084,
+      "sha256": "7e7c400972ad842f57f02a0591455c93ca57b76598369c4e77f601ed3197c0c9"
     },
     {
       "path": "CHAT_HANDOFF.md",
-      "bytes": 7468,
-      "sha256": "1626b61230e97910646df47a68b257b9c83bfe2784e1c747a53034c8791f59a2"
+      "bytes": 6845,
+      "sha256": "3a464ac2dffc2a4b92dcfbff1560754011c3c2b659e583bba1dcd8dc186e8458"
     },
     {
       "path": "PRD_V7.md",
-      "bytes": 56361,
-      "sha256": "4d8e606616654a113fd71526dfc89d377ebe2a5fd4a0b890d8110c302f3e6519"
+      "bytes": 57516,
+      "sha256": "31808321cce5dc540fe762b83b92825a57199e9da43f4c972f5408b134841c65"
     },
     {
       "path": "PROJECT_STATE.md",
-      "bytes": 2358,
-      "sha256": "372b1fcc50f67178bc39c6e95dc171c123d0ea7cbb05888890b1e0d7c9830ec0"
+      "bytes": 1169,
+      "sha256": "42d623ab5801cbb6d449ce725c0e33949f1b48096b4d4a2e0ebcb239af2a8f38"
     },
     {
       "path": "README.md",
-      "bytes": 2564,
-      "sha256": "c044089d69abe6d788c765655dc121a22866729942b8f8a5c1f519282dc97d61"
+      "bytes": 2028,
+      "sha256": "4b1abe14449d6d142b80a9223646dff6c544d751d8b1a1c3ba6b0dae34c1bc28"
     },
     {
       "path": "START_HERE.md",
-      "bytes": 3764,
-      "sha256": "f6cf777fd71f3a3f0cf106e37b090d6fea141d7bb9a92efa041d75ac7c53ce60"
-    },
-    {
-      "path": "archive/README.md",
-      "bytes": 627,
-      "sha256": "b8e737287f517c96bf0a506ac1434236f5a38b927e61d9b9854cae087e00053a"
-    },
-    {
-      "path": "archive/figma_archive_ledger.json",
-      "bytes": 9413,
-      "sha256": "bbe133ecf5821569f231e3bebf7ae560f4e8d5d57b56d065802369958851c63d"
-    },
-    {
-      "path": "archive/figma_v1_1_ledger.json",
-      "bytes": 2861,
-      "sha256": "9cad711ed03193b04de03a648fa0e3f34c3567d6ef66a0a19811bfc19657f774"
-    },
-    {
-      "path": "archive/obsolete_sfx_cues_V7_0.csv",
-      "bytes": 124,
-      "sha256": "8432bcb7c34e5cb69b6413fe3d48943c3d120125101f145d8e4552dd6d9ab320"
-    },
-    {
-      "path": "archive/template_V1_1_original.json",
-      "bytes": 5627,
-      "sha256": "68052aaec8be572ad45f43f809645b242bd28ce1a994ce67b44df7e0828ac9c9"
+      "bytes": 2498,
+      "sha256": "ac3266824675827f855deb338c180911d5a7f0b9f17920c32bd18668a4cde29f"
     },
     {
       "path": "assets/hosts_qin_reference/doro_qin_edge.png",
@@ -105,13 +79,13 @@
     },
     {
       "path": "episode/README.md",
-      "bytes": 1360,
-      "sha256": "7444d4f5345499a3005f8e51a9f557f8636e152dfa2f8f448b0ccd088d6ea038"
+      "bytes": 1474,
+      "sha256": "b838c6422b1d521c9dda3aa0c69a4d047e4fa598ca4c9e66daeb65a30984da12"
     },
     {
       "path": "episode/brief.yaml",
       "bytes": 1197,
-      "sha256": "69301ab7c66f877f5847d4ed69af5b8e27a85bbc4f895eb5d051082a1c05c25f"
+      "sha256": "f019eac662c78481ededec19523bc73790e924ca6ae944e9a752abb553d0daec"
     },
     {
       "path": "episode/parts.csv",
@@ -132,51 +106,6 @@
       "path": "episode/storyboard.csv",
       "bytes": 267,
       "sha256": "504f2ff30c4a60bdd25220f796d273dc5d909738af77be44d0d12ac02297ddce"
-    },
-    {
-      "path": "episodes/LB001_李白/LB001_01_论点与口播初稿_待确认.md",
-      "bytes": 3532,
-      "sha256": "a49239033547b60d74aac2ef1cd8bb33bd1342570d168ea6e26787c3582d8997"
-    },
-    {
-      "path": "episodes/LB001_李白/sources.csv",
-      "bytes": 924,
-      "sha256": "69be2447c55329265a2128550e78d66b2d4552355a9dc54e59d2588acb231aae"
-    },
-    {
-      "path": "episodes/LB001_李白/voice_script.txt",
-      "bytes": 634,
-      "sha256": "4fa7ddb3c8241e214c3894824be6bb036edb9dd77d89a27de7b56a1b29aa4ad2"
-    },
-    {
-      "path": "episodes/SY001_商鞅/SY001_01_策划初稿_待确认.md",
-      "bytes": 6339,
-      "sha256": "93fe1ad2be04f46ef9ffa2fbb4419008da31a22cc9228608352a26211e0b718c"
-    },
-    {
-      "path": "episodes/WS001_武松/WS001_01_论点与口播定稿.md",
-      "bytes": 3425,
-      "sha256": "29e714e8d5110ac6201783479778953f55b66411e771cde7657739e0103eed3d"
-    },
-    {
-      "path": "episodes/WS001_武松/WS001_02_Codex完整制作指令.md",
-      "bytes": 12309,
-      "sha256": "07da9ca6f03611400902d89a8e849f341c4596e3422f74f79cc6043c9bd2d2f1"
-    },
-    {
-      "path": "episodes/WS001_武松/WS001_03_插图与口播对应.md",
-      "bytes": 706,
-      "sha256": "f23e4d6cf7f0bd1e64dad7496cf64972ad82afe72a4e73226cdc3663af5045a0"
-    },
-    {
-      "path": "episodes/WS001_武松/WS001_04_成片审核.md",
-      "bytes": 2991,
-      "sha256": "618c4bbb733047f76f9fac74744ac8c49f6870e4654cc72ad82f28045ffc56d7"
-    },
-    {
-      "path": "episodes/research/2026-09-18_douyin_topics_pending.md",
-      "bytes": 6820,
-      "sha256": "c18632cc7f6c19d1d0b85e470f37b14acc7465c91f2a7b84e024ea402ecdf9bc"
     },
     {
       "path": "refs/README.md",
@@ -230,8 +159,8 @@
     },
     {
       "path": "spec/delivery_rules.json",
-      "bytes": 1721,
-      "sha256": "e7f0ea758a5d5f1b65bf55db6baf6314eeca39c3b6fefbf111994ffb16c16eee"
+      "bytes": 2280,
+      "sha256": "085a6340a977fc80e3576016187dda2232ceb910ca661ee9cad193a84f4c9565"
     },
     {
       "path": "spec/template.json",
@@ -240,8 +169,8 @@
     },
     {
       "path": "tools/validate_handoff.py",
-      "bytes": 3552,
-      "sha256": "e3c3fd55095759cfffae762feb98f446a53890600545872cc72d9af7f303fe3c"
+      "bytes": 3795,
+      "sha256": "1ac663c99755158e01e68f023ae1e71983703ed4680894f60382733fae6ea1d8"
     }
   ],
   "mapping_schema_updated_date": "2026-09-18",
@@ -252,5 +181,7 @@
   "handoff_updated_date": "2026-09-18",
   "repository": "https://github.com/KAtOReNA7/tiktok",
   "branch": "main",
-  "contains_completed_video": false
+  "contains_completed_video": false,
+  "scope": "project_rules_handoff_and_reusable_assets_only",
+  "includes_episode_content": false
 }

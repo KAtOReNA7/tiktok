@@ -12,7 +12,8 @@ ROOT_FILES = (
     ".gitattributes", ".gitignore", "README.md", "AGENTS.md", "START_HERE.md",
     "PRD_V7.md", "PROJECT_STATE.md", "CHANGELOG.md", "CHAT_HANDOFF.md",
 )
-DIRS = ("assets", "refs", "spec", "episode", "episodes", "archive", "tools")
+DIRS = ("assets", "refs", "spec", "episode", "tools")
+LOCAL_ONLY_DIRS = {"episodes", "research", "archive", "交付", "素材", "选题", "runs", "tmp", "exports", "local"}
 REQUIRED = (
     "PRD_V7.md", "START_HERE.md", "PROJECT_STATE.md",
     "assets/template/base_plate_1080x1920.png",
@@ -57,6 +58,8 @@ def main():
     seen = set()
     for entry in data["files"]:
         name = entry["path"]
+        if Path(name).parts[0] in LOCAL_ONLY_DIRS:
+            raise ValueError("Local-only content must not enter the handoff manifest: " + name)
         path = (ROOT / name).resolve()
         if not path.is_relative_to(ROOT) or name in seen:
             raise ValueError("Invalid or duplicate manifest path: " + name)

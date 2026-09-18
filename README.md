@@ -1,50 +1,41 @@
-# 古今人物锐评｜制作与新电脑接续
+# 古今人物锐评｜规范与新电脑接续
 
-这里是本项目的统一接续仓库。当前 **PRD V7.2**，保留V7.1制作规范，新增GitHub同步流程。后续直接维护这里，不再逐次发送接续压缩包。
+本仓库只保存PRD、项目方向、接续说明和通用资产，当前 **PRD V7.3**。选题调研、论点、口播、分镜、单集制作记录和成品全部存本地，不因定稿而上传，不为普通改稿创建Git提交。
 
 ## 新电脑开始
-
-在希望保存项目的父目录运行：
 
 ```powershell
 git clone https://github.com/KAtOReNA7/tiktok.git
 cd tiktok
 ```
 
-然后用Codex打开这个目录，发送：
+已有克隆先核对remote、分支和工作区；干净main可运行 `git pull --ff-only origin main`。有改动时按PRD第13.1节保留，不强制覆盖。
 
-```text
-先安全同步本仓库main分支，读取AGENTS.md、START_HERE.md、PRD_V7.md和PROJECT_STATE.md，检查已有模板和角色参考图。按我本次明确任务执行。不要重跑已完成的武松，也不要把商鞅待确认提案当成制作定稿。后续已确认的规范和接续更新直接提交到这个仓库，给我提交号，不再另做接续压缩包。
-```
+读取AGENTS.md、CHAT_HANDOFF.md、START_HERE.md、PRD_V7.md和PROJECT_STATE.md，然后按用户当前任务执行。武松已完成，不重做；待确认文案不自动生图。
 
-已有克隆的电脑先检查 `git status --short` 和当前分支。工作区干净且位于main时执行 `git pull --ff-only origin main`。存在本地改动时按PRD第13.1节保留并处理，不强制覆盖。
-
-## 从哪里读
+## 仓库内容
 
 | 文件／目录 | 用途 |
 | --- | --- |
-| [CHAT_HANDOFF.md](CHAT_HANDOFF.md) | 新对话粘贴指令、沟通背景和全部迁移文件索引 |
-| [START_HERE.md](START_HERE.md) | 开工顺序及当前交付规则 |
-| [PRD_V7.md](PRD_V7.md) | 唯一现行主PRD，内部版本V7.2 |
-| [PROJECT_STATE.md](PROJECT_STATE.md) | 已完成事项、待确认选题、下一步 |
-| [CHANGELOG.md](CHANGELOG.md) | 规范与接续更新记录 |
-| [spec/](spec/) | 模板、黑底字幕、交付字段 |
-| [assets/](assets/) | 实际底板和已有透明角色图 |
-| [refs/](refs/) | Doro身份原图、版式和漫画参考 |
-| [episode/](episode/) | 新一期的空白制作模板 |
-| [episodes/](episodes/) | 各选题文稿、两列映射和审片记录 |
+| CHAT_HANDOFF.md、START_HERE.md、AGENTS.md | 新对话与新机器开工说明 |
+| PRD_V7.md | 唯一现行主规范V7.3 |
+| PROJECT_STATE.md、CHANGELOG.md | 必要状态摘要、规范与方向变化 |
+| spec/ | 通用模板、字幕与存放参数 |
+| assets/、refs/ | 固定底板、身份原图和可复用参考 |
+| episode/ | 空白制作模板，填写后的副本必须放本地 |
+| tools/、manifest.json | 接续文件校验 |
 
-图像资产随Git一起取得，无需找回聊天附件。仓库没有用户最新剪映工程、武松成片或最终独立配音。新生成素材默认交到本地 `交付/` 文件夹，该目录不自动进入Git。
+本地工作根默认放在仓库旁的 `tiktok-local/`：`episodes/` 保存选题内容，`交付/` 保存用户使用的最终文件。已有用户指定目录则沿用。这里的本地文件不会随clone迁到新机器；仅在任务需要时补充，不能说仓库已备份。
 
-## 校验与后续更新
+2026-09-18已将原episodes/与旧archive/共14个文件完整保留到本地后，从main的当前文件树移除。普通删除提交保留Git历史，不重写历史。
 
-克隆后可运行 `python tools/validate_handoff.py`；Windows也可运行 `py -3 tools/validate_handoff.py`。它检查清单哈希、PNG和两列素材映射模板。
+## 规范更新
 
-规范更新后，刷新并核对清单：
+仅规范、项目方向或必要接续摘要变化时更新仓库。运行：
 
 ```powershell
 python tools/validate_handoff.py --refresh
 python tools/validate_handoff.py
 ```
 
-检查改动、只暂存本次文件、正常提交并推送。协作冲突和分支保护按PRD第13.1.1节处理。每次交付回报提交号，不能把“本地已改”当成“远端已同步”。
+检查diff和文件清单，只提交规范／接续范围，正常推送并读回远端后报告提交号。不另制作接续压缩包。
