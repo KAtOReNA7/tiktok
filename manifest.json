@@ -1,7 +1,7 @@
 {
   "package": "history_review_git_handoff",
   "format": "git_repository",
-  "prd_version": "7.6",
+  "prd_version": "7.7",
   "layout_template": "RYP_WHITE_SINGLE_V1_1",
   "created_date": "2026-09-17",
   "remote_figma_updated": false,
@@ -19,38 +19,38 @@
     },
     {
       "path": "AGENTS.md",
-      "bytes": 4562,
-      "sha256": "9f1081e8738544537aee05e654258e227d130ed977ae10c9a68c43170ebe7323"
+      "bytes": 4663,
+      "sha256": "dd2d2a9935f3d6d58c6d89824c11e896a75e286f2943ad2a5a5fc9e43df6cf0f"
     },
     {
       "path": "CHANGELOG.md",
-      "bytes": 5105,
-      "sha256": "fe76bdd94e763447d8012d78058630d533b59c4d3f9a8838f462c5a54bce886e"
+      "bytes": 5766,
+      "sha256": "7b0f9268dff3d8fc92c2a81b4fc184daef26c8ff29cac44dfc01e42a769e12ad"
     },
     {
       "path": "CHAT_HANDOFF.md",
-      "bytes": 10836,
-      "sha256": "2df78972922c865cf8a53a024ae174a3070212a42be108e64afb6e767c814742"
+      "bytes": 10940,
+      "sha256": "2b85e7c2f1216264e6fc2e49ae3a6053117b2719bbe06926cc59622fc29a7dfe"
     },
     {
       "path": "PRD_V7.md",
-      "bytes": 78788,
-      "sha256": "89dedf41664037c9b722640efe8d41eb24ec97afa1305d4d776c26cc3838791a"
+      "bytes": 79496,
+      "sha256": "e5d43b5f5556bd3e921107115b3e32d74788555218e9734a173f1a196a464c98"
     },
     {
       "path": "PROJECT_STATE.md",
-      "bytes": 2987,
-      "sha256": "20d44eda77c49d39e25932bca01a1974ee3ca77e9200157375cdd4a781f86229"
+      "bytes": 3006,
+      "sha256": "0477973fed6fea9bf1bf41b218dc6dc6a7f3c6a55e96a0eaf8c231cd9fb1cff2"
     },
     {
       "path": "README.md",
-      "bytes": 3936,
-      "sha256": "f672de7e7ab0417a5d13b5cfb60f00aa22925280a40d0058f1a19cb0d9b98c68"
+      "bytes": 4001,
+      "sha256": "ca1cb4aef930122f9e4162d4abfacb7645e69ce82ffab1f2ce014561595c9705"
     },
     {
       "path": "START_HERE.md",
-      "bytes": 4948,
-      "sha256": "569b66a6eb39dfa6f5fd3d490401a719687ca0d9860dce525cba1e1490669ea1"
+      "bytes": 5013,
+      "sha256": "7544c557e772dc81e3521ba828d592744c908ce0119ec55616be8b5ed3211bd9"
     },
     {
       "path": "assets/hosts_qin_reference/doro_qin_edge.png",
@@ -79,13 +79,13 @@
     },
     {
       "path": "episode/README.md",
-      "bytes": 2262,
-      "sha256": "30366cab0702ec4858b9c0307830bc5014b23c191b05825b09696015b887e9c7"
+      "bytes": 2345,
+      "sha256": "5010a21addbd7ac31a380b912d78363bc94f89d6504ee8a0a6cc0d4c2f972299"
     },
     {
       "path": "episode/brief.yaml",
-      "bytes": 1541,
-      "sha256": "d3a7d80ac5b1d437840cb79120670079f51bd93a11e5e2c70f033afcfc8b92a3"
+      "bytes": 1581,
+      "sha256": "0bc2eb765551a6cba717778d9d3b2bb669a0e8a5ae712491fab52565a55d19bd"
     },
     {
       "path": "episode/parts.csv",
@@ -109,8 +109,8 @@
     },
     {
       "path": "refs/README.md",
-      "bytes": 2535,
-      "sha256": "36747c66280b150ad29712b06a9e9547fc979bfe7cdcce5f470fad0bfc3e3aca"
+      "bytes": 2583,
+      "sha256": "2c05c1f9cbc65d36dd33a2ee691e5b61379b09354078ec8e34d037af7ce1cee2"
     },
     {
       "path": "refs/comic_language/axe_action_reference.png",
@@ -159,13 +159,13 @@
     },
     {
       "path": "spec/character_identity.json",
-      "bytes": 3294,
-      "sha256": "3e32c65a8ca8f953baacc1c756c81a691033e875237bea5b0e8b07cb40c9479a"
+      "bytes": 3479,
+      "sha256": "9ea8d0bd72d39c5de5c506501e2fd8ee36c8acbc4add35fa2b0b78147f66ea12"
     },
     {
       "path": "spec/delivery_rules.json",
-      "bytes": 5246,
-      "sha256": "1deef8b4b6fdb0852ad987b8df87835687f5389a3d3fb5614c5a37e3762e1c56"
+      "bytes": 5334,
+      "sha256": "9b4ef553c53fbace7f99727548d12b7ad565c0389111277a769adaaa69eb1809"
     },
     {
       "path": "spec/operations_handoff.md",
@@ -179,8 +179,8 @@
     },
     {
       "path": "tools/validate_handoff.py",
-      "bytes": 5029,
-      "sha256": "101949f993d663f1e1fdead79a4d1bbf560989bbe8cc532fd127e8a4201ac1a7"
+      "bytes": 5647,
+      "sha256": "55d1e766a292bbe05ddbb690f4221673d00b43b68f820f0c539276b7890cacfa"
     }
   ],
   "mapping_schema_updated_date": "2026-09-18",

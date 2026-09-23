@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "prd_version": "7.6",
+  "prd_version": "7.7",
   "updated_date": "2026-09-24",
   "principle": "三位原有Q版角色本人演故事；剧情身份只改变服饰、道具和表演",
   "all_hosts_must_be_chibi": true,
@@ -50,11 +50,15 @@
     "automatic_file_validation_is_visual_qa": false
   },
   "correction": {
-    "user_reported_drift_requires_cast_comparison": true,
+    "user_reported_drift_requires_internal_visual_review": true,
     "comparison_includes_original_refs_face_and_body": true,
-    "one_user_confirmation_before_batch_after_reported_drift": true,
-    "reuse_explicitly_approved_current_correction": true,
+    "one_user_confirmation_before_batch_after_reported_drift": false,
+    "reuse_visually_verified_current_correction": true,
     "approval_for_every_stable_image": false,
+    "user_character_approval_required": false,
+    "calibration_is_internal": true,
+    "separate_calibration_artifact_required": false,
+    "continue_after_internal_pass": true,
     "adult_body_fix": "重绘整个人物及必要接触、遮挡和投影，不能仅换脸或缩放成人"
   }
 }

@@ -62,6 +62,15 @@ def main():
         raise ValueError("Rejected or unverified identity cannot be delivered as approved")
     if rules["character_identity_spec"] != "spec/character_identity.json":
         raise ValueError("Delivery rules must reference the current identity specification")
+    correction = identity["correction"]
+    if (correction["user_character_approval_required"]
+            or correction["one_user_confirmation_before_batch_after_reported_drift"]
+            or correction["approval_for_every_stable_image"]
+            or rules["character_acceptance"]["user_approval_required"]):
+        raise ValueError("Character checks must not require user approval")
+    if not (correction["continue_after_internal_pass"]
+            and rules["character_acceptance"]["continue_after_internal_identity_pass"]):
+        raise ValueError("Continue production after internal character validation")
     data = json.loads(MANIFEST.read_text(encoding="utf-8"))
     if args.refresh:
         data["files"] = []
