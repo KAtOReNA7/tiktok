@@ -1,5 +1,5 @@
 {
-  "prd_version": "7.4",
+  "prd_version": "7.5",
   "root_relative": "交付",
   "topic_directory": "{topic_id}_{topic_short_name}",
   "part_directory": "{part_number:02d}_第{part_number:02d}集_{part_short_title}",
@@ -52,7 +52,11 @@
   "branch": "main",
   "handoff_mode": "select_first_setup_or_local_continue",
   "execution": {
-    "modes": ["first_setup", "local_continue", "rules_update"],
+    "modes": [
+      "first_setup",
+      "local_continue",
+      "rules_update"
+    ],
     "default_when_local_files_available": "local_continue",
     "explicit_user_mode_takes_priority": true,
     "new_session_requires_remote_sync": false,
@@ -61,10 +65,30 @@
     "local_continue_requires_latest_remote": false,
     "local_continue_requires_full_handoff_validation": false,
     "missing_local_file_auto_initializes": false,
-    "remote_sync_triggers": ["first_setup_when_not_initialized", "explicit_rules_sync_or_update"],
+    "remote_sync_triggers": [
+      "first_setup_when_not_initialized",
+      "explicit_rules_sync_or_update"
+    ],
     "mode_record_location": "existing_local_production_log_or_execution_index",
     "instruction_files_separate_by_mode": true,
-    "instruction_files_local_only": true
+    "instruction_files_local_only": true,
+    "instruction_file_delivery": {
+      "default_extension": ".txt",
+      "allowed_extensions": [
+        ".txt",
+        ".md"
+      ],
+      "actual_downloadable_file_required": true,
+      "chat_text_is_optional_preview_only": true,
+      "self_contained_episode_task": true,
+      "verify_before_delivery": [
+        "execution_mode",
+        "approved_script_complete",
+        "all_sections",
+        "file_end_marker"
+      ],
+      "end_marker_is_narration": false
+    }
   },
   "local_workspace_default": "../tiktok-local",
   "repository_scope": [
@@ -84,5 +108,33 @@
     "旧生产归档"
   ],
   "upload_episode_content_on_approval": false,
-  "commit_for_every_content_delivery": false
+  "commit_for_every_content_delivery": false,
+  "publishing_title": {
+    "default_max_characters": 20,
+    "punctuation_counts": true,
+    "project_rule_not_universal_platform_limit": true,
+    "locked_over_limit_title": "report_length_and_suggest_without_silent_rewrite",
+    "cover_layout_checked_separately": true
+  },
+  "operations": {
+    "independent_from_production": true,
+    "handoff": "spec/operations_handoff.md",
+    "reuse_existing_authorized_task": true,
+    "default_start_time": "13:00",
+    "timezone": "Asia/Shanghai",
+    "production_requires_operations_run": false,
+    "daily_operations_requires_github": false,
+    "authorized_feishu_content": [
+      "选题元数据与来源核验边界",
+      "作品运营指标",
+      "评论分析"
+    ],
+    "upload_complete_production_archive": false,
+    "dynamic_data_in_git": false,
+    "workflow_file": "三只不服_运营工作流.md",
+    "rating_rules_file": "三只不服_运营评级规则.md",
+    "runtime_state_file": "三只不服_定时运行状态.json",
+    "character_first_selection": "trial_revocable_by_user",
+    "selection_rule_reference": "PRD_V7.md section 2.4"
+  }
 }

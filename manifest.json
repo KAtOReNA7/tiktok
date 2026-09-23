@@ -1,7 +1,7 @@
 {
   "package": "history_review_git_handoff",
   "format": "git_repository",
-  "prd_version": "7.4",
+  "prd_version": "7.5",
   "layout_template": "RYP_WHITE_SINGLE_V1_1",
   "created_date": "2026-09-17",
   "remote_figma_updated": false,
@@ -19,38 +19,38 @@
     },
     {
       "path": "AGENTS.md",
-      "bytes": 3175,
-      "sha256": "85018ba4348207069881a93f614642152ca11a64b6b2d0090afbe746b45257ed"
+      "bytes": 4142,
+      "sha256": "2aa933212a540d2aaf2de9b7d5946c330e740c513c42ef49fcf8114a5dae350a"
     },
     {
       "path": "CHANGELOG.md",
-      "bytes": 3114,
-      "sha256": "828fe9deb83ea611bce4f74f0df8328a2b2a9cea911f231b965352991ad8d2e7"
+      "bytes": 4194,
+      "sha256": "910496c6bdc8f81c7be2f80b1f697546288b629db46be873ff5e9411ba252e6f"
     },
     {
       "path": "CHAT_HANDOFF.md",
-      "bytes": 8430,
-      "sha256": "9a5916a0893f6d7614233cb674cdccc962761e05c4df9a79803ac8abf696af78"
+      "bytes": 10307,
+      "sha256": "b1505fbaa16c48e00be7883ab18588fa58a1c36497b187f742792ea230a20be0"
     },
     {
       "path": "PRD_V7.md",
-      "bytes": 63951,
-      "sha256": "10c42a87a93cb8b03d8d12830364500cb0b94dedeec41d83214251845c0fa609"
+      "bytes": 71882,
+      "sha256": "0d74f66d2a7faeb38fc5cb7662a83daeb29d9c34b004bcee81fa22fb12abca16"
     },
     {
       "path": "PROJECT_STATE.md",
-      "bytes": 1484,
-      "sha256": "323232c0377523df7fab2859d5364dbf4f8dcaf1a519ec95accf8b1714cadde3"
+      "bytes": 2689,
+      "sha256": "7952cadce4f050af31570e75e48e935ed10cc414e1f0d0b07f66670ed14bef39"
     },
     {
       "path": "README.md",
-      "bytes": 2828,
-      "sha256": "6e0aab6fd9d643fd2f0c52d9b955b922071cdd83c7e78c70c830b9285354c686"
+      "bytes": 3619,
+      "sha256": "383ec8e93bd1453d0bad7d85494aaa6ef46187eed59e009e3303a8c8d149b920"
     },
     {
       "path": "START_HERE.md",
-      "bytes": 3627,
-      "sha256": "4a9fcbc5e2ac49ee84c37961d3b4c7e1f5fbf54017ca964a1aca2ca1b848cb1b"
+      "bytes": 4688,
+      "sha256": "7230e865e9555cca3755d94ee11dfd44dbe1a0181bfc2a1835758de20534a23f"
     },
     {
       "path": "assets/hosts_qin_reference/doro_qin_edge.png",
@@ -159,8 +159,13 @@
     },
     {
       "path": "spec/delivery_rules.json",
-      "bytes": 3054,
-      "sha256": "77278f75e19d55fc46095a2e673023b41ffbbd02451a10849cfecddcecf62bd1"
+      "bytes": 4693,
+      "sha256": "6385cc80d6b09d3d4a2fc6cb03470c6ca12285cce1228ca90d6cd25f9a7c51aa"
+    },
+    {
+      "path": "spec/operations_handoff.md",
+      "bytes": 3842,
+      "sha256": "6d79ef48ecc64fc5dba959a1d6f00b9fe304d5f6f9451ce5390d77803bdce361"
     },
     {
       "path": "spec/template.json",
@@ -183,5 +188,6 @@
   "branch": "main",
   "contains_completed_video": false,
   "scope": "project_rules_handoff_and_reusable_assets_only",
-  "includes_episode_content": false
+  "includes_episode_content": false,
+  "updated_date": "2026-09-23"
 }
