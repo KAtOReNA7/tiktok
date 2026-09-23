@@ -1,7 +1,7 @@
 {
   "package": "history_review_git_handoff",
   "format": "git_repository",
-  "prd_version": "7.5",
+  "prd_version": "7.6",
   "layout_template": "RYP_WHITE_SINGLE_V1_1",
   "created_date": "2026-09-17",
   "remote_figma_updated": false,
@@ -19,38 +19,38 @@
     },
     {
       "path": "AGENTS.md",
-      "bytes": 4142,
-      "sha256": "2aa933212a540d2aaf2de9b7d5946c330e740c513c42ef49fcf8114a5dae350a"
+      "bytes": 4562,
+      "sha256": "9f1081e8738544537aee05e654258e227d130ed977ae10c9a68c43170ebe7323"
     },
     {
       "path": "CHANGELOG.md",
-      "bytes": 4194,
-      "sha256": "910496c6bdc8f81c7be2f80b1f697546288b629db46be873ff5e9411ba252e6f"
+      "bytes": 5105,
+      "sha256": "fe76bdd94e763447d8012d78058630d533b59c4d3f9a8838f462c5a54bce886e"
     },
     {
       "path": "CHAT_HANDOFF.md",
-      "bytes": 10307,
-      "sha256": "b1505fbaa16c48e00be7883ab18588fa58a1c36497b187f742792ea230a20be0"
+      "bytes": 10836,
+      "sha256": "2df78972922c865cf8a53a024ae174a3070212a42be108e64afb6e767c814742"
     },
     {
       "path": "PRD_V7.md",
-      "bytes": 71882,
-      "sha256": "0d74f66d2a7faeb38fc5cb7662a83daeb29d9c34b004bcee81fa22fb12abca16"
+      "bytes": 78788,
+      "sha256": "89dedf41664037c9b722640efe8d41eb24ec97afa1305d4d776c26cc3838791a"
     },
     {
       "path": "PROJECT_STATE.md",
-      "bytes": 2689,
-      "sha256": "7952cadce4f050af31570e75e48e935ed10cc414e1f0d0b07f66670ed14bef39"
+      "bytes": 2987,
+      "sha256": "20d44eda77c49d39e25932bca01a1974ee3ca77e9200157375cdd4a781f86229"
     },
     {
       "path": "README.md",
-      "bytes": 3619,
-      "sha256": "383ec8e93bd1453d0bad7d85494aaa6ef46187eed59e009e3303a8c8d149b920"
+      "bytes": 3936,
+      "sha256": "f672de7e7ab0417a5d13b5cfb60f00aa22925280a40d0058f1a19cb0d9b98c68"
     },
     {
       "path": "START_HERE.md",
-      "bytes": 4688,
-      "sha256": "7230e865e9555cca3755d94ee11dfd44dbe1a0181bfc2a1835758de20534a23f"
+      "bytes": 4948,
+      "sha256": "569b66a6eb39dfa6f5fd3d490401a719687ca0d9860dce525cba1e1490669ea1"
     },
     {
       "path": "assets/hosts_qin_reference/doro_qin_edge.png",
@@ -79,13 +79,13 @@
     },
     {
       "path": "episode/README.md",
-      "bytes": 1809,
-      "sha256": "615a9ce0b8a7456986ec47e8c750d36b79e3ac01c9dafbfc90a3abffb658597f"
+      "bytes": 2262,
+      "sha256": "30366cab0702ec4858b9c0307830bc5014b23c191b05825b09696015b887e9c7"
     },
     {
       "path": "episode/brief.yaml",
-      "bytes": 1197,
-      "sha256": "f019eac662c78481ededec19523bc73790e924ca6ae944e9a752abb553d0daec"
+      "bytes": 1541,
+      "sha256": "d3a7d80ac5b1d437840cb79120670079f51bd93a11e5e2c70f033afcfc8b92a3"
     },
     {
       "path": "episode/parts.csv",
@@ -109,8 +109,8 @@
     },
     {
       "path": "refs/README.md",
-      "bytes": 1558,
-      "sha256": "9f3c0f10c7b35920f015d5db677f4e0734453a01a88272dfa50e7e970101a5da"
+      "bytes": 2535,
+      "sha256": "36747c66280b150ad29712b06a9e9547fc979bfe7cdcce5f470fad0bfc3e3aca"
     },
     {
       "path": "refs/comic_language/axe_action_reference.png",
@@ -158,9 +158,14 @@
       "sha256": "1dc3b84de92e98acf076111e722b77a8a989e24b629ae5571fd99119a80d7bb5"
     },
     {
+      "path": "spec/character_identity.json",
+      "bytes": 3294,
+      "sha256": "3e32c65a8ca8f953baacc1c756c81a691033e875237bea5b0e8b07cb40c9479a"
+    },
+    {
       "path": "spec/delivery_rules.json",
-      "bytes": 4693,
-      "sha256": "6385cc80d6b09d3d4a2fc6cb03470c6ca12285cce1228ca90d6cd25f9a7c51aa"
+      "bytes": 5246,
+      "sha256": "1deef8b4b6fdb0852ad987b8df87835687f5389a3d3fb5614c5a37e3762e1c56"
     },
     {
       "path": "spec/operations_handoff.md",
@@ -174,8 +179,8 @@
     },
     {
       "path": "tools/validate_handoff.py",
-      "bytes": 3795,
-      "sha256": "1ac663c99755158e01e68f023ae1e71983703ed4680894f60382733fae6ea1d8"
+      "bytes": 5029,
+      "sha256": "101949f993d663f1e1fdead79a4d1bbf560989bbe8cc532fd127e8a4201ac1a7"
     }
   ],
   "mapping_schema_updated_date": "2026-09-18",
@@ -189,5 +194,5 @@
   "contains_completed_video": false,
   "scope": "project_rules_handoff_and_reusable_assets_only",
   "includes_episode_content": false,
-  "updated_date": "2026-09-23"
+  "updated_date": "2026-09-24"
 }

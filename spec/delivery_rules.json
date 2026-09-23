@@ -1,5 +1,5 @@
 {
-  "prd_version": "7.5",
+  "prd_version": "7.6",
   "root_relative": "交付",
   "topic_directory": "{topic_id}_{topic_short_name}",
   "part_directory": "{part_number:02d}_第{part_number:02d}集_{part_short_title}",
@@ -136,5 +136,22 @@
     "runtime_state_file": "三只不服_定时运行状态.json",
     "character_first_selection": "trial_revocable_by_user",
     "selection_rule_reference": "PRD_V7.md section 2.4"
+  },
+  "character_identity_spec": "spec/character_identity.json",
+  "character_acceptance": {
+    "all_hosts_original_chibi": true,
+    "applies_to": [
+      "scene",
+      "cover",
+      "edge_overlay",
+      "repair"
+    ],
+    "actual_refs_for_each_visible_host": true,
+    "visual_check_each_visible_host": true,
+    "rejected_status": "REJECTED_IDENTITY",
+    "unchecked_status": "UNVERIFIED_IDENTITY",
+    "rejected_or_unverified_as_ready": false,
+    "identity_qa_location": "existing_local_production_log",
+    "mapping_columns_unchanged": true
   }
 }

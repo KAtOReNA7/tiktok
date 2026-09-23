@@ -5,6 +5,12 @@
 - identity/doro_expression_user.png：只看右下角粉发Doro；领奖台上三位不是本项目Doro参考。
 - 咕咕嘎嘎、曼波目前可用的身份／动作图在assets/hosts_qin_reference。未附不存在的更原始角色图。
 
+现行三位身份清单见 `spec/character_identity.json`：咕咕嘎嘎用 `assets/hosts_qin_reference/gugu_qin_edge.png`，曼波用 `assets/hosts_qin_reference/mambo_qin_edge.png`，Doro用上述用户原图。每次生图／编辑必须实际输入每位出镜演员对应的图，文件名或文字描述不能代替真实参考。
+
+三位本人都保持Q版脸与身体演故事。秦装参考用来锁定演员特征、脸型和Q版观感，不要求新题沿用秦装，也不把裁切的边缘图冒称完整全身原设定。咕咕嘎嘎保留黑发、大灰黑眼、企鹅兜帽与黄色喙；曼波保留栗棕发、蓝花、马耳、琥珀大眼与圆脸；Doro保留粉发紫眼及白色短肢团状身体。具体判定仍须查看实际图片，不以文本清单代替。
+
+角色长袍／武器／古风画风不能改变其骨架或使其成年男性化；问题图不能作为身份母图。角色分配、定妆确认与逐图验收按PRD第6节执行。
+
 ## 版式
 - layout/V1_1_layout_only.png：已归档白底单格模板。仅参考布局，内含旧湘山Doro，不能作为脸型母图。
 - layout/EP01_V5_human_edit.png：用户第五版第1.1集的实际帧，参考边缘角色与字幕呈现。它是截图，不是可编辑模板，不能直接抹字当新题底板。

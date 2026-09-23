@@ -1,5 +1,5 @@
 # 空白任务模板。下一选题尚未由本包确定。
-prd_version: '7.3'
+prd_version: '7.6'
 episode_id: null
 topic: null
 core_claim: null
@@ -24,6 +24,14 @@ hosts_cast:
   doro: null
   gugu: null
   mambo: null
+character_identity_spec: spec/character_identity.json
+hosts_are_original_chibi_actors: true
+actual_identity_refs_per_visible_host: true
+# 以下为待填写的本地执行记录，null不表示已检查或已通过。
+cast_calibration_file: null
+identity_correction_required: null
+identity_correction_user_confirmed: null
+identity_qa_log: null
 user_locked_items: []
 requested_deliverables: []
 missing_dependencies: []

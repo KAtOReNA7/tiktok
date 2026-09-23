@@ -19,6 +19,9 @@ REQUIRED = (
     "assets/template/base_plate_1080x1920.png",
     "refs/identity/doro_primary_user.png", "refs/identity/doro_expression_user.png",
     "spec/template.json", "spec/caption_style.json", "spec/delivery_rules.json",
+    "spec/character_identity.json",
+    "assets/hosts_qin_reference/gugu_qin_edge.png",
+    "assets/hosts_qin_reference/mambo_qin_edge.png",
     "episode/scene_map.csv",
 )
 COLUMNS = ["插图编号", "对应口播"]
@@ -46,6 +49,19 @@ def main():
     rules = json.loads((ROOT / "spec/delivery_rules.json").read_text(encoding="utf-8"))
     if rules["scene_map"]["columns"] != COLUMNS or rules["scene_map"]["extra_columns_allowed"]:
         raise ValueError("delivery_rules.json has a conflicting scene-map schema")
+    identity = json.loads((ROOT / "spec/character_identity.json").read_text(encoding="utf-8"))
+    if not identity["all_hosts_must_be_chibi"] or not identity["actual_reference_input_for_each_visible_host"]:
+        raise ValueError("All three hosts require Q-version identity and actual reference inputs")
+    if set(identity["characters"]) != {"doro", "gugu", "mambo"}:
+        raise ValueError("Identity specification must cover all three hosts")
+    for character in identity["characters"].values():
+        ref = (ROOT / character["identity_reference"]).resolve()
+        if not ref.is_relative_to(ROOT) or not ref.is_file():
+            raise ValueError("Missing or invalid host identity reference")
+    if identity["qa"]["rejected_or_unverified_deliverable"]:
+        raise ValueError("Rejected or unverified identity cannot be delivered as approved")
+    if rules["character_identity_spec"] != "spec/character_identity.json":
+        raise ValueError("Delivery rules must reference the current identity specification")
     data = json.loads(MANIFEST.read_text(encoding="utf-8"))
     if args.refresh:
         data["files"] = []
@@ -71,7 +87,7 @@ def main():
             raise ValueError("Not a PNG: " + name)
     if any(name not in seen for name in REQUIRED):
         raise ValueError("Manifest omits required handoff files")
-    print("PASS: %d files, asset hashes and two-column mapping verified." % len(data["files"]))
+    print("PASS: %d files, asset hashes, three-host identity references and two-column mapping verified. Image likeness requires visual QA." % len(data["files"]))
 
 
 if __name__ == "__main__":
