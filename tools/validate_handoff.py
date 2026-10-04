@@ -3,6 +3,7 @@ import argparse
 import csv
 import hashlib
 import json
+import struct
 import sys
 from pathlib import Path
 
@@ -71,7 +72,38 @@ def main():
     if not (correction["continue_after_internal_pass"]
             and rules["character_acceptance"]["continue_after_internal_identity_pass"]):
         raise ValueError("Continue production after internal character validation")
+    template = json.loads((ROOT / "spec/template.json").read_text(encoding="utf-8"))
+    caption = json.loads((ROOT / "spec/caption_style.json").read_text(encoding="utf-8"))
+    if template["template_id"] != caption["template_id"] or template["template_id"] != rules["default_template_id"]:
+        raise ValueError("Template, caption and delivery defaults disagree")
+    slot = template["fields"]["字幕视频预留槽"]["bounds"]
+    if (slot != caption["background"]["bounds"]
+            or slot != caption["delivery"]["placement_in_1080x1920"]["bounds"]
+            or slot[2:] != [caption["delivery"]["video_width"], caption["delivery"]["video_height"]]):
+        raise ValueError("Caption video must match the reserved slot exactly")
+    if template["production"]["voice_subtitles_in_scene_plate"] or caption["scene_plate"]["bake_narration_text"]:
+        raise ValueError("Scene plates must leave the caption slot empty")
+    canvas = (template["canvas"]["width"], template["canvas"]["height"])
+    asset_paths = [template["characters"]["overlay_file"]]
+    if set(template["variants"]) != {"cover_opening", "body", "closeup", "evidence"}:
+        raise ValueError("V2 must include all four reusable layout variants")
+    for variant in template["variants"].values():
+        if variant["caption_slot_bounds"] != slot:
+            raise ValueError("All V2 variants must share the same caption slot")
+        asset_paths.append(variant["base_plate"])
+    for name in asset_paths:
+        path = (ROOT / name).resolve()
+        if not path.is_relative_to(ROOT) or not path.is_file():
+            raise ValueError("Missing current template asset: " + name)
+        png = path.read_bytes()
+        if (png[:8] != b"\x89PNG\r\n\x1a\n" or png[12:16] != b"IHDR"
+                or struct.unpack(">II", png[16:24]) != canvas or png[25] != 6):
+            raise ValueError("V2 assets must be full-canvas RGBA PNGs: " + name)
     data = json.loads(MANIFEST.read_text(encoding="utf-8"))
+    if data["layout_template"] != template["template_id"]:
+        raise ValueError("Manifest points at the wrong default template")
+    if len({data["prd_version"], template["prd_version"], caption["prd_version"], rules["prd_version"]}) != 1:
+        raise ValueError("PRD versions disagree across active specs")
     if args.refresh:
         data["files"] = []
         for path in paths_for_manifest():
@@ -96,7 +128,9 @@ def main():
             raise ValueError("Not a PNG: " + name)
     if any(name not in seen for name in REQUIRED):
         raise ValueError("Manifest omits required handoff files")
-    print("PASS: %d files, asset hashes, three-host identity references and two-column mapping verified. Image likeness requires visual QA." % len(data["files"]))
+    if any(name not in seen for name in asset_paths):
+        raise ValueError("Manifest omits current template assets")
+    print("PASS: %d files, V2 RGBA assets, caption-slot compatibility, asset hashes, three-host references and two-column mapping verified. Image likeness requires visual QA." % len(data["files"]))
 
 
 if __name__ == "__main__":

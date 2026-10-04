@@ -1,10 +1,10 @@
 {
   "package": "history_review_git_handoff",
   "format": "git_repository",
-  "prd_version": "7.7",
-  "layout_template": "RYP_WHITE_SINGLE_V1_1",
+  "prd_version": "7.8",
+  "layout_template": "RYP_STORY_MAIN_V2",
   "created_date": "2026-09-17",
-  "remote_figma_updated": false,
+  "remote_figma_updated": true,
   "includes_jianying_project": false,
   "files": [
     {
@@ -19,38 +19,38 @@
     },
     {
       "path": "AGENTS.md",
-      "bytes": 4663,
-      "sha256": "dd2d2a9935f3d6d58c6d89824c11e896a75e286f2943ad2a5a5fc9e43df6cf0f"
+      "bytes": 5988,
+      "sha256": "66da50a35656e3f241d93daf74dad207b6ff8a488644095cd42955297820d569"
     },
     {
       "path": "CHANGELOG.md",
-      "bytes": 5766,
-      "sha256": "7b0f9268dff3d8fc92c2a81b4fc184daef26c8ff29cac44dfc01e42a769e12ad"
+      "bytes": 6854,
+      "sha256": "56c52e4900215c091ff42d15c4f57a9213c692c89cbfdbd00d9ceb969904b720"
     },
     {
       "path": "CHAT_HANDOFF.md",
-      "bytes": 10940,
-      "sha256": "2b85e7c2f1216264e6fc2e49ae3a6053117b2719bbe06926cc59622fc29a7dfe"
+      "bytes": 12290,
+      "sha256": "769f533da25390122a779e6f2c02634c55eeb2521395ac9f07ebbf06dd1e143f"
     },
     {
       "path": "PRD_V7.md",
-      "bytes": 79496,
-      "sha256": "e5d43b5f5556bd3e921107115b3e32d74788555218e9734a173f1a196a464c98"
+      "bytes": 87253,
+      "sha256": "1bc50672837f702f8e974410875e69e07e72b7a3151117671aadd47fc92bcb63"
     },
     {
       "path": "PROJECT_STATE.md",
-      "bytes": 3006,
-      "sha256": "0477973fed6fea9bf1bf41b218dc6dc6a7f3c6a55e96a0eaf8c231cd9fb1cff2"
+      "bytes": 4078,
+      "sha256": "af58c2cd14b35e7d3adbc631c9e03ac3b20e8b130e4ef15c8bbe2c4fd3f2ffb8"
     },
     {
       "path": "README.md",
-      "bytes": 4001,
-      "sha256": "ca1cb4aef930122f9e4162d4abfacb7645e69ce82ffab1f2ce014561595c9705"
+      "bytes": 5455,
+      "sha256": "951c2e20df1179f93e5e16679565707cbb0138fd7060072bc19688f59e22fa5c"
     },
     {
       "path": "START_HERE.md",
-      "bytes": 5013,
-      "sha256": "7544c557e772dc81e3521ba828d592744c908ce0119ec55616be8b5ed3211bd9"
+      "bytes": 6833,
+      "sha256": "01303559b885eb02a9b1e3da27cee739ecad0ed3ad26d9f42dd06328dfedebe4"
     },
     {
       "path": "assets/hosts_qin_reference/doro_qin_edge.png",
@@ -78,14 +78,39 @@
       "sha256": "cb03cb3da2db1e333037b067d08a013476d5f4b03a7a164a319fffa6852face9"
     },
     {
+      "path": "assets/template/v2/body_base_1080x1920.png",
+      "bytes": 18553,
+      "sha256": "d924aa97cc096f2d76044f1cbcc82d6a35b7c0d9566d9966758591f9455cea1d"
+    },
+    {
+      "path": "assets/template/v2/closeup_base_1080x1920.png",
+      "bytes": 18575,
+      "sha256": "bab26096511ca1e4bdfe1d76935d9ab77453e4cea1597678744730889a00dd4f"
+    },
+    {
+      "path": "assets/template/v2/cover_opening_base_1080x1920.png",
+      "bytes": 18589,
+      "sha256": "c1efa8eda4a522a4dd6aff63c66620e4e15b08209a797d503a07f5174c25d61d"
+    },
+    {
+      "path": "assets/template/v2/evidence_base_1080x1920.png",
+      "bytes": 18598,
+      "sha256": "b1526ad1c26cf9285d12231ffb7c665218cc56206b23e9bc1eee408844f4f583"
+    },
+    {
+      "path": "assets/template/v2/hosts_signature_qin_reference_1080x1920.png",
+      "bytes": 46482,
+      "sha256": "d3472f5b2148458540d47c173d92d61b348575abb48508a7be47a7f6493a892b"
+    },
+    {
       "path": "episode/README.md",
-      "bytes": 2345,
-      "sha256": "5010a21addbd7ac31a380b912d78363bc94f89d6504ee8a0a6cc0d4c2f972299"
+      "bytes": 3561,
+      "sha256": "6f09168fc1f45105059420a36c75d58b8b26bc8a10404c700fb80e2310734990"
     },
     {
       "path": "episode/brief.yaml",
-      "bytes": 1581,
-      "sha256": "0bc2eb765551a6cba717778d9d3b2bb669a0e8a5ae712491fab52565a55d19bd"
+      "bytes": 2160,
+      "sha256": "f99a7490abfa652bbab7a7464e99b07edacdbc5e021fdabf753f0fe13b28e3c9"
     },
     {
       "path": "episode/parts.csv",
@@ -109,8 +134,8 @@
     },
     {
       "path": "refs/README.md",
-      "bytes": 2583,
-      "sha256": "2c05c1f9cbc65d36dd33a2ee691e5b61379b09354078ec8e34d037af7ce1cee2"
+      "bytes": 3462,
+      "sha256": "00963a64b699408f523b595399a42dac419fcb6cf6c54fa262ef20039740a0a5"
     },
     {
       "path": "refs/comic_language/axe_action_reference.png",
@@ -154,18 +179,18 @@
     },
     {
       "path": "spec/caption_style.json",
-      "bytes": 1889,
-      "sha256": "1dc3b84de92e98acf076111e722b77a8a989e24b629ae5571fd99119a80d7bb5"
+      "bytes": 2231,
+      "sha256": "a15149664a76a89344d59b0bf4a4f1bc587a2c098fb5a617a01938dc9327398b"
     },
     {
       "path": "spec/character_identity.json",
-      "bytes": 3479,
-      "sha256": "9ea8d0bd72d39c5de5c506501e2fd8ee36c8acbc4add35fa2b0b78147f66ea12"
+      "bytes": 3724,
+      "sha256": "b76290b9b460064a5f71bf98569eb86f8a919ad1326c7353dbc6fb6a48120ce9"
     },
     {
       "path": "spec/delivery_rules.json",
-      "bytes": 5334,
-      "sha256": "9b4ef553c53fbace7f99727548d12b7ad565c0389111277a769adaaa69eb1809"
+      "bytes": 5524,
+      "sha256": "6db2ac7a3ba839a8d021f7537f6416322669cf5130a0052c0e53b4888a9f0d06"
     },
     {
       "path": "spec/operations_handoff.md",
@@ -174,13 +199,13 @@
     },
     {
       "path": "spec/template.json",
-      "bytes": 6623,
-      "sha256": "598fe2f64a10036c143a8f6550dba522f5e5348214248e00ffa64712d174631c"
+      "bytes": 13785,
+      "sha256": "291417ffa43297fc3cc84ca34b8aba9b65be7b176eca37c4632e10a79389a295"
     },
     {
       "path": "tools/validate_handoff.py",
-      "bytes": 5647,
-      "sha256": "55d1e766a292bbe05ddbb690f4221673d00b43b68f820f0c539276b7890cacfa"
+      "bytes": 8056,
+      "sha256": "ab6d595398f3434fc8e173581c51788e760b6b0a69c8265a4389e8c90ab5264d"
     }
   ],
   "mapping_schema_updated_date": "2026-09-18",
@@ -188,11 +213,12 @@
     "插图编号",
     "对应口播"
   ],
-  "handoff_updated_date": "2026-09-18",
+  "handoff_updated_date": "2026-10-05",
   "repository": "https://github.com/KAtOReNA7/tiktok",
   "branch": "main",
   "contains_completed_video": false,
   "scope": "project_rules_handoff_and_reusable_assets_only",
   "includes_episode_content": false,
-  "updated_date": "2026-09-24"
+  "updated_date": "2026-10-05",
+  "remote_figma_verified_date": "2026-10-05"
 }

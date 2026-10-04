@@ -1,22 +1,23 @@
 {
-  "template_id": "RYP_WHITE_SINGLE_V1_1",
-  "version": "1.1",
-  "approval_date": "2026-09-16",
-  "status": "REVISED_PER_USER_REQUEST",
+  "template_id": "RYP_STORY_MAIN_V2",
+  "version": "2.0",
+  "prd_version": "7.8",
+  "approval_date": "2026-10-05",
+  "status": "APPROVED_DEFAULT_FOR_NEW_PRODUCTION",
   "figma": {
     "file_key": "gc9VEwuG01X8ZsMTHg7HsQ",
-    "page_id": "50:2",
-    "master_id": "50:60",
-    "work_copy_id": "50:4",
-    "base_plate_id": "43:7",
-    "reuse_check_id": "45:2",
-    "asset_type": "editable_frame_copy_template",
-    "named_version_history_saved": false,
-    "history_note": "当前接口不支持命名版本历史；已另建专用资产页和锁定母版留档",
-    "rules_id": "48:2",
-    "intro_id": "51:2",
-    "previous_version_page": "42:2",
-    "reuse_check_version": "1.0"
+    "page_id": "75:2",
+    "component_set_id": "76:99",
+    "review_board_id": "78:2",
+    "guide_board_id": "78:108",
+    "asset_type": "component_variants",
+    "sample_caption_visibility_property": "显示字幕示例文字#82:0",
+    "sample_caption_default_visible": false,
+    "verified_date": "2026-10-05",
+    "review_url": "https://www.figma.com/design/gc9VEwuG01X8ZsMTHg7HsQ?node-id=78-2",
+    "guide_url": "https://www.figma.com/design/gc9VEwuG01X8ZsMTHg7HsQ?node-id=78-108",
+    "preserve_masters": true,
+    "ordinary_production_requires_remote_access": false
   },
   "canvas": {
     "width": 1080,
@@ -27,198 +28,495 @@
   },
   "palette": {
     "background": "#FAFAFA",
-    "footer": "#F0F0F0",
     "title": "#161616",
-    "secondary": "#303030",
-    "source": "#3D3D3D",
+    "secondary": "#595959",
+    "source": "#595959",
     "caption_bg": "#1C1C1C",
     "caption_text": "#FFFFFF",
-    "footer_brand": "#595959",
     "fluorescent": "#F2FA00",
     "seal": "#AA352D",
-    "tick": "#D4D4D4",
-    "vertical_rule": "#DADADA"
+    "line": "#DADADA",
+    "white": "#FFFFFF"
   },
   "fields": {
-    "段落小标题": {
-      "source_node_id": "50:33",
-      "name": "可替换/段落小标题",
-      "bounds": [
-        96,
-        248,
-        776,
-        38
-      ],
-      "font_family": "Noto Sans SC",
-      "font_style": "Bold",
-      "font_size": 30,
-      "line_height": 36,
-      "color": "#303030"
-    },
-    "主标题": {
-      "source_node_id": "50:35",
-      "name": "可替换/主标题",
-      "bounds": [
-        96,
-        306,
-        776,
-        176
-      ],
-      "font_family": "Noto Sans SC",
-      "font_style": "Black",
-      "font_size": 72,
-      "line_height": 88,
-      "color": "#161616"
-    },
-    "期数": {
-      "source_node_id": "50:37",
-      "name": "可替换/期数",
-      "bounds": [
-        142,
-        492,
-        160,
-        34
-      ],
-      "font_family": "Noto Sans SC",
-      "font_style": "Bold",
-      "font_size": 28,
-      "line_height": 34,
-      "color": "#161616"
-    },
     "漫画主画面": {
-      "source_node_id": "50:39",
-      "name": "可替换/漫画主画面",
       "bounds": [
-        128,
-        536,
-        744,
-        752
+        40,
+        208,
+        1000,
+        1472
+      ],
+      "source_node_id": "76:30",
+      "clip": true,
+      "preferred_art_ratio": "1000:1472",
+      "area_fraction": 0.709877,
+      "area_includes_overlaid_text": true,
+      "caption_exclusion_within_art_window": [
+        56,
+        1200,
+        776,
+        128
       ]
     },
+    "段落小标题": {
+      "bounds": [
+        80,
+        256,
+        448,
+        44
+      ],
+      "source_node_id": "76:34",
+      "font_family": "Noto Sans SC",
+      "font_style": "Bold",
+      "font_size": 34,
+      "line_height": 44,
+      "color": "#161616",
+      "container_bounds": [
+        64,
+        240,
+        480,
+        76
+      ],
+      "container_fill": "#F2FA00"
+    },
+    "主标题": {
+      "bounds": [
+        88,
+        342,
+        768,
+        208
+      ],
+      "source_node_id": "76:14",
+      "font_family": "Noto Sans SC",
+      "font_style": "Black",
+      "font_size": 86,
+      "line_height": 104,
+      "color": "#FFFFFF",
+      "variants": [
+        "cover_opening"
+      ],
+      "container_bounds": [
+        64,
+        318,
+        816,
+        256
+      ],
+      "container_fill": "#161616",
+      "emphasis_fill": "#F2FA00"
+    },
+    "人物身份": {
+      "bounds": [
+        532,
+        1132,
+        226,
+        44
+      ],
+      "source_node_id": "76:36",
+      "font_family": "Noto Sans SC",
+      "font_style": "Bold",
+      "font_size": 34,
+      "line_height": 44,
+      "color": "#161616",
+      "container_bounds": [
+        520,
+        1120,
+        250,
+        68
+      ],
+      "container_fill": "#FAFAFA",
+      "movable": true,
+      "position_is_example": true,
+      "blank_base_contains_label": false
+    },
+    "强调短句": {
+      "bounds": [
+        84,
+        1180,
+        704,
+        72
+      ],
+      "source_node_id": "76:60",
+      "font_family": "Noto Sans SC",
+      "font_style": "Black",
+      "font_size": 58,
+      "line_height": 72,
+      "color": "#161616",
+      "container_bounds": [
+        64,
+        1160,
+        744,
+        112
+      ],
+      "container_fill": "#F2FA00",
+      "variants": [
+        "closeup"
+      ]
+    },
+    "证据卡": {
+      "bounds": [
+        64,
+        440,
+        816,
+        272
+      ],
+      "source_node_id": "76:83",
+      "container_fill": "#FAFAFA",
+      "variants": [
+        "evidence"
+      ],
+      "children": {
+        "标识": {
+          "bounds": [
+            96,
+            472,
+            752,
+            44
+          ],
+          "source_node_id": "76:85",
+          "font_family": "Noto Sans SC",
+          "font_style": "Bold",
+          "font_size": 34,
+          "line_height": 44,
+          "color": "#AA352D"
+        },
+        "原文": {
+          "bounds": [
+            96,
+            540,
+            752,
+            72
+          ],
+          "source_node_id": "76:86",
+          "font_family": "Noto Sans SC",
+          "font_style": "Black",
+          "font_size": 58,
+          "line_height": 72,
+          "color": "#161616"
+        },
+        "解释": {
+          "bounds": [
+            96,
+            636,
+            752,
+            44
+          ],
+          "source_node_id": "76:87",
+          "font_family": "Noto Sans SC",
+          "font_style": "Bold",
+          "font_size": 34,
+          "line_height": 44,
+          "color": "#161616"
+        }
+      }
+    },
+    "字幕视频预留槽": {
+      "bounds": [
+        96,
+        1408,
+        776,
+        128
+      ],
+      "source_node_id": "76:37",
+      "fill": "#1C1C1C",
+      "fixed_across_all_variants": true,
+      "empty_in_scene_plate": true
+    },
     "口播字幕": {
-      "source_node_id": "50:41",
-      "name": "可替换/口播字幕",
       "bounds": [
         120,
         1420,
         728,
         104
       ],
+      "source_node_id": "76:38",
       "font_family": "Noto Sans SC",
       "font_style": "Bold",
       "font_size": 44,
       "line_height": 52,
-      "color": "#FFFFFF"
+      "color": "#FFFFFF",
+      "align": "center",
+      "visible_in_scene_plate": false,
+      "caption_spec": "spec/caption_style.json"
     },
     "短出处": {
-      "source_node_id": "50:42",
-      "name": "可替换/短出处",
       "bounds": [
-        128,
-        1336,
-        620,
-        40
+        76,
+        1604,
+        792,
+        38
       ],
+      "source_node_id": "76:40",
       "font_family": "Noto Sans SC",
       "font_style": "Bold",
+      "font_size": 28,
+      "line_height": 38,
+      "color": "#595959",
+      "container_bounds": [
+        64,
+        1592,
+        816,
+        62
+      ],
+      "container_fill": "#FAFAFA"
+    },
+    "品牌": {
+      "bounds": [
+        56,
+        104,
+        400,
+        40
+      ],
+      "source_node_id": "76:28",
+      "font_family": "Noto Sans SC",
+      "font_style": "Black",
       "font_size": 32,
       "line_height": 40,
-      "color": "#3D3D3D"
+      "color": "#161616",
+      "text": "三只不服"
+    },
+    "口号": {
+      "bounds": [
+        648,
+        108,
+        240,
+        38
+      ],
+      "source_node_id": "76:29",
+      "font_family": "Noto Sans SC",
+      "font_style": "Bold",
+      "font_size": 28,
+      "line_height": 38,
+      "color": "#595959",
+      "text": "古今皆可评"
+    },
+    "朱印": {
+      "bounds": [
+        824,
+        1714,
+        56,
+        92
+      ],
+      "source_node_id": "76:46",
+      "fill": "#AA352D",
+      "text": "锐\n评"
+    },
+    "底部细线": {
+      "bounds": [
+        56,
+        1810,
+        824,
+        2
+      ],
+      "source_node_id": "76:45",
+      "fill": "#DADADA"
+    }
+  },
+  "variants": {
+    "cover_opening": {
+      "label": "封面开场",
+      "component_id": "76:2",
+      "example_instance_id": "78:6",
+      "base_plate": "assets/template/v2/cover_opening_base_1080x1920.png",
+      "chapter_container_bounds": [
+        64,
+        240,
+        260,
+        76
+      ],
+      "chapter_text_bounds": [
+        80,
+        256,
+        228,
+        44
+      ],
+      "caption_slot_bounds": [
+        96,
+        1408,
+        776,
+        128
+      ]
+    },
+    "body": {
+      "label": "正文大画面",
+      "component_id": "76:24",
+      "example_instance_id": "78:29",
+      "base_plate": "assets/template/v2/body_base_1080x1920.png",
+      "chapter_container_bounds": [
+        64,
+        240,
+        480,
+        76
+      ],
+      "chapter_text_bounds": [
+        80,
+        256,
+        448,
+        44
+      ],
+      "caption_slot_bounds": [
+        96,
+        1408,
+        776,
+        128
+      ]
+    },
+    "closeup": {
+      "label": "局部特写",
+      "component_id": "76:48",
+      "example_instance_id": "78:54",
+      "base_plate": "assets/template/v2/closeup_base_1080x1920.png",
+      "chapter_container_bounds": [
+        64,
+        240,
+        480,
+        76
+      ],
+      "chapter_text_bounds": [
+        80,
+        256,
+        448,
+        44
+      ],
+      "caption_slot_bounds": [
+        96,
+        1408,
+        776,
+        128
+      ],
+      "crop_rule": "按本期脸、动作或关键道具取局部，保持比例；秦始皇示例的放大偏移不是固定参数。"
+    },
+    "evidence": {
+      "label": "原文证据",
+      "component_id": "76:72",
+      "example_instance_id": "78:79",
+      "base_plate": "assets/template/v2/evidence_base_1080x1920.png",
+      "chapter_container_bounds": [
+        64,
+        240,
+        480,
+        76
+      ],
+      "chapter_text_bounds": [
+        80,
+        256,
+        448,
+        44
+      ],
+      "caption_slot_bounds": [
+        96,
+        1408,
+        776,
+        128
+      ]
     }
   },
   "limits": {
     "title_max_lines": 2,
-    "title_approx_fullwidth_chars_per_line": 10,
+    "title_approx_fullwidth_chars_per_line": 8,
     "caption_max_lines": 2,
     "caption_approx_fullwidth_chars_per_line": 16,
     "source_max_lines": 1,
-    "chapter_short_title_recommended_characters": [
-      4,
-      8
-    ],
     "text_opacity": 1,
     "auto_shrink_text": false,
-    "comic_stroke_width": 3,
-    "comic_stroke_align": "INSIDE"
+    "all_variants_required_per_episode": false,
+    "body_repeats_full_episode_title": false,
+    "giant_footer_brand": false,
+    "text_fit_requires_actual_render_check": true
   },
   "safe_area": {
-    "bounds": [
-      96,
-      240,
-      776,
-      1296
+    "key_content_horizontal": [
+      64,
+      904
     ],
-    "validation": "provisional_pending_douyin_device_check",
-    "important_text_inside": true
+    "reserved_top_px": 208,
+    "reserved_right_px": 152,
+    "reserved_bottom_px": 270,
+    "validation": "project_reservations_not_official_universal_douyin_dimensions",
+    "important_content_avoids_caption_slot": true,
+    "image_may_extend_under_reserved_ui": true,
+    "final_device_preview_required": true
   },
   "characters": {
-    "overlay_file": "assets/hosts_qin_reference/hosts_qin_overlay_1080x1920.png",
-    "source_canvas": [
-      640,
-      640
+    "identity_spec": "spec/character_identity.json",
+    "signature_bounds": [
+      56,
+      1710,
+      230,
+      82
     ],
+    "overlay_file": "assets/template/v2/hosts_signature_qin_reference_1080x1920.png",
+    "signature_role": "small_decorative_independent_layer",
+    "signature_carries_critical_information": false,
     "rotation": 0,
-    "edge_of": "actual_video_canvas",
-    "cropping_allowed": true,
-    "carries_critical_information": false,
     "slots": {
       "doro": {
         "bounds": [
-          936,
-          96,
-          180,
-          180
+          56,
+          1710,
+          82,
+          82
         ],
-        "file": "assets/hosts_qin_reference/doro_qin_edge.png",
-        "cos": "秦始皇"
+        "file": "assets/hosts_qin_reference/doro_qin_edge.png"
       },
       "gugu": {
         "bounds": [
-          -30,
-          784,
-          180,
-          180
+          130,
+          1710,
+          82,
+          82
         ],
-        "file": "assets/hosts_qin_reference/gugu_qin_edge.png",
-        "cos": "传令官"
+        "file": "assets/hosts_qin_reference/gugu_qin_edge.png"
       },
       "mambo": {
         "bounds": [
-          128,
-          1785,
-          150,
-          150
+          204,
+          1710,
+          82,
+          82
         ],
-        "file": "assets/hosts_qin_reference/mambo_qin_edge.png",
-        "cos": "劳役者"
+        "file": "assets/hosts_qin_reference/mambo_qin_edge.png"
       }
     },
     "topic_specific": true,
-    "reuse_rule": "秦朝服装只作本期样例；新选题编辑cos，保持外缘锚点、透明留白和视觉大小。"
+    "reuse_rule": "底部三位签名以现有秦装为通用参考；需要换装时按本期设定编辑服饰，保持三位原Q版身份及V2锚点。正文角色独立按剧情出演；旧版全屏外缘overlay不能直接贴到V2。"
   },
-  "title_highlight": {
-    "source_node_id": "50:59",
-    "layer_name": "可替换/标题关键词底色",
-    "text": "过誉",
-    "bounds": [
-      164,
-      398,
-      152,
-      80
+  "local_assets": {
+    "base_type": "transparent_rgba_ui_overlay",
+    "base_layer_order": "above_comic_below_episode_text_and_caption_video",
+    "transparent_story_bounds": [
+      40,
+      208,
+      1000,
+      1472
     ],
-    "fill": "#F2FA00",
-    "text_fill": "#161616",
-    "text_font_px": 72,
-    "text_font_weight": "Black",
-    "z_order": "behind_title",
-    "optional": true,
-    "position_rule": "与关键词对应；换标题后重新定位或隐藏；不是固定底板的一部分",
-    "example_title": "秦始皇\n最过誉的皇帝？",
-    "note": "example_title与bounds为秦始皇示例；新标题按实际关键词位置移动或隐藏。"
+    "base_has_sample_art": false,
+    "base_has_sample_episode_text": false,
+    "base_has_hosts": false,
+    "base_keeps_empty_caption_slot": true,
+    "fixed_card_backgrounds_in_base": true,
+    "moving_or_resizing_cards": "rebuild_from_current_spec_or_Figma_instance; do_not_leave_original_baked_card_underneath",
+    "movable_identity_card": "draw_separately_from_fields; not_baked_in_base"
   },
-  "prd_version": "7.1",
-  "parameter_status": "inherited_design_baseline_not_new_machine_verified",
-  "note": "PRD V7合并行为规则；几何沿用V1.1。远端Figma本轮未重新验证或修改。用户新模板优先。",
+  "migration": {
+    "effective_date": "2026-10-05",
+    "new_production_default": "RYP_STORY_MAIN_V2",
+    "completed_videos_rebuild": false,
+    "in_progress_legacy_work": "follow_current_user_task_do_not_force_migration",
+    "old_computer_sync": "only_explicit_rules_update_then_local_continue",
+    "other_computers_auto_updated": false,
+    "instructions_must_name_prd_and_template_versions": true,
+    "missing_v2_assets": "search_local_report_specific_gaps_continue_independent_steps_no_silent_v1_fallback_no_auto_remote_sync"
+  },
+  "legacy": {
+    "template_id": "RYP_WHITE_SINGLE_V1_1",
+    "status": "legacy_tasks_only",
+    "figma_page_id": "50:2",
+    "figma_master_id": "50:60",
+    "figma_work_copy_id": "50:4",
+    "base_plate": "assets/template/base_plate_1080x1920.png",
+    "hosts_overlay": "assets/hosts_qin_reference/hosts_qin_overlay_1080x1920.png",
+    "use_for_new_v2_production": false
+  },
   "production": {
     "default_mode": "assets_for_human_editing",
     "ai_video": false,
@@ -234,7 +532,7 @@
     "voice_subtitles_in_scene_plate": false,
     "hosts_in_scene_plate": false,
     "raw_comic_required": true,
-    "remote_figma_checked_this_merge": false,
+    "remote_figma_checked_this_merge": true,
     "sound_effects": false,
     "background_music": false,
     "light_motion": false,
@@ -250,6 +548,9 @@
     "one_sentence_description_per_part": true,
     "delivery_format": "folder",
     "delivery_root": "交付",
-    "compress_delivery": false
-  }
+    "compress_delivery": false,
+    "caption_slot_must_remain_empty": true,
+    "offline_template_available": true
+  },
+  "note": "V2四种镜头版式属于同一节目，按叙事需要选用，不是新增四档栏目。模板示例的秦始皇原画、文字与裁切不是新选题素材或强制构图。字幕几何及交付规格沿用既有黑底MP4流程。"
 }

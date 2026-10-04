@@ -1,6 +1,6 @@
 {
-  "schema_version": "1.1",
-  "template_id": "RYP_WHITE_SINGLE_V1_1",
+  "schema_version": "1.2",
+  "template_id": "RYP_STORY_MAIN_V2",
   "coordinate_system": "1080x1920_canvas_pixels_not_jianying_panel_units",
   "background": {
     "bounds": [
@@ -10,7 +10,8 @@
       128
     ],
     "fill": "#1C1C1C",
-    "already_in_base_plate": true
+    "already_in_base_plate": true,
+    "fixed_across_all_v2_variants": true
   },
   "text": {
     "bounds": [
@@ -40,7 +41,7 @@
   },
   "calibration": "渲染时对齐固定字幕文字框；用户提供更新黑框规格时据其校准，不让用户逐条设置字幕样式。",
   "transparent_export": "not_default_black_background_requested",
-  "prd_version": "7.1",
+  "prd_version": "7.8",
   "delivery": {
     "primary": "black_background_mp4",
     "srt_is_auxiliary": true,
@@ -73,6 +74,14 @@
       12,
       728,
       104
-    ]
+    ],
+    "compositing": "normal_opaque_overlay_no_chroma_key_no_screen_blend_no_stretch"
+  },
+  "compatible_legacy_template_id": "RYP_WHITE_SINGLE_V1_1",
+  "updated_date": "2026-10-05",
+  "scene_plate": {
+    "example_text_visible": false,
+    "bake_narration_text": false,
+    "keep_empty_black_slot": true
   }
 }

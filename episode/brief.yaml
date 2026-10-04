@@ -1,5 +1,5 @@
 # 空白任务模板。下一选题尚未由本包确定。
-prd_version: '7.7'
+prd_version: '7.8'
 episode_id: null
 topic: null
 core_claim: null
@@ -10,7 +10,18 @@ script_version: null
 part_count: null
 scope: null
 human_editor: user
-template_id: RYP_WHITE_SINGLE_V1_1
+template_id: RYP_STORY_MAIN_V2
+# 四种为同一节目的可选镜头版式，不要求全部出现。
+template_spec: spec/template.json
+template_variant_policy: choose_per_shot
+template_asset_root: assets/template/v2
+template_asset_kind: transparent_overlay
+# 层序：独立漫画→透明底板→独立文字／三位签名→后续字幕MP4。
+# 仅记录已在本机取得的版本；缺件不自动联网、不回退旧模板。
+local_template_verified: null
+template_missing_dependencies: []
+caption_slot: {x: 96, y: 1408, width: 776, height: 128, background: '#1C1C1C'}
+caption_placeholder_visible: false
 ai_video: false
 jianying_assistant: false
 full_gui_assembly: false

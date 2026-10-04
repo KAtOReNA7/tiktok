@@ -1,11 +1,18 @@
 {
   "schema_version": 1,
-  "prd_version": "7.7",
-  "updated_date": "2026-09-24",
+  "prd_version": "7.8",
+  "updated_date": "2026-10-05",
   "principle": "三位原有Q版角色本人演故事；剧情身份只改变服饰、道具和表演",
   "all_hosts_must_be_chibi": true,
   "preserve_actor_identity_and_body_structure": true,
-  "scope": ["正文", "封面", "动作与侧背面镜头", "本期定妆", "页边透明层", "返修"],
+  "scope": [
+    "正文",
+    "封面",
+    "动作与侧背面镜头",
+    "本期定妆",
+    "模板透明角色层（V2底部签名／旧版页边）",
+    "返修"
+  ],
   "actual_reference_input_for_each_visible_host": true,
   "text_path_is_not_reference_input": true,
   "costume_reference_cannot_override_identity": true,
@@ -14,7 +21,13 @@
       "name": "Doro",
       "identity_reference": "refs/identity/doro_primary_user.png",
       "reference_origin": "用户身份原图",
-      "features": ["宽圆脸", "粉色分束刘海", "侧边玫瑰卷与蝴蝶结", "简洁紫眼与小嘴", "白色短肢团状身体"],
+      "features": [
+        "宽圆脸",
+        "粉色分束刘海",
+        "侧边玫瑰卷与蝴蝶结",
+        "简洁紫眼与小嘴",
+        "白色短肢团状身体"
+      ],
       "body_rule": "保留原非人形团状身体，不变成人形少女或男子",
       "expression_reference": "refs/identity/doro_expression_user.png",
       "expression_reference_scope": "仅右下角粉发Doro"
@@ -23,20 +36,40 @@
       "name": "咕咕嘎嘎",
       "identity_reference": "assets/hosts_qin_reference/gugu_qin_edge.png",
       "reference_origin": "现有秦装Q版参考；未提供更原始全身身份图",
-      "features": ["黑色短发刘海与侧辫", "圆脸大灰黑眼", "小嘴", "企鹅兜帽黑白轮廓与黄色喙", "大头短身和短四肢"],
+      "features": [
+        "黑色短发刘海与侧辫",
+        "圆脸大灰黑眼",
+        "小嘴",
+        "企鹅兜帽黑白轮廓与黄色喙",
+        "大头短身和短四肢"
+      ],
       "body_rule": "保持原Q版与年龄观感、性别表达，服装换为剧情需要，不成人男性化"
     },
     "mambo": {
       "name": "曼波",
       "identity_reference": "assets/hosts_qin_reference/mambo_qin_edge.png",
       "reference_origin": "现有秦装Q版参考；未提供更原始全身身份图",
-      "features": ["栗棕色刘海与发束侧辫", "蓝色花饰", "马耳", "琥珀色大眼", "圆脸小嘴与大头短身"],
+      "features": [
+        "栗棕色刘海与发束侧辫",
+        "蓝色花饰",
+        "马耳",
+        "琥珀色大眼",
+        "圆脸小嘴与大头短身"
+      ],
       "body_rule": "保持原Q版与年龄观感、性别表达，不加胡须或成年男性骨架"
     }
   },
   "human_shaped_hosts_full_body_check": "约2—3头身为辅助；以原参考Q版观感为准，特写和透视不机械量比",
   "doro_uses_own_body_structure": true,
-  "forbidden_identity_substitutions": ["成年男性coser", "成熟男性脸和自然胡须", "写实肌肉或长腿窄头", "把成人缩小", "陌生Q版人物只贴耳朵发饰", "Doro人形化", "仅页边Q版而正文成人化"],
+  "forbidden_identity_substitutions": [
+    "成年男性coser",
+    "成熟男性脸和自然胡须",
+    "写实肌肉或长腿窄头",
+    "把成人缩小",
+    "陌生Q版人物只贴耳朵发饰",
+    "Doro人形化",
+    "仅页边Q版而正文成人化"
+  ],
   "qa": {
     "each_visible_host_each_output": true,
     "inspect_actual_images": true,
