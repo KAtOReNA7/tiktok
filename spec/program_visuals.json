@@ -1,0 +1,144 @@
+{
+  "version": "1.0",
+  "effective_date": "2026-10-05",
+  "status": "READY_FOR_REVERSIBLE_PROGRAM_TRIAL",
+  "scope": "Three program families; variants within a family are shot layouts, not separate programs",
+  "figma": {
+    "file_key": "gc9VEwuG01X8ZsMTHg7HsQ",
+    "page_id": "89:2",
+    "page_name": "05 · V2｜答疑与同尺三案",
+    "review_board_id": "92:2",
+    "review_url": "https://www.figma.com/design/gc9VEwuG01X8ZsMTHg7HsQ?node-id=92-2",
+    "main_program_page_preserved": "75:2",
+    "ordinary_production_requires_remote_access": false
+  },
+  "shared": {
+    "canvas": [1080, 1920],
+    "story_bounds": [40, 208, 1000, 1472],
+    "caption_slot_bounds": [96, 1408, 776, 128],
+    "caption_slot_rgba": [28, 28, 28, 255],
+    "caption_text_bounds": [120, 1420, 728, 104],
+    "caption_font": {"family": "Noto Sans SC", "style": "Bold", "size": 44, "line_height": 52, "max_lines": 2},
+    "caption_example_visible": false,
+    "character_spec": "spec/character_identity.json",
+    "signature_bounds": [56, 1710, 230, 82],
+    "signature_overlay_reference": "assets/template/v2/hosts_signature_qin_reference_1080x1920.png",
+    "signature_is_topic_specific_independent_layer": true,
+    "font_family": "Noto Sans SC",
+    "palette_source": "spec/template.json",
+    "safe_area_source": "spec/template.json",
+    "layer_order": ["本期独立漫画", "所选栏目的一张透明底板", "本期独立可编辑栏目及内容文字", "本期三位Q版小签名", "最终黑底字幕MP4"],
+    "do_not_stack_multiple_full_canvas_bases": true,
+    "scene_plate_keeps_caption_empty": true,
+    "base_has_sample_art": false,
+    "base_has_text": false,
+    "base_has_hosts": false,
+    "base_type": "transparent_rgba_ui_overlay",
+    "preview_art_note": "Figma为结构演示复用既有秦始皇原画；不是新选题素材。不得把预览图当底板或复用为其他故事。",
+    "fixed_text_must_be_rendered_separately": {
+      "brand": {"text": "三只不服", "bounds": [56, 104, 400, 40], "size": 32, "line_height": 40, "style": "Black", "color": "#161616"},
+      "program": {"bounds": [648, 108, 240, 38], "size": 28, "line_height": 38, "style": "Bold", "color": "#595959"},
+      "source": {"bounds": [76, 1604, 792, 38], "size": 28, "line_height": 38, "style": "Bold", "color": "#595959", "max_lines": 1},
+      "seal": {"text": "锐\n评", "bounds": [832, 1722, 40, 76], "size": 28, "line_height": 38, "style": "Bold", "color": "#FFFFFF", "max_lines": 2}
+    }
+  },
+  "programs": {
+    "MAIN_ACCOUNT": {
+      "label": "名场面算账",
+      "template_id": "RYP_STORY_MAIN_V2",
+      "spec_source": "spec/template.json",
+      "base_directory": "assets/template/v2",
+      "variants": ["cover_opening", "body", "closeup", "evidence"],
+      "program_label_rule": "用既有小栏目/段落标识，不恢复正文巨大整集标题；四种为按需镜头版式，不强制全用。",
+      "source_note": "既有四版资产已验证，本文件不重定义或修改其像素。"
+    },
+    "COUNTER_REPLY": {
+      "label": "最强反方答疑",
+      "template_id": "RYP_COUNTER_REPLY_V1",
+      "component_set_id": "90:59",
+      "recognition": "朱红短签＋黑色问题卡；答复阶段保留短问题条，新增下方证据答复卡",
+      "short_label": "有理也得答",
+      "short_label_text": {"bounds": [76, 252, 224, 44], "size": 34, "line_height": 44, "style": "Bold", "color": "#FFFFFF"},
+      "variants": {
+        "question": {
+          "component_id": "90:2",
+          "export_node_id": "92:33",
+          "base_plate": "assets/template/v2/programs/counter_question_base_1080x1920.png",
+          "cards": {"question": [64, 336, 816, 300], "answer_tease": [64, 1210, 816, 124]},
+          "text": {
+            "question_label": {"bounds": [88, 360, 768, 44], "size": 34, "line_height": 44, "style": "Bold", "color": "#F2FA00", "max_lines": 1},
+            "question": {"bounds": [88, 416, 768, 176], "size": 72, "line_height": 88, "style": "Black", "color": "#FFFFFF", "max_lines": 2},
+            "answer_tease": {"bounds": [88, 1234, 768, 64], "size": 48, "line_height": 64, "style": "Black", "color": "#161616", "max_lines": 1}
+          }
+        },
+        "reply": {
+          "component_id": "90:30",
+          "export_node_id": "92:90",
+          "base_plate": "assets/template/v2/programs/counter_reply_base_1080x1920.png",
+          "cards": {"question": [64, 336, 816, 128], "evidence_reply": [64, 1036, 816, 300]},
+          "text": {
+            "short_question": {"bounds": [88, 360, 768, 64], "size": 48, "line_height": 64, "style": "Black", "color": "#FFFFFF", "max_lines": 1},
+            "evidence_label": {"bounds": [88, 1060, 768, 44], "size": 34, "line_height": 44, "style": "Bold", "color": "#AA352D", "max_lines": 1},
+            "evidence_answer": {"bounds": [88, 1116, 768, 128], "size": 48, "line_height": 64, "style": "Black", "color": "#161616", "max_lines": 2},
+            "limit_or_result": {"bounds": [88, 1256, 768, 44], "size": 34, "line_height": 44, "style": "Bold", "color": "#595959", "max_lines": 1}
+          }
+        }
+      },
+      "switch_rule": "问题与最强反方必须准确表达；正文给直接答案，再给证据及适用边界。静态切换与信息推进一致，不持续把同一句问题盖在所有正文上。"
+    },
+    "SAME_RULE_COMPARE": {
+      "label": "同尺三案比较",
+      "template_id": "RYP_SAME_RULE_COMPARE_V1",
+      "component_set_id": "90:216",
+      "recognition": "荧光黄短签＋固定比较标准＋三案状态槽，当前项高亮",
+      "short_label": "同一把尺子",
+      "short_label_text": {"bounds": [76, 252, 224, 44], "size": 34, "line_height": 44, "style": "Bold", "color": "#161616"},
+      "cards": {"standard": [64, 336, 816, 184], "case_slots": [[64, 548, 264, 120], [340, 548, 264, 120], [616, 548, 264, 120]], "case_evidence": [64, 1096, 816, 240]},
+      "text": {
+        "standard_label": {"bounds": [88, 360, 768, 44], "size": 34, "line_height": 44, "style": "Bold", "color": "#F2FA00", "max_lines": 1},
+        "standard": {"bounds": [88, 414, 768, 64], "size": 48, "line_height": 64, "style": "Black", "color": "#FFFFFF", "max_lines": 1},
+        "case_names": {"bounds": [[76, 560, 240, 56], [352, 560, 240, 56], [628, 560, 240, 56]], "size": 42, "line_height": 56, "style": "Black", "color": "#161616", "max_lines": 1},
+        "case_statuses": {"bounds": [[76, 618, 240, 38], [352, 618, 240, 38], [628, 618, 240, 38]], "size": 28, "line_height": 38, "style": "Bold", "color": "#595959", "max_lines": 1},
+        "current_label": {"bounds": [88, 1120, 768, 44], "size": 34, "line_height": 44, "style": "Bold", "color": "#AA352D", "max_lines": 1},
+        "current_evidence": {"bounds": [88, 1176, 768, 128], "size": 48, "line_height": 64, "style": "Black", "color": "#161616", "max_lines": 2}
+      },
+      "variants": {
+        "standard": {"component_id": "90:60", "export_node_id": "92:158", "base_plate": "assets/template/v2/programs/compare_standard_base_1080x1920.png", "active_case": 0, "visible_case_names": 0},
+        "reveal_1": {"component_id": "90:99", "export_node_id": "92:237", "base_plate": "assets/template/v2/programs/compare_reveal_1_base_1080x1920.png", "active_case": 1, "visible_case_names": 1},
+        "reveal_2": {"component_id": "90:138", "export_node_id": "92:315", "base_plate": "assets/template/v2/programs/compare_reveal_2_base_1080x1920.png", "active_case": 2, "visible_case_names": 2},
+        "reveal_3": {"component_id": "90:177", "export_node_id": "92:393", "base_plate": "assets/template/v2/programs/compare_reveal_3_base_1080x1920.png", "active_case": 3, "visible_case_names": 3}
+      },
+      "switch_rule": "标准先交代，按内容逐项揭示。此前已讲项目保留名称，未讲项目显示待揭示；每项新增明确行动、证据和代价。不要把三案顺序自动解释为道德排名；确要排名须先给统一尺度并说明并列/不可比。",
+      "figma_instance_rule": "切换变体不会自动填本期案例内容；必须逐实例设置案例名、状态、当前标识及当前证据文本属性。模板预览甲乙丙案仅演示状态，不能原样交付。"
+    }
+  },
+  "production": {
+    "ordinary_production": "读取本地spec与底板；不为开工联网检查Figma。",
+    "captions": "沿用spec/caption_style.json；没有最终人声不编时间码。",
+    "static_cuts_only": true,
+    "ai_video": false,
+    "animation": false,
+    "background_music": false,
+    "sound_effects": false,
+    "all_variants_required": false,
+    "extra_shots_only_for_new_information": true,
+    "text_fit": "不自动缩字、截断或删改锁稿。字段溢出先合理断行；超出卡片可容纳信息量时切为新信息镜头，不能挤进字幕槽。",
+    "moving_cards": "通用底板含卡片背景；移动/改尺寸须重导相应底板或按精确spec重建UI，不只移动文字。",
+    "scene_art": "漫画与UI分离；剧情主体/脸/动作/气泡避开卡片和字幕槽。",
+    "deliverable_mapping": "素材映射仍仅插图编号、对应口播两列。",
+    "branding": "三位仍为Q版本人，不以成人历史人物或陌生Q版替代。"
+  },
+  "validation": {
+    "verified_date": "2026-10-05",
+    "review_board_visually_checked": true,
+    "overlapping_multiline_text_fixed": true,
+    "font_family_verified": "Noto Sans SC",
+    "bases_decoded_as_rgba_png": true,
+    "all_bases_1080x1920": true,
+    "caption_slot_exact_uniform_rgba": [28, 28, 28, 255],
+    "transparent_story_probe": {"point": [500, 800], "rgba": [0, 0, 0, 0]},
+    "sample_art_text_hosts_not_exported": true,
+    "export_method": "Figma node.exportAsync PNG contentsOnly true, not screenshot with canvas background",
+    "live_video_performance_validated": false
+  }
+}

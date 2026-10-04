@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "prd_version": "7.9",
+  "prd_version": "7.10",
   "profile_id": "RETENTION_INFO_V1",
   "updated_date": "2026-10-05",
   "purpose": "正文持续提供事实、因果、证据和代价，让观众获得标题尚未讲完的信息。",
@@ -122,6 +122,8 @@
     ],
     "user_mapping_extra_columns_allowed": false,
     "real_timestamps_only_after_final_voice": true,
-    "operations_table_or_automation_change_required": false
+    "operations_table_or_automation_change_required": false,
+    "program_editorial_spec": "spec/program_editorial.json",
+    "operations_trial_boundary": "文案规则本身不自动修改运营；用户授权的栏目／验证任务按PRD 20.5和现行运营工作流执行。"
   }
 }

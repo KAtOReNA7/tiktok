@@ -1,0 +1,139 @@
+{
+  "schema_version": "1.0",
+  "prd_version": "7.10",
+  "profile_id": "PROGRAM_FAMILY_V1",
+  "updated_date": "2026-10-05",
+  "status": "active_revocable",
+  "account_promise": "熟悉的故事，算清主角得到什么、别人付出什么；有争议，回原文。",
+  "profile_copy_ready": "三只Q版演熟悉故事，算清主角的收获与别人的代价。有争议，回原文。",
+  "profile_edit_requires_current_site_task": true,
+  "fixed_release_frequency": null,
+  "fixed_program_ratio": null,
+  "template_id": "RYP_STORY_MAIN_V2",
+  "narrative_profile_id": "RETENTION_INFO_V1",
+  "visual_spec": "spec/program_visuals.json",
+  "base_layout_variants_are_programs": false,
+  "programs": {
+    "MAIN_ACCOUNT": {
+      "name": "名场面算账",
+      "viewer_reward": "熟悉事件中具体人物的所得、行为责任与他人的代价。",
+      "structure": [
+        "行动冲突",
+        "必要前因与关系",
+        "真实证据或新增发现",
+        "具体受损者与未结之账"
+      ],
+      "requires_real_comment": false,
+      "forbidden": [
+        "换词重复道德判词",
+        "一条爆款证明整本书所有角度有效",
+        "为了攻击删去影响责任的前因"
+      ]
+    },
+    "COUNTER_REPLY": {
+      "name": "最强反方答疑",
+      "viewer_reward": "真实争议最有力的理由是否成立，条件和边界是什么。",
+      "structure": [
+        "真实问题或最强异议",
+        "公平复述及必要上下文",
+        "关键原文与事实核对",
+        "明确回答与边界"
+      ],
+      "requires_real_comment": true,
+      "comment_evidence": [
+        "作品或评论来源",
+        "原话与上下文",
+        "原话与编辑概括区分",
+        "采集时点及可访问性"
+      ],
+      "forbidden": [
+        "伪造网友评论或截图",
+        "把少数回复说成所有人共识",
+        "故意弱化反方",
+        "只复述原主张不回答"
+      ],
+      "if_comment_unavailable": "可另做明确标为编辑提问的问答，不冒充本档真实评论答疑。"
+    },
+    "SAME_RULE_COMPARE": {
+      "name": "同尺三案比较",
+      "viewer_reward": "同一个问题用同一标准看三件事，知道差别为何成立。",
+      "case_count": 3,
+      "structure": [
+        "统一标准与范围",
+        "案例一相关证据",
+        "案例二同项证据",
+        "案例三同项证据",
+        "相同维度结论或并列"
+      ],
+      "requirements": [
+        "比较标准先写明",
+        "三案来源性质一致或明确分组且不混成同一事实层级",
+        "每案独立证据",
+        "不确定性与并列允许",
+        "只有排序证据充分才排名"
+      ],
+      "forbidden": [
+        "三篇旧稿拼接",
+        "中途替换比较标准",
+        "把史实小说混成同一事实层级",
+        "无总体样本宣称全历史前三",
+        "数字等级没有依据"
+      ]
+    }
+  },
+  "episode_record": {
+    "location": "existing_local_brief_or_production_log",
+    "fields": [
+      "program_id",
+      "viewer_question_and_reward",
+      "source_type_and_boundary",
+      "new_information_vs_recent_similar_episode",
+      "actual_visual_assets",
+      "script_lock_and_authorized_change_scope"
+    ],
+    "add_to_voice_script": false,
+    "add_to_user_scene_map": false
+  },
+  "validation": {
+    "multi_change_pilot_label": "组合试运行",
+    "multi_change_pilot_is_randomized_ab": false,
+    "single_cause_attribution_from_pilot": false,
+    "states_separate": [
+      "rules_ready",
+      "assets_ready",
+      "production_ready",
+      "published",
+      "effect_verified"
+    ],
+    "predefine": [
+      "question",
+      "primary_metric",
+      "secondary_metrics",
+      "observation_window",
+      "sample_and_comparability",
+      "continue_adjust_pause_conditions",
+      "review_time"
+    ],
+    "comparability": [
+      "duration",
+      "publication_age",
+      "traffic_type",
+      "character_familiarity",
+      "evidence_strength",
+      "uncontrolled_differences"
+    ],
+    "evaluate": [
+      "opening_exit",
+      "average_watch",
+      "completion",
+      "shares",
+      "follow_conversion",
+      "concrete_comment_demand"
+    ],
+    "small_sample_conclusion": "无法判定或方向性观察，不因单条表现定论整档节目。",
+    "dynamic_plan_location": "authorized_operations_workspace_and_feishu",
+    "reupload_old_completed_video_as_default_control": false,
+    "next_episode_promise": "仅预告已有材料的具体问题，本集仍完整回答，不强要关注。",
+    "intent_is_actual_conversion": false
+  }
+}

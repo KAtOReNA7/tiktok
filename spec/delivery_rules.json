@@ -1,5 +1,5 @@
 {
-  "prd_version": "7.9",
+  "prd_version": "7.10",
   "root_relative": "交付",
   "topic_directory": "{topic_id}_{topic_short_name}",
   "part_directory": "{part_number:02d}_第{part_number:02d}集_{part_short_title}",
@@ -92,7 +92,10 @@
         "narrative_profile_and_trial_scope",
         "complete_script_information_progression",
         "opening_middle_payoff_visual_alignment",
-        "locked_script_boundary"
+        "locked_script_boundary",
+        "program_id_and_editorial_structure",
+        "program_visual_assets_exist_and_checked",
+        "experiment_scope_and_no_false_ab_claim"
       ],
       "end_marker_is_narration": false
     }
@@ -166,5 +169,8 @@
   "template_spec": "spec/template.json",
   "default_template_id": "RYP_STORY_MAIN_V2",
   "narrative_spec": "spec/narrative_retention.json",
-  "narrative_profile_id": "RETENTION_INFO_V1"
+  "narrative_profile_id": "RETENTION_INFO_V1",
+  "program_editorial_spec": "spec/program_editorial.json",
+  "program_visual_spec": "spec/program_visuals.json",
+  "program_id_required": true
 }
