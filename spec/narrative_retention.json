@@ -1,0 +1,127 @@
+{
+  "schema_version": "1.0",
+  "prd_version": "7.9",
+  "profile_id": "RETENTION_INFO_V1",
+  "updated_date": "2026-10-05",
+  "purpose": "正文持续提供事实、因果、证据和代价，让观众获得标题尚未讲完的信息。",
+  "basis": "2026-10-04重新审计中的完播率建议；2026-10-05用户授权纳入后续文稿与执行指令。",
+  "trial": {
+    "status": "active_revocable",
+    "duration_target_s": [
+      25,
+      30
+    ],
+    "reference_structure_is_mandatory": false,
+    "stage_windows_are_actual_timecodes": false,
+    "guaranteed_retention_improvement": false,
+    "platform_standard": false,
+    "adjustment": "按后续真实表现与用户反馈调整或撤销；不得为满足五段或秒数机械填充、伪造反方或省掉必要前因。"
+  },
+  "duration": {
+    "existing_max_s": 40,
+    "includes_intro_outro_and_pauses": true,
+    "final_voice_rate_from_original": 1.25,
+    "apply_rate_once": true,
+    "estimate_before_audio_only": true,
+    "do_not_shrink_by_extra_speedup": true
+  },
+  "reference_structure": [
+    {
+      "stage": "action_conflict",
+      "suggested_window_s": [
+        0,
+        2
+      ],
+      "function": "具体人物／受损者＋正在发生的行动冲突；首句不能只是复读标题判词。"
+    },
+    {
+      "stage": "necessary_context",
+      "suggested_window_s": [
+        2,
+        5
+      ],
+      "function": "交代理解此事不可缺的动机、关系或前因；不省略会改变责任判断的事实。"
+    },
+    {
+      "stage": "first_evidence",
+      "suggested_window_s": [
+        5,
+        12
+      ],
+      "function": "第一项可核验的具体行为或证据，必要古文随即译成短白话。"
+    },
+    {
+      "stage": "new_discovery_or_counterargument",
+      "suggested_window_s": [
+        12,
+        20
+      ],
+      "function": "提供标题未讲完的新发现、后果或责任边界；若有真正相关的最强反方，用必要事实回应，不编稻草人，也不强制两面平衡。"
+    },
+    {
+      "stage": "payoff",
+      "suggested_window_s": [
+        20,
+        28
+      ],
+      "function": "回答开头冲突，落到具体人物得失、后果或已由事实建立的未解之账；不再复述开头判词或强要互动。"
+    }
+  ],
+  "writing_rules": {
+    "title_opening_and_ending_have_distinct_functions": true,
+    "new_verified_information_beyond_title": true,
+    "review_every_content_segment_for_information_gain": true,
+    "information_gain_types": [
+      "具体动作或事实",
+      "必要因果或关系",
+      "新证据及其含义",
+      "后果或代价",
+      "相关最强反方及事实回应",
+      "改变责任判断的限定条件"
+    ],
+    "remove_repetition_test": "删掉这句话若不损失事实、因果、人物关系、证据或结论推导，它是否只是换词重复谴责？是则删减或与相邻句合并。",
+    "connective_or_brief_explanation_allowed": true,
+    "fixed_number_of_facts_or_twists": false,
+    "counterargument_required_in_every_episode": false,
+    "sharp_supported_judgment_allowed": true,
+    "forbidden": [
+      "以人物生平和固定欢迎语慢热开场",
+      "正文反复换词重复同一指责",
+      "用“更离谱的还在后面”代替真实信息",
+      "虚构证据、引文、数字、反转或动机",
+      "为制造争议删去改变责任判断的前因",
+      "结尾再次完整复读标题或强行要求评论"
+    ],
+    "second_person_audience_address_default": false,
+    "source_categories_must_remain_distinct": true,
+    "voice_script_contains_only_narration": true
+  },
+  "visual_execution": {
+    "first_image_depicts_opening_action_conflict": true,
+    "first_character_identity_clear_without_knowing_actor": true,
+    "visual_change_follows_information_or_story_beat": true,
+    "angle_changes_alone_count_as_new_information": false,
+    "fixed_cut_interval_s": null,
+    "fixed_image_count": null,
+    "template_id": "RYP_STORY_MAIN_V2",
+    "all_template_variants_required": false,
+    "captions_and_template_geometry_unchanged": true,
+    "no_extra_motion_music_or_sound_effects": true
+  },
+  "workflow": {
+    "applies_to": "后续新写稿件、用户授权修改的稿件和相应生产指令；不自动重做已完成内容。",
+    "locked_script_auto_rewrite": false,
+    "production_instruction_includes_complete_approved_script": true,
+    "production_instruction_names_profile_and_version": true,
+    "draft_review_before_lock": "复核必要前因、每段信息增量、中段新发现或反方回应、结尾兑现。",
+    "after_lock": "按锁定稿完善画面及必要内部说明；发现内容问题报告具体句段，不静默改词或添新口播。",
+    "internal_record": "沿用本地brief、storyboard的visual_task/change_from_previous及production_log；不另建复杂评分或要求用户逐镜确认。",
+    "user_mapping_columns": [
+      "插图编号",
+      "对应口播"
+    ],
+    "user_mapping_extra_columns_allowed": false,
+    "real_timestamps_only_after_final_voice": true,
+    "operations_table_or_automation_change_required": false
+  }
+}

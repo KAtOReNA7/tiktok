@@ -20,7 +20,7 @@ REQUIRED = (
     "assets/template/base_plate_1080x1920.png",
     "refs/identity/doro_primary_user.png", "refs/identity/doro_expression_user.png",
     "spec/template.json", "spec/caption_style.json", "spec/delivery_rules.json",
-    "spec/character_identity.json",
+    "spec/character_identity.json", "spec/narrative_retention.json",
     "assets/hosts_qin_reference/gugu_qin_edge.png",
     "assets/hosts_qin_reference/mambo_qin_edge.png",
     "episode/scene_map.csv",
@@ -48,6 +48,10 @@ def main():
     if not rows or rows[0] != COLUMNS or any(len(r) != 2 for r in rows):
         raise ValueError("scene_map.csv must have exactly two columns")
     rules = json.loads((ROOT / "spec/delivery_rules.json").read_text(encoding="utf-8"))
+    narrative = json.loads((ROOT / "spec/narrative_retention.json").read_text(encoding="utf-8"))
+    if (rules["narrative_spec"] != "spec/narrative_retention.json"
+            or rules["narrative_profile_id"] != narrative["profile_id"]):
+        raise ValueError("Delivery instructions must reference the current narrative profile")
     if rules["scene_map"]["columns"] != COLUMNS or rules["scene_map"]["extra_columns_allowed"]:
         raise ValueError("delivery_rules.json has a conflicting scene-map schema")
     identity = json.loads((ROOT / "spec/character_identity.json").read_text(encoding="utf-8"))
@@ -102,7 +106,7 @@ def main():
     data = json.loads(MANIFEST.read_text(encoding="utf-8"))
     if data["layout_template"] != template["template_id"]:
         raise ValueError("Manifest points at the wrong default template")
-    if len({data["prd_version"], template["prd_version"], caption["prd_version"], rules["prd_version"]}) != 1:
+    if len({data["prd_version"], template["prd_version"], caption["prd_version"], rules["prd_version"], narrative["prd_version"]}) != 1:
         raise ValueError("PRD versions disagree across active specs")
     if args.refresh:
         data["files"] = []

@@ -1,5 +1,5 @@
 # 空白任务模板。下一选题尚未由本包确定。
-prd_version: '7.8'
+prd_version: '7.9'
 episode_id: null
 topic: null
 core_claim: null
@@ -11,6 +11,12 @@ part_count: null
 scope: null
 human_editor: user
 template_id: RYP_STORY_MAIN_V2
+narrative_profile_id: RETENTION_INFO_V1
+narrative_spec: spec/narrative_retention.json
+# 25–30秒仅为可撤销试验参考；按需填写，不覆盖40秒默认上限。
+trial_target_duration_s: null
+# 内部检查状态按实填写，null不是通过；不扩展用户两列映射。
+info_gain_review: null
 # 四种为同一节目的可选镜头版式，不要求全部出现。
 template_spec: spec/template.json
 template_variant_policy: choose_per_shot

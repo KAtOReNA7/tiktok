@@ -1,7 +1,7 @@
 {
   "package": "history_review_git_handoff",
   "format": "git_repository",
-  "prd_version": "7.8",
+  "prd_version": "7.9",
   "layout_template": "RYP_STORY_MAIN_V2",
   "created_date": "2026-09-17",
   "remote_figma_updated": true,
@@ -19,38 +19,38 @@
     },
     {
       "path": "AGENTS.md",
-      "bytes": 5988,
-      "sha256": "66da50a35656e3f241d93daf74dad207b6ff8a488644095cd42955297820d569"
+      "bytes": 7080,
+      "sha256": "a30e307727fb17ba21d1fc58d7e80bb6ef5b3a0062ca05006d93bdebe8f7cc10"
     },
     {
       "path": "CHANGELOG.md",
-      "bytes": 6854,
-      "sha256": "56c52e4900215c091ff42d15c4f57a9213c692c89cbfdbd00d9ceb969904b720"
+      "bytes": 8210,
+      "sha256": "7cdaddc8eab89510ed71fad86b4010e7c8d4f7028a49ba90914de280f0d6dbde"
     },
     {
       "path": "CHAT_HANDOFF.md",
-      "bytes": 12290,
-      "sha256": "769f533da25390122a779e6f2c02634c55eeb2521395ac9f07ebbf06dd1e143f"
+      "bytes": 14027,
+      "sha256": "9c8c9040f710d238d35d76b3705a2d111d52649d6bfe429e3dff54d7bfa8d4ed"
     },
     {
       "path": "PRD_V7.md",
-      "bytes": 87253,
-      "sha256": "1bc50672837f702f8e974410875e69e07e72b7a3151117671aadd47fc92bcb63"
+      "bytes": 94753,
+      "sha256": "6c146b5be1e4abcdc9d80d435013856edc6e13ba70e6fcdb0871cc5848bdb294"
     },
     {
       "path": "PROJECT_STATE.md",
-      "bytes": 4078,
-      "sha256": "af58c2cd14b35e7d3adbc631c9e03ac3b20e8b130e4ef15c8bbe2c4fd3f2ffb8"
+      "bytes": 4801,
+      "sha256": "690310331e6547ad9d19ec336d016acea6c44d951234c80e5ec7a739674c2430"
     },
     {
       "path": "README.md",
-      "bytes": 5455,
-      "sha256": "951c2e20df1179f93e5e16679565707cbb0138fd7060072bc19688f59e22fa5c"
+      "bytes": 6329,
+      "sha256": "a4911df16f8a1d6756402b0cde7f2856a8671eb2ca3b699e99af261248432f91"
     },
     {
       "path": "START_HERE.md",
-      "bytes": 6833,
-      "sha256": "01303559b885eb02a9b1e3da27cee739ecad0ed3ad26d9f42dd06328dfedebe4"
+      "bytes": 7599,
+      "sha256": "c74df89a0eab8fb0a80bf63432f6f92fcf5b0b69559539325c729d2898622268"
     },
     {
       "path": "assets/hosts_qin_reference/doro_qin_edge.png",
@@ -104,13 +104,13 @@
     },
     {
       "path": "episode/README.md",
-      "bytes": 3561,
-      "sha256": "6f09168fc1f45105059420a36c75d58b8b26bc8a10404c700fb80e2310734990"
+      "bytes": 4908,
+      "sha256": "10e7e09c369dcd59e8d486915698cfb2f876dee5c02599ff931af33319ba3818"
     },
     {
       "path": "episode/brief.yaml",
-      "bytes": 2160,
-      "sha256": "f99a7490abfa652bbab7a7464e99b07edacdbc5e021fdabf753f0fe13b28e3c9"
+      "bytes": 2471,
+      "sha256": "bbb3e017f52ba3042fc3aa4808214476540c60d2f258ba4cbf20287d072bca86"
     },
     {
       "path": "episode/parts.csv",
@@ -180,17 +180,22 @@
     {
       "path": "spec/caption_style.json",
       "bytes": 2231,
-      "sha256": "a15149664a76a89344d59b0bf4a4f1bc587a2c098fb5a617a01938dc9327398b"
+      "sha256": "4acf247a91ae688a2bcd28b89fea38cb8f4d95b4bc981114e6de2cef9503f33a"
     },
     {
       "path": "spec/character_identity.json",
       "bytes": 3724,
-      "sha256": "b76290b9b460064a5f71bf98569eb86f8a919ad1326c7353dbc6fb6a48120ce9"
+      "sha256": "5e3bd17b1595f999ad2b22cea15fa6f60528eba61e8f4b7869ce40987c38f4ff"
     },
     {
       "path": "spec/delivery_rules.json",
-      "bytes": 5524,
-      "sha256": "6db2ac7a3ba839a8d021f7537f6416322669cf5130a0052c0e53b4888a9f0d06"
+      "bytes": 5804,
+      "sha256": "172364297785202971a4666f58477cbe30a68d2295cac873ceb7681071a2efdb"
+    },
+    {
+      "path": "spec/narrative_retention.json",
+      "bytes": 5176,
+      "sha256": "75de2bfb4c377f73ce12fd579159f70bb9f88913a3b2f47425223deac5780d1c"
     },
     {
       "path": "spec/operations_handoff.md",
@@ -200,12 +205,12 @@
     {
       "path": "spec/template.json",
       "bytes": 13785,
-      "sha256": "291417ffa43297fc3cc84ca34b8aba9b65be7b176eca37c4632e10a79389a295"
+      "sha256": "c2c40ab3da33cb177c9821b3d285fd09845ce955625fb8eacf0d3c92e5d006be"
     },
     {
       "path": "tools/validate_handoff.py",
-      "bytes": 8056,
-      "sha256": "ab6d595398f3434fc8e173581c51788e760b6b0a69c8265a4389e8c90ab5264d"
+      "bytes": 8448,
+      "sha256": "4850f3f0284f480f6abe4ae3aec9233ef469df5be8d3df412a64ba84a1691ff4"
     }
   ],
   "mapping_schema_updated_date": "2026-09-18",
@@ -220,5 +225,6 @@
   "scope": "project_rules_handoff_and_reusable_assets_only",
   "includes_episode_content": false,
   "updated_date": "2026-10-05",
-  "remote_figma_verified_date": "2026-10-05"
+  "remote_figma_verified_date": "2026-10-05",
+  "narrative_profile_id": "RETENTION_INFO_V1"
 }
