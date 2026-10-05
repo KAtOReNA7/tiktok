@@ -1,44 +1,39 @@
 {
-  "version": "3.2",
-  "prd_version": "7.14",
+  "version": "3.1",
+  "prd_version": "7.13",
   "effective_date": "2026-10-05",
   "status": "READY_FOR_REVERSIBLE_PROGRAM_TRIAL",
-  "template_id": "RYP_STORY_MAIN_V3_2",
+  "template_id": "RYP_STORY_MAIN_V3_1",
   "caption_profile_id": "STATIC_CAPTION_PAGES_V1",
   "scope": "Three program families; variants within a family are shot layouts, not separate programs",
   "figma": {
     "file_key": "gc9VEwuG01X8ZsMTHg7HsQ",
-    "page_id": "115:2",
-    "preview_board_id": "117:1558",
-    "preview_body_id": "115:75",
+    "page_id": "111:900",
+    "preview_board_id": "111:2583",
+    "preview_body_id": "111:1058",
     "measurement_board_id": "103:595",
     "variants": {
-      "cover": "117:147",
-      "body": "115:75",
-      "evidence": "117:158",
-      "question": "117:169",
-      "compare": "117:180"
+      "cover": "111:1045",
+      "body": "111:1058",
+      "evidence": "111:1070",
+      "question": "111:1083",
+      "compare": "111:1096"
     },
     "components": {
-      "chrome": "115:3",
-      "seal": "115:63",
-      "hosts": "115:67",
-      "identity": "115:71",
-      "body": "115:75",
-      "evidence": "117:71",
-      "bubble": "117:80",
-      "question": "117:85",
-      "compareStandard": "117:91",
-      "compareReveal1": "117:105",
-      "compareReveal2": "117:119",
-      "compareReveal3": "117:133",
-      "cover": "117:147",
-      "evidenceFrame": "117:158",
-      "questionFrame": "117:169",
-      "compareFrame": "117:180",
-      "compare": "117:105"
+      "chrome": "111:901",
+      "seal": "111:957",
+      "hosts": "111:961",
+      "identity": "111:965",
+      "evidence": "111:969",
+      "bubble": "111:978",
+      "question": "111:983",
+      "compare": "111:1003",
+      "compareStandard": "111:989",
+      "compareReveal1": "111:1003",
+      "compareReveal2": "111:1017",
+      "compareReveal3": "111:1031"
     },
-    "review_url": "https://www.figma.com/design/gc9VEwuG01X8ZsMTHg7HsQ?node-id=117-1558",
+    "review_url": "https://www.figma.com/design/gc9VEwuG01X8ZsMTHg7HsQ?node-id=111-2583",
     "ordinary_production_requires_remote_access": false,
     "preserve_legacy_masters": true
   },
@@ -51,7 +46,7 @@
       40,
       400,
       1000,
-      1000
+      848
     ],
     "persistent_title_bounds": [
       64,
@@ -60,13 +55,13 @@
       160
     ],
     "caption_panel_bounds": [
-      130,
+      80,
       1416,
       820,
       218
     ],
     "caption_text_bounds": [
-      150,
+      100,
       1440,
       760,
       128
@@ -80,33 +75,33 @@
     },
     "caption_profile_id": "STATIC_CAPTION_PAGES_V1",
     "character_spec": "spec/character_identity.json",
-    "edge_overlay_reference": "assets/template/v3_2/hosts_edge_qin_reference_1080x1920.png",
+    "edge_overlay_reference": "assets/template/v3_1/hosts_edge_qin_reference_1080x1920.png",
     "edge_hosts_bounds": {
       "doro": [
-        884,
-        24,
-        180,
-        180
+        758,
+        1258,
+        160,
+        160
       ],
       "gugu": [
-        -8,
-        1416,
-        180,
-        180
+        0,
+        1258,
+        160,
+        160
       ],
       "mambo": [
-        560,
-        1664,
-        220,
-        220
+        390,
+        1265,
+        160,
+        160
       ]
     },
     "layer_order": [
-      "source illustration within the 1000x1000 story window, contain by default",
-      "V3.2 clean plate, source divider/index, seal and separated host anchors",
-      "approved title and identity/card content; comparison hides single-person identity",
-      "approved actor cutouts at upper-right, left-lower and bottom-center; no actor alpha inside the comic",
-      "full narration page text at x150 and integrated source text at x176"
+      "source illustration placed within story window, contain by default",
+      "V3.1 clean plate with detached host strip, caption panel, divider, source index and seal",
+      "approved title and identity/card text; comparison hides single-person identity",
+      "three separated approved actor cutouts strictly outside entire story window",
+      "full narration page text and integrated source text"
     ],
     "do_not_stack_multiple_full_canvas_bases": true,
     "final_png_bakes_current_caption": true,
@@ -124,41 +119,20 @@
     "top_content_type_visible": false,
     "source_has_separate_white_strip": false,
     "source_text_bounds": [
-      176,
+      126,
       1592,
       714,
       36
     ],
     "legacy_v3_spec": "spec/legacy/v3/program_visuals.json",
-    "actor_story_alpha_intersection_max_pixels": 0,
-    "edge_hosts_spatial_zones": {
-      "doro": "top_right",
-      "gugu": "left_lower",
-      "mambo": "bottom_center"
-    },
-    "legacy_v3_1_spec": "spec/legacy/v3_1/program_visuals.json",
-    "host_distribution_validation_required": true,
-    "decorative_host_risk_exceptions": {
-      "mode": "surrounding_template",
-      "three_distinct_heights": true,
-      "same_row_prohibited": true,
-      "same_bottom_strip_prohibited": true,
-      "spatial_zones": [
-        "top_right",
-        "left_lower",
-        "bottom_center"
-      ],
-      "approval": "User red-box guidance; approved by root visual review",
-      "nonessential_hosts_may_enter_top_bottom_ui_risk_areas": true,
-      "core_information_still_avoids_ui_risk_areas": true
-    }
+    "actor_story_alpha_intersection_max_pixels": 0
   },
   "programs": {
     "MAIN_ACCOUNT": {
       "label": "名场面算账",
-      "template_id": "RYP_STORY_MAIN_V3_2",
+      "template_id": "RYP_STORY_MAIN_V3_1",
       "spec_source": "spec/template.json",
-      "base_directory": "assets/template/v3_2",
+      "base_directory": "assets/template/v3_1",
       "variants": [
         "cover_opening",
         "body",
@@ -169,7 +143,7 @@
     },
     "COUNTER_REPLY": {
       "label": "最强反方答疑",
-      "template_id": "RYP_STORY_MAIN_V3_2",
+      "template_id": "RYP_STORY_MAIN_V3_1",
       "recognition": "问题卡与证据答复卡；常驻本集主题、静态口播、三位分散扒边不变",
       "question_card": {
         "x": 172,
@@ -205,10 +179,10 @@
       },
       "variants": {
         "question": {
-          "base_plate": "assets/template/v3_2/counter_question_base_1080x1920.png",
-          "export_node_id": "117:1115",
+          "base_plate": "assets/template/v3_1/counter_question_base_1080x1920.png",
+          "export_node_id": "111:2146",
           "caption_text_bounds": [
-            150,
+            100,
             1440,
             760,
             128
@@ -221,10 +195,10 @@
           ]
         },
         "reply": {
-          "base_plate": "assets/template/v3_2/counter_reply_base_1080x1920.png",
-          "export_node_id": "117:1183",
+          "base_plate": "assets/template/v3_1/counter_reply_base_1080x1920.png",
+          "export_node_id": "111:2213",
           "caption_text_bounds": [
-            150,
+            100,
             1440,
             760,
             128
@@ -241,7 +215,7 @@
     },
     "SAME_RULE_COMPARE": {
       "label": "同尺三案比较",
-      "template_id": "RYP_STORY_MAIN_V3_2",
+      "template_id": "RYP_STORY_MAIN_V3_1",
       "recognition": "同一标准和三案状态卡；当前项随口播静态高亮，未讲项不提前揭答案",
       "compare_card": {
         "x": 172,
@@ -270,10 +244,10 @@
       },
       "variants": {
         "standard": {
-          "base_plate": "assets/template/v3_2/compare_standard_base_1080x1920.png",
-          "export_node_id": "117:1254",
+          "base_plate": "assets/template/v3_1/compare_standard_base_1080x1920.png",
+          "export_node_id": "111:2283",
           "caption_text_bounds": [
-            150,
+            100,
             1440,
             760,
             128
@@ -287,10 +261,10 @@
           "active_case": 0
         },
         "reveal_1": {
-          "base_plate": "assets/template/v3_2/compare_reveal_1_base_1080x1920.png",
-          "export_node_id": "117:1330",
+          "base_plate": "assets/template/v3_1/compare_reveal_1_base_1080x1920.png",
+          "export_node_id": "111:2358",
           "caption_text_bounds": [
-            150,
+            100,
             1440,
             760,
             128
@@ -304,10 +278,10 @@
           "active_case": 1
         },
         "reveal_2": {
-          "base_plate": "assets/template/v3_2/compare_reveal_2_base_1080x1920.png",
-          "export_node_id": "117:1406",
+          "base_plate": "assets/template/v3_1/compare_reveal_2_base_1080x1920.png",
+          "export_node_id": "111:2433",
           "caption_text_bounds": [
-            150,
+            100,
             1440,
             760,
             128
@@ -321,10 +295,10 @@
           "active_case": 2
         },
         "reveal_3": {
-          "base_plate": "assets/template/v3_2/compare_reveal_3_base_1080x1920.png",
-          "export_node_id": "117:1482",
+          "base_plate": "assets/template/v3_1/compare_reveal_3_base_1080x1920.png",
+          "export_node_id": "111:2508",
           "caption_text_bounds": [
-            150,
+            100,
             1440,
             760,
             128

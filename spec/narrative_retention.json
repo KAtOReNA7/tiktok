@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "prd_version": "7.13",
+  "prd_version": "7.14",
   "profile_id": "RETENTION_INFO_V1",
   "updated_date": "2026-10-05",
   "purpose": "正文持续提供事实、因果、证据和代价，让观众获得标题尚未讲完的信息。",
@@ -103,7 +103,7 @@
     "angle_changes_alone_count_as_new_information": false,
     "fixed_cut_interval_s": null,
     "fixed_image_count": null,
-    "template_id": "RYP_STORY_MAIN_V3_1",
+    "template_id": "RYP_STORY_MAIN_V3_2",
     "all_template_variants_required": false,
     "captions_and_template_geometry_unchanged": false,
     "no_extra_motion_music_or_sound_effects": true,

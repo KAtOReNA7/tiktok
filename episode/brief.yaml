@@ -1,5 +1,5 @@
 # 空白任务模板。下一选题尚未由本包确定。
-prd_version: '7.13'
+prd_version: '7.14'
 episode_id: null
 topic: null
 core_claim: null
@@ -10,26 +10,26 @@ script_version: null
 part_count: null
 scope: null
 human_editor: user
-template_id: RYP_STORY_MAIN_V3_1
+template_id: RYP_STORY_MAIN_V3_2
 narrative_profile_id: RETENTION_INFO_V1
 narrative_spec: spec/narrative_retention.json
 # 25–30秒仅为可撤销试验参考；按需填写，不覆盖40秒默认上限。
 trial_target_duration_s: null
 # 内部检查状态按实填写，null不是通过；不扩展用户两列映射。
 info_gain_review: null
-# 按当前V3.1栏目选择镜头版式，不要求全部出现。
+# 按当前V3.2栏目选择镜头版式，不要求全部出现。
 template_spec: spec/template.json
 template_variant_policy: choose_per_shot
-template_asset_root: assets/template/v3_1
+template_asset_root: assets/template/v3_2
 template_asset_kind: transparent_overlay
-# 层序：独立原画→一份V3.1透明底板→本期主题/口播/证据等文字→三位扒边，导出最终PNG。
+# 层序：独立原画→一份V3.2透明底板→本期主题/口播/证据等文字→三位扒边，导出最终PNG。
 # 仅记录已在本机取得的版本；缺件不自动联网、不回退旧模板。
 local_template_verified: null
 template_missing_dependencies: []
 caption_profile_id: STATIC_CAPTION_PAGES_V1
 page_plan_json: null
 original_art_reuse_only: null
-caption_text_bounds: {x: 100, y: 1440, width: 760, height: 128}
+caption_text_bounds: {x: 150, y: 1440, width: 760, height: 128}
 caption_example_text_visible: false
 final_png_contains_current_caption: true
 ai_video: false
@@ -82,3 +82,7 @@ mapping_encoding_profile_id: CSV_EXCEL_UTF8_BOM_V1
 # 实际本期透明角色层与主漫画窗alpha>0交集必须为0；null不是已通过。
 host_story_alpha_intersection_pixels: null
 host_overlay_validation_tool: tools/validate_host_overlay.py
+
+# 不同方位与高度环抱整版，不能只因漫画交集为0就放行同排布局。
+host_distribution_check: null
+host_layout_kind: surrounding_template

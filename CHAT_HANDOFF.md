@@ -1,6 +1,6 @@
 # 新对话迁移与沟通接续
 
-更新日期：2026-10-05。本文件用于接续工作窗口中的策划讨论；执行制作时同时读取本地主PRD V7.13。仓库main是规范发布源，不要求老电脑每次联网检查。新对话不等于新电脑。
+更新日期：2026-10-05。本文件用于接续工作窗口中的策划讨论；执行制作时同时读取本地主PRD V7.14。仓库main是规范发布源，不要求老电脑每次联网检查。新对话不等于新电脑。
 
 ## 老电脑新对话／继续制作（默认使用）
 
@@ -9,13 +9,13 @@
 
 本轮不例行访问GitHub或Figma，不clone／fetch／pull／ls-remote，不通过浏览器、API或连接器检查远端版本、登录或仓库可用性。换对话、换选题、换集数不触发同步；这条覆盖旧指令中的例行同步要求。缺件先找本地副本，报告具体缺口并继续独立步骤，不自动转成首次初始化。
 
-武松已完成，不重做；商鞅提案未批准生图。按本机当前任务的完整采用稿和实际制作记录接着做，不从摘要推断某集已完成或尚未制作，也不默认恢复李白旧任务。新制作任务要求PRD V7.13／RYP_STORY_MAIN_V3_1／STATIC_CAPTION_PAGES_V1／RETENTION_INFO_V1，读取本地spec/template.json、spec/narrative_retention.json与assets/template/v3_1/；不能沿用旧底板冒充V3.1。本地版本或资产不足时查找并报告具体缺件，不自行联网升级。已完成作品不重做，在制旧版按用户当前指示处理。先简短确认本地工作目录和当前进度，再承接我的新要求。完整调研、稿件与素材放本地，不commit、不push；规范更新与运营复盘是独立任务。
+武松已完成，不重做；商鞅提案未批准生图。按本机当前任务的完整采用稿和实际制作记录接着做，不从摘要推断某集已完成或尚未制作，也不默认恢复李白旧任务。新制作任务要求PRD V7.14／RYP_STORY_MAIN_V3_2／STATIC_CAPTION_PAGES_V1／RETENTION_INFO_V1，读取本地spec/template.json、spec/narrative_retention.json与assets/template/v3_2/；不能沿用旧底板冒充V3.2。本地版本或资产不足时查找并报告具体缺件，不自行联网升级。已完成作品不重做，在制旧版按用户当前指示处理。先简短确认本地工作目录和当前进度，再承接我的新要求。完整调研、稿件与素材放本地，不commit、不push；规范更新与运营复盘是独立任务。
 ```
 
 ## 新电脑首次接续（仅初始化时使用）
 
 ```text
-执行模式：first_setup（新电脑首次初始化）。请通过 https://github.com/KAtOReNA7/tiktok 接续历史锐评短视频项目。先检查这台电脑是否已有可用规范、模板和初始化记录；已有则跳过同步，按local_continue执行。尚未初始化时按PRD安全克隆／同步main，读取AGENTS.md、CHAT_HANDOFF.md、PROJECT_STATE.md、START_HERE.md、PRD_V7.md和所需spec，读取spec/narrative_retention.json的RETENTION_INFO_V1，实际查看V7.13／RYP_STORY_MAIN_V3_1模板与角色参考，核对assets/template/v3_1/实际底板和三个独立扒边层，记录本地目录、PRD版本及取得的提交号。
+执行模式：first_setup（新电脑首次初始化）。请通过 https://github.com/KAtOReNA7/tiktok 接续历史锐评短视频项目。先检查这台电脑是否已有可用规范、模板和初始化记录；已有则跳过同步，按local_continue执行。尚未初始化时按PRD安全克隆／同步main，读取AGENTS.md、CHAT_HANDOFF.md、PROJECT_STATE.md、START_HERE.md、PRD_V7.md和所需spec，读取spec/narrative_retention.json的RETENTION_INFO_V1，实际查看V7.14／RYP_STORY_MAIN_V3_2模板与角色参考，核对assets/template/v3_2/实际底板和三个独立扒边层，记录本地目录、PRD版本及取得的提交号。
 
 仓库只放PRD、接续说明、必要状态摘要和通用资产；完整本期稿件与素材在本地，不会随clone取得。只补齐当前任务需要的文件，不要求搬运全部历史聊天。武松已完成，不重做；商鞅仍未批准生图；其他内容按用户提供的完整当前任务执行，不从Git旧稿恢复。
 
@@ -36,9 +36,9 @@
 
 ## 现行制作路线
 
-选题与采用稿 → 原画／分镜 → 语义字幕拆页与V3.1确定性套版 → 最终PNG、同模板封面、简介与两列CSV → 用户按原配音安排图长 → 局部审片。
+选题与采用稿 → 原画／分镜 → 语义字幕拆页与V3.2确定性套版 → 最终PNG、同模板封面、简介与两列CSV → 用户按原配音安排图长 → 局部审片。
 
-新制作使用`RYP_STORY_MAIN_V3_1`及`STATIC_CAPTION_PAGES_V1`。每张最终PNG常驻明确本集主题与该页实际口播；三位装饰扒边全部可见alpha位于主漫画窗外，实际交集必须为0。删除顶部“历史·原文回看”等内容类型，不换空话；出处使用暗色面板内浅灰字，不再用白条。准确文字由可编辑文本层确定性合成，不让imagegen绘字。读取本地spec/template.json、caption_style.json、program_visuals.json和assets/template/v3_1/。旧V3保留在spec/legacy/v3/与assets/template/v3/，旧V2保留在spec/legacy/v2/与assets/template/v2/，仅供明确旧工程兼容，不混用。
+新制作使用`RYP_STORY_MAIN_V3_2`及`STATIC_CAPTION_PAGES_V1`。每张最终PNG常驻明确本集主题与该页实际口播；三位装饰扒边在右上、左下与底部三个方位和不同高度环抱整张模板，禁止同一排聚集；全部可见alpha位于主漫画窗外，实际交集必须为0。装饰可使用用户指定的顶部／底部非核心风险留白，核心标题、字幕、出处与正文仍避让。删除顶部“历史·原文回看”等内容类型，不换空话；出处使用暗色面板内浅灰字，不再用白条。准确文字由可编辑文本层确定性合成，不让imagegen绘字。读取本地spec/template.json、caption_style.json、program_visuals.json和assets/template/v3_2/。旧V3.1保留在spec/legacy/v3_1/与assets/template/v3_1/；旧V3保留在spec/legacy/v3/与assets/template/v3/，旧V2保留在spec/legacy/v2/与assets/template/v2/，仅供明确旧工程兼容，不混用。
 
 原画按连续语义拆子页S01_01、S01_02（单页也_01），每页最多两行，长句分多图且可复用原画。两列CSV每行仅对应一张最终PNG的原稿片段；内部JSON记录parent_scene_id和视觉折行，逐父镜头及全稿拼接必须逐字符相等，不删改、重复或重排。CSV继续UTF-8单BOM、CRLF记录边界、标准转义与实际文件验收。
 
@@ -56,18 +56,18 @@
 
 ## 三档节目与验证接续
 
-账号承诺：“熟悉的故事，算清主角得到什么、别人付出什么；有争议，回原文。” 使用spec/program_editorial.json：MAIN_ACCOUNT名场面算账、COUNTER_REPLY最强反方答疑、SAME_RULE_COMPARE同尺三案比较。每档有不同问题结构，读取spec/program_visuals.json与assets/template/v3_1/中本期适用组件；各基础版式仍是镜头工具，不能算四档节目。真实评论要能回到原话及上下文，三案必须同一标准／同一来源性质，不能伪造网友、拼三旧稿或冒充全史前三。
+账号承诺：“熟悉的故事，算清主角得到什么、别人付出什么；有争议，回原文。” 使用spec/program_editorial.json：MAIN_ACCOUNT名场面算账、COUNTER_REPLY最强反方答疑、SAME_RULE_COMPARE同尺三案比较。每档有不同问题结构，读取spec/program_visuals.json与assets/template/v3_2/中本期适用组件；各基础版式仍是镜头工具，不能算四档节目。真实评论要能回到原话及上下文，三案必须同一标准／同一来源性质，不能伪造网友、拼三旧稿或冒充全史前三。
 
 新模板、新口播同时变化的首批只记组合试运行，后续尽量只改一个主要因素，按相近时长、发布龄期及流量性质比较。每轮提前写清问题、主指标、辅助指标、窗口、继续／调整／暂停条件和复核时间；实际计划与数据留运营工作区，不把今日作品或每天条数写成长期规则。账号简介与栏目小标识可表达承诺，不必每集念口号；预告要对应真实已准备问题，本集仍给完整回答。规则、素材、发布、效果验证分别记状态。
 
 ## 当前进度与下一步
 
-- 当前V7.13切换V3.1扒边零遮挡、暗板内出处和无顶部类型文字，保留静态语义字幕PNG，CSV_EXCEL_UTF8_BOM_V1继续有效。运营任务不变；新模板设计完成不代表用户电脑三篇原画已在本环境重排。
+- 当前V7.14切换V3.2扒边零遮挡、暗板内出处和无顶部类型文字，保留静态语义字幕PNG，CSV_EXCEL_UTF8_BOM_V1继续有效。运营任务不变；新模板设计完成不代表用户电脑三篇原画已在本环境重排。
 
 - 账号“三只不服”已发布作品并进入真实数据复盘阶段，主页装修已完成。秦始皇已有用户剪辑版本，暂无返修；武松27.3秒成片已完成、不重做。动态指标与评论以当次运营台账为准，不在此固定作品数量。
 - 商鞅仍是本地待确认提案，不自动生图。
-- 此前V7.10已落实账号承诺、三档节目与可撤销验证机制；当时使用V2，本轮新任务切V3.1并沿用RETENTION_INFO_V1；用户已授权近期新作品用新版模板与文案组合试运行。具体选题、采用稿、改写范围、制作与发布状态以当次任务和本机记录为准，不把执行文件完成当成视频已完成，不重做旧作品。
-- V3.1实际底板、可编辑字段与扒边位置见当前spec及assets/template/v3_1/；旧V2几何与MP4流程仅在spec/legacy/v2/兼容保存，旧资产不删除，不自动重做旧片。
+- 此前V7.10已落实账号承诺、三档节目与可撤销验证机制；当时使用V2，本轮新任务切V3.2并沿用RETENTION_INFO_V1；用户已授权近期新作品用新版模板与文案组合试运行。具体选题、采用稿、改写范围、制作与发布状态以当次任务和本机记录为准，不把执行文件完成当成视频已完成，不重做旧作品。
+- V3.2实际底板、可编辑字段与扒边位置见当前spec及assets/template/v3_2/；旧V2几何与MP4流程仅在spec/legacy/v2/兼容保存，旧资产不删除，不自动重做旧片。
 - 旧2026-09-23水浒优先与人物暂缓仅为历史阶段记录，不再作为当前默认。新候选按具体事件、证据和最新可比数据进入三档测试，不因一条爆款机械复制同一作品体系。
 - 沿用独立的北京时间每日13:00复盘任务；评论按需求、证据、具体动作和验证闭环处理。持续规格入口见PRD第20节与spec/operations_handoff.md，实际运行结果只读运营工作区，不将配置成功当成全链路运行通过。
 - 仓库只保存规范与必要接续信息。普通调研、论点、口播修改及素材交付不触发Git提交。
@@ -77,7 +77,7 @@
 | 内容 | 仓库位置 |
 | --- | --- |
 | 沟通接续与粘贴指令 | CHAT_HANDOFF.md |
-| 主规范 | PRD_V7.md（内部版本V7.13） |
+| 主规范 | PRD_V7.md（内部版本V7.14） |
 | 首次初始化／老电脑续作入口 | START_HERE.md、AGENTS.md、README.md |
 | 最新任务状态 | PROJECT_STATE.md |
 | 版本变化与校验 | CHANGELOG.md、manifest.json、tools/validate_handoff.py |
@@ -85,7 +85,7 @@
 | 身份原图、版式、漫画参考 | refs/ |
 | 模板与字幕参数、交付规则 | spec/ |
 | 口播信息推进规则 | spec/narrative_retention.json（RETENTION_INFO_V1） |
-| 栏目内容与视觉 | spec/program_editorial.json、spec/program_visuals.json、assets/template/v3_1/ |
+| 栏目内容与视觉 | spec/program_editorial.json、spec/program_visuals.json、assets/template/v3_2/ |
 | 独立运营任务通用入口 | PRD第20节、spec/operations_handoff.md；完整运营规格在运营工作区 |
 | 空白brief、分镜、两列映射模板 | episode/ |
 
@@ -99,4 +99,4 @@ GitHub仅作为PRD、项目方向及新机器接续资料的发布源。老电�
 
 只有规范／接续实际更新时才刷新清单、校验、正常提交推送并读回远端，之后报告提交号。普通内容交付只给本地文件。无法写GitHub时说明阻塞，不假装上传成功。不另做接续压缩包，不宣称后台自动同步。
 
-未来制作指令必须明示PRD V7.13／RYP_STORY_MAIN_V3_1／STATIC_CAPTION_PAGES_V1／RETENTION_INFO_V1，并读取本地spec/narrative_retention.json。新电脑只在首次初始化取得完整通用资料；老电脑需要升级时由用户明确发起一次 `rules_update`，之后继续本地工作。当前电脑更新不代表其他电脑自动更新；遇本地旧版或缺件，查找并报告具体缺口，不能静默回退旧底板或自行联网补齐。
+未来制作指令必须明示PRD V7.14／RYP_STORY_MAIN_V3_2／STATIC_CAPTION_PAGES_V1／RETENTION_INFO_V1，并读取本地spec/narrative_retention.json。新电脑只在首次初始化取得完整通用资料；老电脑需要升级时由用户明确发起一次 `rules_update`，之后继续本地工作。当前电脑更新不代表其他电脑自动更新；遇本地旧版或缺件，查找并报告具体缺口，不能静默回退旧底板或自行联网补齐。

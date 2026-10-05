@@ -11,7 +11,7 @@ from pathlib import Path
 
 from validate_mapping_csv import COLUMNS, validate_mapping_csv
 
-TEMPLATE_IDS = {"RYP_STORY_MAIN_V3", "RYP_STORY_MAIN_V3_1"}
+TEMPLATE_IDS = {"RYP_STORY_MAIN_V3", "RYP_STORY_MAIN_V3_1", "RYP_STORY_MAIN_V3_2"}
 PROFILE_ID = "STATIC_CAPTION_PAGES_V1"
 
 

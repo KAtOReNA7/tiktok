@@ -1,6 +1,6 @@
 # 古今人物锐评｜规范与新电脑接续
 
-本仓库只保存PRD、项目方向、接续说明和通用资产，当前 **PRD V7.13**。完整选题调研、论点、口播、分镜、单集制作记录和成品存本地，不因定稿而上传，不为普通改稿创建Git提交。独立运营任务可将已授权的选题元数据、运营指标与评论分析写指定飞书，不把完整制作档案或动态数据提交Git。
+本仓库只保存PRD、项目方向、接续说明和通用资产，当前 **PRD V7.14**。完整选题调研、论点、口播、分镜、单集制作记录和成品存本地，不因定稿而上传，不为普通改稿创建Git提交。独立运营任务可将已授权的选题元数据、运营指标与评论分析写指定飞书，不把完整制作档案或动态数据提交Git。
 
 ## 先选择执行入口
 
@@ -19,9 +19,9 @@ cd tiktok
 
 读取AGENTS.md、CHAT_HANDOFF.md、START_HERE.md、PRD_V7.md和PROJECT_STATE.md，然后按用户当前任务执行。武松已完成，不重做；待确认文案不自动生图。
 
-## 当前模板｜V3.1
+## 当前模板｜V3.2
 
-新制作使用`RYP_STORY_MAIN_V3_1`及`STATIC_CAPTION_PAGES_V1`。每张最终PNG常驻明确本集主题与该页实际口播；三位装饰扒边全部可见alpha位于主漫画窗外，实际交集必须为0。删除顶部“历史·原文回看”等内容类型，不换空话；出处使用暗色面板内浅灰字，不再用白条。准确文字由可编辑文本层确定性合成，不让imagegen绘字。读取本地spec/template.json、caption_style.json、program_visuals.json和assets/template/v3_1/。旧V3保留在spec/legacy/v3/与assets/template/v3/，旧V2保留在spec/legacy/v2/与assets/template/v2/，仅供明确旧工程兼容，不混用。
+新制作使用`RYP_STORY_MAIN_V3_2`及`STATIC_CAPTION_PAGES_V1`。每张最终PNG常驻明确本集主题与该页实际口播；三位装饰扒边在右上、左下与底部三个方位和不同高度环抱整张模板，禁止同一排聚集；全部可见alpha位于主漫画窗外，实际交集必须为0。装饰可使用用户指定的顶部／底部非核心风险留白，核心标题、字幕、出处与正文仍避让。删除顶部“历史·原文回看”等内容类型，不换空话；出处使用暗色面板内浅灰字，不再用白条。准确文字由可编辑文本层确定性合成，不让imagegen绘字。读取本地spec/template.json、caption_style.json、program_visuals.json和assets/template/v3_2/。旧V3.1保留在spec/legacy/v3_1/与assets/template/v3_1/；旧V3保留在spec/legacy/v3/与assets/template/v3/，旧V2保留在spec/legacy/v2/与assets/template/v2/，仅供明确旧工程兼容，不混用。
 
 原画按连续语义拆子页S01_01、S01_02（单页也_01），每页最多两行，长句分多图且可复用原画。两列CSV每行仅对应一张最终PNG的原稿片段；内部JSON记录parent_scene_id和视觉折行，逐父镜头及全稿拼接必须逐字符相等，不删改、重复或重排。CSV继续UTF-8单BOM、CRLF记录边界、标准转义与实际文件验收。
 
@@ -43,7 +43,7 @@ cd tiktok
 - `COUNTER_REPLY` 最强反方答疑：一条真实评论及其上下文，公平复述后用证据回答；无评论不伪造网友。
 - `SAME_RULE_COMPARE` 同尺三案比较：先声明统一标准与范围，再依次比较三案，不拼旧稿、不混口径、不冒充全史排名。
 
-编辑配置见`spec/program_editorial.json`，对应视觉配置见`spec/program_visuals.json`和`assets/template/v3_1/`；它们在V3.1几何上区分节目，保持Q版身份与静态字幕面板。各基础版式仍是镜头工具，不是节目数量。单集执行文件必须明写program_id和实际使用的栏目资产。
+编辑配置见`spec/program_editorial.json`，对应视觉配置见`spec/program_visuals.json`和`assets/template/v3_2/`；它们在V3.2几何上区分节目，保持Q版身份与静态字幕面板。各基础版式仍是镜头工具，不是节目数量。单集执行文件必须明写program_id和实际使用的栏目资产。
 
 首批同时换模板与文案只作为组合试运行，后续按PRD 20.5做可比验证，具体排期、稿件和结果留运营工作区，不固化频次／配比。规则完成、素材完成、发布完成、效果验证分开记录。
 
@@ -56,7 +56,7 @@ cd tiktok
 | 文件／目录 | 用途 |
 | --- | --- |
 | CHAT_HANDOFF.md、START_HERE.md、AGENTS.md | 分开的首次初始化与老电脑续作入口 |
-| PRD_V7.md | 唯一现行主规范V7.13 |
+| PRD_V7.md | 唯一现行主规范V7.14 |
 | PROJECT_STATE.md、CHANGELOG.md | 必要状态摘要、规范与方向变化 |
 | spec/ | 通用模板、字幕、口播信息推进、栏目编辑与视觉、存放参数及独立运营接续接口 |
 | assets/、refs/ | 固定底板、身份原图和可复用参考 |

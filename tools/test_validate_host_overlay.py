@@ -72,6 +72,66 @@ class HostOverlayTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "inside the PNG"):
             validate_host_overlay(self.path, [1, 0, 4, 2], (4, 2))
 
+    def distributed_slots(self):
+        return {"doro": {"bounds": [3, 0, 1, 1], "spatial_zone": "upper_right"},
+                "gugu": {"bounds": [0, 3, 1, 1], "spatial_zone": "lower_left"},
+                "mambo": {"bounds": [2, 5, 1, 1], "spatial_zone": "bottom_center"}}
+
+    def test_actual_alpha_occupies_three_distributed_regions(self):
+        alpha = [0] * 24
+        for index in (3, 12, 22):
+            alpha[index] = 255
+        write_png(self.path, alpha, 4)
+        result = validate_host_overlay(self.path, [1, 1, 2, 1], (4, 6), self.distributed_slots())
+        self.assertTrue(result["distribution_checked"])
+        self.assertEqual(result["distribution"]["pixels_outside_regions"], 0)
+
+    def test_same_row_rejected_even_without_story_overlap(self):
+        alpha = [0] * 24
+        for index in (12, 13, 15):
+            alpha[index] = 255
+        write_png(self.path, alpha)
+        slots = self.distributed_slots()
+        for (name, slot), x in zip(slots.items(), (0, 1, 3)):
+            slot["bounds"] = [x, 3, 1, 1]
+        with self.assertRaisesRegex(ValueError, "different heights"):
+            validate_host_overlay(self.path, [1, 1, 2, 1], (4, 6), slots)
+
+    def test_pixels_outside_approved_regions_rejected(self):
+        alpha = [0] * 24
+        for index in (3, 12, 22, 19):
+            alpha[index] = 255
+        write_png(self.path, alpha)
+        with self.assertRaisesRegex(ValueError, "outside the three approved"):
+            validate_host_overlay(self.path, [1, 1, 2, 1], (4, 6), self.distributed_slots())
+
+    def test_missing_actor_region_rejected(self):
+        alpha = [0] * 24
+        for index in (3, 12):
+            alpha[index] = 255
+        write_png(self.path, alpha)
+        with self.assertRaisesRegex(ValueError, "No visible actor pixels"):
+            validate_host_overlay(self.path, [1, 1, 2, 1], (4, 6), self.distributed_slots())
+
+    def test_transparent_frame_may_extend_beyond_canvas(self):
+        alpha = [0] * 24
+        for index in (3, 12, 22):
+            alpha[index] = 255
+        write_png(self.path, alpha)
+        slots = self.distributed_slots()
+        slots["doro"]["bounds"] = [2, -1, 2, 2]
+        result = validate_host_overlay(self.path, [1, 1, 2, 1], (4, 6), slots)
+        self.assertEqual(result["distribution"]["pixels_outside_regions"], 0)
+
+    def test_protected_text_intersection_rejected(self):
+        alpha = [0] * 24
+        for index in (3, 12, 22):
+            alpha[index] = 255
+        write_png(self.path, alpha)
+        with self.assertRaisesRegex(ValueError, "protected text region"):
+            validate_host_overlay(self.path, [1, 1, 2, 1], (4, 6), self.distributed_slots(),
+                                  {"caption": [3, 0, 1, 1]})
+
 
 if __name__ == "__main__":
     unittest.main()

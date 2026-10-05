@@ -50,6 +50,12 @@ class CaptionPageTests(unittest.TestCase):
         self.write(plan)
         self.assertEqual(validate_caption_pages(self.root / "plan.json"), (1, 3))
 
+    def test_v3_2_reuses_identical_caption_fragments(self):
+        plan = copy.deepcopy(self.plan)
+        plan["template_id"] = "RYP_STORY_MAIN_V3_2"
+        self.write(plan)
+        self.assertEqual(validate_caption_pages(self.root / "plan.json"), (1, 3))
+
     def test_changed_punctuation_is_rejected_even_when_csv_matches(self):
         plan = copy.deepcopy(self.plan)
         page = plan["episodes"][0]["pages"][-1]

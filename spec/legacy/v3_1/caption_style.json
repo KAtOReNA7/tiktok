@@ -1,8 +1,8 @@
 {
   "schema_version": "2.0",
-  "prd_version": "7.14",
+  "prd_version": "7.13",
   "updated_date": "2026-10-05",
-  "template_id": "RYP_STORY_MAIN_V3_2",
+  "template_id": "RYP_STORY_MAIN_V3_1",
   "profile_id": "STATIC_CAPTION_PAGES_V1",
   "coordinate_system": "1080x1920_canvas_pixels_not_jianying_panel_units",
   "background": {
@@ -10,7 +10,7 @@
     "fill": "#161616",
     "opacity": 0.97,
     "bounds": [
-      130,
+      80,
       1416,
       820,
       218
@@ -25,7 +25,7 @@
     "fill": "#FFFFFF",
     "overflow": "Split at semantic boundaries to multiple sequential stills reusing the same source art; preserve all punctuation and wording; no assumed audio timings",
     "bounds": [
-      150,
+      100,
       1440,
       760,
       128
@@ -95,13 +95,12 @@
     "background": "shared caption_panel; no separate white plaque",
     "source_prefix_required": false,
     "bounds": [
-      176,
+      126,
       1592,
       714,
       36
     ]
   },
   "layout_change_preserves_existing_page_fragments": true,
-  "legacy_v3_caption_spec": "spec/legacy/v3/caption_style.json",
-  "legacy_v3_1_caption_spec": "spec/legacy/v3_1/caption_style.json"
+  "legacy_v3_caption_spec": "spec/legacy/v3/caption_style.json"
 }

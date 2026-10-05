@@ -1,42 +1,37 @@
 {
-  "template_id": "RYP_STORY_MAIN_V3_2",
-  "version": "3.2",
-  "prd_version": "7.14",
+  "template_id": "RYP_STORY_MAIN_V3_1",
+  "version": "3.1",
+  "prd_version": "7.13",
   "approval_date": "2026-10-05",
   "status": "DEFAULT_FOR_NEW_PRODUCTION_USER_AUTHORIZED_REDESIGN",
   "figma": {
     "file_key": "gc9VEwuG01X8ZsMTHg7HsQ",
-    "page_id": "115:2",
-    "preview_board_id": "117:1558",
-    "preview_body_id": "115:75",
+    "page_id": "111:900",
+    "preview_board_id": "111:2583",
+    "preview_body_id": "111:1058",
     "measurement_board_id": "103:595",
     "variants": {
-      "cover": "117:147",
-      "body": "115:75",
-      "evidence": "117:158",
-      "question": "117:169",
-      "compare": "117:180"
+      "cover": "111:1045",
+      "body": "111:1058",
+      "evidence": "111:1070",
+      "question": "111:1083",
+      "compare": "111:1096"
     },
     "components": {
-      "chrome": "115:3",
-      "seal": "115:63",
-      "hosts": "115:67",
-      "identity": "115:71",
-      "body": "115:75",
-      "evidence": "117:71",
-      "bubble": "117:80",
-      "question": "117:85",
-      "compareStandard": "117:91",
-      "compareReveal1": "117:105",
-      "compareReveal2": "117:119",
-      "compareReveal3": "117:133",
-      "cover": "117:147",
-      "evidenceFrame": "117:158",
-      "questionFrame": "117:169",
-      "compareFrame": "117:180",
-      "compare": "117:105"
+      "chrome": "111:901",
+      "seal": "111:957",
+      "hosts": "111:961",
+      "identity": "111:965",
+      "evidence": "111:969",
+      "bubble": "111:978",
+      "question": "111:983",
+      "compare": "111:1003",
+      "compareStandard": "111:989",
+      "compareReveal1": "111:1003",
+      "compareReveal2": "111:1017",
+      "compareReveal3": "111:1031"
     },
-    "review_url": "https://www.figma.com/design/gc9VEwuG01X8ZsMTHg7HsQ?node-id=117-1558",
+    "review_url": "https://www.figma.com/design/gc9VEwuG01X8ZsMTHg7HsQ?node-id=111-2583",
     "ordinary_production_requires_remote_access": false,
     "preserve_legacy_masters": true
   },
@@ -62,10 +57,10 @@
         40,
         400,
         1000,
-        1000
+        848
       ],
       "clip": true,
-      "preferred_art_ratio": "1000:1000",
+      "preferred_art_ratio": "1000:848",
       "legacy_art_fit": "contain with neutral padding by default; crop only after verifying faces/hands/actions/dialogue/evidence; no batch center cover, no stretch or regenerated art for aspect ratio"
     },
     "常驻主题": {
@@ -88,7 +83,7 @@
       "fill": "#161616",
       "opacity": 0.97,
       "bounds": [
-        130,
+        80,
         1416,
         820,
         218
@@ -103,7 +98,7 @@
       "fill": "#FFFFFF",
       "overflow": "Split at semantic boundaries to multiple sequential stills reusing the same source art; preserve all punctuation and wording; no assumed audio timings",
       "bounds": [
-        150,
+        100,
         1440,
         760,
         128
@@ -119,7 +114,7 @@
       "background": "shared caption_panel; no separate white plaque",
       "source_prefix_required": false,
       "bounds": [
-        176,
+        126,
         1592,
         714,
         36
@@ -172,7 +167,7 @@
     "出处分隔线": {
       "fill": "#595959",
       "bounds": [
-        150,
+        100,
         1580,
         760,
         1
@@ -181,7 +176,7 @@
     "出处索引标": {
       "fill": "#F2FA00",
       "bounds": [
-        150,
+        100,
         1592,
         10,
         26
@@ -191,9 +186,9 @@
   "variants": {
     "cover_opening": {
       "label": "封面／开场",
-      "base_plate": "assets/template/v3_2/cover_opening_base_1080x1920.png",
-      "export_node_id": "117:858",
-      "example_node_id": "117:147",
+      "base_plate": "assets/template/v3_1/cover_opening_base_1080x1920.png",
+      "export_node_id": "111:1893",
+      "example_node_id": "111:1045",
       "persistent_title_bounds": [
         64,
         208,
@@ -201,13 +196,13 @@
         160
       ],
       "caption_panel_bounds": [
-        130,
+        80,
         1416,
         820,
         218
       ],
       "caption_text_bounds": [
-        150,
+        100,
         1440,
         760,
         128
@@ -215,9 +210,9 @@
     },
     "body": {
       "label": "正文大画面",
-      "base_plate": "assets/template/v3_2/body_base_1080x1920.png",
-      "export_node_id": "117:920",
-      "example_node_id": "115:75",
+      "base_plate": "assets/template/v3_1/body_base_1080x1920.png",
+      "export_node_id": "111:1954",
+      "example_node_id": "111:1058",
       "persistent_title_bounds": [
         64,
         208,
@@ -225,13 +220,13 @@
         160
       ],
       "caption_panel_bounds": [
-        130,
+        80,
         1416,
         820,
         218
       ],
       "caption_text_bounds": [
-        150,
+        100,
         1440,
         760,
         128
@@ -239,9 +234,9 @@
     },
     "closeup": {
       "label": "主体局部",
-      "base_plate": "assets/template/v3_2/closeup_base_1080x1920.png",
-      "export_node_id": "117:982",
-      "example_node_id": "115:75",
+      "base_plate": "assets/template/v3_1/closeup_base_1080x1920.png",
+      "export_node_id": "111:2015",
+      "example_node_id": "111:1058",
       "persistent_title_bounds": [
         64,
         208,
@@ -249,13 +244,13 @@
         160
       ],
       "caption_panel_bounds": [
-        130,
+        80,
         1416,
         820,
         218
       ],
       "caption_text_bounds": [
-        150,
+        100,
         1440,
         760,
         128
@@ -264,9 +259,9 @@
     },
     "evidence": {
       "label": "原文证据",
-      "base_plate": "assets/template/v3_2/evidence_base_1080x1920.png",
-      "export_node_id": "117:1044",
-      "example_node_id": "117:158",
+      "base_plate": "assets/template/v3_1/evidence_base_1080x1920.png",
+      "export_node_id": "111:2076",
+      "example_node_id": "111:1070",
       "persistent_title_bounds": [
         64,
         208,
@@ -274,13 +269,13 @@
         160
       ],
       "caption_panel_bounds": [
-        130,
+        80,
         1416,
         820,
         218
       ],
       "caption_text_bounds": [
-        150,
+        100,
         1440,
         760,
         128
@@ -321,17 +316,15 @@
       "width": 1080,
       "height": 280
     },
-    "meaning": "Conservative project UI-risk zones constrain core title, narrative, evidence and sources. Per explicit user approval, nonessential edge actors may occupy top and bottom risk zones to surround the whole template; decoration visibility may vary by client and must not be guaranteed.",
+    "meaning": "Conservative project UI-risk zones, not guaranteed official universal platform-safe boundaries. Keep essential title, evidence, narration and faces clear; verify local phone preview.",
     "validation": "project_reservations_not_official_universal_douyin_dimensions",
     "essential_information_avoids_risk": true,
     "decorative_background_may_extend": true,
-    "final_device_preview_required": true,
-    "decorative_hosts_may_enter_user_marked_risk_areas": true,
-    "host_decoration_visibility_on_every_client_guaranteed": false
+    "final_device_preview_required": true
   },
   "characters": {
     "identity_spec": "spec/character_identity.json",
-    "overlay_file": "assets/template/v3_2/hosts_edge_qin_reference_1080x1920.png",
+    "overlay_file": "assets/template/v3_1/hosts_edge_qin_reference_1080x1920.png",
     "overlay_role": "three_separated_actor_edge_layers",
     "final_png_contains_hosts": true,
     "do_not_reoverlay_on_final_png": true,
@@ -340,40 +333,37 @@
     "slots": {
       "doro": {
         "bounds": [
-          884,
-          24,
-          180,
-          180
+          758,
+          1258,
+          160,
+          160
         ],
         "file": "assets/hosts_qin_reference/doro_qin_edge.png",
-        "gesture": "grip upper-right short vertical anchor above the main title",
-        "spatial_zone": "top_right"
+        "gesture": "grip separate right short anchor, fully outside comic"
       },
       "gugu": {
         "bounds": [
-          -8,
-          1416,
-          180,
-          180
+          0,
+          1258,
+          160,
+          160
         ],
         "file": "assets/hosts_qin_reference/gugu_qin_edge.png",
-        "gesture": "grip left-lower short vertical anchor beside the caption panel, clear of all narration text",
-        "spatial_zone": "left_lower"
+        "gesture": "grip separate left short anchor, fully outside comic"
       },
       "mambo": {
         "bounds": [
-          560,
-          1664,
-          220,
-          220
+          390,
+          1265,
+          160,
+          160
         ],
         "file": "assets/hosts_qin_reference/mambo_qin_edge.png",
-        "gesture": "grip bottom-center horizontal anchor at y1872, surrounding the entire template",
-        "spatial_zone": "bottom_center"
+        "gesture": "hands align to caption panel top at y1416, fully outside comic"
       }
     },
     "topic_specific": true,
-    "reuse_rule": "三位装饰在不同方位与高度围绕整版，不得同排或同底条。通用及本期换装层均实际验三个批准区域像素/区外0/漫画与文字交集0；透明矩形可延伸画布外或相接，不等于可见角色被裁，脸手标志仍须看图完整。原Q版参考不变，装饰允许用户指定top/bottom风险留白，不能把此例外用于核心文字或故事。",
+    "reuse_rule": "三位装饰角色所有可见像素全部位于漫画窗外，通用及本期换装角色层均须实际alpha验交集0，含发丝描边与半透明阴影；不可裁掉角色来掩盖相交。原Q版参考身份不变，不挡字幕/出处，不重复叠V3旧扒边或V2签名。",
     "story_alpha_intersection_max_pixels": 0,
     "alpha_threshold": "> 0",
     "alpha_validation_tool": "tools/validate_host_overlay.py",
@@ -381,71 +371,50 @@
       40,
       400,
       1000,
-      1000
+      848
     ],
+    "decoration_strip": {
+      "x": 0,
+      "y": 1248,
+      "width": 1080,
+      "height": 168,
+      "may_overlap_story_window": false,
+      "grip_contact_with_caption_panel_allowed": true,
+      "separated_horizontal_placement": true
+    },
     "anchor_lines": [
       {
-        "for": "Doro",
-        "x": 1046,
-        "y": 25,
-        "width": 2,
-        "height": 170,
-        "fill": "#161616"
-      },
-      {
         "for": "咕咕嘎嘎",
-        "x": 19,
-        "y": 1416,
+        "x": 24,
+        "y": 1258,
         "width": 2,
-        "height": 170,
+        "height": 152,
         "fill": "#161616"
       },
       {
-        "for": "曼波",
-        "x": 568,
-        "y": 1872,
-        "width": 204,
-        "height": 2,
+        "for": "Doro",
+        "x": 900,
+        "y": 1258,
+        "width": 2,
+        "height": 152,
         "fill": "#161616"
       }
-    ],
-    "layout_kind": "surrounding_template",
-    "forbid_same_row": true,
-    "host_layout": {
-      "mode": "surrounding_template",
-      "three_distinct_heights": true,
-      "same_row_prohibited": true,
-      "same_bottom_strip_prohibited": true,
-      "spatial_zones": [
-        "top_right",
-        "left_lower",
-        "bottom_center"
-      ],
-      "approval": "User red-box guidance; approved by root visual review",
-      "nonessential_hosts_may_enter_top_bottom_ui_risk_areas": true,
-      "core_information_still_avoids_ui_risk_areas": true
-    },
-    "distribution_validation_required": true,
-    "protected_text_field_names": [
-      "常驻主题",
-      "口播字幕",
-      "短出处"
     ]
   },
   "local_assets": {
     "base_type": "transparent_rgba_ui_overlay",
     "base_layer_order": [
-      "source illustration within the 1000x1000 story window, contain by default",
-      "V3.2 clean plate, source divider/index, seal and separated host anchors",
-      "approved title and identity/card content; comparison hides single-person identity",
-      "approved actor cutouts at upper-right, left-lower and bottom-center; no actor alpha inside the comic",
-      "full narration page text at x150 and integrated source text at x176"
+      "source illustration placed within story window, contain by default",
+      "V3.1 clean plate with detached host strip, caption panel, divider, source index and seal",
+      "approved title and identity/card text; comparison hides single-person identity",
+      "three separated approved actor cutouts strictly outside entire story window",
+      "full narration page text and integrated source text"
     ],
     "transparent_story_bounds": [
       40,
       400,
       1000,
-      1000
+      848
     ],
     "base_has_sample_art": false,
     "base_has_sample_episode_text": false,
@@ -457,103 +426,103 @@
     "blank_base_variants_may_share_pixels": "cover/body/closeup use the same common chrome; their source-art crop and editable content differ",
     "asset_inventory": [
       {
-        "file": "assets/template/v3_2/cover_opening_base_1080x1920.png",
-        "figma_node_id": "117:858",
+        "file": "assets/template/v3_1/cover_opening_base_1080x1920.png",
+        "figma_node_id": "111:1893",
         "width": 1080,
         "height": 1920,
         "mode": "RGBA",
-        "sha256": "ae7d1ed2af05b496a18a6046cf768945d311bbfa24f9d3f18f87d08ea0804063",
-        "bytes": 16767
+        "sha256": "fde4e0a922e73b44dc43d7854cab4daca2ed1c222718f54ef5beb95e2d9d6dd8",
+        "bytes": 16712
       },
       {
-        "file": "assets/template/v3_2/body_base_1080x1920.png",
-        "figma_node_id": "117:920",
+        "file": "assets/template/v3_1/body_base_1080x1920.png",
+        "figma_node_id": "111:1954",
         "width": 1080,
         "height": 1920,
         "mode": "RGBA",
-        "sha256": "ae7d1ed2af05b496a18a6046cf768945d311bbfa24f9d3f18f87d08ea0804063",
-        "bytes": 16767
+        "sha256": "fde4e0a922e73b44dc43d7854cab4daca2ed1c222718f54ef5beb95e2d9d6dd8",
+        "bytes": 16712
       },
       {
-        "file": "assets/template/v3_2/closeup_base_1080x1920.png",
-        "figma_node_id": "117:982",
+        "file": "assets/template/v3_1/closeup_base_1080x1920.png",
+        "figma_node_id": "111:2015",
         "width": 1080,
         "height": 1920,
         "mode": "RGBA",
-        "sha256": "ae7d1ed2af05b496a18a6046cf768945d311bbfa24f9d3f18f87d08ea0804063",
-        "bytes": 16767
+        "sha256": "fde4e0a922e73b44dc43d7854cab4daca2ed1c222718f54ef5beb95e2d9d6dd8",
+        "bytes": 16712
       },
       {
-        "file": "assets/template/v3_2/evidence_base_1080x1920.png",
-        "figma_node_id": "117:1044",
+        "file": "assets/template/v3_1/evidence_base_1080x1920.png",
+        "figma_node_id": "111:2076",
         "width": 1080,
         "height": 1920,
         "mode": "RGBA",
-        "sha256": "0d1ba06a830c16b2d40f28f57553212392d4cecde402c35f207b960802212c58",
-        "bytes": 17149
+        "sha256": "1f35559523c2438abb79f616886a1f3705e46f166149c8af1452f09e9872878f",
+        "bytes": 17093
       },
       {
-        "file": "assets/template/v3_2/counter_question_base_1080x1920.png",
-        "figma_node_id": "117:1115",
+        "file": "assets/template/v3_1/counter_question_base_1080x1920.png",
+        "figma_node_id": "111:2146",
         "width": 1080,
         "height": 1920,
         "mode": "RGBA",
-        "sha256": "147591778eada0bdf00d949be71f6600ea225455ee07af4702f8faabf3d129d0",
-        "bytes": 17121
+        "sha256": "881b07f386309f6072aed288675673cf8c640624af15257e37062abddb321f2b",
+        "bytes": 17065
       },
       {
-        "file": "assets/template/v3_2/counter_reply_base_1080x1920.png",
-        "figma_node_id": "117:1183",
+        "file": "assets/template/v3_1/counter_reply_base_1080x1920.png",
+        "figma_node_id": "111:2213",
         "width": 1080,
         "height": 1920,
         "mode": "RGBA",
-        "sha256": "0d1ba06a830c16b2d40f28f57553212392d4cecde402c35f207b960802212c58",
-        "bytes": 17149
+        "sha256": "1f35559523c2438abb79f616886a1f3705e46f166149c8af1452f09e9872878f",
+        "bytes": 17093
       },
       {
-        "file": "assets/template/v3_2/compare_standard_base_1080x1920.png",
-        "figma_node_id": "117:1254",
+        "file": "assets/template/v3_1/compare_standard_base_1080x1920.png",
+        "figma_node_id": "111:2283",
         "width": 1080,
         "height": 1920,
         "mode": "RGBA",
-        "sha256": "940e3487d4a5d128803f750883260492a84d6c77af021976447870cfd52912e5",
-        "bytes": 17123
+        "sha256": "a98f1e8b3bb8d593c67ae0e113ee6bf4f7492ab71b154da86374df3ed0b28241",
+        "bytes": 17063
       },
       {
-        "file": "assets/template/v3_2/compare_reveal_1_base_1080x1920.png",
-        "figma_node_id": "117:1330",
+        "file": "assets/template/v3_1/compare_reveal_1_base_1080x1920.png",
+        "figma_node_id": "111:2358",
         "width": 1080,
         "height": 1920,
         "mode": "RGBA",
-        "sha256": "7ad17119d15140f5ea74a0ad2dd888a3a30a571d3235a30fded2f157e259fa9b",
-        "bytes": 17149
+        "sha256": "e555d4c91235f4fbb3e3112c56b3a34c7d0f6098e4999ec73dc70869270cd058",
+        "bytes": 17089
       },
       {
-        "file": "assets/template/v3_2/compare_reveal_2_base_1080x1920.png",
-        "figma_node_id": "117:1406",
+        "file": "assets/template/v3_1/compare_reveal_2_base_1080x1920.png",
+        "figma_node_id": "111:2433",
         "width": 1080,
         "height": 1920,
         "mode": "RGBA",
-        "sha256": "0f60b027b00afa7e4ddffaa1b1b16ca22033ec8f73d47222de93040af5eeab3a",
-        "bytes": 17147
+        "sha256": "da3bebba5177e32ccf282f9796fdd1883fac07bf4860f9e6803a7abc08a50d5e",
+        "bytes": 17088
       },
       {
-        "file": "assets/template/v3_2/compare_reveal_3_base_1080x1920.png",
-        "figma_node_id": "117:1482",
+        "file": "assets/template/v3_1/compare_reveal_3_base_1080x1920.png",
+        "figma_node_id": "111:2508",
         "width": 1080,
         "height": 1920,
         "mode": "RGBA",
-        "sha256": "874853d5ea515f41676cb940a52f578b73526ab331a153f03cc2183ee1db1a68",
-        "bytes": 17146
+        "sha256": "8d2585f0d11bf2484a7ccdd9a39ffe47bc79d4dcc9b36dab2f883d1c7ffb059d",
+        "bytes": 17087
       },
       {
-        "file": "assets/template/v3_2/hosts_edge_qin_reference_1080x1920.png",
-        "figma_node_id": "115:67",
+        "file": "assets/template/v3_1/hosts_edge_qin_reference_1080x1920.png",
+        "figma_node_id": "111:961",
         "width": 1080,
         "height": 1920,
         "mode": "RGBA",
-        "sha256": "a6ba7a80858a1fe89d858d201e4b1b2fc0853c88e5ea2e1d6745fc18eb8e4c3c",
-        "bytes": 160669
+        "sha256": "427cd244ccadeec6adb335bb8a51560f5b2e501d874e244420299346f150f020",
+        "bytes": 114030
       }
     ],
     "base_fixed_text_allowlist": [
@@ -579,30 +548,24 @@
   },
   "migration": {
     "effective_date": "2026-10-05",
-    "new_production_default": "RYP_STORY_MAIN_V3_2",
+    "new_production_default": "RYP_STORY_MAIN_V3_1",
     "completed_videos_rebuild": false,
     "in_progress_legacy_work": "follow_current_user_task_do_not_force_migration",
     "old_computer_sync": "only_explicit_rules_update_then_local_continue",
     "other_computers_auto_updated": false,
     "instructions_must_name_prd_and_template_versions": true,
-    "missing_v3_2_assets": "search_local_report_specific_gaps_no_silent_legacy_fallback_no_auto_remote_sync"
+    "missing_v3_1_assets": "search_local_report_specific_gaps_no_silent_legacy_fallback_no_auto_remote_sync"
   },
   "legacy": {
-    "template_id": "RYP_STORY_MAIN_V3_1",
+    "template_id": "RYP_STORY_MAIN_V3",
     "status": "explicit_legacy_tasks_only",
-    "template_spec": "spec/legacy/v3_1/template.json",
-    "caption_spec": "spec/legacy/v3_1/caption_style.json",
-    "program_visual_spec": "spec/legacy/v3_1/program_visuals.json",
-    "asset_root": "assets/template/v3_1",
+    "template_spec": "spec/legacy/v3/template.json",
+    "caption_spec": "spec/legacy/v3/caption_style.json",
+    "program_visual_spec": "spec/legacy/v3/program_visuals.json",
+    "asset_root": "assets/template/v3",
     "use_for_new_production": false,
-    "older_spec_directories": [
-      "spec/legacy/v3",
-      "spec/legacy/v2"
-    ],
-    "older_asset_roots": [
-      "assets/template/v3",
-      "assets/template/v2"
-    ]
+    "older_v2_spec_directory": "spec/legacy/v2",
+    "older_v2_asset_root": "assets/template/v2"
   },
   "production": {
     "default_mode": "assets_for_human_editing",
@@ -646,13 +609,13 @@
   "note": "Every content page keeps the same explicit topic; semantic caption subpages may reuse source art without counting as new story information. Generic asset QA does not prove any episode rendered.",
   "card_text_components": {
     "identity": {
-      "componentId": "115:71",
+      "componentId": "111:965",
       "width": 286,
       "height": 66,
       "texts": [
         {
           "name": "角色名",
-          "id": "115:74",
+          "id": "111:968",
           "x": 22,
           "y": 13,
           "width": 244,
@@ -674,13 +637,13 @@
       ]
     },
     "evidence": {
-      "componentId": "117:71",
+      "componentId": "111:969",
       "width": 688,
       "height": 292,
       "texts": [
         {
           "name": "证据类型",
-          "id": "117:76",
+          "id": "111:974",
           "x": 32,
           "y": 22,
           "width": 618,
@@ -701,7 +664,7 @@
         },
         {
           "name": "原文引用",
-          "id": "117:77",
+          "id": "111:975",
           "x": 32,
           "y": 72,
           "width": 618,
@@ -722,7 +685,7 @@
         },
         {
           "name": "释义",
-          "id": "117:78",
+          "id": "111:976",
           "x": 32,
           "y": 146,
           "width": 618,
@@ -743,7 +706,7 @@
         },
         {
           "name": "证据出处",
-          "id": "117:79",
+          "id": "111:977",
           "x": 32,
           "y": 202,
           "width": 618,
@@ -765,13 +728,13 @@
       ]
     },
     "bubble": {
-      "componentId": "117:80",
+      "componentId": "111:978",
       "width": 560,
       "height": 160,
       "texts": [
         {
           "name": "气泡文字",
-          "id": "117:83",
+          "id": "111:981",
           "x": 24,
           "y": 20,
           "width": 510,
@@ -793,13 +756,13 @@
       ]
     },
     "question": {
-      "componentId": "117:85",
+      "componentId": "111:983",
       "width": 688,
       "height": 260,
       "texts": [
         {
           "name": "追问标签",
-          "id": "117:89",
+          "id": "111:987",
           "x": 32,
           "y": 24,
           "width": 618,
@@ -820,7 +783,7 @@
         },
         {
           "name": "追问正文",
-          "id": "117:90",
+          "id": "111:988",
           "x": 32,
           "y": 76,
           "width": 618,
@@ -842,13 +805,13 @@
       ]
     },
     "compare": {
-      "componentId": "117:105",
+      "componentId": "111:1003",
       "width": 688,
       "height": 570,
       "texts": [
         {
           "name": "统一标准",
-          "id": "117:109",
+          "id": "111:1007",
           "x": 30,
           "y": 22,
           "width": 624,
@@ -869,7 +832,7 @@
         },
         {
           "name": "案例名称/1",
-          "id": "117:111",
+          "id": "111:1009",
           "x": 44,
           "y": 86,
           "width": 596,
@@ -890,7 +853,7 @@
         },
         {
           "name": "同尺结果/1",
-          "id": "117:112",
+          "id": "111:1010",
           "x": 44,
           "y": 130,
           "width": 596,
@@ -911,7 +874,7 @@
         },
         {
           "name": "案例名称/2",
-          "id": "117:114",
+          "id": "111:1012",
           "x": 44,
           "y": 196,
           "width": 596,
@@ -932,7 +895,7 @@
         },
         {
           "name": "同尺结果/2",
-          "id": "117:115",
+          "id": "111:1013",
           "x": 44,
           "y": 240,
           "width": 596,
@@ -953,7 +916,7 @@
         },
         {
           "name": "案例名称/3",
-          "id": "117:117",
+          "id": "111:1015",
           "x": 44,
           "y": 306,
           "width": 596,
@@ -974,7 +937,7 @@
         },
         {
           "name": "同尺结果/3",
-          "id": "117:118",
+          "id": "111:1016",
           "x": 44,
           "y": 350,
           "width": 596,
