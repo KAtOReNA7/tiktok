@@ -1,6 +1,5 @@
 """Validate the portable handoff; --refresh updates its explicit file manifest."""
 import argparse
-import csv
 import hashlib
 import json
 import re
@@ -8,6 +7,7 @@ import struct
 import sys
 import zlib
 from pathlib import Path
+from validate_mapping_csv import COLUMNS, validate_mapping_csv
 
 ROOT = Path(__file__).resolve().parents[1]
 MANIFEST = ROOT / "manifest.json"
@@ -27,8 +27,8 @@ REQUIRED = (
     "assets/hosts_qin_reference/gugu_qin_edge.png",
     "assets/hosts_qin_reference/mambo_qin_edge.png",
     "episode/scene_map.csv",
+    "tools/validate_mapping_csv.py",
 )
-COLUMNS = ["插图编号", "对应口播"]
 PROGRAM_IDS = {"MAIN_ACCOUNT", "COUNTER_REPLY", "SAME_RULE_COMPARE"}
 CAPTION_SLOT = [96, 1408, 776, 128]
 
@@ -98,10 +98,7 @@ def main():
     for name in REQUIRED:
         if not (ROOT / name).is_file():
             raise ValueError("Missing required file: " + name)
-    with (ROOT / "episode/scene_map.csv").open(encoding="utf-8-sig", newline="") as f:
-        rows = list(csv.reader(f))
-    if not rows or rows[0] != COLUMNS or any(len(r) != 2 for r in rows):
-        raise ValueError("scene_map.csv must have exactly two columns")
+    validate_mapping_csv(ROOT / "episode/scene_map.csv", allow_header_only=True)
     rules = json.loads((ROOT / "spec/delivery_rules.json").read_text(encoding="utf-8"))
     narrative = json.loads((ROOT / "spec/narrative_retention.json").read_text(encoding="utf-8"))
     editorial = json.loads((ROOT / "spec/program_editorial.json").read_text(encoding="utf-8"))
@@ -118,6 +115,14 @@ def main():
         raise ValueError("Delivery instructions must reference the current narrative profile")
     if rules["scene_map"]["columns"] != COLUMNS or rules["scene_map"]["extra_columns_allowed"]:
         raise ValueError("delivery_rules.json has a conflicting scene-map schema")
+    csv_export = rules["scene_map"]["csv_export"]
+    if (csv_export["encoding_profile_id"] != "CSV_EXCEL_UTF8_BOM_V1"
+            or csv_export["encoding"] != "utf-8-sig" or csv_export["bom_hex"] != "EF BB BF"
+            or csv_export["bom_count"] != 1 or csv_export["record_separator"] != "CRLF"
+            or csv_export["delimiter"] != "," or csv_export["quotechar"] != '"'
+            or not csv_export["strict_decode"] or not csv_export["readback_actual_file"]
+            or not csv_export["preserve_cells_exactly"]):
+        raise ValueError("Delivered CSV must require one UTF-8 BOM, CRLF and lossless strict readback")
     identity = json.loads((ROOT / "spec/character_identity.json").read_text(encoding="utf-8"))
     if not identity["all_hosts_must_be_chibi"] or not identity["actual_reference_input_for_each_visible_host"]:
         raise ValueError("All three hosts require Q-version identity and actual reference inputs")
@@ -223,7 +228,7 @@ def main():
         raise ValueError("Manifest omits required handoff files")
     if any(name not in seen for name in asset_paths):
         raise ValueError("Manifest omits current template assets")
-    print("PASS: %d files, PRD version, three program IDs, six program bases, decoded RGBA assets, caption-slot compatibility, asset hashes, three-host references and two-column mapping verified. Image likeness and caption pixels require visual QA." % len(data["files"]))
+    print("PASS: %d files, PRD version, three program IDs, six program bases, decoded RGBA assets, caption-slot compatibility, asset hashes, three-host references and BOM/CRLF two-column mapping template verified. Validate delivered CSV files separately; image likeness and caption pixels require visual QA." % len(data["files"]))
 
 
 if __name__ == "__main__":

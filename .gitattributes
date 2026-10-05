@@ -6,3 +6,6 @@
 *.mp4 -text
 *.wav -text
 
+
+# Preserve the Excel mapping template BOM and CRLF bytes exactly.
+episode/scene_map.csv -text whitespace=cr-at-eol

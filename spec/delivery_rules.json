@@ -1,5 +1,5 @@
 {
-  "prd_version": "7.10",
+  "prd_version": "7.11",
   "root_relative": "交付",
   "topic_directory": "{topic_id}_{topic_short_name}",
   "part_directory": "{part_number:02d}_第{part_number:02d}集_{part_short_title}",
@@ -46,7 +46,32 @@
     "empty_placeholder_columns_allowed": false,
     "append_timing_after_voice": false,
     "subtitle_timing_location": "字幕制作文件及字幕放置说明，独立于素材映射",
-    "updated_date": "2026-09-18"
+    "updated_date": "2026-10-05",
+    "csv_export": {
+      "encoding_profile_id": "CSV_EXCEL_UTF8_BOM_V1",
+      "encoding": "utf-8-sig",
+      "bom_hex": "EF BB BF",
+      "bom_count": 1,
+      "record_separator": "CRLF",
+      "final_record_terminated": true,
+      "delimiter": ",",
+      "quotechar": "\"",
+      "doublequote": true,
+      "quoting": "minimal_standard_csv",
+      "preserve_embedded_newlines": true,
+      "strict_decode": true,
+      "reject_replacement_characters": true,
+      "readback_actual_file": true,
+      "preserve_cells_exactly": true,
+      "require_nonempty_data_rows": true,
+      "require_unique_nonempty_ids": true,
+      "idempotent_export": true,
+      "validation_tool": "tools/validate_mapping_csv.py",
+      "export_function": "tools.validate_mapping_csv.export_mapping_csv",
+      "web_preview_is_not_acceptance": true,
+      "gbk_or_ansi_conversion": false,
+      "xlsx_required": false
+    }
   },
   "repository": "https://github.com/KAtOReNA7/tiktok",
   "branch": "main",
@@ -95,7 +120,9 @@
         "locked_script_boundary",
         "program_id_and_editorial_structure",
         "program_visual_assets_exist_and_checked",
-        "experiment_scope_and_no_false_ab_claim"
+        "experiment_scope_and_no_false_ab_claim",
+        "mapping_csv_encoding_profile",
+        "actual_delivered_mapping_csv_validation"
       ],
       "end_marker_is_narration": false
     }

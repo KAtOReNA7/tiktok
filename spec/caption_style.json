@@ -41,7 +41,7 @@
   },
   "calibration": "渲染时对齐固定字幕文字框；用户提供更新黑框规格时据其校准，不让用户逐条设置字幕样式。",
   "transparent_export": "not_default_black_background_requested",
-  "prd_version": "7.10",
+  "prd_version": "7.11",
   "delivery": {
     "primary": "black_background_mp4",
     "srt_is_auxiliary": true,

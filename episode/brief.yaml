@@ -1,5 +1,5 @@
 # 空白任务模板。下一选题尚未由本包确定。
-prd_version: '7.9'
+prd_version: '7.11'
 episode_id: null
 topic: null
 core_claim: null
@@ -71,3 +71,6 @@ light_motion: false
 sound_motion_suggestions: false
 delivery_root: 交付
 compress_delivery: false
+
+# 素材映射实际导出与交付验收规范；仍仅两列。
+mapping_encoding_profile_id: CSV_EXCEL_UTF8_BOM_V1
