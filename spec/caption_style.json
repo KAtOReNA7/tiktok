@@ -72,7 +72,11 @@
     "source_audio": "user_existing_voice_choose_page_order_and_durations",
     "fake_timecodes": false,
     "editable_text_source_required": true,
-    "user_reoverlays_same_subtitle": false
+    "user_reoverlays_same_subtitle": false,
+    "single_complete_image_delivery": true,
+    "black_mp4_dependency": false,
+    "srt_dependency": false,
+    "user_finished_video_required": false
   },
   "scene_plate": {
     "blank_template_has_episode_caption": false,
@@ -83,7 +87,11 @@
     "explicit_user_request_required": true,
     "template_id": "RYP_STORY_MAIN_V2",
     "caption_spec": "spec/legacy/v2/caption_style.json",
-    "apply_to_new_default": false
+    "apply_to_new_default": false,
+    "status": "archived_not_a_default_workflow",
+    "activation": "future_explicit_request_for_a_separate_subtitle_video_task_only",
+    "continuing_old_template_activates_video": false,
+    "receiving_audio_or_video_activates_video": false
   },
   "source_in_shared_panel": {
     "font_family": "Noto Sans SC",
@@ -103,5 +111,6 @@
   },
   "layout_change_preserves_existing_page_fragments": true,
   "legacy_v3_caption_spec": "spec/legacy/v3/caption_style.json",
-  "legacy_v3_1_caption_spec": "spec/legacy/v3_1/caption_style.json"
+  "legacy_v3_1_caption_spec": "spec/legacy/v3_1/caption_style.json",
+  "caption_delivery_requirement": "FINAL_PNG_WITH_CAPTIONS_ONLY_V1"
 }

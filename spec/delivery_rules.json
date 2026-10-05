@@ -45,7 +45,7 @@
     "extra_columns_allowed": false,
     "empty_placeholder_columns_allowed": false,
     "append_timing_after_voice": false,
-    "subtitle_timing_location": "默认无时码；用户按原配音安排页长，显式旧版字幕任务的真实时码另存，不进CSV",
+    "subtitle_timing_location": "静态PNG默认无时码文件；用户按原配音安排页长。未来明确另行索要字幕视频才开独立任务并另存真实时码，不进CSV",
     "updated_date": "2026-10-05",
     "csv_export": {
       "encoding_profile_id": "CSV_EXCEL_UTF8_BOM_V1",
@@ -132,9 +132,11 @@
         "actual_delivered_mapping_csv_validation",
         "static_caption_profile_and_actual_png",
         "page_plan_and_mapping_lossless_reassembly",
-        "persistent_title_and_three_spread_hosts"
+        "persistent_title_and_three_spread_hosts",
+        "caption_delivery_requirement_matches_both_specs_and_chinese_goal_first"
       ],
-      "end_marker_is_narration": false
+      "end_marker_is_narration": false,
+      "caption_goal_first_in_chinese": "直接交付含口播字幕的最终图片；长段拆连续多图；不留空字幕槽，不做单独字幕视频，不要求用户先发成片再补字幕。"
     }
   },
   "local_workspace_default": "../tiktok-local",
@@ -218,5 +220,6 @@
   "actor_overlay_validation_tool": "tools/validate_host_overlay.py",
   "actor_overlay_story_alpha_intersection_pixels": 0,
   "actor_overlay_distribution_validation_required": true,
-  "decorative_actor_ui_risk_region_allowed": true
+  "decorative_actor_ui_risk_region_allowed": true,
+  "caption_delivery_requirement": "FINAL_PNG_WITH_CAPTIONS_ONLY_V1"
 }

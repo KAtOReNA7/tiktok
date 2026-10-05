@@ -189,6 +189,14 @@ def main():
             or rules["final_voice_required_for_default_delivery"]
             or rules["caption_delivery_default"] != caption["delivery"]["primary"]):
         raise ValueError("V3 final PNGs must contain persistent title, actors and static captions without waiting for audio")
+    if (caption["caption_delivery_requirement"] != "FINAL_PNG_WITH_CAPTIONS_ONLY_V1"
+            or rules["caption_delivery_requirement"] != caption["caption_delivery_requirement"]
+            or not caption["delivery"]["single_complete_image_delivery"]
+            or any(caption["delivery"][key] for key in ("black_mp4_dependency", "srt_dependency", "user_finished_video_required"))
+            or caption["legacy"]["activation"] != "future_explicit_request_for_a_separate_subtitle_video_task_only"
+            or caption["legacy"]["continuing_old_template_activates_video"]
+            or caption["legacy"]["receiving_audio_or_video_activates_video"]):
+        raise ValueError("Deliver complete captioned PNGs; archived subtitle video workflows must not become dependencies")
     profiles = {template["caption_profile_id"], caption["profile_id"], rules["caption_profile_id"],
                 editorial["caption_profile_id"], program_visuals["caption_profile_id"],
                 shared["caption_profile_id"], narrative["visual_execution"]["caption_profile_id"]}

@@ -19,23 +19,23 @@
     },
     {
       "path": "AGENTS.md",
-      "bytes": 9322,
-      "sha256": "00eba2e419e8d32713f08c1cb2dc2930230ed1366de742bdcc3bdfa1e526791f"
+      "bytes": 9784,
+      "sha256": "6e5a73189b99e65267e33a6ba1d6dabb4e41934327568490446df8562667a43a"
     },
     {
       "path": "CHANGELOG.md",
-      "bytes": 13104,
-      "sha256": "06fbc5e3c8bb717ef4580106a2ba391e741669c799e8ae03c4dbc038f1839394"
+      "bytes": 13669,
+      "sha256": "ef4bb613d16b0a9dd21682cc4d27290935b7eb59349f85451c101612f97ca949"
     },
     {
       "path": "CHAT_HANDOFF.md",
-      "bytes": 14765,
-      "sha256": "35a69654c82fc58ac5769f9f71558d374c6d954db209b8b35cfb46f30f73fc94"
+      "bytes": 15015,
+      "sha256": "ebee07b341506ba9efa46a1a4ee01ce053ecd8ce1b7fc3ea73f4893abb39cbad"
     },
     {
       "path": "PRD_V7.md",
-      "bytes": 102104,
-      "sha256": "f322a2b2b31f68996a4898223f877b3c0ed89b0d0aa42db5a886a00aeb0e4c61"
+      "bytes": 103470,
+      "sha256": "3e3cb1e0fea74fd24573c79365de6eb10c9d19856daa80f282f85c7f4b2cc92e"
     },
     {
       "path": "PROJECT_STATE.md",
@@ -49,8 +49,8 @@
     },
     {
       "path": "START_HERE.md",
-      "bytes": 8619,
-      "sha256": "74531384784761946dfd980be8578b7f3c9231132173edd701d14930cfc0a3e5"
+      "bytes": 8871,
+      "sha256": "eed704dac972214f22d73c95e2ac22c2a43b5a9978a143fc37bcb58b9e5ca39a"
     },
     {
       "path": "assets/hosts_qin_reference/doro_qin_edge.png",
@@ -334,8 +334,8 @@
     },
     {
       "path": "refs/README.md",
-      "bytes": 3462,
-      "sha256": "00963a64b699408f523b595399a42dac419fcb6cf6c54fa262ef20039740a0a5"
+      "bytes": 3629,
+      "sha256": "4d38368ea27121ef9fe81f4e122d0ca46d0eb8e77c7026271f55e3eb180759be"
     },
     {
       "path": "refs/comic_language/axe_action_reference.png",
@@ -379,8 +379,8 @@
     },
     {
       "path": "spec/caption_style.json",
-      "bytes": 3349,
-      "sha256": "a1a832b7dbd35782598bf1b8b563d2a1bed63d14183f2587ed8f634205098539"
+      "bytes": 3812,
+      "sha256": "0afa927fa3f9e9ab31652ce24458ba6928b325278d2ac66ff1249d7ce38b1bb5"
     },
     {
       "path": "spec/character_identity.json",
@@ -389,8 +389,8 @@
     },
     {
       "path": "spec/delivery_rules.json",
-      "bytes": 8430,
-      "sha256": "c5f1637dc9940ec5806e4ce951c88d1d3cfd66eec2481347109f4bb0a67a4247"
+      "bytes": 8828,
+      "sha256": "1c9eadb2390d9ef9346c3645a523a26352e1a54fc351d15969d51b667ca09dd2"
     },
     {
       "path": "spec/legacy/v2/caption_style.json",
@@ -484,8 +484,8 @@
     },
     {
       "path": "tools/validate_handoff.py",
-      "bytes": 22944,
-      "sha256": "9ed6934e003df96255e3099a0350279a96c04a62dcbf313766da792b69519e84"
+      "bytes": 23724,
+      "sha256": "4a7ec93634397ff4474925b59b12cca74263d5039ca7840249fe98b2abe41004"
     },
     {
       "path": "tools/validate_host_overlay.py",
