@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "prd_version": "7.11",
+  "prd_version": "7.12",
   "profile_id": "RETENTION_INFO_V1",
   "updated_date": "2026-10-05",
   "purpose": "正文持续提供事实、因果、证据和代价，让观众获得标题尚未讲完的信息。",
@@ -103,10 +103,13 @@
     "angle_changes_alone_count_as_new_information": false,
     "fixed_cut_interval_s": null,
     "fixed_image_count": null,
-    "template_id": "RYP_STORY_MAIN_V2",
+    "template_id": "RYP_STORY_MAIN_V3",
     "all_template_variants_required": false,
-    "captions_and_template_geometry_unchanged": true,
-    "no_extra_motion_music_or_sound_effects": true
+    "captions_and_template_geometry_unchanged": false,
+    "no_extra_motion_music_or_sound_effects": true,
+    "caption_profile_id": "STATIC_CAPTION_PAGES_V1",
+    "static_caption_page_split_is_new_story_information": false,
+    "same_art_may_be_reused_for_caption_pages": true
   },
   "workflow": {
     "applies_to": "后续新写稿件、用户授权修改的稿件和相应生产指令；不自动重做已完成内容。",

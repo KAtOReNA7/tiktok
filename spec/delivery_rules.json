@@ -1,5 +1,5 @@
 {
-  "prd_version": "7.11",
+  "prd_version": "7.12",
   "root_relative": "交付",
   "topic_directory": "{topic_id}_{topic_short_name}",
   "part_directory": "{part_number:02d}_第{part_number:02d}集_{part_short_title}",
@@ -9,13 +9,13 @@
   "old_versions_directory": "90_历史版本",
   "manifest_name": "00_交付清单.md",
   "required_per_part": [
-    "口播稿_含开头正文结尾",
+    "纯口播稿_完整采用稿",
     "封面.png",
     "发布文案.txt_含一句话简介",
-    "黑底字幕.mp4_收到最终人声后",
-    "字幕放置说明.txt",
+    "按语义拆页的最终含字幕PNG",
     "素材映射.csv",
-    "实际漫画与套版素材"
+    "可编辑文字与原画源文件",
+    "交付清单及图片排列说明"
   ],
   "cancelled": [
     "音效",
@@ -40,12 +40,12 @@
     ],
     "column_count": 2,
     "row_order": "口播顺序",
-    "narration_text": "完整定稿原文，不用摘要、省略号或指代",
+    "narration_text": "本页显示的原稿连续片段；按parent_scene_id及全稿顺序拼回完整原文，不删改重复。",
     "image_number_matches_filename": true,
     "extra_columns_allowed": false,
     "empty_placeholder_columns_allowed": false,
     "append_timing_after_voice": false,
-    "subtitle_timing_location": "字幕制作文件及字幕放置说明，独立于素材映射",
+    "subtitle_timing_location": "默认无时码；用户按原配音安排页长，显式旧版字幕任务的真实时码另存，不进CSV",
     "updated_date": "2026-10-05",
     "csv_export": {
       "encoding_profile_id": "CSV_EXCEL_UTF8_BOM_V1",
@@ -71,7 +71,14 @@
       "web_preview_is_not_acceptance": true,
       "gbk_or_ansi_conversion": false,
       "xlsx_required": false
-    }
+    },
+    "page_id_pattern": "S{parent_index:02d}_{page_index:02d}",
+    "single_page_has_suffix_01": true,
+    "parent_scene_id_location": "local_internal_page_plan_json_only",
+    "visual_linebreaks_location": "local_internal_page_plan_json_only",
+    "caption_page_validation_tool": "tools/validate_caption_pages.py",
+    "page_plan_csv_match": "actual_csv_cells_equal_page_id_and_caption_text_in_page_order",
+    "source_conservation": "per_parent_and_whole_episode_exact_character_equality_including_punctuation_and_whitespace"
   },
   "repository": "https://github.com/KAtOReNA7/tiktok",
   "branch": "main",
@@ -113,7 +120,7 @@
         "file_end_marker",
         "prd_version",
         "template_id_and_layout_variant",
-        "caption_slot_compatibility",
+        "static_caption_panel_and_text_geometry",
         "narrative_profile_and_trial_scope",
         "complete_script_information_progression",
         "opening_middle_payoff_visual_alignment",
@@ -122,7 +129,10 @@
         "program_visual_assets_exist_and_checked",
         "experiment_scope_and_no_false_ab_claim",
         "mapping_csv_encoding_profile",
-        "actual_delivered_mapping_csv_validation"
+        "actual_delivered_mapping_csv_validation",
+        "static_caption_profile_and_actual_png",
+        "page_plan_and_mapping_lossless_reassembly",
+        "persistent_title_and_three_spread_hosts"
       ],
       "end_marker_is_narration": false
     }
@@ -194,10 +204,14 @@
     "mapping_columns_unchanged": true
   },
   "template_spec": "spec/template.json",
-  "default_template_id": "RYP_STORY_MAIN_V2",
+  "default_template_id": "RYP_STORY_MAIN_V3",
   "narrative_spec": "spec/narrative_retention.json",
   "narrative_profile_id": "RETENTION_INFO_V1",
   "program_editorial_spec": "spec/program_editorial.json",
   "program_visual_spec": "spec/program_visuals.json",
-  "program_id_required": true
+  "program_id_required": true,
+  "caption_profile_id": "STATIC_CAPTION_PAGES_V1",
+  "caption_delivery_default": "static_caption_baked_final_png",
+  "final_voice_required_for_default_delivery": false,
+  "legacy_v2_caption_spec": "spec/legacy/v2/caption_style.json"
 }

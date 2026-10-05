@@ -1,87 +1,88 @@
 {
-  "schema_version": "1.2",
-  "template_id": "RYP_STORY_MAIN_V2",
+  "schema_version": "2.0",
+  "prd_version": "7.12",
+  "updated_date": "2026-10-05",
+  "template_id": "RYP_STORY_MAIN_V3",
+  "profile_id": "STATIC_CAPTION_PAGES_V1",
   "coordinate_system": "1080x1920_canvas_pixels_not_jianying_panel_units",
   "background": {
+    "corner_cut_px": 22,
+    "fill": "#161616",
+    "opacity": 0.97,
     "bounds": [
-      96,
-      1408,
-      776,
-      128
-    ],
-    "fill": "#1C1C1C",
-    "already_in_base_plate": true,
-    "fixed_across_all_v2_variants": true
+      80,
+      1398,
+      820,
+      170
+    ]
   },
   "text": {
-    "bounds": [
-      120,
-      1420,
-      728,
-      104
-    ],
     "font_family": "Noto Sans SC",
     "font_style": "Bold",
-    "font_size_px": 44,
-    "line_height_px": 52,
-    "fill": "#FFFFFF",
-    "opacity": 1,
-    "align": "center",
+    "font_size_px": 48,
+    "line_height_px": 64,
     "max_lines": 2,
+    "fill": "#FFFFFF",
+    "overflow": "Split at semantic boundaries to multiple sequential stills reusing the same source art; preserve all punctuation and wording; no assumed audio timings",
+    "bounds": [
+      100,
+      1420,
+      760,
+      128
+    ],
+    "align": "left",
     "auto_shrink": false
   },
-  "srt": {
-    "encoding": "UTF-8",
-    "timebase": "current_final_voice_or_named_video",
-    "start_at_zero_only_for_new_video": true,
-    "patch_retains_existing_video_timebase": true,
-    "contains_style": false,
-    "required": false,
-    "role": "optional_auxiliary_or_render_input"
+  "rendering": {
+    "method": "editable_text_layers_deterministic_composition",
+    "imagegen_draws_accurate_text": false,
+    "actual_font_measurement_required": true,
+    "max_lines": 2,
+    "overflow": "more_semantic_pages_reusing_same_art_not_smaller_font_or_three_lines",
+    "source_text_and_visual_linebreaks_separate": true,
+    "static_not_word_highlight": true
   },
-  "calibration": "渲染时对齐固定字幕文字框；用户提供更新黑框规格时据其校准，不让用户逐条设置字幕样式。",
-  "transparent_export": "not_default_black_background_requested",
-  "prd_version": "7.11",
-  "delivery": {
-    "primary": "black_background_mp4",
-    "srt_is_auxiliary": true,
-    "srt_only_is_complete": false,
-    "video_width": 776,
-    "video_height": 128,
-    "video_fps": 30,
-    "video_codec": "H.264",
-    "pixel_format": "yuv420p",
-    "background": "#1C1C1C",
-    "transparent": false,
-    "audio_track": false,
-    "frame_origin": "local_video_zero",
-    "full_part_timing": "starts_at_part_zero_and_matches_full_part",
-    "patch_timing": "local_zero_with_explicit_original_start_s_end_s",
-    "placement_in_1080x1920": {
-      "bounds": [
-        96,
-        1408,
-        776,
-        128
-      ],
-      "center": [
-        484,
-        1472
-      ]
-    },
-    "text_box_within_strip": [
-      24,
-      12,
-      728,
-      104
+  "pagination": {
+    "page_id_pattern": "{parent_scene_id}_{page_index:02d}",
+    "single_page_suffix": "_01",
+    "internal_plan_fields": [
+      "parent_scene_id",
+      "caption_text",
+      "display_lines",
+      "output_filename"
     ],
-    "compositing": "normal_opaque_overlay_no_chroma_key_no_screen_blend_no_stretch"
+    "source_conservation": "per_parent_and_whole_episode_exact_characters_including_punctuation_and_whitespace",
+    "reorder_or_repeat_source": false,
+    "same_art_reuse_allowed": true,
+    "mapping_columns": [
+      "插图编号",
+      "对应口播"
+    ],
+    "mapping_row": "one final page with exact displayed source fragment",
+    "validation_tool": "tools/validate_caption_pages.py",
+    "validator_scope": "text_and_actual_csv_only_not_image_audio_or_font_fit"
   },
-  "compatible_legacy_template_id": "RYP_WHITE_SINGLE_V1_1",
-  "updated_date": "2026-10-05",
+  "delivery": {
+    "primary": "static_caption_baked_final_png",
+    "width": 1080,
+    "height": 1920,
+    "final_voice_required": false,
+    "default_black_mp4": false,
+    "default_srt": false,
+    "source_audio": "user_existing_voice_choose_page_order_and_durations",
+    "fake_timecodes": false,
+    "editable_text_source_required": true,
+    "user_reoverlays_same_subtitle": false
+  },
   "scene_plate": {
-    "example_text_visible": false,
-    "bake_narration_text": false,
-    "keep_empty_black_slot": true
+    "blank_template_has_episode_caption": false,
+    "bake_narration_text_in_final_png": true,
+    "keep_empty_black_slot_in_final_png": false
+  },
+  "legacy": {
+    "explicit_user_request_required": true,
+    "template_id": "RYP_STORY_MAIN_V2",
+    "caption_spec": "spec/legacy/v2/caption_style.json",
+    "apply_to_new_default": false
   }
 }

@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "prd_version": "7.11",
+  "prd_version": "7.12",
   "profile_id": "PROGRAM_FAMILY_V1",
   "updated_date": "2026-10-05",
   "status": "active_revocable",
@@ -9,7 +9,7 @@
   "profile_edit_requires_current_site_task": true,
   "fixed_release_frequency": null,
   "fixed_program_ratio": null,
-  "template_id": "RYP_STORY_MAIN_V2",
+  "template_id": "RYP_STORY_MAIN_V3",
   "narrative_profile_id": "RETENTION_INFO_V1",
   "visual_spec": "spec/program_visuals.json",
   "base_layout_variants_are_programs": false,
@@ -135,5 +135,6 @@
     "reupload_old_completed_video_as_default_control": false,
     "next_episode_promise": "仅预告已有材料的具体问题，本集仍完整回答，不强要关注。",
     "intent_is_actual_conversion": false
-  }
+  },
+  "caption_profile_id": "STATIC_CAPTION_PAGES_V1"
 }

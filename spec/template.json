@@ -1,521 +1,508 @@
 {
-  "template_id": "RYP_STORY_MAIN_V2",
-  "version": "2.0",
-  "prd_version": "7.11",
+  "template_id": "RYP_STORY_MAIN_V3",
+  "version": "3.0",
+  "prd_version": "7.12",
   "approval_date": "2026-10-05",
-  "status": "APPROVED_DEFAULT_FOR_NEW_PRODUCTION",
+  "status": "DEFAULT_FOR_NEW_PRODUCTION_USER_AUTHORIZED_REDESIGN",
   "figma": {
     "file_key": "gc9VEwuG01X8ZsMTHg7HsQ",
-    "page_id": "75:2",
-    "component_set_id": "76:99",
-    "review_board_id": "78:2",
-    "guide_board_id": "78:108",
-    "asset_type": "component_variants",
-    "sample_caption_visibility_property": "显示字幕示例文字#82:0",
-    "sample_caption_default_visible": false,
-    "verified_date": "2026-10-05",
-    "review_url": "https://www.figma.com/design/gc9VEwuG01X8ZsMTHg7HsQ?node-id=78-2",
-    "guide_url": "https://www.figma.com/design/gc9VEwuG01X8ZsMTHg7HsQ?node-id=78-108",
-    "preserve_masters": true,
-    "ordinary_production_requires_remote_access": false
+    "page_id": "101:2",
+    "preview_board_id": "101:566",
+    "preview_body_id": "101:233",
+    "measurement_board_id": "103:595",
+    "variants": {
+      "cover": "101:152",
+      "body": "101:233",
+      "evidence": "101:309",
+      "question": "101:394",
+      "compare": "101:476"
+    },
+    "components": {
+      "chrome": "101:8",
+      "seal": "101:64",
+      "hosts": "101:68",
+      "identity": "101:72",
+      "evidence": "101:76",
+      "bubble": "101:85",
+      "question": "101:90",
+      "compare": "101:110",
+      "compareStandard": "101:96",
+      "compareReveal1": "101:110",
+      "compareReveal2": "101:124",
+      "compareReveal3": "101:138"
+    },
+    "review_url": "https://www.figma.com/design/gc9VEwuG01X8ZsMTHg7HsQ?node-id=101-566",
+    "ordinary_production_requires_remote_access": false,
+    "preserve_legacy_masters": true
   },
   "canvas": {
     "width": 1080,
     "height": 1920,
     "clips_content": true,
-    "coordinate_origin": "top_left",
-    "video_fps": 30
+    "coordinate_origin": "top_left"
   },
   "palette": {
-    "background": "#FAFAFA",
-    "title": "#161616",
-    "secondary": "#595959",
-    "source": "#595959",
-    "caption_bg": "#1C1C1C",
-    "caption_text": "#FFFFFF",
-    "fluorescent": "#F2FA00",
-    "seal": "#AA352D",
+    "paper": "#FAFAFA",
+    "ink": "#161616",
+    "muted": "#595959",
     "line": "#DADADA",
+    "yellow": "#F2FA00",
+    "seal": "#AA352D",
     "white": "#FFFFFF"
   },
+  "caption_profile_id": "STATIC_CAPTION_PAGES_V1",
   "fields": {
     "漫画主画面": {
       "bounds": [
         40,
-        208,
+        400,
         1000,
-        1472
+        1240
       ],
-      "source_node_id": "76:30",
       "clip": true,
-      "preferred_art_ratio": "1000:1472",
-      "area_fraction": 0.709877,
-      "area_includes_overlaid_text": true,
-      "caption_exclusion_within_art_window": [
-        56,
-        1200,
-        776,
-        128
+      "preferred_art_ratio": "1000:1240",
+      "legacy_art_fit": "inspect focal subjects; preserve face/hands/action with crop or proportional contain and neutral padding; no stretch; no default center crop; no regeneration for aspect ratio"
+    },
+    "常驻主题": {
+      "font_family": "Noto Sans SC",
+      "font_style": "Black",
+      "font_size_px": 62,
+      "line_height_px": 76,
+      "max_lines": 2,
+      "repeat_on_every_content_page": true,
+      "overflow": "已批准标题不得擅改，只允许原字语义换行；另用屏幕短题须当前用户明确批准，完整标题保留发布元数据；不缩字",
+      "bounds": [
+        64,
+        208,
+        810,
+        160
       ]
     },
-    "段落小标题": {
+    "内容类型": {
+      "font_size_px": 25,
+      "essential": false,
+      "bounds": [
+        64,
+        164,
+        810,
+        34
+      ]
+    },
+    "口播面板": {
+      "corner_cut_px": 22,
+      "fill": "#161616",
+      "opacity": 0.97,
       "bounds": [
         80,
-        256,
-        448,
-        44
-      ],
-      "source_node_id": "76:34",
-      "font_family": "Noto Sans SC",
-      "font_style": "Bold",
-      "font_size": 34,
-      "line_height": 44,
-      "color": "#161616",
-      "container_bounds": [
-        64,
-        240,
-        480,
-        76
-      ],
-      "container_fill": "#F2FA00"
-    },
-    "主标题": {
-      "bounds": [
-        88,
-        342,
-        768,
-        208
-      ],
-      "source_node_id": "76:14",
-      "font_family": "Noto Sans SC",
-      "font_style": "Black",
-      "font_size": 86,
-      "line_height": 104,
-      "color": "#FFFFFF",
-      "variants": [
-        "cover_opening"
-      ],
-      "container_bounds": [
-        64,
-        318,
-        816,
-        256
-      ],
-      "container_fill": "#161616",
-      "emphasis_fill": "#F2FA00"
-    },
-    "人物身份": {
-      "bounds": [
-        532,
-        1132,
-        226,
-        44
-      ],
-      "source_node_id": "76:36",
-      "font_family": "Noto Sans SC",
-      "font_style": "Bold",
-      "font_size": 34,
-      "line_height": 44,
-      "color": "#161616",
-      "container_bounds": [
-        520,
-        1120,
-        250,
-        68
-      ],
-      "container_fill": "#FAFAFA",
-      "movable": true,
-      "position_is_example": true,
-      "blank_base_contains_label": false
-    },
-    "强调短句": {
-      "bounds": [
-        84,
-        1180,
-        704,
-        72
-      ],
-      "source_node_id": "76:60",
-      "font_family": "Noto Sans SC",
-      "font_style": "Black",
-      "font_size": 58,
-      "line_height": 72,
-      "color": "#161616",
-      "container_bounds": [
-        64,
-        1160,
-        744,
-        112
-      ],
-      "container_fill": "#F2FA00",
-      "variants": [
-        "closeup"
+        1398,
+        820,
+        170
       ]
     },
-    "证据卡": {
-      "bounds": [
-        64,
-        440,
-        816,
-        272
-      ],
-      "source_node_id": "76:83",
-      "container_fill": "#FAFAFA",
-      "variants": [
-        "evidence"
-      ],
-      "children": {
-        "标识": {
-          "bounds": [
-            96,
-            472,
-            752,
-            44
-          ],
-          "source_node_id": "76:85",
-          "font_family": "Noto Sans SC",
-          "font_style": "Bold",
-          "font_size": 34,
-          "line_height": 44,
-          "color": "#AA352D"
-        },
-        "原文": {
-          "bounds": [
-            96,
-            540,
-            752,
-            72
-          ],
-          "source_node_id": "76:86",
-          "font_family": "Noto Sans SC",
-          "font_style": "Black",
-          "font_size": 58,
-          "line_height": 72,
-          "color": "#161616"
-        },
-        "解释": {
-          "bounds": [
-            96,
-            636,
-            752,
-            44
-          ],
-          "source_node_id": "76:87",
-          "font_family": "Noto Sans SC",
-          "font_style": "Bold",
-          "font_size": 34,
-          "line_height": 44,
-          "color": "#161616"
-        }
-      }
-    },
-    "字幕视频预留槽": {
-      "bounds": [
-        96,
-        1408,
-        776,
-        128
-      ],
-      "source_node_id": "76:37",
-      "fill": "#1C1C1C",
-      "fixed_across_all_variants": true,
-      "empty_in_scene_plate": true
-    },
     "口播字幕": {
-      "bounds": [
-        120,
-        1420,
-        728,
-        104
-      ],
-      "source_node_id": "76:38",
       "font_family": "Noto Sans SC",
       "font_style": "Bold",
-      "font_size": 44,
-      "line_height": 52,
-      "color": "#FFFFFF",
-      "align": "center",
-      "visible_in_scene_plate": false,
-      "caption_spec": "spec/caption_style.json"
+      "font_size_px": 48,
+      "line_height_px": 64,
+      "max_lines": 2,
+      "fill": "#FFFFFF",
+      "overflow": "Split at semantic boundaries to multiple sequential stills reusing the same source art; preserve all punctuation and wording; no assumed audio timings",
+      "bounds": [
+        100,
+        1420,
+        760,
+        128
+      ]
     },
     "短出处": {
-      "bounds": [
-        76,
-        1604,
-        792,
-        38
-      ],
-      "source_node_id": "76:40",
       "font_family": "Noto Sans SC",
-      "font_style": "Bold",
-      "font_size": 28,
-      "line_height": 38,
-      "color": "#595959",
-      "container_bounds": [
-        64,
-        1592,
-        816,
-        62
-      ],
-      "container_fill": "#FAFAFA"
-    },
-    "品牌": {
+      "font_style": "Regular",
+      "font_size_px": 26,
+      "line_height_px": 38,
+      "overflow": "short book/chapter reference only; full citation in source document; never shrink font",
       "bounds": [
-        56,
-        104,
-        400,
+        340,
+        1590,
+        530,
         40
-      ],
-      "source_node_id": "76:28",
-      "font_family": "Noto Sans SC",
-      "font_style": "Black",
-      "font_size": 32,
-      "line_height": 40,
-      "color": "#161616",
-      "text": "三只不服"
-    },
-    "口号": {
-      "bounds": [
-        648,
-        108,
-        240,
-        38
-      ],
-      "source_node_id": "76:29",
-      "font_family": "Noto Sans SC",
-      "font_style": "Bold",
-      "font_size": 28,
-      "line_height": 38,
-      "color": "#595959",
-      "text": "古今皆可评"
+      ]
     },
     "朱印": {
-      "bounds": [
-        824,
-        1714,
-        56,
-        92
-      ],
-      "source_node_id": "76:46",
+      "text": "锐评",
+      "font_family": "Noto Serif SC",
+      "font_style": "Bold",
+      "font_size_px": 39,
+      "line_height_px": 43,
       "fill": "#AA352D",
-      "text": "锐\n评"
-    },
-    "底部细线": {
       "bounds": [
-        56,
-        1810,
-        824,
-        2
+        910,
+        216,
+        94,
+        112
       ],
-      "source_node_id": "76:45",
-      "fill": "#DADADA"
+      "text_already_baked_in_base": true
+    },
+    "人物身份": {
+      "x": 172,
+      "y": 436,
+      "width": 286,
+      "height": 66,
+      "text_x": 194,
+      "text_y": 449,
+      "font_size_px": 28,
+      "line_height_px": 40,
+      "corner_cut_px": 14
+    },
+    "证据卡": {
+      "x": 172,
+      "y": 530,
+      "width": 688,
+      "height": 292,
+      "corner_cut_px": 24,
+      "inner_x": 204,
+      "inner_y": 552,
+      "inner_width": 618,
+      "stack_gap_px": 12,
+      "label_font_size_px": 26,
+      "quote_font_size_px": 46,
+      "quote_line_height_px": 62,
+      "paraphrase_font_size_px": 31,
+      "paraphrase_line_height_px": 44,
+      "source_font_size_px": 26,
+      "source_line_height_px": 38
     }
   },
   "variants": {
     "cover_opening": {
-      "label": "封面开场",
-      "component_id": "76:2",
-      "example_instance_id": "78:6",
-      "base_plate": "assets/template/v2/cover_opening_base_1080x1920.png",
-      "chapter_container_bounds": [
+      "label": "封面／开场",
+      "base_plate": "assets/template/v3/cover_opening_base_1080x1920.png",
+      "export_node_id": "106:595",
+      "example_node_id": "101:152",
+      "persistent_title_bounds": [
         64,
-        240,
-        260,
-        76
+        208,
+        810,
+        160
       ],
-      "chapter_text_bounds": [
+      "caption_panel_bounds": [
         80,
-        256,
-        228,
-        44
+        1398,
+        820,
+        170
       ],
-      "caption_slot_bounds": [
-        96,
-        1408,
-        776,
+      "caption_text_bounds": [
+        100,
+        1420,
+        760,
         128
       ]
     },
     "body": {
       "label": "正文大画面",
-      "component_id": "76:24",
-      "example_instance_id": "78:29",
-      "base_plate": "assets/template/v2/body_base_1080x1920.png",
-      "chapter_container_bounds": [
+      "base_plate": "assets/template/v3/body_base_1080x1920.png",
+      "export_node_id": "106:655",
+      "example_node_id": "101:233",
+      "persistent_title_bounds": [
         64,
-        240,
-        480,
-        76
+        208,
+        810,
+        160
       ],
-      "chapter_text_bounds": [
+      "caption_panel_bounds": [
         80,
-        256,
-        448,
-        44
+        1398,
+        820,
+        170
       ],
-      "caption_slot_bounds": [
-        96,
-        1408,
-        776,
+      "caption_text_bounds": [
+        100,
+        1420,
+        760,
         128
       ]
     },
     "closeup": {
-      "label": "局部特写",
-      "component_id": "76:48",
-      "example_instance_id": "78:54",
-      "base_plate": "assets/template/v2/closeup_base_1080x1920.png",
-      "chapter_container_bounds": [
+      "label": "主体局部",
+      "base_plate": "assets/template/v3/closeup_base_1080x1920.png",
+      "export_node_id": "106:715",
+      "example_node_id": "101:233",
+      "persistent_title_bounds": [
         64,
-        240,
-        480,
-        76
+        208,
+        810,
+        160
       ],
-      "chapter_text_bounds": [
+      "caption_panel_bounds": [
         80,
-        256,
-        448,
-        44
+        1398,
+        820,
+        170
       ],
-      "caption_slot_bounds": [
-        96,
-        1408,
-        776,
+      "caption_text_bounds": [
+        100,
+        1420,
+        760,
         128
       ],
-      "crop_rule": "按本期脸、动作或关键道具取局部，保持比例；秦始皇示例的放大偏移不是固定参数。"
+      "crop_rule": "按关键人物／动作保留主体裁切，或等比contain加中性留边；不拉伸，不默认硬裁，不因原画比例重生图。"
     },
     "evidence": {
       "label": "原文证据",
-      "component_id": "76:72",
-      "example_instance_id": "78:79",
-      "base_plate": "assets/template/v2/evidence_base_1080x1920.png",
-      "chapter_container_bounds": [
+      "base_plate": "assets/template/v3/evidence_base_1080x1920.png",
+      "export_node_id": "106:775",
+      "example_node_id": "101:309",
+      "persistent_title_bounds": [
         64,
-        240,
-        480,
-        76
+        208,
+        810,
+        160
       ],
-      "chapter_text_bounds": [
+      "caption_panel_bounds": [
         80,
-        256,
-        448,
-        44
+        1398,
+        820,
+        170
       ],
-      "caption_slot_bounds": [
-        96,
-        1408,
-        776,
+      "caption_text_bounds": [
+        100,
+        1420,
+        760,
         128
       ]
     }
   },
   "limits": {
     "title_max_lines": 2,
-    "title_approx_fullwidth_chars_per_line": 8,
     "caption_max_lines": 2,
-    "caption_approx_fullwidth_chars_per_line": 16,
     "source_max_lines": 1,
-    "text_opacity": 1,
     "auto_shrink_text": false,
     "all_variants_required_per_episode": false,
-    "body_repeats_full_episode_title": false,
+    "persistent_topic_on_every_final_page": true,
+    "top_brand_or_slogan": false,
     "giant_footer_brand": false,
-    "text_fit_requires_actual_render_check": true
+    "text_fit_requires_actual_font_render_check": true,
+    "accurate_text_by_imagegen": false,
+    "locked_title_silent_rewrite": false
   },
   "safe_area": {
-    "key_content_horizontal": [
-      64,
-      904
-    ],
-    "reserved_top_px": 208,
-    "reserved_right_px": 152,
-    "reserved_bottom_px": 270,
+    "top": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 208
+    },
+    "right": {
+      "x": 920,
+      "y": 540,
+      "width": 160,
+      "height": 1100
+    },
+    "bottom": {
+      "x": 0,
+      "y": 1640,
+      "width": 1080,
+      "height": 280
+    },
+    "meaning": "Conservative project UI-risk zones, not guaranteed official universal platform-safe boundaries. Keep essential title, evidence, narration and faces clear; verify local phone preview.",
     "validation": "project_reservations_not_official_universal_douyin_dimensions",
-    "important_content_avoids_caption_slot": true,
-    "image_may_extend_under_reserved_ui": true,
+    "essential_information_avoids_risk": true,
+    "decorative_background_may_extend": true,
     "final_device_preview_required": true
   },
   "characters": {
     "identity_spec": "spec/character_identity.json",
-    "signature_bounds": [
-      56,
-      1710,
-      230,
-      82
-    ],
-    "overlay_file": "assets/template/v2/hosts_signature_qin_reference_1080x1920.png",
-    "signature_role": "small_decorative_independent_layer",
-    "signature_carries_critical_information": false,
-    "rotation": 0,
+    "overlay_file": "assets/template/v3/hosts_edge_qin_reference_1080x1920.png",
+    "overlay_role": "three_separated_actor_edge_layers",
+    "final_png_contains_hosts": true,
+    "do_not_reoverlay_on_final_png": true,
+    "all_three_required_as_edge_actors": true,
+    "critical_information_carried": false,
     "slots": {
       "doro": {
         "bounds": [
-          56,
-          1710,
-          82,
-          82
+          870,
+          368,
+          230,
+          230
         ],
-        "file": "assets/hosts_qin_reference/doro_qin_edge.png"
+        "file": "assets/hosts_qin_reference/doro_qin_edge.png",
+        "gesture": "grip right edge"
       },
       "gugu": {
         "bounds": [
-          130,
-          1710,
-          82,
-          82
+          -30,
+          790,
+          220,
+          220
         ],
-        "file": "assets/hosts_qin_reference/gugu_qin_edge.png"
+        "file": "assets/hosts_qin_reference/gugu_qin_edge.png",
+        "gesture": "grip left edge"
       },
       "mambo": {
         "bounds": [
-          204,
-          1710,
-          82,
-          82
+          680,
+          1190,
+          220,
+          220
         ],
-        "file": "assets/hosts_qin_reference/mambo_qin_edge.png"
+        "file": "assets/hosts_qin_reference/mambo_qin_edge.png",
+        "gesture": "hands align to top of subtitle panel at y1398"
       }
     },
     "topic_specific": true,
-    "reuse_rule": "底部三位签名以现有秦装为通用参考；需要换装时按本期设定编辑服饰，保持三位原Q版身份及V2锚点。正文角色独立按剧情出演；旧版全屏外缘overlay不能直接贴到V2。"
+    "reuse_rule": "可复用合格秦装原透明图按固定V3锚点合成；新题cos保留身份。不叠V2紧凑签名或V1全屏外缘图；手部贴面板边，脸／身体不进字幕文字框。"
   },
   "local_assets": {
     "base_type": "transparent_rgba_ui_overlay",
-    "base_layer_order": "above_comic_below_episode_text_and_caption_video",
+    "base_layer_order": [
+      "source illustration with inspected focal crop",
+      "blank reusable V3 plate with caption panel and seal",
+      "title and identity/source text",
+      "optional evidence or question or one-standard-three-case content",
+      "three separated actor edge overlays",
+      "caption text and export page order"
+    ],
     "transparent_story_bounds": [
       40,
-      208,
+      400,
       1000,
-      1472
+      1240
     ],
     "base_has_sample_art": false,
     "base_has_sample_episode_text": false,
     "base_has_hosts": false,
-    "base_keeps_empty_caption_slot": true,
+    "base_caption_panel_has_no_episode_text": true,
+    "final_png_contains_current_caption": true,
     "fixed_card_backgrounds_in_base": true,
-    "moving_or_resizing_cards": "rebuild_from_current_spec_or_Figma_instance; do_not_leave_original_baked_card_underneath",
-    "movable_identity_card": "draw_separately_from_fields; not_baked_in_base"
+    "do_not_stack_full_canvas_bases": true,
+    "blank_base_variants_may_share_pixels": "cover/body/closeup use the same common chrome; their source-art crop and editable content differ",
+    "asset_inventory": [
+      {
+        "file": "assets/template/v3/cover_opening_base_1080x1920.png",
+        "figma_node_id": "106:595",
+        "width": 1080,
+        "height": 1920,
+        "mode": "RGBA",
+        "sha256": "f63c57b7e94ec8bd941681c264d723f98bc64e8dd93545139acdc9563cc73f5f",
+        "bytes": 16619
+      },
+      {
+        "file": "assets/template/v3/body_base_1080x1920.png",
+        "figma_node_id": "106:655",
+        "width": 1080,
+        "height": 1920,
+        "mode": "RGBA",
+        "sha256": "f63c57b7e94ec8bd941681c264d723f98bc64e8dd93545139acdc9563cc73f5f",
+        "bytes": 16619
+      },
+      {
+        "file": "assets/template/v3/closeup_base_1080x1920.png",
+        "figma_node_id": "106:715",
+        "width": 1080,
+        "height": 1920,
+        "mode": "RGBA",
+        "sha256": "f63c57b7e94ec8bd941681c264d723f98bc64e8dd93545139acdc9563cc73f5f",
+        "bytes": 16619
+      },
+      {
+        "file": "assets/template/v3/evidence_base_1080x1920.png",
+        "figma_node_id": "106:775",
+        "width": 1080,
+        "height": 1920,
+        "mode": "RGBA",
+        "sha256": "0fdfc93877893bf715e612f877745f4e3c40218a94094f726cdc5ee9308d232e",
+        "bytes": 17001
+      },
+      {
+        "file": "assets/template/v3/counter_question_base_1080x1920.png",
+        "figma_node_id": "106:844",
+        "width": 1080,
+        "height": 1920,
+        "mode": "RGBA",
+        "sha256": "304e9fffe7fe32ba5e3a292f459a9b9207ba69a510c3fb8f00db418d7c60a784",
+        "bytes": 16972
+      },
+      {
+        "file": "assets/template/v3/counter_reply_base_1080x1920.png",
+        "figma_node_id": "106:910",
+        "width": 1080,
+        "height": 1920,
+        "mode": "RGBA",
+        "sha256": "0fdfc93877893bf715e612f877745f4e3c40218a94094f726cdc5ee9308d232e",
+        "bytes": 17001
+      },
+      {
+        "file": "assets/template/v3/compare_standard_base_1080x1920.png",
+        "figma_node_id": "106:979",
+        "width": 1080,
+        "height": 1920,
+        "mode": "RGBA",
+        "sha256": "d12622b45cfbd86d90e3b6cb66ce870744685f0d1d5eebecdf0bc9ec15ca7b79",
+        "bytes": 16972
+      },
+      {
+        "file": "assets/template/v3/compare_reveal_1_base_1080x1920.png",
+        "figma_node_id": "106:1053",
+        "width": 1080,
+        "height": 1920,
+        "mode": "RGBA",
+        "sha256": "8f2dbe354e1bcdfff581c33c5066ae1adf2d86bdeeb4d860b3993f814a5b5223",
+        "bytes": 16998
+      },
+      {
+        "file": "assets/template/v3/compare_reveal_2_base_1080x1920.png",
+        "figma_node_id": "106:1127",
+        "width": 1080,
+        "height": 1920,
+        "mode": "RGBA",
+        "sha256": "3cefa4541496e3ff7a1a2a7a25ecf537aad979ee4579829bde437013c966ceaf",
+        "bytes": 16997
+      },
+      {
+        "file": "assets/template/v3/compare_reveal_3_base_1080x1920.png",
+        "figma_node_id": "106:1201",
+        "width": 1080,
+        "height": 1920,
+        "mode": "RGBA",
+        "sha256": "aadac636443fe8b9cf5beeb8c1ca711b8cbcc4d077d8957cb42dbfb6f347f21b",
+        "bytes": 16996
+      },
+      {
+        "file": "assets/template/v3/hosts_edge_qin_reference_1080x1920.png",
+        "figma_node_id": "101:68",
+        "width": 1080,
+        "height": 1920,
+        "mode": "RGBA",
+        "sha256": "1b8381ddd2521d31cfdc944c9946d62e067e0edc4cbad38e26eda98bc8184c43",
+        "bytes": 191556
+      }
+    ],
+    "base_fixed_text_allowlist": [
+      "锐评"
+    ],
+    "seal_text_already_baked": true,
+    "identity_card_background_baked": false,
+    "identity_card_background": "render locally from fields.人物身份 geometry; Figma optional, not a production dependency",
+    "export_method": "Figma isolated node get_screenshot returned real PNG; node.exportAsync output was truncated and not used"
   },
   "migration": {
     "effective_date": "2026-10-05",
-    "new_production_default": "RYP_STORY_MAIN_V2",
+    "new_production_default": "RYP_STORY_MAIN_V3",
     "completed_videos_rebuild": false,
     "in_progress_legacy_work": "follow_current_user_task_do_not_force_migration",
     "old_computer_sync": "only_explicit_rules_update_then_local_continue",
     "other_computers_auto_updated": false,
     "instructions_must_name_prd_and_template_versions": true,
-    "missing_v2_assets": "search_local_report_specific_gaps_continue_independent_steps_no_silent_v1_fallback_no_auto_remote_sync"
+    "missing_v3_assets": "search_local_report_specific_gaps_no_silent_v2_fallback_no_auto_remote_sync"
   },
   "legacy": {
-    "template_id": "RYP_WHITE_SINGLE_V1_1",
-    "status": "legacy_tasks_only",
-    "figma_page_id": "50:2",
-    "figma_master_id": "50:60",
-    "figma_work_copy_id": "50:4",
-    "base_plate": "assets/template/base_plate_1080x1920.png",
-    "hosts_overlay": "assets/hosts_qin_reference/hosts_qin_overlay_1080x1920.png",
-    "use_for_new_v2_production": false
+    "template_id": "RYP_STORY_MAIN_V2",
+    "status": "explicit_legacy_tasks_only",
+    "template_spec": "spec/legacy/v2/template.json",
+    "caption_spec": "spec/legacy/v2/caption_style.json",
+    "program_visual_spec": "spec/legacy/v2/program_visuals.json",
+    "asset_root": "assets/template/v2",
+    "use_for_new_production": false
   },
   "production": {
     "default_mode": "assets_for_human_editing",
@@ -529,8 +516,8 @@
     "fixed_image_count": null,
     "scene_text_policy": "integrated_material_and_perspective",
     "comic_dialogue": "short_contextual_optional",
-    "voice_subtitles_in_scene_plate": false,
-    "hosts_in_scene_plate": false,
+    "voice_subtitles_in_scene_plate": true,
+    "hosts_in_scene_plate": true,
     "raw_comic_required": true,
     "remote_figma_checked_this_merge": true,
     "sound_effects": false,
@@ -539,7 +526,7 @@
     "sound_motion_suggestions": false,
     "default_max_episode_duration_s": 40,
     "duration_includes_intro_outro": true,
-    "caption_primary_format": "black_background_mp4",
+    "caption_primary_format": "static_caption_baked_final_png",
     "srt_only_delivery": false,
     "intro_default": "per_part",
     "shared_topic_intro_allowed": true,
@@ -549,8 +536,365 @@
     "delivery_format": "folder",
     "delivery_root": "交付",
     "compress_delivery": false,
-    "caption_slot_must_remain_empty": true,
-    "offline_template_available": true
+    "caption_slot_must_remain_empty": false,
+    "offline_template_available": true,
+    "final_voice_required_for_default_caption_delivery": false,
+    "default_caption_profile": "STATIC_CAPTION_PAGES_V1",
+    "static_caption_is_word_highlight": false,
+    "timings_without_actual_audio": false
   },
-  "note": "V2四种镜头版式属于同一节目，按叙事需要选用，不是新增四档栏目。模板示例的秦始皇原画、文字与裁切不是新选题素材或强制构图。字幕几何及交付规格沿用既有黑底MP4流程。"
+  "note": "Every content page keeps the same explicit topic; semantic caption subpages may reuse source art without counting as new story information. Generic asset QA does not prove any episode rendered.",
+  "card_text_components": {
+    "identity": {
+      "componentId": "101:72",
+      "width": 286,
+      "height": 66,
+      "texts": [
+        {
+          "name": "角色名",
+          "id": "101:75",
+          "x": 22,
+          "y": 13,
+          "width": 244,
+          "height": 40,
+          "font": {
+            "family": "Noto Sans SC",
+            "style": "Bold",
+            "variationSettings": {
+              "wght": 700
+            }
+          },
+          "fontSize": 28,
+          "lineHeight": {
+            "unit": "PIXELS",
+            "value": 40
+          },
+          "max_lines": 1
+        }
+      ]
+    },
+    "evidence": {
+      "componentId": "101:76",
+      "width": 688,
+      "height": 292,
+      "texts": [
+        {
+          "name": "证据类型",
+          "id": "101:81",
+          "x": 32,
+          "y": 22,
+          "width": 618,
+          "height": 38,
+          "font": {
+            "family": "Noto Sans SC",
+            "style": "Bold",
+            "variationSettings": {
+              "wght": 700
+            }
+          },
+          "fontSize": 26,
+          "lineHeight": {
+            "unit": "PIXELS",
+            "value": 38
+          },
+          "max_lines": 1
+        },
+        {
+          "name": "原文引用",
+          "id": "101:82",
+          "x": 32,
+          "y": 72,
+          "width": 618,
+          "height": 62,
+          "font": {
+            "family": "Noto Sans SC",
+            "style": "Bold",
+            "variationSettings": {
+              "wght": 700
+            }
+          },
+          "fontSize": 46,
+          "lineHeight": {
+            "unit": "PIXELS",
+            "value": 62
+          },
+          "max_lines": 1
+        },
+        {
+          "name": "释义",
+          "id": "101:83",
+          "x": 32,
+          "y": 146,
+          "width": 618,
+          "height": 44,
+          "font": {
+            "family": "Noto Sans SC",
+            "style": "Regular",
+            "variationSettings": {
+              "wght": 400
+            }
+          },
+          "fontSize": 31,
+          "lineHeight": {
+            "unit": "PIXELS",
+            "value": 44
+          },
+          "max_lines": 1
+        },
+        {
+          "name": "证据出处",
+          "id": "101:84",
+          "x": 32,
+          "y": 202,
+          "width": 618,
+          "height": 38,
+          "font": {
+            "family": "Noto Sans SC",
+            "style": "Regular",
+            "variationSettings": {
+              "wght": 400
+            }
+          },
+          "fontSize": 26,
+          "lineHeight": {
+            "unit": "PIXELS",
+            "value": 38
+          },
+          "max_lines": 1
+        }
+      ]
+    },
+    "bubble": {
+      "componentId": "101:85",
+      "width": 560,
+      "height": 160,
+      "texts": [
+        {
+          "name": "气泡文字",
+          "id": "101:88",
+          "x": 24,
+          "y": 20,
+          "width": 510,
+          "height": 96,
+          "font": {
+            "family": "Noto Sans SC",
+            "style": "Bold",
+            "variationSettings": {
+              "wght": 700
+            }
+          },
+          "fontSize": 38,
+          "lineHeight": {
+            "unit": "PIXELS",
+            "value": 48
+          },
+          "max_lines": 2
+        }
+      ]
+    },
+    "question": {
+      "componentId": "101:90",
+      "width": 688,
+      "height": 260,
+      "texts": [
+        {
+          "name": "追问标签",
+          "id": "101:94",
+          "x": 32,
+          "y": 24,
+          "width": 618,
+          "height": 38,
+          "font": {
+            "family": "Noto Sans SC",
+            "style": "Bold",
+            "variationSettings": {
+              "wght": 700
+            }
+          },
+          "fontSize": 26,
+          "lineHeight": {
+            "unit": "PIXELS",
+            "value": 38
+          },
+          "max_lines": 1
+        },
+        {
+          "name": "追问正文",
+          "id": "101:95",
+          "x": 32,
+          "y": 76,
+          "width": 618,
+          "height": 124,
+          "font": {
+            "family": "Noto Sans SC",
+            "style": "Black",
+            "variationSettings": {
+              "wght": 900
+            }
+          },
+          "fontSize": 44,
+          "lineHeight": {
+            "unit": "PIXELS",
+            "value": 62
+          },
+          "max_lines": 2
+        }
+      ]
+    },
+    "compare": {
+      "componentId": "101:110",
+      "width": 688,
+      "height": 570,
+      "texts": [
+        {
+          "name": "统一标准",
+          "id": "101:114",
+          "x": 30,
+          "y": 22,
+          "width": 624,
+          "height": 42,
+          "font": {
+            "family": "Noto Sans SC",
+            "style": "Black",
+            "variationSettings": {
+              "wght": 900
+            }
+          },
+          "fontSize": 29,
+          "lineHeight": {
+            "unit": "PIXELS",
+            "value": 42
+          },
+          "max_lines": 1
+        },
+        {
+          "name": "案例名称/1",
+          "id": "101:116",
+          "x": 44,
+          "y": 86,
+          "width": 596,
+          "height": 40,
+          "font": {
+            "family": "Noto Sans SC",
+            "style": "Bold",
+            "variationSettings": {
+              "wght": 700
+            }
+          },
+          "fontSize": 28,
+          "lineHeight": {
+            "unit": "PIXELS",
+            "value": 40
+          },
+          "max_lines": 1
+        },
+        {
+          "name": "同尺结果/1",
+          "id": "101:117",
+          "x": 44,
+          "y": 130,
+          "width": 596,
+          "height": 36,
+          "font": {
+            "family": "Noto Sans SC",
+            "style": "Regular",
+            "variationSettings": {
+              "wght": 400
+            }
+          },
+          "fontSize": 25,
+          "lineHeight": {
+            "unit": "PIXELS",
+            "value": 36
+          },
+          "max_lines": 1
+        },
+        {
+          "name": "案例名称/2",
+          "id": "101:119",
+          "x": 44,
+          "y": 196,
+          "width": 596,
+          "height": 40,
+          "font": {
+            "family": "Noto Sans SC",
+            "style": "Bold",
+            "variationSettings": {
+              "wght": 700
+            }
+          },
+          "fontSize": 28,
+          "lineHeight": {
+            "unit": "PIXELS",
+            "value": 40
+          },
+          "max_lines": 1
+        },
+        {
+          "name": "同尺结果/2",
+          "id": "101:120",
+          "x": 44,
+          "y": 240,
+          "width": 596,
+          "height": 36,
+          "font": {
+            "family": "Noto Sans SC",
+            "style": "Regular",
+            "variationSettings": {
+              "wght": 400
+            }
+          },
+          "fontSize": 25,
+          "lineHeight": {
+            "unit": "PIXELS",
+            "value": 36
+          },
+          "max_lines": 1
+        },
+        {
+          "name": "案例名称/3",
+          "id": "101:122",
+          "x": 44,
+          "y": 306,
+          "width": 596,
+          "height": 40,
+          "font": {
+            "family": "Noto Sans SC",
+            "style": "Bold",
+            "variationSettings": {
+              "wght": 700
+            }
+          },
+          "fontSize": 28,
+          "lineHeight": {
+            "unit": "PIXELS",
+            "value": 40
+          },
+          "max_lines": 1
+        },
+        {
+          "name": "同尺结果/3",
+          "id": "101:123",
+          "x": 44,
+          "y": 350,
+          "width": 596,
+          "height": 36,
+          "font": {
+            "family": "Noto Sans SC",
+            "style": "Regular",
+            "variationSettings": {
+              "wght": 400
+            }
+          },
+          "fontSize": 25,
+          "lineHeight": {
+            "unit": "PIXELS",
+            "value": 36
+          },
+          "max_lines": 1
+        }
+      ]
+    }
+  },
+  "card_text_coordinates": "relative_to_each_component_top_left"
 }

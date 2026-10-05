@@ -27,10 +27,18 @@ REQUIRED = (
     "assets/hosts_qin_reference/gugu_qin_edge.png",
     "assets/hosts_qin_reference/mambo_qin_edge.png",
     "episode/scene_map.csv",
-    "tools/validate_mapping_csv.py",
+    "tools/validate_mapping_csv.py", "tools/validate_caption_pages.py",
+    "spec/legacy/v2/template.json", "spec/legacy/v2/caption_style.json",
+    "spec/legacy/v2/program_visuals.json",
 )
 PROGRAM_IDS = {"MAIN_ACCOUNT", "COUNTER_REPLY", "SAME_RULE_COMPARE"}
-CAPTION_SLOT = [96, 1408, 776, 128]
+TITLE_BOUNDS = [64, 208, 810, 160]
+STORY_BOUNDS = [40, 400, 1000, 1240]
+CAPTION_PANEL = [80, 1398, 820, 170]
+CAPTION_TEXT = [100, 1420, 760, 128]
+CAPTION_PROFILE = "STATIC_CAPTION_PAGES_V1"
+EDGE_HOSTS = {"doro": [870, 368, 230, 230], "gugu": [-30, 790, 220, 220],
+              "mambo": [680, 1190, 220, 220]}
 
 
 def paths_for_manifest():
@@ -149,50 +157,114 @@ def main():
     caption = json.loads((ROOT / "spec/caption_style.json").read_text(encoding="utf-8"))
     if template["template_id"] != caption["template_id"] or template["template_id"] != rules["default_template_id"]:
         raise ValueError("Template, caption and delivery defaults disagree")
-    slot = template["fields"]["字幕视频预留槽"]["bounds"]
-    if (slot != CAPTION_SLOT or slot != caption["background"]["bounds"]
-            or slot != caption["delivery"]["placement_in_1080x1920"]["bounds"]
-            or slot[2:] != [caption["delivery"]["video_width"], caption["delivery"]["video_height"]]):
-        raise ValueError("Caption video must match the reserved slot exactly")
-    if template["production"]["voice_subtitles_in_scene_plate"] or caption["scene_plate"]["bake_narration_text"]:
-        raise ValueError("Scene plates must leave the caption slot empty")
+    fields = template["fields"]
     canvas = (template["canvas"]["width"], template["canvas"]["height"])
     shared = program_visuals["shared"]
-    if (canvas != (1080, 1920) or tuple(shared["canvas"]) != canvas
-            or shared["caption_slot_bounds"] != slot
-            or shared["caption_slot_rgba"] != [28, 28, 28, 255]
-            or shared["caption_example_visible"]
-            or not shared["scene_plate_keeps_caption_empty"]):
-        raise ValueError("Program layouts must preserve the full canvas and fixed empty caption slot")
+    if (template["template_id"] != "RYP_STORY_MAIN_V3" or canvas != (1080, 1920)
+            or fields["漫画主画面"]["bounds"] != STORY_BOUNDS
+            or fields["常驻主题"]["bounds"] != TITLE_BOUNDS
+            or fields["口播面板"]["bounds"] != CAPTION_PANEL
+            or fields["口播字幕"]["bounds"] != CAPTION_TEXT
+            or caption["background"]["bounds"] != CAPTION_PANEL
+            or caption["text"]["bounds"] != CAPTION_TEXT):
+        raise ValueError("V3 canvas, persistent title, story and static-caption geometry disagree")
+    if (fields["常驻主题"]["font_size_px"] != 62 or fields["常驻主题"]["line_height_px"] != 76
+            or caption["text"]["font_size_px"] != 48 or caption["text"]["line_height_px"] != 64
+            or caption["text"]["max_lines"] != 2 or caption["text"]["auto_shrink"]):
+        raise ValueError("V3 requires measured two-line text at the specified font size, never auto-shrink")
+    if (not template["limits"]["persistent_topic_on_every_final_page"]
+            or template["limits"]["top_brand_or_slogan"]
+            or not template["production"]["voice_subtitles_in_scene_plate"]
+            or not template["production"]["hosts_in_scene_plate"]
+            or not caption["scene_plate"]["bake_narration_text_in_final_png"]
+            or caption["scene_plate"]["keep_empty_black_slot_in_final_png"]
+            or caption["delivery"]["primary"] != "static_caption_baked_final_png"
+            or caption["delivery"]["final_voice_required"]
+            or rules["final_voice_required_for_default_delivery"]
+            or rules["caption_delivery_default"] != caption["delivery"]["primary"]):
+        raise ValueError("V3 final PNGs must contain persistent title, actors and static captions without waiting for audio")
+    profiles = {template["caption_profile_id"], caption["profile_id"], rules["caption_profile_id"],
+                editorial["caption_profile_id"], program_visuals["caption_profile_id"],
+                shared["caption_profile_id"], narrative["visual_execution"]["caption_profile_id"]}
+    if profiles != {CAPTION_PROFILE}:
+        raise ValueError("Active specs must share the static-caption profile")
+    if (tuple(shared["canvas"]) != canvas or shared["story_bounds"] != STORY_BOUNDS
+            or shared["persistent_title_bounds"] != TITLE_BOUNDS
+            or shared["caption_panel_bounds"] != CAPTION_PANEL
+            or shared["caption_text_bounds"] != CAPTION_TEXT
+            or not shared["final_png_bakes_current_caption"]
+            or shared["base_has_episode_text"] or shared["base_has_hosts"]
+            or shared["base_fixed_text_allowlist"] != ["锐评"]):
+        raise ValueError("Program layouts must share V3 geometry and only the fixed seal text in blank bases")
+    slots = template["characters"]["slots"]
+    if ({key: value["bounds"] for key, value in slots.items()} != EDGE_HOSTS
+            or shared["edge_hosts_bounds"] != EDGE_HOSTS
+            or not template["characters"]["do_not_reoverlay_on_final_png"]):
+        raise ValueError("V3 must use all three spread edge positions without duplicate overlays")
+    for name in ("top", "right", "bottom"):
+        area = template["safe_area"][name]
+        rect = [area[key] for key in ("x", "y", "width", "height")]
+        expected = {"top": [0, 0, 1080, 208], "right": [920, 540, 160, 1100],
+                    "bottom": [0, 1640, 1080, 280]}[name]
+        if rect != expected:
+            raise ValueError("Project UI-risk reservations changed without reviewed geometry")
     asset_paths = [template["characters"]["overlay_file"]]
     if set(template["variants"]) != {"cover_opening", "body", "closeup", "evidence"}:
-        raise ValueError("V2 must include all four reusable layout variants")
+        raise ValueError("V3 must include four reusable main layout variants")
     for variant in template["variants"].values():
-        if variant["caption_slot_bounds"] != slot:
-            raise ValueError("All V2 variants must share the same caption slot")
+        if (variant["caption_text_bounds"] != CAPTION_TEXT
+                or variant["persistent_title_bounds"] != TITLE_BOUNDS):
+            raise ValueError("All main V3 variants must retain title and caption geometry")
         asset_paths.append(variant["base_plate"])
     programs = program_visuals["programs"]
     if (programs["MAIN_ACCOUNT"]["spec_source"] != "spec/template.json"
             or programs["MAIN_ACCOUNT"]["template_id"] != template["template_id"]
             or set(programs["MAIN_ACCOUNT"]["variants"]) != set(template["variants"])):
-        raise ValueError("Main program must retain the four current V2 layout variants")
+        raise ValueError("Main program must reference the active V3 layout variants")
     required_variants = {
         "COUNTER_REPLY": {"question", "reply"},
         "SAME_RULE_COMPARE": {"standard", "reveal_1", "reveal_2", "reveal_3"},
     }
     program_assets = []
     for program_id, variants in required_variants.items():
-        if set(programs[program_id]["variants"]) != variants:
-            raise ValueError("Program visual variants incomplete: " + program_id)
-        program_assets.extend(variant["base_plate"]
-                              for variant in programs[program_id]["variants"].values())
+        program = programs[program_id]
+        if set(program["variants"]) != variants or program["template_id"] != template["template_id"]:
+            raise ValueError("V3 program visual variants incomplete: " + program_id)
+        for variant in program["variants"].values():
+            if (variant["caption_text_bounds"] != CAPTION_TEXT
+                    or variant["persistent_title_bounds"] != TITLE_BOUNDS):
+                raise ValueError("Program variant lost persistent V3 title or caption geometry")
+            program_assets.append(variant["base_plate"])
     if len(program_assets) != 6 or len(set(program_assets)) != 6:
-        raise ValueError("Program visuals require six distinct exported base plates")
+        raise ValueError("Program visuals require six separately named reusable base plates")
+    if [variant["active_case"] for variant in programs["SAME_RULE_COMPARE"]["variants"].values()] != [0, 1, 2, 3]:
+        raise ValueError("Compare states must reveal the standard then each of three distinct cases")
+    if programs["SAME_RULE_COMPARE"]["identity_card_visible"]:
+        raise ValueError("Three-case comparison must not overlay the single-actor identity card")
     asset_paths.extend(program_assets)
-    for name in asset_paths:
+    inventory = template["local_assets"]["asset_inventory"]
+    if len(inventory) != 11 or {asset["file"] for asset in inventory} != set(asset_paths):
+        raise ValueError("V3 inventory must contain exactly ten bases and one spread-host overlay")
+    for asset in inventory:
+        name = asset["file"]
+        if not name.startswith("assets/template/v3/"):
+            raise ValueError("Current V3 assets must not point at legacy files")
         validate_rgba_png(name, canvas)
+        content = (ROOT / name).read_bytes()
+        if len(content) != asset["bytes"] or hashlib.sha256(content).hexdigest() != asset["sha256"]:
+            raise ValueError("V3 asset inventory differs from the exported PNG: " + name)
+    legacy = json.loads((ROOT / "spec/legacy/v2/template.json").read_text(encoding="utf-8"))
+    legacy_caption = json.loads((ROOT / "spec/legacy/v2/caption_style.json").read_text(encoding="utf-8"))
+    if (legacy["template_id"] != "RYP_STORY_MAIN_V2"
+            or legacy_caption["delivery"]["primary"] != "black_background_mp4"
+            or legacy["fields"]["字幕视频预留槽"]["bounds"] != [96, 1408, 776, 128]):
+        raise ValueError("Explicit V2 compatibility must retain its original geometry and MP4 spec")
+    for variant in legacy["variants"].values():
+        if not (ROOT / variant["base_plate"]).is_file():
+            raise ValueError("Legacy V2 asset missing: " + variant["base_plate"])
     data = json.loads(MANIFEST.read_text(encoding="utf-8"))
-    if data["layout_template"] != template["template_id"]:
+    if (data["layout_template"] != template["template_id"]
+            or data["caption_profile_id"] != CAPTION_PROFILE):
         raise ValueError("Manifest points at the wrong default template")
     prd_title = (ROOT / "PRD_V7.md").read_text(encoding="utf-8").splitlines()[0]
     prd_match = re.search(r"\bPRD V(\d+\.\d+)\b", prd_title)
@@ -200,7 +272,7 @@ def main():
         raise ValueError("PRD title must declare its current version")
     if len({prd_match.group(1), data["prd_version"], template["prd_version"],
             caption["prd_version"], rules["prd_version"], narrative["prd_version"],
-            editorial["prd_version"]}) != 1:
+            editorial["prd_version"], program_visuals["prd_version"], identity["prd_version"]}) != 1:
         raise ValueError("PRD versions disagree across active specs")
     if args.refresh:
         data["files"] = []
@@ -228,7 +300,7 @@ def main():
         raise ValueError("Manifest omits required handoff files")
     if any(name not in seen for name in asset_paths):
         raise ValueError("Manifest omits current template assets")
-    print("PASS: %d files, PRD version, three program IDs, six program bases, decoded RGBA assets, caption-slot compatibility, asset hashes, three-host references and BOM/CRLF two-column mapping template verified. Validate delivered CSV files separately; image likeness and caption pixels require visual QA." % len(data["files"]))
+    print("PASS: %d files, PRD version, three V3 programs, ten bases and spread-host overlay, decoded RGBA assets, persistent title/static-caption geometry, legacy V2 compatibility, asset hashes and BOM/CRLF mapping template verified. Validate actual page plans/CSV files separately; rendered text, likeness and phone-preview safety require visual QA." % len(data["files"]))
 
 
 if __name__ == "__main__":

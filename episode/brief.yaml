@@ -1,5 +1,5 @@
 # 空白任务模板。下一选题尚未由本包确定。
-prd_version: '7.11'
+prd_version: '7.12'
 episode_id: null
 topic: null
 core_claim: null
@@ -10,24 +10,28 @@ script_version: null
 part_count: null
 scope: null
 human_editor: user
-template_id: RYP_STORY_MAIN_V2
+template_id: RYP_STORY_MAIN_V3
 narrative_profile_id: RETENTION_INFO_V1
 narrative_spec: spec/narrative_retention.json
 # 25–30秒仅为可撤销试验参考；按需填写，不覆盖40秒默认上限。
 trial_target_duration_s: null
 # 内部检查状态按实填写，null不是通过；不扩展用户两列映射。
 info_gain_review: null
-# 四种为同一节目的可选镜头版式，不要求全部出现。
+# 按当前V3栏目选择镜头版式，不要求全部出现。
 template_spec: spec/template.json
 template_variant_policy: choose_per_shot
-template_asset_root: assets/template/v2
+template_asset_root: assets/template/v3
 template_asset_kind: transparent_overlay
-# 层序：独立漫画→透明底板→独立文字／三位签名→后续字幕MP4。
+# 层序：独立原画→一份V3透明底板→本期主题/口播/证据等文字→三位扒边，导出最终PNG。
 # 仅记录已在本机取得的版本；缺件不自动联网、不回退旧模板。
 local_template_verified: null
 template_missing_dependencies: []
-caption_slot: {x: 96, y: 1408, width: 776, height: 128, background: '#1C1C1C'}
-caption_placeholder_visible: false
+caption_profile_id: STATIC_CAPTION_PAGES_V1
+page_plan_json: null
+original_art_reuse_only: null
+caption_text_bounds: {x: 100, y: 1420, width: 760, height: 128}
+caption_example_text_visible: false
+final_png_contains_current_caption: true
 ai_video: false
 jianying_assistant: false
 full_gui_assembly: false
@@ -63,7 +67,7 @@ shared_intro_asset_path: null
 outro_per_part: true
 cover_per_part: true
 one_sentence_description_per_part: true
-caption_delivery: black_background_mp4
+caption_delivery: static_caption_baked_final_png
 srt_only_delivery: false
 sound_effects: false
 background_music: false
