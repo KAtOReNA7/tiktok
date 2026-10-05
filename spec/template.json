@@ -38,7 +38,8 @@
     },
     "review_url": "https://www.figma.com/design/gc9VEwuG01X8ZsMTHg7HsQ?node-id=117-1558",
     "ordinary_production_requires_remote_access": false,
-    "preserve_legacy_masters": true
+    "preserve_legacy_masters": true,
+    "cover_node_role": "9x16_video_opening_or_historical_reference_not_new_ratio_cover"
   },
   "canvas": {
     "width": 1080,
@@ -190,7 +191,7 @@
   },
   "variants": {
     "cover_opening": {
-      "label": "封面／开场",
+      "label": "视频开场／历史9:16封面参考",
       "base_plate": "assets/template/v3_2/cover_opening_base_1080x1920.png",
       "export_node_id": "117:858",
       "example_node_id": "117:147",
@@ -211,7 +212,8 @@
         1440,
         760,
         128
-      ]
+      ],
+      "publishing_cover": false
     },
     "body": {
       "label": "正文大画面",
@@ -641,7 +643,8 @@
     "final_voice_required_for_default_caption_delivery": false,
     "default_caption_profile": "STATIC_CAPTION_PAGES_V1",
     "static_caption_is_word_highlight": false,
-    "timings_without_actual_audio": false
+    "timings_without_actual_audio": false,
+    "cover_count_per_part": 2
   },
   "note": "Every content page keeps the same explicit topic; semantic caption subpages may reuse source art without counting as new story information. Generic asset QA does not prove any episode rendered.",
   "card_text_components": {
@@ -997,5 +1000,7 @@
     }
   },
   "card_text_coordinates": "relative_to_each_component_top_left",
-  "template_revision": "3.2.1"
+  "template_revision": "3.2.1",
+  "geometry_scope": "9x16_video_frames_only_not_independent_publishing_covers",
+  "cover_spec": "spec/cover_delivery.json"
 }

@@ -1,5 +1,6 @@
 """Validate the portable handoff; --refresh updates its explicit file manifest."""
 import argparse
+import csv
 import hashlib
 import json
 import re
@@ -22,7 +23,7 @@ REQUIRED = (
     "PRD_V7.md", "START_HERE.md", "PROJECT_STATE.md",
     "assets/template/base_plate_1080x1920.png",
     "refs/identity/doro_primary_user.png", "refs/identity/doro_expression_user.png",
-    "spec/template.json", "spec/caption_style.json", "spec/delivery_rules.json",
+    "spec/template.json", "spec/caption_style.json", "spec/delivery_rules.json", "spec/cover_delivery.json",
     "spec/character_identity.json", "spec/narrative_retention.json",
     "spec/program_editorial.json", "spec/program_visuals.json",
     "assets/hosts_qin_reference/gugu_qin_edge.png",
@@ -163,6 +164,39 @@ def main():
     caption = json.loads((ROOT / "spec/caption_style.json").read_text(encoding="utf-8"))
     if template["template_id"] != caption["template_id"] or template["template_id"] != rules["default_template_id"]:
         raise ValueError("Template, caption and delivery defaults disagree")
+    cover = json.loads((ROOT / "spec/cover_delivery.json").read_text(encoding="utf-8"))
+    expected_covers = {"cover_3x4": ("3:4", 1080, 1440, "cover_3x4_path"),
+                       "cover_4x3": ("4:3", 1440, 1080, "cover_4x3_path")}
+    if (cover["profile_id"] != "COVER_DUAL_RATIO_V1" or cover["prd_version"] != rules["prd_version"]
+            or rules["cover_profile_id"] != cover["profile_id"]
+            or rules["cover_spec"] != "spec/cover_delivery.json"
+            or template["cover_spec"] != rules["cover_spec"]
+            or program_visuals["cover_spec"] != rules["cover_spec"]
+            or cover["required_per_part"] != 2 or cover["format"] != "PNG"
+            or set(cover["variants"]) != set(expected_covers)):
+        raise ValueError("Each episode requires the two current publishing cover formats")
+    for name, expected in expected_covers.items():
+        item = cover["variants"][name]
+        if tuple(item[key] for key in ("aspect_ratio", "width", "height", "parts_csv_column")) != expected:
+            raise ValueError("Wrong cover ratio, dimensions or parts.csv field: " + name)
+    with (ROOT / "episode/parts.csv").open(encoding="utf-8-sig", newline="") as handle:
+        parts_columns = next(csv.reader(handle))
+    if ("cover_path" in parts_columns
+            or any(parts_columns.count(item[3]) != 1 for item in expected_covers.values())
+            or not {"封面_3x4.png_1080x1440", "封面_4x3.png_1440x1080"}.issubset(rules["required_per_part"])):
+        raise ValueError("Blank episode template and delivery list must distinguish both cover files")
+    if (not cover["composition"]["independent_layout_per_ratio"]
+            or cover["composition"]["reuse_video_fixed_host_coordinates"]
+            or cover["composition"]["video_host_overlay_validator_applies"]
+            or cover["composition"]["narration_paragraph_required"]
+            or cover["composition"]["empty_video_caption_slot_required"]
+            or cover["delivery"]["include_in_caption_mapping"]
+            or cover["delivery"]["insert_at_video_opening"]
+            or cover["delivery"]["blank_baseplate_required"]
+            or not cover["assets"]["can_produce_without_prebuilt_baseplate"]
+            or template["variants"]["cover_opening"]["publishing_cover"]
+            or caption["scope"] != "9x16_video_caption_pages_not_independent_publishing_covers"):
+        raise ValueError("Publishing covers must be independently laid out and separate from 9:16 caption pages")
     fields = template["fields"]
     canvas = (template["canvas"]["width"], template["canvas"]["height"])
     shared = program_visuals["shared"]

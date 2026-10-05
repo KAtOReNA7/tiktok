@@ -40,7 +40,8 @@
     },
     "review_url": "https://www.figma.com/design/gc9VEwuG01X8ZsMTHg7HsQ?node-id=117-1558",
     "ordinary_production_requires_remote_access": false,
-    "preserve_legacy_masters": true
+    "preserve_legacy_masters": true,
+    "cover_node_role": "9x16_video_opening_or_historical_reference_not_new_ratio_cover"
   },
   "shared": {
     "canvas": [
@@ -342,5 +343,7 @@
       "identity_card_visible": false
     }
   },
-  "template_revision": "3.2.1"
+  "template_revision": "3.2.1",
+  "geometry_scope": "9x16_video_frames_only_not_independent_publishing_covers",
+  "cover_spec": "spec/cover_delivery.json"
 }

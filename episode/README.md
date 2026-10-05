@@ -1,6 +1,6 @@
 # 本期空白模板｜V7.14
 
-brief.yaml记录本期范围和40秒默认上限；parts.csv逐集记录片头模式、独立结尾、封面、一句话简介和静态字幕分页计划、最终PNG目录及字幕profile。它们是空白字段，不是已完成内容。
+brief.yaml记录本期范围和40秒默认上限；parts.csv逐集记录片头模式、独立结尾、cover_3x4_path／cover_4x3_path两种封面路径、一句话简介和静态字幕分页计划、最终PNG目录及字幕profile。它们是空白字段，不是已完成内容。
 
 brief中的hosts_cast记录“固定Q版演员→剧情角色”，身份标准读取spec/character_identity.json。本地分镜在现有composition／identity_ref等字段说明实际出镜者与参考用途；production_log逐图记实际输入、脸与身体检查、是否通过。需要纠偏时按需记录内部定妆文件及视觉检查结论，null不是通过；Codex自行修正后继续完整交付，不设置角色确认节点。拒绝成人化或换脸素材，不能把身份验收字段加到用户两列映射中。
 
@@ -18,7 +18,10 @@ production_log.md集中记录实际提示词、参考用途、版本、简短QA�
 
 ## 新制作任务的模板要求
 
-新制作使用`RYP_STORY_MAIN_V3_2`及`STATIC_CAPTION_PAGES_V1`。每张最终PNG常驻明确本集主题与该页实际口播；三位装饰扒边在右上、左下与底部三个方位和不同高度环抱整张模板，禁止同一排聚集；全部可见alpha位于主漫画窗外，实际交集必须为0。装饰可使用用户指定的顶部／底部非核心风险留白，核心标题、字幕、出处与正文仍避让。删除顶部“历史·原文回看”等内容类型，不换空话；出处使用暗色面板内浅灰字，不再用白条。准确文字由可编辑文本层确定性合成，不让imagegen绘字。读取本地spec/template.json、caption_style.json、program_visuals.json和assets/template/v3_2/。旧V3.1保留在spec/legacy/v3_1/与assets/template/v3_1/；旧V3保留在spec/legacy/v3/与assets/template/v3/，旧V2保留在spec/legacy/v2/与assets/template/v2/，仅供明确旧工程兼容，不混用。
+发布封面另按spec/cover_delivery.json（COVER_DUAL_RATIO_V1）：每集交1080×1440（3:4）与1440×1080（4:3）两张PNG，继承系列视觉并各自排版，不套正文固定锚点，不进字幕映射或成片开头。旧9:16封面资产仅作视频开场／历史参考；本轮未制新尺寸底板，可直接在目标画布排版，不因此停工。
+
+
+新制作使用`RYP_STORY_MAIN_V3_2`及`STATIC_CAPTION_PAGES_V1`。每张9:16正文最终PNG常驻明确本集主题与该页实际口播；三位装饰扒边在右上、左下与底部三个方位和不同高度环抱整张模板，禁止同一排聚集；全部可见alpha位于主漫画窗外，实际交集必须为0。装饰可使用用户指定的顶部／底部非核心风险留白，核心标题、字幕、出处与正文仍避让。删除顶部“历史·原文回看”等内容类型，不换空话；出处使用暗色面板内浅灰字，不再用白条。准确文字由可编辑文本层确定性合成，不让imagegen绘字。读取本地spec/template.json、caption_style.json、program_visuals.json和assets/template/v3_2/。旧V3.1保留在spec/legacy/v3_1/与assets/template/v3_1/；旧V3保留在spec/legacy/v3/与assets/template/v3/，旧V2保留在spec/legacy/v2/与assets/template/v2/，仅供明确旧工程兼容，不混用。
 
 原画按连续语义拆子页S01_01、S01_02（单页也_01），每页最多两行，长句分多图且可复用原画。两列CSV每行仅对应一张最终PNG的原稿片段；内部JSON记录parent_scene_id和视觉折行，逐父镜头及全稿拼接必须逐字符相等，不删改、重复或重排。CSV继续UTF-8单BOM、CRLF记录边界、标准转义与实际文件验收。
 

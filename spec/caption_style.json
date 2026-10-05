@@ -112,5 +112,7 @@
   "layout_change_preserves_existing_page_fragments": true,
   "legacy_v3_caption_spec": "spec/legacy/v3/caption_style.json",
   "legacy_v3_1_caption_spec": "spec/legacy/v3_1/caption_style.json",
-  "caption_delivery_requirement": "FINAL_PNG_WITH_CAPTIONS_ONLY_V1"
+  "caption_delivery_requirement": "FINAL_PNG_WITH_CAPTIONS_ONLY_V1",
+  "scope": "9x16_video_caption_pages_not_independent_publishing_covers",
+  "independent_cover_spec": "spec/cover_delivery.json"
 }

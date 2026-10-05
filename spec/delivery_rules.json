@@ -10,7 +10,8 @@
   "manifest_name": "00_交付清单.md",
   "required_per_part": [
     "纯口播稿_完整采用稿",
-    "封面.png",
+    "封面_3x4.png_1080x1440",
+    "封面_4x3.png_1440x1080",
     "发布文案.txt_含一句话简介",
     "按语义拆页的最终含字幕PNG",
     "素材映射.csv",
@@ -133,7 +134,8 @@
         "static_caption_profile_and_actual_png",
         "page_plan_and_mapping_lossless_reassembly",
         "persistent_title_and_three_spread_hosts",
-        "caption_delivery_requirement_matches_both_specs_and_chinese_goal_first"
+        "caption_delivery_requirement_matches_both_specs_and_chinese_goal_first",
+        "two_cover_ratios_actual_dimensions_and_independent_layout"
       ],
       "end_marker_is_narration": false,
       "caption_goal_first_in_chinese": "直接交付含口播字幕的最终图片；长段拆连续多图；不留空字幕槽，不做单独字幕视频，不要求用户先发成片再补字幕。"
@@ -221,5 +223,7 @@
   "actor_overlay_story_alpha_intersection_pixels": 0,
   "actor_overlay_distribution_validation_required": true,
   "decorative_actor_ui_risk_region_allowed": true,
-  "caption_delivery_requirement": "FINAL_PNG_WITH_CAPTIONS_ONLY_V1"
+  "caption_delivery_requirement": "FINAL_PNG_WITH_CAPTIONS_ONLY_V1",
+  "cover_spec": "spec/cover_delivery.json",
+  "cover_profile_id": "COVER_DUAL_RATIO_V1"
 }
