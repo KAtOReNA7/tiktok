@@ -43,7 +43,7 @@ CAPTION_PANEL = [130, 1416, 820, 218]
 CAPTION_TEXT = [150, 1440, 760, 128]
 CAPTION_PROFILE = "STATIC_CAPTION_PAGES_V1"
 EDGE_HOSTS = {"doro": [884, 24, 180, 180], "gugu": [-8, 1416, 180, 180],
-              "mambo": [560, 1664, 220, 220]}
+              "mambo": [580, 1702, 180, 180]}
 EDGE_ZONES = {"doro": "top_right", "gugu": "left_lower", "mambo": "bottom_center"}
 
 
@@ -307,6 +307,9 @@ def main():
     if (data["layout_template"] != template["template_id"]
             or data["caption_profile_id"] != CAPTION_PROFILE):
         raise ValueError("Manifest points at the wrong default template")
+    if {data["template_revision"], template["version"], template["template_revision"],
+            program_visuals["version"], program_visuals["template_revision"]} != {"3.2.1"}:
+        raise ValueError("Template revision must match 3.2.1 independently of the unchanged PRD version")
     prd_title = (ROOT / "PRD_V7.md").read_text(encoding="utf-8").splitlines()[0]
     prd_match = re.search(r"\bPRD V(\d+\.\d+)\b", prd_title)
     if not prd_match:

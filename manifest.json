@@ -24,8 +24,8 @@
     },
     {
       "path": "CHANGELOG.md",
-      "bytes": 12675,
-      "sha256": "1b1599748b4ab7eb8ad1ca4f3a0aca11a76225dc70bc29adbc7b4f1383db7f15"
+      "bytes": 13104,
+      "sha256": "06fbc5e3c8bb717ef4580106a2ba391e741669c799e8ae03c4dbc038f1839394"
     },
     {
       "path": "CHAT_HANDOFF.md",
@@ -34,13 +34,13 @@
     },
     {
       "path": "PRD_V7.md",
-      "bytes": 101984,
-      "sha256": "98b0e929440832fd19bd40d278e1f7e959efc9220ed452f2d756cfc423e3c3ac"
+      "bytes": 102104,
+      "sha256": "f322a2b2b31f68996a4898223f877b3c0ed89b0d0aa42db5a886a00aeb0e4c61"
     },
     {
       "path": "PROJECT_STATE.md",
-      "bytes": 6654,
-      "sha256": "32fc4d39381ebf81f56272b813e209d8d1d7194ed905750bc5792d55ad1d0822"
+      "bytes": 6703,
+      "sha256": "83ddcbf7434d8649a850dd792a702a3aeafc42489bc40924d8981c565e7f878e"
     },
     {
       "path": "README.md",
@@ -299,8 +299,8 @@
     },
     {
       "path": "assets/template/v3_2/hosts_edge_qin_reference_1080x1920.png",
-      "bytes": 160669,
-      "sha256": "a6ba7a80858a1fe89d858d201e4b1b2fc0853c88e5ea2e1d6745fc18eb8e4c3c"
+      "bytes": 138151,
+      "sha256": "e5a98479d4801f56a50b001443d4e2ed34fe7d254d2645f8ff97ee807de4993d"
     },
     {
       "path": "episode/README.md",
@@ -454,13 +454,13 @@
     },
     {
       "path": "spec/program_visuals.json",
-      "bytes": 9752,
-      "sha256": "1da7e0b864af3efcd798fd15337664bc73be9d86042beb8b7ed550e055b5e3d7"
+      "bytes": 9786,
+      "sha256": "d5889b18dc05f3d16ebdb0d77b28e4d788d39914cd2ead39c5d7006df2fe9629"
     },
     {
       "path": "spec/template.json",
-      "bytes": 27796,
-      "sha256": "b45014ff534011a221e001c532a55b1b7d5c02965587439f40e7ef990effa7d7"
+      "bytes": 27830,
+      "sha256": "d797a7a0f5c23a27549ae1e22f22f3653eb9dc404889cf6b771e29dba2f59474"
     },
     {
       "path": "tools/test_validate_caption_pages.py",
@@ -484,8 +484,8 @@
     },
     {
       "path": "tools/validate_handoff.py",
-      "bytes": 22659,
-      "sha256": "1be8a2cf805ef4a44b827bfb4cc5a88d2b0726fc5ae3d3dc522f24100fa239a0"
+      "bytes": 22944,
+      "sha256": "9ed6934e003df96255e3099a0350279a96c04a62dcbf313766da792b69519e84"
     },
     {
       "path": "tools/validate_host_overlay.py",
@@ -512,5 +512,6 @@
   "updated_date": "2026-10-05",
   "remote_figma_verified_date": "2026-10-05",
   "narrative_profile_id": "RETENTION_INFO_V1",
-  "caption_profile_id": "STATIC_CAPTION_PAGES_V1"
+  "caption_profile_id": "STATIC_CAPTION_PAGES_V1",
+  "template_revision": "3.2.1"
 }

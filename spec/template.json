@@ -1,6 +1,6 @@
 {
   "template_id": "RYP_STORY_MAIN_V3_2",
-  "version": "3.2",
+  "version": "3.2.1",
   "prd_version": "7.14",
   "approval_date": "2026-10-05",
   "status": "DEFAULT_FOR_NEW_PRODUCTION_USER_AUTHORIZED_REDESIGN",
@@ -362,10 +362,10 @@
       },
       "mambo": {
         "bounds": [
-          560,
-          1664,
-          220,
-          220
+          580,
+          1702,
+          180,
+          180
         ],
         "file": "assets/hosts_qin_reference/mambo_qin_edge.png",
         "gesture": "grip bottom-center horizontal anchor at y1872, surrounding the entire template",
@@ -552,8 +552,8 @@
         "width": 1080,
         "height": 1920,
         "mode": "RGBA",
-        "sha256": "a6ba7a80858a1fe89d858d201e4b1b2fc0853c88e5ea2e1d6745fc18eb8e4c3c",
-        "bytes": 160669
+        "sha256": "e5a98479d4801f56a50b001443d4e2ed34fe7d254d2645f8ff97ee807de4993d",
+        "bytes": 138151
       }
     ],
     "base_fixed_text_allowlist": [
@@ -996,5 +996,6 @@
       ]
     }
   },
-  "card_text_coordinates": "relative_to_each_component_top_left"
+  "card_text_coordinates": "relative_to_each_component_top_left",
+  "template_revision": "3.2.1"
 }

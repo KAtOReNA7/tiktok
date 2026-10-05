@@ -1,5 +1,5 @@
 {
-  "version": "3.2",
+  "version": "3.2.1",
   "prd_version": "7.14",
   "effective_date": "2026-10-05",
   "status": "READY_FOR_REVERSIBLE_PROGRAM_TRIAL",
@@ -95,10 +95,10 @@
         180
       ],
       "mambo": [
-        560,
-        1664,
-        220,
-        220
+        580,
+        1702,
+        180,
+        180
       ]
     },
     "layer_order": [
@@ -341,5 +341,6 @@
       "switch_rule": "明确一个共同评价标准与范围，三项必须是不同案例；先讲标准，按实际内容依次切0/1/2/3，不拼接三篇旧稿或混标准。",
       "identity_card_visible": false
     }
-  }
+  },
+  "template_revision": "3.2.1"
 }
