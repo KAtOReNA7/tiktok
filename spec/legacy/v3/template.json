@@ -1,37 +1,37 @@
 {
-  "template_id": "RYP_STORY_MAIN_V3_1",
-  "version": "3.1",
-  "prd_version": "7.13",
+  "template_id": "RYP_STORY_MAIN_V3",
+  "version": "3.0",
+  "prd_version": "7.12",
   "approval_date": "2026-10-05",
   "status": "DEFAULT_FOR_NEW_PRODUCTION_USER_AUTHORIZED_REDESIGN",
   "figma": {
     "file_key": "gc9VEwuG01X8ZsMTHg7HsQ",
-    "page_id": "111:900",
-    "preview_board_id": "111:2583",
-    "preview_body_id": "111:1058",
+    "page_id": "101:2",
+    "preview_board_id": "101:566",
+    "preview_body_id": "101:233",
     "measurement_board_id": "103:595",
     "variants": {
-      "cover": "111:1045",
-      "body": "111:1058",
-      "evidence": "111:1070",
-      "question": "111:1083",
-      "compare": "111:1096"
+      "cover": "101:152",
+      "body": "101:233",
+      "evidence": "101:309",
+      "question": "101:394",
+      "compare": "101:476"
     },
     "components": {
-      "chrome": "111:901",
-      "seal": "111:957",
-      "hosts": "111:961",
-      "identity": "111:965",
-      "evidence": "111:969",
-      "bubble": "111:978",
-      "question": "111:983",
-      "compare": "111:1003",
-      "compareStandard": "111:989",
-      "compareReveal1": "111:1003",
-      "compareReveal2": "111:1017",
-      "compareReveal3": "111:1031"
+      "chrome": "101:8",
+      "seal": "101:64",
+      "hosts": "101:68",
+      "identity": "101:72",
+      "evidence": "101:76",
+      "bubble": "101:85",
+      "question": "101:90",
+      "compare": "101:110",
+      "compareStandard": "101:96",
+      "compareReveal1": "101:110",
+      "compareReveal2": "101:124",
+      "compareReveal3": "101:138"
     },
-    "review_url": "https://www.figma.com/design/gc9VEwuG01X8ZsMTHg7HsQ?node-id=111-2583",
+    "review_url": "https://www.figma.com/design/gc9VEwuG01X8ZsMTHg7HsQ?node-id=101-566",
     "ordinary_production_requires_remote_access": false,
     "preserve_legacy_masters": true
   },
@@ -57,11 +57,11 @@
         40,
         400,
         1000,
-        848
+        1240
       ],
       "clip": true,
-      "preferred_art_ratio": "1000:848",
-      "legacy_art_fit": "contain with neutral padding by default; crop only after verifying faces/hands/actions/dialogue/evidence; no batch center cover, no stretch or regenerated art for aspect ratio"
+      "preferred_art_ratio": "1000:1240",
+      "legacy_art_fit": "inspect focal subjects; preserve face/hands/action with crop or proportional contain and neutral padding; no stretch; no default center crop; no regeneration for aspect ratio"
     },
     "常驻主题": {
       "font_family": "Noto Sans SC",
@@ -78,15 +78,25 @@
         160
       ]
     },
+    "内容类型": {
+      "font_size_px": 25,
+      "essential": false,
+      "bounds": [
+        64,
+        164,
+        810,
+        34
+      ]
+    },
     "口播面板": {
       "corner_cut_px": 22,
       "fill": "#161616",
       "opacity": 0.97,
       "bounds": [
         80,
-        1416,
+        1398,
         820,
-        218
+        170
       ]
     },
     "口播字幕": {
@@ -99,7 +109,7 @@
       "overflow": "Split at semantic boundaries to multiple sequential stills reusing the same source art; preserve all punctuation and wording; no assumed audio timings",
       "bounds": [
         100,
-        1440,
+        1420,
         760,
         128
       ]
@@ -108,16 +118,13 @@
       "font_family": "Noto Sans SC",
       "font_style": "Regular",
       "font_size_px": 26,
-      "line_height_px": 36,
+      "line_height_px": 38,
       "overflow": "short book/chapter reference only; full citation in source document; never shrink font",
-      "fill": "#DADADA",
-      "background": "shared caption_panel; no separate white plaque",
-      "source_prefix_required": false,
       "bounds": [
-        126,
-        1592,
-        714,
-        36
+        340,
+        1590,
+        530,
+        40
       ]
     },
     "朱印": {
@@ -163,32 +170,14 @@
       "paraphrase_line_height_px": 44,
       "source_font_size_px": 26,
       "source_line_height_px": 38
-    },
-    "出处分隔线": {
-      "fill": "#595959",
-      "bounds": [
-        100,
-        1580,
-        760,
-        1
-      ]
-    },
-    "出处索引标": {
-      "fill": "#F2FA00",
-      "bounds": [
-        100,
-        1592,
-        10,
-        26
-      ]
     }
   },
   "variants": {
     "cover_opening": {
       "label": "封面／开场",
-      "base_plate": "assets/template/v3_1/cover_opening_base_1080x1920.png",
-      "export_node_id": "111:1893",
-      "example_node_id": "111:1045",
+      "base_plate": "assets/template/v3/cover_opening_base_1080x1920.png",
+      "export_node_id": "106:595",
+      "example_node_id": "101:152",
       "persistent_title_bounds": [
         64,
         208,
@@ -197,22 +186,22 @@
       ],
       "caption_panel_bounds": [
         80,
-        1416,
+        1398,
         820,
-        218
+        170
       ],
       "caption_text_bounds": [
         100,
-        1440,
+        1420,
         760,
         128
       ]
     },
     "body": {
       "label": "正文大画面",
-      "base_plate": "assets/template/v3_1/body_base_1080x1920.png",
-      "export_node_id": "111:1954",
-      "example_node_id": "111:1058",
+      "base_plate": "assets/template/v3/body_base_1080x1920.png",
+      "export_node_id": "106:655",
+      "example_node_id": "101:233",
       "persistent_title_bounds": [
         64,
         208,
@@ -221,22 +210,22 @@
       ],
       "caption_panel_bounds": [
         80,
-        1416,
+        1398,
         820,
-        218
+        170
       ],
       "caption_text_bounds": [
         100,
-        1440,
+        1420,
         760,
         128
       ]
     },
     "closeup": {
       "label": "主体局部",
-      "base_plate": "assets/template/v3_1/closeup_base_1080x1920.png",
-      "export_node_id": "111:2015",
-      "example_node_id": "111:1058",
+      "base_plate": "assets/template/v3/closeup_base_1080x1920.png",
+      "export_node_id": "106:715",
+      "example_node_id": "101:233",
       "persistent_title_bounds": [
         64,
         208,
@@ -245,23 +234,23 @@
       ],
       "caption_panel_bounds": [
         80,
-        1416,
+        1398,
         820,
-        218
+        170
       ],
       "caption_text_bounds": [
         100,
-        1440,
+        1420,
         760,
         128
       ],
-      "crop_rule": "只有逐图证明脸、手、动作、物证与关系完整后才保留主体裁切；已批准原画重排默认contain加中性留边。不批量居中cover、不拉伸、不为比例重生图。"
+      "crop_rule": "按关键人物／动作保留主体裁切，或等比contain加中性留边；不拉伸，不默认硬裁，不因原画比例重生图。"
     },
     "evidence": {
       "label": "原文证据",
-      "base_plate": "assets/template/v3_1/evidence_base_1080x1920.png",
-      "export_node_id": "111:2076",
-      "example_node_id": "111:1070",
+      "base_plate": "assets/template/v3/evidence_base_1080x1920.png",
+      "export_node_id": "106:775",
+      "example_node_id": "101:309",
       "persistent_title_bounds": [
         64,
         208,
@@ -270,13 +259,13 @@
       ],
       "caption_panel_bounds": [
         80,
-        1416,
+        1398,
         820,
-        218
+        170
       ],
       "caption_text_bounds": [
         100,
-        1440,
+        1420,
         760,
         128
       ]
@@ -293,9 +282,7 @@
     "giant_footer_brand": false,
     "text_fit_requires_actual_font_render_check": true,
     "accurate_text_by_imagegen": false,
-    "locked_title_silent_rewrite": false,
-    "top_content_type_visible": false,
-    "replacement_top_slogan_allowed": false
+    "locked_title_silent_rewrite": false
   },
   "safe_area": {
     "top": {
@@ -324,7 +311,7 @@
   },
   "characters": {
     "identity_spec": "spec/character_identity.json",
-    "overlay_file": "assets/template/v3_1/hosts_edge_qin_reference_1080x1920.png",
+    "overlay_file": "assets/template/v3/hosts_edge_qin_reference_1080x1920.png",
     "overlay_role": "three_separated_actor_edge_layers",
     "final_png_contains_hosts": true,
     "do_not_reoverlay_on_final_png": true,
@@ -333,88 +320,53 @@
     "slots": {
       "doro": {
         "bounds": [
-          758,
-          1258,
-          160,
-          160
+          870,
+          368,
+          230,
+          230
         ],
         "file": "assets/hosts_qin_reference/doro_qin_edge.png",
-        "gesture": "grip separate right short anchor, fully outside comic"
+        "gesture": "grip right edge"
       },
       "gugu": {
         "bounds": [
-          0,
-          1258,
-          160,
-          160
+          -30,
+          790,
+          220,
+          220
         ],
         "file": "assets/hosts_qin_reference/gugu_qin_edge.png",
-        "gesture": "grip separate left short anchor, fully outside comic"
+        "gesture": "grip left edge"
       },
       "mambo": {
         "bounds": [
-          390,
-          1265,
-          160,
-          160
+          680,
+          1190,
+          220,
+          220
         ],
         "file": "assets/hosts_qin_reference/mambo_qin_edge.png",
-        "gesture": "hands align to caption panel top at y1416, fully outside comic"
+        "gesture": "hands align to top of subtitle panel at y1398"
       }
     },
     "topic_specific": true,
-    "reuse_rule": "三位装饰角色所有可见像素全部位于漫画窗外，通用及本期换装角色层均须实际alpha验交集0，含发丝描边与半透明阴影；不可裁掉角色来掩盖相交。原Q版参考身份不变，不挡字幕/出处，不重复叠V3旧扒边或V2签名。",
-    "story_alpha_intersection_max_pixels": 0,
-    "alpha_threshold": "> 0",
-    "alpha_validation_tool": "tools/validate_host_overlay.py",
-    "protected_story_bounds": [
-      40,
-      400,
-      1000,
-      848
-    ],
-    "decoration_strip": {
-      "x": 0,
-      "y": 1248,
-      "width": 1080,
-      "height": 168,
-      "may_overlap_story_window": false,
-      "grip_contact_with_caption_panel_allowed": true,
-      "separated_horizontal_placement": true
-    },
-    "anchor_lines": [
-      {
-        "for": "咕咕嘎嘎",
-        "x": 24,
-        "y": 1258,
-        "width": 2,
-        "height": 152,
-        "fill": "#161616"
-      },
-      {
-        "for": "Doro",
-        "x": 900,
-        "y": 1258,
-        "width": 2,
-        "height": 152,
-        "fill": "#161616"
-      }
-    ]
+    "reuse_rule": "可复用合格秦装原透明图按固定V3锚点合成；新题cos保留身份。不叠V2紧凑签名或V1全屏外缘图；手部贴面板边，脸／身体不进字幕文字框。"
   },
   "local_assets": {
     "base_type": "transparent_rgba_ui_overlay",
     "base_layer_order": [
-      "source illustration placed within story window, contain by default",
-      "V3.1 clean plate with detached host strip, caption panel, divider, source index and seal",
-      "approved title and identity/card text; comparison hides single-person identity",
-      "three separated approved actor cutouts strictly outside entire story window",
-      "full narration page text and integrated source text"
+      "source illustration with inspected focal crop",
+      "blank reusable V3 plate with caption panel and seal",
+      "title and identity/source text",
+      "optional evidence or question or one-standard-three-case content",
+      "three separated actor edge overlays",
+      "caption text and export page order"
     ],
     "transparent_story_bounds": [
       40,
       400,
       1000,
-      848
+      1240
     ],
     "base_has_sample_art": false,
     "base_has_sample_episode_text": false,
@@ -426,103 +378,103 @@
     "blank_base_variants_may_share_pixels": "cover/body/closeup use the same common chrome; their source-art crop and editable content differ",
     "asset_inventory": [
       {
-        "file": "assets/template/v3_1/cover_opening_base_1080x1920.png",
-        "figma_node_id": "111:1893",
+        "file": "assets/template/v3/cover_opening_base_1080x1920.png",
+        "figma_node_id": "106:595",
         "width": 1080,
         "height": 1920,
         "mode": "RGBA",
-        "sha256": "fde4e0a922e73b44dc43d7854cab4daca2ed1c222718f54ef5beb95e2d9d6dd8",
-        "bytes": 16712
+        "sha256": "f63c57b7e94ec8bd941681c264d723f98bc64e8dd93545139acdc9563cc73f5f",
+        "bytes": 16619
       },
       {
-        "file": "assets/template/v3_1/body_base_1080x1920.png",
-        "figma_node_id": "111:1954",
+        "file": "assets/template/v3/body_base_1080x1920.png",
+        "figma_node_id": "106:655",
         "width": 1080,
         "height": 1920,
         "mode": "RGBA",
-        "sha256": "fde4e0a922e73b44dc43d7854cab4daca2ed1c222718f54ef5beb95e2d9d6dd8",
-        "bytes": 16712
+        "sha256": "f63c57b7e94ec8bd941681c264d723f98bc64e8dd93545139acdc9563cc73f5f",
+        "bytes": 16619
       },
       {
-        "file": "assets/template/v3_1/closeup_base_1080x1920.png",
-        "figma_node_id": "111:2015",
+        "file": "assets/template/v3/closeup_base_1080x1920.png",
+        "figma_node_id": "106:715",
         "width": 1080,
         "height": 1920,
         "mode": "RGBA",
-        "sha256": "fde4e0a922e73b44dc43d7854cab4daca2ed1c222718f54ef5beb95e2d9d6dd8",
-        "bytes": 16712
+        "sha256": "f63c57b7e94ec8bd941681c264d723f98bc64e8dd93545139acdc9563cc73f5f",
+        "bytes": 16619
       },
       {
-        "file": "assets/template/v3_1/evidence_base_1080x1920.png",
-        "figma_node_id": "111:2076",
+        "file": "assets/template/v3/evidence_base_1080x1920.png",
+        "figma_node_id": "106:775",
         "width": 1080,
         "height": 1920,
         "mode": "RGBA",
-        "sha256": "1f35559523c2438abb79f616886a1f3705e46f166149c8af1452f09e9872878f",
-        "bytes": 17093
+        "sha256": "0fdfc93877893bf715e612f877745f4e3c40218a94094f726cdc5ee9308d232e",
+        "bytes": 17001
       },
       {
-        "file": "assets/template/v3_1/counter_question_base_1080x1920.png",
-        "figma_node_id": "111:2146",
+        "file": "assets/template/v3/counter_question_base_1080x1920.png",
+        "figma_node_id": "106:844",
         "width": 1080,
         "height": 1920,
         "mode": "RGBA",
-        "sha256": "881b07f386309f6072aed288675673cf8c640624af15257e37062abddb321f2b",
-        "bytes": 17065
+        "sha256": "304e9fffe7fe32ba5e3a292f459a9b9207ba69a510c3fb8f00db418d7c60a784",
+        "bytes": 16972
       },
       {
-        "file": "assets/template/v3_1/counter_reply_base_1080x1920.png",
-        "figma_node_id": "111:2213",
+        "file": "assets/template/v3/counter_reply_base_1080x1920.png",
+        "figma_node_id": "106:910",
         "width": 1080,
         "height": 1920,
         "mode": "RGBA",
-        "sha256": "1f35559523c2438abb79f616886a1f3705e46f166149c8af1452f09e9872878f",
-        "bytes": 17093
+        "sha256": "0fdfc93877893bf715e612f877745f4e3c40218a94094f726cdc5ee9308d232e",
+        "bytes": 17001
       },
       {
-        "file": "assets/template/v3_1/compare_standard_base_1080x1920.png",
-        "figma_node_id": "111:2283",
+        "file": "assets/template/v3/compare_standard_base_1080x1920.png",
+        "figma_node_id": "106:979",
         "width": 1080,
         "height": 1920,
         "mode": "RGBA",
-        "sha256": "a98f1e8b3bb8d593c67ae0e113ee6bf4f7492ab71b154da86374df3ed0b28241",
-        "bytes": 17063
+        "sha256": "d12622b45cfbd86d90e3b6cb66ce870744685f0d1d5eebecdf0bc9ec15ca7b79",
+        "bytes": 16972
       },
       {
-        "file": "assets/template/v3_1/compare_reveal_1_base_1080x1920.png",
-        "figma_node_id": "111:2358",
+        "file": "assets/template/v3/compare_reveal_1_base_1080x1920.png",
+        "figma_node_id": "106:1053",
         "width": 1080,
         "height": 1920,
         "mode": "RGBA",
-        "sha256": "e555d4c91235f4fbb3e3112c56b3a34c7d0f6098e4999ec73dc70869270cd058",
-        "bytes": 17089
+        "sha256": "8f2dbe354e1bcdfff581c33c5066ae1adf2d86bdeeb4d860b3993f814a5b5223",
+        "bytes": 16998
       },
       {
-        "file": "assets/template/v3_1/compare_reveal_2_base_1080x1920.png",
-        "figma_node_id": "111:2433",
+        "file": "assets/template/v3/compare_reveal_2_base_1080x1920.png",
+        "figma_node_id": "106:1127",
         "width": 1080,
         "height": 1920,
         "mode": "RGBA",
-        "sha256": "da3bebba5177e32ccf282f9796fdd1883fac07bf4860f9e6803a7abc08a50d5e",
-        "bytes": 17088
+        "sha256": "3cefa4541496e3ff7a1a2a7a25ecf537aad979ee4579829bde437013c966ceaf",
+        "bytes": 16997
       },
       {
-        "file": "assets/template/v3_1/compare_reveal_3_base_1080x1920.png",
-        "figma_node_id": "111:2508",
+        "file": "assets/template/v3/compare_reveal_3_base_1080x1920.png",
+        "figma_node_id": "106:1201",
         "width": 1080,
         "height": 1920,
         "mode": "RGBA",
-        "sha256": "8d2585f0d11bf2484a7ccdd9a39ffe47bc79d4dcc9b36dab2f883d1c7ffb059d",
-        "bytes": 17087
+        "sha256": "aadac636443fe8b9cf5beeb8c1ca711b8cbcc4d077d8957cb42dbfb6f347f21b",
+        "bytes": 16996
       },
       {
-        "file": "assets/template/v3_1/hosts_edge_qin_reference_1080x1920.png",
-        "figma_node_id": "111:961",
+        "file": "assets/template/v3/hosts_edge_qin_reference_1080x1920.png",
+        "figma_node_id": "101:68",
         "width": 1080,
         "height": 1920,
         "mode": "RGBA",
-        "sha256": "427cd244ccadeec6adb335bb8a51560f5b2e501d874e244420299346f150f020",
-        "bytes": 114030
+        "sha256": "1b8381ddd2521d31cfdc944c9946d62e067e0edc4cbad38e26eda98bc8184c43",
+        "bytes": 191556
       }
     ],
     "base_fixed_text_allowlist": [
@@ -531,41 +483,26 @@
     "seal_text_already_baked": true,
     "identity_card_background_baked": false,
     "identity_card_background": "render locally from fields.人物身份 geometry; Figma optional, not a production dependency",
-    "export_method": "Figma isolated node get_screenshot returned real PNG; node.exportAsync output was truncated and not used",
-    "source_has_separate_white_strip": false,
-    "source_background": "shared caption panel",
-    "top_decoration": {
-      "text_allowed": false,
-      "style": "Existing thin yellow/black lines only; no replacement slogan"
-    },
-    "art_placement": {
-      "default": "contain",
-      "neutral_letterbox_allowed": true,
-      "crop_requires_visual_review": true,
-      "prohibit_forced_center_cover": true,
-      "preserve_faces_hands_identity_features_dialogue_and_key_evidence": true
-    }
+    "export_method": "Figma isolated node get_screenshot returned real PNG; node.exportAsync output was truncated and not used"
   },
   "migration": {
     "effective_date": "2026-10-05",
-    "new_production_default": "RYP_STORY_MAIN_V3_1",
+    "new_production_default": "RYP_STORY_MAIN_V3",
     "completed_videos_rebuild": false,
     "in_progress_legacy_work": "follow_current_user_task_do_not_force_migration",
     "old_computer_sync": "only_explicit_rules_update_then_local_continue",
     "other_computers_auto_updated": false,
     "instructions_must_name_prd_and_template_versions": true,
-    "missing_v3_1_assets": "search_local_report_specific_gaps_no_silent_legacy_fallback_no_auto_remote_sync"
+    "missing_v3_assets": "search_local_report_specific_gaps_no_silent_v2_fallback_no_auto_remote_sync"
   },
   "legacy": {
-    "template_id": "RYP_STORY_MAIN_V3",
+    "template_id": "RYP_STORY_MAIN_V2",
     "status": "explicit_legacy_tasks_only",
-    "template_spec": "spec/legacy/v3/template.json",
-    "caption_spec": "spec/legacy/v3/caption_style.json",
-    "program_visual_spec": "spec/legacy/v3/program_visuals.json",
-    "asset_root": "assets/template/v3",
-    "use_for_new_production": false,
-    "older_v2_spec_directory": "spec/legacy/v2",
-    "older_v2_asset_root": "assets/template/v2"
+    "template_spec": "spec/legacy/v2/template.json",
+    "caption_spec": "spec/legacy/v2/caption_style.json",
+    "program_visual_spec": "spec/legacy/v2/program_visuals.json",
+    "asset_root": "assets/template/v2",
+    "use_for_new_production": false
   },
   "production": {
     "default_mode": "assets_for_human_editing",
@@ -609,13 +546,13 @@
   "note": "Every content page keeps the same explicit topic; semantic caption subpages may reuse source art without counting as new story information. Generic asset QA does not prove any episode rendered.",
   "card_text_components": {
     "identity": {
-      "componentId": "111:965",
+      "componentId": "101:72",
       "width": 286,
       "height": 66,
       "texts": [
         {
           "name": "角色名",
-          "id": "111:968",
+          "id": "101:75",
           "x": 22,
           "y": 13,
           "width": 244,
@@ -637,13 +574,13 @@
       ]
     },
     "evidence": {
-      "componentId": "111:969",
+      "componentId": "101:76",
       "width": 688,
       "height": 292,
       "texts": [
         {
           "name": "证据类型",
-          "id": "111:974",
+          "id": "101:81",
           "x": 32,
           "y": 22,
           "width": 618,
@@ -664,7 +601,7 @@
         },
         {
           "name": "原文引用",
-          "id": "111:975",
+          "id": "101:82",
           "x": 32,
           "y": 72,
           "width": 618,
@@ -685,7 +622,7 @@
         },
         {
           "name": "释义",
-          "id": "111:976",
+          "id": "101:83",
           "x": 32,
           "y": 146,
           "width": 618,
@@ -706,7 +643,7 @@
         },
         {
           "name": "证据出处",
-          "id": "111:977",
+          "id": "101:84",
           "x": 32,
           "y": 202,
           "width": 618,
@@ -728,13 +665,13 @@
       ]
     },
     "bubble": {
-      "componentId": "111:978",
+      "componentId": "101:85",
       "width": 560,
       "height": 160,
       "texts": [
         {
           "name": "气泡文字",
-          "id": "111:981",
+          "id": "101:88",
           "x": 24,
           "y": 20,
           "width": 510,
@@ -756,13 +693,13 @@
       ]
     },
     "question": {
-      "componentId": "111:983",
+      "componentId": "101:90",
       "width": 688,
       "height": 260,
       "texts": [
         {
           "name": "追问标签",
-          "id": "111:987",
+          "id": "101:94",
           "x": 32,
           "y": 24,
           "width": 618,
@@ -783,7 +720,7 @@
         },
         {
           "name": "追问正文",
-          "id": "111:988",
+          "id": "101:95",
           "x": 32,
           "y": 76,
           "width": 618,
@@ -805,13 +742,13 @@
       ]
     },
     "compare": {
-      "componentId": "111:1003",
+      "componentId": "101:110",
       "width": 688,
       "height": 570,
       "texts": [
         {
           "name": "统一标准",
-          "id": "111:1007",
+          "id": "101:114",
           "x": 30,
           "y": 22,
           "width": 624,
@@ -832,7 +769,7 @@
         },
         {
           "name": "案例名称/1",
-          "id": "111:1009",
+          "id": "101:116",
           "x": 44,
           "y": 86,
           "width": 596,
@@ -853,7 +790,7 @@
         },
         {
           "name": "同尺结果/1",
-          "id": "111:1010",
+          "id": "101:117",
           "x": 44,
           "y": 130,
           "width": 596,
@@ -874,7 +811,7 @@
         },
         {
           "name": "案例名称/2",
-          "id": "111:1012",
+          "id": "101:119",
           "x": 44,
           "y": 196,
           "width": 596,
@@ -895,7 +832,7 @@
         },
         {
           "name": "同尺结果/2",
-          "id": "111:1013",
+          "id": "101:120",
           "x": 44,
           "y": 240,
           "width": 596,
@@ -916,7 +853,7 @@
         },
         {
           "name": "案例名称/3",
-          "id": "111:1015",
+          "id": "101:122",
           "x": 44,
           "y": 306,
           "width": 596,
@@ -937,7 +874,7 @@
         },
         {
           "name": "同尺结果/3",
-          "id": "111:1016",
+          "id": "101:123",
           "x": 44,
           "y": 350,
           "width": 596,

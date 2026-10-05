@@ -8,6 +8,7 @@ import sys
 import zlib
 from pathlib import Path
 from validate_mapping_csv import COLUMNS, validate_mapping_csv
+from validate_host_overlay import validate_host_overlay
 
 ROOT = Path(__file__).resolve().parents[1]
 MANIFEST = ROOT / "manifest.json"
@@ -30,15 +31,17 @@ REQUIRED = (
     "tools/validate_mapping_csv.py", "tools/validate_caption_pages.py",
     "spec/legacy/v2/template.json", "spec/legacy/v2/caption_style.json",
     "spec/legacy/v2/program_visuals.json",
+    "spec/legacy/v3/template.json", "spec/legacy/v3/caption_style.json",
+    "spec/legacy/v3/program_visuals.json", "tools/validate_host_overlay.py",
 )
 PROGRAM_IDS = {"MAIN_ACCOUNT", "COUNTER_REPLY", "SAME_RULE_COMPARE"}
 TITLE_BOUNDS = [64, 208, 810, 160]
-STORY_BOUNDS = [40, 400, 1000, 1240]
-CAPTION_PANEL = [80, 1398, 820, 170]
-CAPTION_TEXT = [100, 1420, 760, 128]
+STORY_BOUNDS = [40, 400, 1000, 848]
+CAPTION_PANEL = [80, 1416, 820, 218]
+CAPTION_TEXT = [100, 1440, 760, 128]
 CAPTION_PROFILE = "STATIC_CAPTION_PAGES_V1"
-EDGE_HOSTS = {"doro": [870, 368, 230, 230], "gugu": [-30, 790, 220, 220],
-              "mambo": [680, 1190, 220, 220]}
+EDGE_HOSTS = {"doro": [758, 1258, 160, 160], "gugu": [0, 1258, 160, 160],
+              "mambo": [390, 1265, 160, 160]}
 
 
 def paths_for_manifest():
@@ -160,7 +163,7 @@ def main():
     fields = template["fields"]
     canvas = (template["canvas"]["width"], template["canvas"]["height"])
     shared = program_visuals["shared"]
-    if (template["template_id"] != "RYP_STORY_MAIN_V3" or canvas != (1080, 1920)
+    if (template["template_id"] != "RYP_STORY_MAIN_V3_1" or canvas != (1080, 1920)
             or fields["漫画主画面"]["bounds"] != STORY_BOUNDS
             or fields["常驻主题"]["bounds"] != TITLE_BOUNDS
             or fields["口播面板"]["bounds"] != CAPTION_PANEL
@@ -208,6 +211,15 @@ def main():
                     "bottom": [0, 1640, 1080, 280]}[name]
         if rect != expected:
             raise ValueError("Project UI-risk reservations changed without reviewed geometry")
+    if ("内容类型" in fields or shared["top_content_type_visible"]
+            or template["limits"]["top_content_type_visible"]
+            or template["local_assets"]["source_has_separate_white_strip"]
+            or fields["短出处"]["bounds"] != [126, 1592, 714, 36]
+            or fields["短出处"]["font_size_px"] != 26):
+        raise ValueError("V3.1 deletes top content-type copy and uses the new in-panel source typography")
+    if (template["characters"]["story_alpha_intersection_max_pixels"] != 0
+            or template["characters"]["alpha_validation_tool"] != "tools/validate_host_overlay.py"):
+        raise ValueError("V3.1 requires zero actual actor alpha inside the story window")
     asset_paths = [template["characters"]["overlay_file"]]
     if set(template["variants"]) != {"cover_opening", "body", "closeup", "evidence"}:
         raise ValueError("V3 must include four reusable main layout variants")
@@ -247,12 +259,22 @@ def main():
         raise ValueError("V3 inventory must contain exactly ten bases and one spread-host overlay")
     for asset in inventory:
         name = asset["file"]
-        if not name.startswith("assets/template/v3/"):
+        if not name.startswith("assets/template/v3_1/"):
             raise ValueError("Current V3 assets must not point at legacy files")
         validate_rgba_png(name, canvas)
         content = (ROOT / name).read_bytes()
         if len(content) != asset["bytes"] or hashlib.sha256(content).hexdigest() != asset["sha256"]:
             raise ValueError("V3 asset inventory differs from the exported PNG: " + name)
+    actor_alpha = validate_host_overlay(ROOT / template["characters"]["overlay_file"], STORY_BOUNDS, canvas)
+    if actor_alpha["story_intersection_pixels"] != 0:
+        raise ValueError("Visible actor pixels must not enter any portion of the main comic window")
+    legacy_v3 = json.loads((ROOT / "spec/legacy/v3/template.json").read_text(encoding="utf-8"))
+    if (legacy_v3["template_id"] != "RYP_STORY_MAIN_V3"
+            or legacy_v3["fields"]["漫画主画面"]["bounds"] != [40, 400, 1000, 1240]):
+        raise ValueError("Original V3 compatibility geometry must remain archived")
+    for asset in legacy_v3["local_assets"]["asset_inventory"]:
+        if hashlib.sha256((ROOT / asset["file"]).read_bytes()).hexdigest() != asset["sha256"]:
+            raise ValueError("Archived V3 asset changed: " + asset["file"])
     legacy = json.loads((ROOT / "spec/legacy/v2/template.json").read_text(encoding="utf-8"))
     legacy_caption = json.loads((ROOT / "spec/legacy/v2/caption_style.json").read_text(encoding="utf-8"))
     if (legacy["template_id"] != "RYP_STORY_MAIN_V2"
@@ -300,7 +322,7 @@ def main():
         raise ValueError("Manifest omits required handoff files")
     if any(name not in seen for name in asset_paths):
         raise ValueError("Manifest omits current template assets")
-    print("PASS: %d files, PRD version, three V3 programs, ten bases and spread-host overlay, decoded RGBA assets, persistent title/static-caption geometry, legacy V2 compatibility, asset hashes and BOM/CRLF mapping template verified. Validate actual page plans/CSV files separately; rendered text, likeness and phone-preview safety require visual QA." % len(data["files"]))
+    print("PASS: %d files, PRD version, three V3.1 programs, ten bases and spread-host overlay, decoded RGBA assets, persistent title/static-caption geometry, actual actor-alpha/story intersection zero, legacy V2/V3 compatibility, asset hashes and BOM/CRLF mapping template verified. Validate actual page plans/CSV files separately; rendered text, likeness and phone-preview safety require visual QA." % len(data["files"]))
 
 
 if __name__ == "__main__":

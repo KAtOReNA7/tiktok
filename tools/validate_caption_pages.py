@@ -11,7 +11,7 @@ from pathlib import Path
 
 from validate_mapping_csv import COLUMNS, validate_mapping_csv
 
-TEMPLATE_ID = "RYP_STORY_MAIN_V3"
+TEMPLATE_IDS = {"RYP_STORY_MAIN_V3", "RYP_STORY_MAIN_V3_1"}
 PROFILE_ID = "STATIC_CAPTION_PAGES_V1"
 
 
@@ -27,8 +27,8 @@ def validate_caption_pages(plan_path, csv_directory=None):
     """Return checked episode/page counts; never modify the plan or its CSVs."""
     plan_path = Path(plan_path)
     plan = json.loads(plan_path.read_text(encoding="utf-8", errors="strict"))
-    if plan.get("template_id") != TEMPLATE_ID or plan.get("caption_mode") != PROFILE_ID:
-        raise ValueError("Plan must declare the V3 template and static caption profile")
+    if plan.get("template_id") not in TEMPLATE_IDS or plan.get("caption_mode") != PROFILE_ID:
+        raise ValueError("Plan must declare a supported V3 template and static caption profile")
     csv_directory = Path(csv_directory) if csv_directory else plan_path.parent
     episodes = plan.get("episodes")
     if not isinstance(episodes, list) or not episodes:

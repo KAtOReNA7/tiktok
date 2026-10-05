@@ -1,8 +1,8 @@
 {
   "schema_version": "2.0",
-  "prd_version": "7.13",
+  "prd_version": "7.12",
   "updated_date": "2026-10-05",
-  "template_id": "RYP_STORY_MAIN_V3_1",
+  "template_id": "RYP_STORY_MAIN_V3",
   "profile_id": "STATIC_CAPTION_PAGES_V1",
   "coordinate_system": "1080x1920_canvas_pixels_not_jianying_panel_units",
   "background": {
@@ -11,9 +11,9 @@
     "opacity": 0.97,
     "bounds": [
       80,
-      1416,
+      1398,
       820,
-      218
+      170
     ]
   },
   "text": {
@@ -26,7 +26,7 @@
     "overflow": "Split at semantic boundaries to multiple sequential stills reusing the same source art; preserve all punctuation and wording; no assumed audio timings",
     "bounds": [
       100,
-      1440,
+      1420,
       760,
       128
     ],
@@ -84,23 +84,5 @@
     "template_id": "RYP_STORY_MAIN_V2",
     "caption_spec": "spec/legacy/v2/caption_style.json",
     "apply_to_new_default": false
-  },
-  "source_in_shared_panel": {
-    "font_family": "Noto Sans SC",
-    "font_style": "Regular",
-    "font_size_px": 26,
-    "line_height_px": 36,
-    "overflow": "short book/chapter reference only; full citation in source document; never shrink font",
-    "fill": "#DADADA",
-    "background": "shared caption_panel; no separate white plaque",
-    "source_prefix_required": false,
-    "bounds": [
-      126,
-      1592,
-      714,
-      36
-    ]
-  },
-  "layout_change_preserves_existing_page_fragments": true,
-  "legacy_v3_caption_spec": "spec/legacy/v3/caption_style.json"
+  }
 }

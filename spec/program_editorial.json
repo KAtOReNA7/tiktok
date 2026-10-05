@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "prd_version": "7.12",
+  "prd_version": "7.13",
   "profile_id": "PROGRAM_FAMILY_V1",
   "updated_date": "2026-10-05",
   "status": "active_revocable",
@@ -9,7 +9,7 @@
   "profile_edit_requires_current_site_task": true,
   "fixed_release_frequency": null,
   "fixed_program_ratio": null,
-  "template_id": "RYP_STORY_MAIN_V3",
+  "template_id": "RYP_STORY_MAIN_V3_1",
   "narrative_profile_id": "RETENTION_INFO_V1",
   "visual_spec": "spec/program_visuals.json",
   "base_layout_variants_are_programs": false,

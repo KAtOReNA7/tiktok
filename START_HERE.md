@@ -1,4 +1,4 @@
-# 从这里开始｜古今人物锐评 V7.12
+# 从这里开始｜古今人物锐评 V7.13
 
 先判断执行模式，再决定是否访问仓库。唯一规范仓库：https://github.com/KAtOReNA7/tiktok 。新对话、新选题、新集数不等于新电脑。
 
@@ -25,7 +25,7 @@
 1. 每集含片头正文片尾默认不超过40秒；内容多可按独立故事分期，不固定集数。
 2. 对广泛人设或长期倾向作判断时，优先多件具体事例快速推进；关键人物讲清姓名、身份和关系，不用一个冷门故事反复解释。
 3. 用户用剪映“曼波讲故事”原声只处理一次到1.25倍，负责试听和装配。
-4. 默认使用RYP_STORY_MAIN_V3白底故事主画面模板；实际查看spec/template.json、spec/character_identity.json和三位对应参考图。三位Q版本人出演，cos不改变脸和身体；每次真实输入每位出镜演员的身份图，不能变为成年男性或只贴装饰。正文、封面、页边层逐图验收；发生偏差后由Codex自行对照参考修正，内部验收通过后继续完整制作，不等待用户确认角色形象。版式图、问题图不作身份母图。
+4. 默认使用RYP_STORY_MAIN_V3_1白底故事主画面模板；实际查看spec/template.json、spec/character_identity.json和三位对应参考图。三位Q版本人出演，cos不改变脸和身体；每次真实输入每位出镜演员的身份图，不能变为成年男性或只贴装饰。正文、封面、页边层逐图验收；发生偏差后由Codex自行对照参考修正，内部验收通过后继续完整制作，不等待用户确认角色形象。版式图、问题图不作身份母图。
 5. 素材映射严格只有“插图编号、对应口播”两列，口播为完整原文；时码单独处理。实际CSV按CSV_EXCEL_UTF8_BOM_V1导出：UTF-8单BOM、CRLF记录边界和标准转义，字段内换行与原文不变；严格解码并逐格读回，再运行tools/validate_mapping_csv.py核验本期真实文件，不凭网页预览判合格。
 6. 按STATIC_CAPTION_PAGES_V1交带静态口播的最终PNG，不等最终人声；用户原配音安排图长，不造时码。语义拆页连续保真，单页也用S01_01编号；每页最多两行，长句多图，不缩小字。
 7. 每集同模板封面与一句话简介；不做AI视频，不提供音效、配乐、轻动效及建议。
@@ -47,9 +47,9 @@
 
 首次克隆后可运行python tools/validate_handoff.py，老电脑不每集重跑首次全量校验。规范或接续实际变化且属于明确维护任务时修改关联文件、刷新manifest、校验并正常提交推送，远端读回后给提交号。普通内容交付只给本地结果，不进行远端读回。
 
-## 当前模板｜V3
+## 当前模板｜V3.1
 
-新制作使用`RYP_STORY_MAIN_V3`及`STATIC_CAPTION_PAGES_V1`。每张最终PNG常驻明确本集主题、该页实际口播和三位分散扒边，删除顶部冗余品牌／口号；准确文字由可编辑文本层确定性合成，不让imagegen绘字。读取本地spec/template.json、caption_style.json、program_visuals.json和assets/template/v3/。旧V2配置与资产仅在spec/legacy/v2/、assets/template/v2/兼容保存，不混用。
+新制作使用`RYP_STORY_MAIN_V3_1`及`STATIC_CAPTION_PAGES_V1`。每张最终PNG常驻明确本集主题与该页实际口播；三位装饰扒边全部可见alpha位于主漫画窗外，实际交集必须为0。删除顶部“历史·原文回看”等内容类型，不换空话；出处使用暗色面板内浅灰字，不再用白条。准确文字由可编辑文本层确定性合成，不让imagegen绘字。读取本地spec/template.json、caption_style.json、program_visuals.json和assets/template/v3_1/。旧V3保留在spec/legacy/v3/与assets/template/v3/，旧V2保留在spec/legacy/v2/与assets/template/v2/，仅供明确旧工程兼容，不混用。
 
 原画按连续语义拆子页S01_01、S01_02（单页也_01），每页最多两行，长句分多图且可复用原画。两列CSV每行仅对应一张最终PNG的原稿片段；内部JSON记录parent_scene_id和视觉折行，逐父镜头及全稿拼接必须逐字符相等，不删改、重复或重排。CSV继续UTF-8单BOM、CRLF记录边界、标准转义与实际文件验收。
 

@@ -1,5 +1,5 @@
 {
-  "prd_version": "7.12",
+  "prd_version": "7.13",
   "root_relative": "交付",
   "topic_directory": "{topic_id}_{topic_short_name}",
   "part_directory": "{part_number:02d}_第{part_number:02d}集_{part_short_title}",
@@ -204,7 +204,7 @@
     "mapping_columns_unchanged": true
   },
   "template_spec": "spec/template.json",
-  "default_template_id": "RYP_STORY_MAIN_V3",
+  "default_template_id": "RYP_STORY_MAIN_V3_1",
   "narrative_spec": "spec/narrative_retention.json",
   "narrative_profile_id": "RETENTION_INFO_V1",
   "program_editorial_spec": "spec/program_editorial.json",
@@ -213,5 +213,8 @@
   "caption_profile_id": "STATIC_CAPTION_PAGES_V1",
   "caption_delivery_default": "static_caption_baked_final_png",
   "final_voice_required_for_default_delivery": false,
-  "legacy_v2_caption_spec": "spec/legacy/v2/caption_style.json"
+  "legacy_v2_caption_spec": "spec/legacy/v2/caption_style.json",
+  "template_geometry_change_reflows_locked_caption_text": false,
+  "actor_overlay_validation_tool": "tools/validate_host_overlay.py",
+  "actor_overlay_story_alpha_intersection_pixels": 0
 }

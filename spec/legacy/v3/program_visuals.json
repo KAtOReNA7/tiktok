@@ -1,41 +1,40 @@
 {
-  "version": "3.1",
-  "prd_version": "7.13",
+  "version": "3.0",
+  "prd_version": "7.12",
   "effective_date": "2026-10-05",
   "status": "READY_FOR_REVERSIBLE_PROGRAM_TRIAL",
-  "template_id": "RYP_STORY_MAIN_V3_1",
+  "template_id": "RYP_STORY_MAIN_V3",
   "caption_profile_id": "STATIC_CAPTION_PAGES_V1",
   "scope": "Three program families; variants within a family are shot layouts, not separate programs",
   "figma": {
     "file_key": "gc9VEwuG01X8ZsMTHg7HsQ",
-    "page_id": "111:900",
-    "preview_board_id": "111:2583",
-    "preview_body_id": "111:1058",
+    "page_id": "101:2",
+    "preview_board_id": "101:566",
+    "preview_body_id": "101:233",
     "measurement_board_id": "103:595",
     "variants": {
-      "cover": "111:1045",
-      "body": "111:1058",
-      "evidence": "111:1070",
-      "question": "111:1083",
-      "compare": "111:1096"
+      "cover": "101:152",
+      "body": "101:233",
+      "evidence": "101:309",
+      "question": "101:394",
+      "compare": "101:476"
     },
     "components": {
-      "chrome": "111:901",
-      "seal": "111:957",
-      "hosts": "111:961",
-      "identity": "111:965",
-      "evidence": "111:969",
-      "bubble": "111:978",
-      "question": "111:983",
-      "compare": "111:1003",
-      "compareStandard": "111:989",
-      "compareReveal1": "111:1003",
-      "compareReveal2": "111:1017",
-      "compareReveal3": "111:1031"
+      "chrome": "101:8",
+      "seal": "101:64",
+      "hosts": "101:68",
+      "identity": "101:72",
+      "evidence": "101:76",
+      "bubble": "101:85",
+      "question": "101:90",
+      "compare": "101:110",
+      "compareStandard": "101:96",
+      "compareReveal1": "101:110",
+      "compareReveal2": "101:124",
+      "compareReveal3": "101:138"
     },
-    "review_url": "https://www.figma.com/design/gc9VEwuG01X8ZsMTHg7HsQ?node-id=111-2583",
-    "ordinary_production_requires_remote_access": false,
-    "preserve_legacy_masters": true
+    "review_url": "https://www.figma.com/design/gc9VEwuG01X8ZsMTHg7HsQ?node-id=101-566",
+    "ordinary_production_requires_remote_access": false
   },
   "shared": {
     "canvas": [
@@ -46,7 +45,7 @@
       40,
       400,
       1000,
-      848
+      1240
     ],
     "persistent_title_bounds": [
       64,
@@ -56,13 +55,13 @@
     ],
     "caption_panel_bounds": [
       80,
-      1416,
+      1398,
       820,
-      218
+      170
     ],
     "caption_text_bounds": [
       100,
-      1440,
+      1420,
       760,
       128
     ],
@@ -75,33 +74,34 @@
     },
     "caption_profile_id": "STATIC_CAPTION_PAGES_V1",
     "character_spec": "spec/character_identity.json",
-    "edge_overlay_reference": "assets/template/v3_1/hosts_edge_qin_reference_1080x1920.png",
+    "edge_overlay_reference": "assets/template/v3/hosts_edge_qin_reference_1080x1920.png",
     "edge_hosts_bounds": {
       "doro": [
-        758,
-        1258,
-        160,
-        160
+        870,
+        368,
+        230,
+        230
       ],
       "gugu": [
-        0,
-        1258,
-        160,
-        160
+        -30,
+        790,
+        220,
+        220
       ],
       "mambo": [
-        390,
-        1265,
-        160,
-        160
+        680,
+        1190,
+        220,
+        220
       ]
     },
     "layer_order": [
-      "source illustration placed within story window, contain by default",
-      "V3.1 clean plate with detached host strip, caption panel, divider, source index and seal",
-      "approved title and identity/card text; comparison hides single-person identity",
-      "three separated approved actor cutouts strictly outside entire story window",
-      "full narration page text and integrated source text"
+      "source illustration with inspected focal crop",
+      "blank reusable V3 plate with caption panel and seal",
+      "title and identity/source text",
+      "optional evidence or question or one-standard-three-case content",
+      "three separated actor edge overlays",
+      "caption text and export page order"
     ],
     "do_not_stack_multiple_full_canvas_bases": true,
     "final_png_bakes_current_caption": true,
@@ -115,24 +115,14 @@
       "锐评"
     ],
     "seal_text_already_baked": true,
-    "card_text_components_source": "spec/template.json#card_text_components",
-    "top_content_type_visible": false,
-    "source_has_separate_white_strip": false,
-    "source_text_bounds": [
-      126,
-      1592,
-      714,
-      36
-    ],
-    "legacy_v3_spec": "spec/legacy/v3/program_visuals.json",
-    "actor_story_alpha_intersection_max_pixels": 0
+    "card_text_components_source": "spec/template.json#card_text_components"
   },
   "programs": {
     "MAIN_ACCOUNT": {
       "label": "名场面算账",
-      "template_id": "RYP_STORY_MAIN_V3_1",
+      "template_id": "RYP_STORY_MAIN_V3",
       "spec_source": "spec/template.json",
-      "base_directory": "assets/template/v3_1",
+      "base_directory": "assets/template/v3",
       "variants": [
         "cover_opening",
         "body",
@@ -143,7 +133,7 @@
     },
     "COUNTER_REPLY": {
       "label": "最强反方答疑",
-      "template_id": "RYP_STORY_MAIN_V3_1",
+      "template_id": "RYP_STORY_MAIN_V3",
       "recognition": "问题卡与证据答复卡；常驻本集主题、静态口播、三位分散扒边不变",
       "question_card": {
         "x": 172,
@@ -179,11 +169,11 @@
       },
       "variants": {
         "question": {
-          "base_plate": "assets/template/v3_1/counter_question_base_1080x1920.png",
-          "export_node_id": "111:2146",
+          "base_plate": "assets/template/v3/counter_question_base_1080x1920.png",
+          "export_node_id": "106:844",
           "caption_text_bounds": [
             100,
-            1440,
+            1420,
             760,
             128
           ],
@@ -195,11 +185,11 @@
           ]
         },
         "reply": {
-          "base_plate": "assets/template/v3_1/counter_reply_base_1080x1920.png",
-          "export_node_id": "111:2213",
+          "base_plate": "assets/template/v3/counter_reply_base_1080x1920.png",
+          "export_node_id": "106:910",
           "caption_text_bounds": [
             100,
-            1440,
+            1420,
             760,
             128
           ],
@@ -215,7 +205,7 @@
     },
     "SAME_RULE_COMPARE": {
       "label": "同尺三案比较",
-      "template_id": "RYP_STORY_MAIN_V3_1",
+      "template_id": "RYP_STORY_MAIN_V3",
       "recognition": "同一标准和三案状态卡；当前项随口播静态高亮，未讲项不提前揭答案",
       "compare_card": {
         "x": 172,
@@ -244,11 +234,11 @@
       },
       "variants": {
         "standard": {
-          "base_plate": "assets/template/v3_1/compare_standard_base_1080x1920.png",
-          "export_node_id": "111:2283",
+          "base_plate": "assets/template/v3/compare_standard_base_1080x1920.png",
+          "export_node_id": "106:979",
           "caption_text_bounds": [
             100,
-            1440,
+            1420,
             760,
             128
           ],
@@ -261,11 +251,11 @@
           "active_case": 0
         },
         "reveal_1": {
-          "base_plate": "assets/template/v3_1/compare_reveal_1_base_1080x1920.png",
-          "export_node_id": "111:2358",
+          "base_plate": "assets/template/v3/compare_reveal_1_base_1080x1920.png",
+          "export_node_id": "106:1053",
           "caption_text_bounds": [
             100,
-            1440,
+            1420,
             760,
             128
           ],
@@ -278,11 +268,11 @@
           "active_case": 1
         },
         "reveal_2": {
-          "base_plate": "assets/template/v3_1/compare_reveal_2_base_1080x1920.png",
-          "export_node_id": "111:2433",
+          "base_plate": "assets/template/v3/compare_reveal_2_base_1080x1920.png",
+          "export_node_id": "106:1127",
           "caption_text_bounds": [
             100,
-            1440,
+            1420,
             760,
             128
           ],
@@ -295,11 +285,11 @@
           "active_case": 2
         },
         "reveal_3": {
-          "base_plate": "assets/template/v3_1/compare_reveal_3_base_1080x1920.png",
-          "export_node_id": "111:2508",
+          "base_plate": "assets/template/v3/compare_reveal_3_base_1080x1920.png",
+          "export_node_id": "106:1201",
           "caption_text_bounds": [
             100,
-            1440,
+            1420,
             760,
             128
           ],
