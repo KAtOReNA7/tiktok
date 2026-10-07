@@ -24,13 +24,13 @@
     },
     {
       "path": "CHANGELOG.md",
-      "bytes": 14267,
-      "sha256": "9819d0f85ff7e71084f08dd7c07135e7a3cecd98b46830c20566a81bf309a989"
+      "bytes": 15181,
+      "sha256": "bb0ddc1f4b2ce124bf1318cfdcdc7c3abfb9cad8c2eb818c48caeb1e1540bebe"
     },
     {
       "path": "CHAT_HANDOFF.md",
-      "bytes": 15413,
-      "sha256": "d17edaac8c20e22c793a748c3fe8deb36e1a2b43dd86bd25fe76a8e9e65b2b4d"
+      "bytes": 16576,
+      "sha256": "4b4197a048d8810b14be7d24621d208d858ae0025a1432c5139f8330a9c0b058"
     },
     {
       "path": "PRD_V7.md",
@@ -39,8 +39,8 @@
     },
     {
       "path": "PROJECT_STATE.md",
-      "bytes": 7083,
-      "sha256": "13fea125cf044225369a76c74181b3e18e5ec6a94cc976e86e5051e0f055df73"
+      "bytes": 7417,
+      "sha256": "83408e8404670a17bceeac1b9c515755c03ea101e6a72c4ce0b7ff5146ae72a3"
     },
     {
       "path": "README.md",
@@ -49,8 +49,8 @@
     },
     {
       "path": "START_HERE.md",
-      "bytes": 9434,
-      "sha256": "b7cab5213d8fd34e6ba0780c826b710b3b5c1bac03f55d1c700a3a66671cfc0d"
+      "bytes": 9910,
+      "sha256": "dcfaedb128163b07eec63df50c8d9d9a1aee0a9b7ca88742ea990400440ee5d1"
     },
     {
       "path": "assets/hosts_qin_reference/doro_qin_edge.png",
@@ -449,8 +449,18 @@
     },
     {
       "path": "spec/operations_handoff.md",
-      "bytes": 5866,
-      "sha256": "c587cd3f9f956d5b6cc2a9c6d13ffdedf7fc4783d68dd5c09c6daf703af04840"
+      "bytes": 7083,
+      "sha256": "cfa9163123be602d49ec6c20e1a43a0a77a134932142607add8b1fc6fa2e257b"
+    },
+    {
+      "path": "spec/operations_script_review.md",
+      "bytes": 16121,
+      "sha256": "b250e7c6606b51f5ff088436173afefd27f3b1420bc595e65dd70a537e7faecb"
+    },
+    {
+      "path": "spec/operations_script_review_history.md",
+      "bytes": 4122,
+      "sha256": "e445e04bedc46a48019f568f91818e185c68b7c0ace8dbc0953b0960b59d3777"
     },
     {
       "path": "spec/program_editorial.json",
@@ -508,15 +518,19 @@
     "插图编号",
     "对应口播"
   ],
-  "handoff_updated_date": "2026-10-05",
+  "handoff_updated_date": "2026-10-08",
   "repository": "https://github.com/KAtOReNA7/tiktok",
   "branch": "main",
   "contains_completed_video": false,
   "scope": "project_rules_handoff_and_reusable_assets_only",
   "includes_episode_content": false,
-  "updated_date": "2026-10-05",
+  "updated_date": "2026-10-08",
   "remote_figma_verified_date": "2026-10-05",
   "narrative_profile_id": "RETENTION_INFO_V1",
   "caption_profile_id": "STATIC_CAPTION_PAGES_V1",
-  "template_revision": "3.2.1"
+  "template_revision": "3.2.1",
+  "script_review_system_id": "SCRIPT_REVIEW_LOOP",
+  "script_review_system_version": "1.0",
+  "script_review_spec": "spec/operations_script_review.md",
+  "script_review_history": "spec/operations_script_review_history.md"
 }
