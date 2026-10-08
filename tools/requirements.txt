@@ -1,0 +1,3 @@
+# Rendering/validation only; Noto Sans SC Black and its license are bundled.
+# The engine version actually used is recorded in every local render record.
+Pillow>=10.0

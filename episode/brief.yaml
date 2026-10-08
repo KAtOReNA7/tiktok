@@ -1,5 +1,5 @@
 # 空白任务模板。下一选题尚未由本包确定。
-prd_version: '7.15'
+prd_version: '7.16'
 episode_id: null
 topic: null
 core_claim: null
@@ -72,9 +72,14 @@ shared_intro_text_path: null
 shared_intro_asset_path: null
 outro_per_part: true
 cover_per_part: true
-cover_profile_id: COVER_DUAL_RATIO_V1
+cover_profile_id: COVER_DUAL_RATIO_FIXED_V1
+cover_template_revision: '1.0.0'
 cover_spec: spec/cover_delivery.json
 cover_count_per_part: 2
+# 两套固定封面母版、字体与几何均来自cover_spec；null不代表本机／本期已验收。
+local_cover_template_verified: null
+cover_missing_dependencies: []
+cover_delivery_validation: null
 one_sentence_description_per_part: true
 caption_delivery: static_caption_baked_final_png
 srt_only_delivery: false
@@ -88,7 +93,7 @@ compress_delivery: false
 # 素材映射实际导出与交付验收规范；仍仅两列。
 mapping_encoding_profile_id: CSV_EXCEL_UTF8_BOM_V1
 
-# 以下固定角色坐标／工具检查仅适用9:16正文，封面按各画布独立验收。
+# 以下固定角色坐标／工具检查仅适用9:16正文；封面使用cover_spec各比例固定几何另行验收。
 # 实际本期透明角色层与主漫画窗alpha>0交集必须为0；null不是已通过。
 host_story_alpha_intersection_pixels: null
 host_overlay_validation_tool: tools/validate_host_overlay.py

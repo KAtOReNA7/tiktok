@@ -1,5 +1,5 @@
 {
-  "prd_version": "7.15",
+  "prd_version": "7.16",
   "root_relative": "交付",
   "topic_directory": "{topic_id}_{topic_short_name}",
   "part_directory": "{part_number:02d}_第{part_number:02d}集_{part_short_title}",
@@ -135,7 +135,7 @@
         "page_plan_and_mapping_lossless_reassembly",
         "persistent_title_and_three_spread_hosts",
         "caption_delivery_requirement_matches_both_specs_and_chinese_goal_first",
-        "two_cover_ratios_actual_dimensions_and_independent_layout"
+        "two_fixed_cover_masters_bundled_font_actual_png_and_render_record_validation"
       ],
       "end_marker_is_narration": false,
       "caption_goal_first_in_chinese": "直接交付含口播字幕的最终图片；长段拆连续多图；不留空字幕槽，不做单独字幕视频，不要求用户先发成片再补字幕。"
@@ -225,7 +225,7 @@
   "decorative_actor_ui_risk_region_allowed": true,
   "caption_delivery_requirement": "FINAL_PNG_WITH_CAPTIONS_ONLY_V1",
   "cover_spec": "spec/cover_delivery.json",
-  "cover_profile_id": "COVER_DUAL_RATIO_V1",
+  "cover_profile_id": "COVER_DUAL_RATIO_FIXED_V1",
   "narrative_rule_revision": "1.1",
   "narrative_revision_requirements": {
     "record_in_instruction": [
@@ -242,5 +242,8 @@
     "production_score_or_platform_metric_gate_required": false,
     "user_role_confirmation_required": false,
     "keep_current_template_caption_cover_identity_and_two_column_mapping": true
-  }
+  },
+  "cover_template_revision": "1.0.0",
+  "cover_renderer": "tools/render_cover.py",
+  "cover_validation_tool": "tools/validate_cover.py"
 }

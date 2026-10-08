@@ -10,6 +10,7 @@ import zlib
 from pathlib import Path
 from validate_mapping_csv import COLUMNS, validate_mapping_csv
 from validate_host_overlay import validate_host_overlay
+from validate_cover import validate_cover_spec
 
 ROOT = Path(__file__).resolve().parents[1]
 MANIFEST = ROOT / "manifest.json"
@@ -36,6 +37,7 @@ REQUIRED = (
     "spec/legacy/v3/program_visuals.json", "tools/validate_host_overlay.py",
     "spec/legacy/v3_1/template.json", "spec/legacy/v3_1/caption_style.json",
     "spec/legacy/v3_1/program_visuals.json",
+    "tools/render_cover.py", "tools/validate_cover.py",
 )
 PROGRAM_IDS = {"MAIN_ACCOUNT", "COUNTER_REPLY", "SAME_RULE_COMPARE"}
 TITLE_BOUNDS = [64, 208, 810, 160]
@@ -167,7 +169,7 @@ def main():
     cover = json.loads((ROOT / "spec/cover_delivery.json").read_text(encoding="utf-8"))
     expected_covers = {"cover_3x4": ("3:4", 1080, 1440, "cover_3x4_path"),
                        "cover_4x3": ("4:3", 1440, 1080, "cover_4x3_path")}
-    if (cover["profile_id"] != "COVER_DUAL_RATIO_V1" or cover["prd_version"] != rules["prd_version"]
+    if (cover["profile_id"] != "COVER_DUAL_RATIO_FIXED_V1" or cover["prd_version"] != rules["prd_version"]
             or rules["cover_profile_id"] != cover["profile_id"]
             or rules["cover_spec"] != "spec/cover_delivery.json"
             or template["cover_spec"] != rules["cover_spec"]
@@ -185,18 +187,23 @@ def main():
             or any(parts_columns.count(item[3]) != 1 for item in expected_covers.values())
             or not {"封面_3x4.png_1080x1440", "封面_4x3.png_1440x1080"}.issubset(rules["required_per_part"])):
         raise ValueError("Blank episode template and delivery list must distinguish both cover files")
-    if (not cover["composition"]["independent_layout_per_ratio"]
+    if (cover["composition"]["independent_layout_per_ratio"]
             or cover["composition"]["reuse_video_fixed_host_coordinates"]
             or cover["composition"]["video_host_overlay_validator_applies"]
             or cover["composition"]["narration_paragraph_required"]
             or cover["composition"]["empty_video_caption_slot_required"]
             or cover["delivery"]["include_in_caption_mapping"]
             or cover["delivery"]["insert_at_video_opening"]
-            or cover["delivery"]["blank_baseplate_required"]
-            or not cover["assets"]["can_produce_without_prebuilt_baseplate"]
+            or not cover["delivery"]["blank_baseplate_required"]
+            or cover["assets"]["can_produce_without_prebuilt_baseplate"]
             or template["variants"]["cover_opening"]["publishing_cover"]
             or caption["scope"] != "9x16_video_caption_pages_not_independent_publishing_covers"):
-        raise ValueError("Publishing covers must be independently laid out and separate from 9:16 caption pages")
+        raise ValueError("Publishing covers must use the two fixed masters and remain separate from 9:16 caption pages")
+    if (rules["cover_template_revision"] != cover["cover_template_revision"]
+            or rules["cover_renderer"] != "tools/render_cover.py"
+            or rules["cover_validation_tool"] != "tools/validate_cover.py"):
+        raise ValueError("Delivery instructions must use the fixed cover renderer and actual-output validator")
+    validate_cover_spec(cover, ROOT)
     fields = template["fields"]
     canvas = (template["canvas"]["width"], template["canvas"]["height"])
     shared = program_visuals["shared"]
@@ -386,7 +393,9 @@ def main():
         raise ValueError("Manifest omits required handoff files")
     if any(name not in seen for name in asset_paths):
         raise ValueError("Manifest omits current template assets")
-    print("PASS: %d files, PRD version, three V3.2 programs, ten bases and spread-host overlay, decoded RGBA assets, persistent title/static-caption geometry, actual actor alpha in three surrounding regions with story/text intersection zero, legacy V2/V3/V3.1 compatibility, asset hashes and BOM/CRLF mapping template verified. Validate actual page plans/CSV files separately; rendered text, likeness and phone-preview safety require visual QA." % len(data["files"]))
+    if any(asset["file"] not in seen for asset in cover["assets"]["asset_inventory"]):
+        raise ValueError("Manifest omits fixed publishing-cover assets or the bundled font/license")
+    print("PASS: %d files, PRD version, three V3.2 programs, ten bases and spread-host overlay, decoded RGBA assets, persistent title/static-caption geometry, actual actor alpha in three surrounding regions with story/text intersection zero, two fixed publishing-cover masters and bundled font/license, legacy V2/V3/V3.1 compatibility, asset hashes and BOM/CRLF mapping template verified. Validate actual page plans/CSV/cover render records separately; rendered text, likeness and phone-preview safety require visual QA." % len(data["files"]))
 
 
 if __name__ == "__main__":

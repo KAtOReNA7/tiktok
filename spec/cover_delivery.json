@@ -1,8 +1,8 @@
 {
-  "schema_version": "1.0",
-  "prd_version": "7.15",
-  "updated_date": "2026-10-05",
-  "profile_id": "COVER_DUAL_RATIO_V1",
+  "schema_version": "2.0",
+  "prd_version": "7.16",
+  "updated_date": "2026-10-08",
+  "profile_id": "COVER_DUAL_RATIO_FIXED_V1",
   "scope": "independent_publishing_covers_each_episode_not_video_frames",
   "required_per_part": 2,
   "format": "PNG",
@@ -12,18 +12,150 @@
       "width": 1080,
       "height": 1440,
       "filename_pattern": "{topic_id}_P{part_number:02d}_封面_3x4_v{revision:02d}.png",
-      "parts_csv_column": "cover_3x4_path"
+      "parts_csv_column": "cover_3x4_path",
+      "template_id": "RYP_PUBLISH_COVER_3X4_V1",
+      "base_plate": "assets/templates/cover_fixed_v1/cover_3x4_base.png",
+      "hosts_overlay": "assets/templates/cover_fixed_v1/cover_3x4_hosts.png",
+      "editable_master_svg": "assets/templates/cover_fixed_v1/cover_3x4_master.svg",
+      "layout": {
+        "story_bounds": [
+          180,
+          464,
+          800,
+          800
+        ],
+        "seal_bounds": [
+          76,
+          486,
+          72,
+          88
+        ],
+        "title": {
+          "bounds": [
+            72,
+            116,
+            800,
+            306
+          ],
+          "font_size_px": 86,
+          "line_height_px": 102,
+          "max_lines": 3,
+          "anchor": "left_top",
+          "fill": "#161616",
+          "highlight": {
+            "mode": "last_nonempty_line",
+            "fill": "#F2FA00",
+            "right_padding_px": 16,
+            "full_line_height": true
+          }
+        },
+        "host_slots": {
+          "doro": {
+            "bounds": [
+              896,
+              8,
+              168,
+              168
+            ],
+            "spatial_zone": "top_right"
+          },
+          "gugu": {
+            "bounds": [
+              8,
+              620,
+              168,
+              168
+            ],
+            "spatial_zone": "left_lower"
+          },
+          "mambo": {
+            "bounds": [
+              808,
+              1264,
+              168,
+              168
+            ],
+            "spatial_zone": "bottom_right"
+          }
+        }
+      }
     },
     "cover_4x3": {
       "aspect_ratio": "4:3",
       "width": 1440,
       "height": 1080,
       "filename_pattern": "{topic_id}_P{part_number:02d}_封面_4x3_v{revision:02d}.png",
-      "parts_csv_column": "cover_4x3_path"
+      "parts_csv_column": "cover_4x3_path",
+      "template_id": "RYP_PUBLISH_COVER_4X3_V1",
+      "base_plate": "assets/templates/cover_fixed_v1/cover_4x3_base.png",
+      "hosts_overlay": "assets/templates/cover_fixed_v1/cover_4x3_hosts.png",
+      "editable_master_svg": "assets/templates/cover_fixed_v1/cover_4x3_master.svg",
+      "layout": {
+        "story_bounds": [
+          688,
+          184,
+          680,
+          680
+        ],
+        "seal_bounds": [
+          72,
+          600,
+          72,
+          88
+        ],
+        "title": {
+          "bounds": [
+            72,
+            180,
+            576,
+            352
+          ],
+          "font_size_px": 72,
+          "line_height_px": 88,
+          "max_lines": 4,
+          "anchor": "left_top",
+          "fill": "#161616",
+          "highlight": {
+            "mode": "last_nonempty_line",
+            "fill": "#F2FA00",
+            "right_padding_px": 16,
+            "full_line_height": true
+          }
+        },
+        "host_slots": {
+          "doro": {
+            "bounds": [
+              1264,
+              8,
+              168,
+              168
+            ],
+            "spatial_zone": "top_right"
+          },
+          "gugu": {
+            "bounds": [
+              8,
+              760,
+              168,
+              168
+            ],
+            "spatial_zone": "left_lower"
+          },
+          "mambo": {
+            "bounds": [
+              1192,
+              896,
+              168,
+              168
+            ],
+            "spatial_zone": "bottom_right"
+          }
+        }
+      }
     }
   },
   "composition": {
-    "independent_layout_per_ratio": true,
+    "independent_layout_per_ratio": false,
     "inherit_visual_style_from": "RYP_STORY_MAIN_V3_2",
     "visual_elements": [
       "white_black_fluorescent_yellow",
@@ -37,34 +169,169 @@
     "editable_accurate_text_required": true,
     "reuse_video_fixed_host_coordinates": false,
     "video_host_overlay_validator_applies": false,
-    "cover_host_qa": "independent_layout_per_actual_canvas; dispersed_surrounding_hosts_outside_story_art_and_clear_of_title_faces_hands_props; inspect_each_cover",
+    "cover_host_qa": "fixed_original_Q_hosts_overlay_only; inspect_actual_cover_identity; no_topic_costume_or_AI_regeneration_for_border_hosts",
     "narration_paragraph_required": false,
-    "empty_video_caption_slot_required": false
+    "empty_video_caption_slot_required": false,
+    "fixed_master_per_ratio": true,
+    "art_letterbox_fill": "#161616"
   },
   "delivery": {
     "separate_from_video_frames": true,
     "include_in_caption_mapping": false,
     "insert_at_video_opening": false,
-    "blank_baseplate_required": false,
+    "blank_baseplate_required": true,
     "per_image_user_confirmation_required": false,
     "qa": [
       "actual_png_signature_and_1080x1440_or_1440x1080_dimensions",
-      "both_ratios_delivered_for_each_part",
-      "independent_composition_no_stretch_or_blind_crop",
-      "readable_title_and_complete_faces_hands_props",
-      "original_chibi_identity_and_host_no_occlusion"
-    ]
+      "both_fixed_master_ratios_delivered_for_each_part",
+      "approved_title_exact_lossless_line_breaks_and_bundled_font_no_shrink",
+      "contain_by_default_or_reviewed_crop_no_stretch",
+      "fixed_chrome_host_pixels_outside_editable_story_title_regions",
+      "readable_title_complete_faces_hands_props_and_original_Q_identity"
+    ],
+    "renderer": "tools/render_cover.py",
+    "actual_output_validation_tool": "tools/validate_cover.py",
+    "local_render_record_required": true
   },
   "assets": {
-    "new_ratio_baseplates_status": "not_created_in_this_rules_update",
-    "new_ratio_baseplates": {},
-    "new_ratio_figma_nodes": {},
-    "can_produce_without_prebuilt_baseplate": true,
-    "production_method": "deterministically_layout_existing_V3_2_visual_elements_on_each_target_canvas; retain_editable_layers; internal_QA_then_complete_delivery",
-    "legacy_1080x1920_cover_role": "video_opening_or_historical_reference_only_not_publishing_cover"
+    "new_ratio_baseplates_status": "FIGMA_FIXED_MASTER_EXPORTED",
+    "new_ratio_baseplates": {
+      "cover_3x4": "assets/templates/cover_fixed_v1/cover_3x4_base.png",
+      "cover_4x3": "assets/templates/cover_fixed_v1/cover_4x3_base.png"
+    },
+    "new_ratio_figma_nodes": {
+      "cover_3x4": "124:3",
+      "cover_4x3": "124:4"
+    },
+    "can_produce_without_prebuilt_baseplate": false,
+    "production_method": "offline_fill_versioned_fixed_Figma_exports_and_bundled_font_with_tools/render_cover.py; preserve_lossless_title_lines; validate_actual_PNG_pair_and_local_render_record; internal_visual_QA_then_complete_delivery",
+    "legacy_1080x1920_cover_role": "video_opening_or_historical_reference_only_not_publishing_cover",
+    "asset_inventory": [
+      {
+        "file": "assets/templates/cover_fixed_v1/cover_3x4_base.png",
+        "bytes": 12378,
+        "sha256": "d6a2120ac18a9afa4dcc80adb34ecbd82889bbab8b013c42e3e228c577c734e4",
+        "canvas": [
+          1080,
+          1440
+        ]
+      },
+      {
+        "file": "assets/templates/cover_fixed_v1/cover_3x4_hosts.png",
+        "bytes": 122389,
+        "sha256": "af984a9803ac85da6a9cfbbc5bc856fc599672023609f0176d54bcecf84b7fa7",
+        "canvas": [
+          1080,
+          1440
+        ]
+      },
+      {
+        "file": "assets/templates/cover_fixed_v1/cover_3x4_master.svg",
+        "bytes": 9863,
+        "sha256": "08aaee83332e8decd63d0ee26f86dd0802ee5cbca41437d04888025cd7cf5faa"
+      },
+      {
+        "file": "assets/templates/cover_fixed_v1/cover_4x3_base.png",
+        "bytes": 11584,
+        "sha256": "e7109a161358e6462fd8cc07f3f411d63cea62be00cb53c3ea38be0522a7ccfa",
+        "canvas": [
+          1440,
+          1080
+        ]
+      },
+      {
+        "file": "assets/templates/cover_fixed_v1/cover_4x3_hosts.png",
+        "bytes": 122296,
+        "sha256": "2ddf4421ad0605943306919619bd29fe979262e1f2b3ba5e24005f9ac9885106",
+        "canvas": [
+          1440,
+          1080
+        ]
+      },
+      {
+        "file": "assets/templates/cover_fixed_v1/cover_4x3_master.svg",
+        "bytes": 9430,
+        "sha256": "a84a0c8b42ed1546ed3a6985c76a4d6d27379a58e723c23af5705fdc64f84f04"
+      },
+      {
+        "file": "assets/fonts/NotoSansSC-Black.otf",
+        "bytes": 8855916,
+        "sha256": "ccb496022356b7dd14d117538a472ae40feff8f6e8f3fe8bffc5616785d2f3f9"
+      },
+      {
+        "file": "assets/fonts/LICENSE.txt",
+        "bytes": 4301,
+        "sha256": "6a73f9541c2de74158c0e7cf6b0a58ef774f5a780bf191f2d7ec9cc53efe2bf2"
+      },
+      {
+        "file": "assets/templates/cover_fixed_v1/cover_fixed_v1_preview.png",
+        "bytes": 1350568,
+        "sha256": "3b6d3d3382ab26aa9f91d80e98214987e7d8b35b0c1e82141159912ece622cfb",
+        "canvas": [
+          1800,
+          1075
+        ],
+        "role": "general_template_preview_not_episode_output"
+      }
+    ],
+    "svg_master_portability": "Each outlined blank master SVG references its same-ratio hosts PNG by relative filename; keep the SVG and sibling hosts PNG together. Episode title remains separately editable in local cover_job.json; renderer uses fixed PNG bases plus bundled font, not SVG text guessing."
   },
   "unchanged_video_canvas": [
     1080,
     1920
-  ]
+  ],
+  "cover_template_revision": "1.0.0",
+  "typography": {
+    "font_family": "Noto Sans SC",
+    "font_style": "Black",
+    "font_file": "assets/fonts/NotoSansSC-Black.otf",
+    "license_file": "assets/fonts/LICENSE.txt",
+    "fallback_allowed": false,
+    "auto_shrink": false,
+    "approved_title_rewrite_allowed": false,
+    "line_break_mode": "explicit_lossless_lines_per_ratio",
+    "line_vertical_alignment": "fixed_line_height_centered_font_metrics_baseline",
+    "requires_system_font_installation": false
+  },
+  "figma": {
+    "file_key": "gc9VEwuG01X8ZsMTHg7HsQ",
+    "ordinary_production_requires_remote_access": false,
+    "source_of_geometry": "fixed_cover_v1_reviewed_frames",
+    "variants": {
+      "cover_3x4": {
+        "master": "124:3",
+        "base": "124:6",
+        "hosts": "124:50",
+        "title": "124:42",
+        "art": "124:41",
+        "preview": "124:96"
+      },
+      "cover_4x3": {
+        "master": "124:4",
+        "base": "124:54",
+        "hosts": "124:91",
+        "title": "124:83",
+        "art": "124:82",
+        "preview": "124:145"
+      }
+    },
+    "page_id": "124:2",
+    "component_set_id": "124:5",
+    "review_board_id": "124:95",
+    "review_url": "https://www.figma.com/design/gc9VEwuG01X8ZsMTHg7HsQ?node-id=124-95"
+  },
+  "workflow": {
+    "local_job_file": "cover_job.json",
+    "job_is_local_only": true,
+    "editable_fields": [
+      "approved_title_lossless_line_breaks",
+      "episode_raw_art_inside_fixed_story_window"
+    ],
+    "fixed_border_hosts_costume_changes_allowed": false,
+    "missing_asset_behavior": "locate_same_version_local_assets; report_specific_missing_files; do_not_improvise_or_auto_sync_in_local_continue",
+    "final_output_count": 2,
+    "title_line_overflow_behavior": "try_a_different_lossless_line_break_within_fixed_limits; never_shrink_rewrite_or_move_frames",
+    "subtitle_output": false,
+    "per_cover_user_confirmation_required": false
+  }
 }

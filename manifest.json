@@ -1,7 +1,7 @@
 {
   "package": "history_review_git_handoff",
   "format": "git_repository",
-  "prd_version": "7.15",
+  "prd_version": "7.16",
   "layout_template": "RYP_STORY_MAIN_V3_2",
   "created_date": "2026-09-17",
   "remote_figma_updated": true,
@@ -19,38 +19,48 @@
     },
     {
       "path": "AGENTS.md",
-      "bytes": 10808,
-      "sha256": "176b7c4cfa679272d80f892ce51a3d0fa3c63e1a2adfa26e945f1f51e93b47ed"
+      "bytes": 11959,
+      "sha256": "241906e047c37af5f5d7e5a88cb83f07843cfb32b26282fca8a257dea1f4281d"
     },
     {
       "path": "CHANGELOG.md",
-      "bytes": 16356,
-      "sha256": "6a9726996e3cd381921e2ab60e1fe05e99cf13b197135c4c274d3184e833ef4f"
+      "bytes": 17615,
+      "sha256": "cbff1384375754c5912f75ee42b905d3793ac4d081d1d1e53a5dd714c6ad3fb8"
     },
     {
       "path": "CHAT_HANDOFF.md",
-      "bytes": 17648,
-      "sha256": "f93b5b5fd88d42727bb0e826dbebc9f3ac0ad86053b7db707fbb85088f940581"
+      "bytes": 19642,
+      "sha256": "bfb48fc3e67e92e5f980bc0743bbba84355a43a83215a316e461aaa9b4c6fca1"
     },
     {
       "path": "PRD_V7.md",
-      "bytes": 109081,
-      "sha256": "7fd127c3607aadf6066fb8041d544bee004042f9552610151ca1be94ce36abc4"
+      "bytes": 114700,
+      "sha256": "fdfad9e515147f2127563e72a4a5f558df30c662bb4d5ed04354780276a3f0a9"
     },
     {
       "path": "PROJECT_STATE.md",
-      "bytes": 8397,
-      "sha256": "0b28dac282438cb0dfad71596326dd198fa6162df8dc32e2ef1d64945c08eea0"
+      "bytes": 10437,
+      "sha256": "ed26fff34ef86602b008d89c1e746764f753b4a34b20f30cdf0a10b1e06d7ab2"
     },
     {
       "path": "README.md",
-      "bytes": 9708,
-      "sha256": "7cbac73f1ce98d41f05a56a2c839e8b377e0c523853c59b270f509491d9e0462"
+      "bytes": 13898,
+      "sha256": "e95e29d41f59d67a34e47e518422799b5f410d02d8947b2437a73fdb2af25d1b"
     },
     {
       "path": "START_HERE.md",
-      "bytes": 10905,
-      "sha256": "61543a682064e42c52e1a5277ede27ffa78684019155908168cff146bc82cca2"
+      "bytes": 13259,
+      "sha256": "4a6fb25714e727f3cf95ed001128bc8d33c33468c60df40eb82f8de3dfbc3e52"
+    },
+    {
+      "path": "assets/fonts/LICENSE.txt",
+      "bytes": 4301,
+      "sha256": "6a73f9541c2de74158c0e7cf6b0a58ef774f5a780bf191f2d7ec9cc53efe2bf2"
+    },
+    {
+      "path": "assets/fonts/NotoSansSC-Black.otf",
+      "bytes": 8855916,
+      "sha256": "ccb496022356b7dd14d117538a472ae40feff8f6e8f3fe8bffc5616785d2f3f9"
     },
     {
       "path": "assets/hosts_qin_reference/doro_qin_edge.png",
@@ -303,14 +313,49 @@
       "sha256": "e5a98479d4801f56a50b001443d4e2ed34fe7d254d2645f8ff97ee807de4993d"
     },
     {
+      "path": "assets/templates/cover_fixed_v1/cover_3x4_base.png",
+      "bytes": 12378,
+      "sha256": "d6a2120ac18a9afa4dcc80adb34ecbd82889bbab8b013c42e3e228c577c734e4"
+    },
+    {
+      "path": "assets/templates/cover_fixed_v1/cover_3x4_hosts.png",
+      "bytes": 122389,
+      "sha256": "af984a9803ac85da6a9cfbbc5bc856fc599672023609f0176d54bcecf84b7fa7"
+    },
+    {
+      "path": "assets/templates/cover_fixed_v1/cover_3x4_master.svg",
+      "bytes": 9863,
+      "sha256": "08aaee83332e8decd63d0ee26f86dd0802ee5cbca41437d04888025cd7cf5faa"
+    },
+    {
+      "path": "assets/templates/cover_fixed_v1/cover_4x3_base.png",
+      "bytes": 11584,
+      "sha256": "e7109a161358e6462fd8cc07f3f411d63cea62be00cb53c3ea38be0522a7ccfa"
+    },
+    {
+      "path": "assets/templates/cover_fixed_v1/cover_4x3_hosts.png",
+      "bytes": 122296,
+      "sha256": "2ddf4421ad0605943306919619bd29fe979262e1f2b3ba5e24005f9ac9885106"
+    },
+    {
+      "path": "assets/templates/cover_fixed_v1/cover_4x3_master.svg",
+      "bytes": 9430,
+      "sha256": "a84a0c8b42ed1546ed3a6985c76a4d6d27379a58e723c23af5705fdc64f84f04"
+    },
+    {
+      "path": "assets/templates/cover_fixed_v1/cover_fixed_v1_preview.png",
+      "bytes": 1350568,
+      "sha256": "3b6d3d3382ab26aa9f91d80e98214987e7d8b35b0c1e82141159912ece622cfb"
+    },
+    {
       "path": "episode/README.md",
-      "bytes": 7830,
-      "sha256": "719137b1d26141ffd5ffa12bdb97f78b783f6f506b0d6792d12875ed8294dd76"
+      "bytes": 11498,
+      "sha256": "a4131f461473f5493801605015885c215661fdf817884ab87f958d4c840d0d6c"
     },
     {
       "path": "episode/brief.yaml",
-      "bytes": 3541,
-      "sha256": "9f6b67505006e27b493947cbbcd1ab63af104646132a693194cb94b302cc45aa"
+      "bytes": 3811,
+      "sha256": "7f525cd9292ae34e84645d8bcc32c0635ccdc125510ee592cc24304c19f64c19"
     },
     {
       "path": "episode/parts.csv",
@@ -380,22 +425,22 @@
     {
       "path": "spec/caption_style.json",
       "bytes": 3941,
-      "sha256": "2bbe5cd04b018da005e0f9a51be6e992953467f4b878e1b436a377cb05688f81"
+      "sha256": "04da99ac0653c03b2b63b23dbca73641618ca14d05ea596a8c12366ec438ad98"
     },
     {
       "path": "spec/character_identity.json",
       "bytes": 3725,
-      "sha256": "f16f042b4f4e6f0bc19f586f0b5bdf78620c8529301a1288b68fd5e4c870d0a7"
+      "sha256": "b62df0c3ca15447282ca9384f17e4a1614635defb0d22602c4054cd0878dffe3"
     },
     {
       "path": "spec/cover_delivery.json",
-      "bytes": 2613,
-      "sha256": "ac448b602dc4a587b5f1feb6c8d8a2c169e1ba365f3bd7213f7dbabd48031b54"
+      "bytes": 10732,
+      "sha256": "d93da87e45619f89eae85dac439e6fafc578cbaddcd27f5f1a7ea8f9986b2748"
     },
     {
       "path": "spec/delivery_rules.json",
-      "bytes": 9642,
-      "sha256": "56510030c5e8306b8a070780fda26d39e542f85f85bbaeb2e2e4565b37079f28"
+      "bytes": 9804,
+      "sha256": "039cf10e24eec133b2daf1db6b6f14cdb94a8abcd9c68686e824a470dda0fb9c"
     },
     {
       "path": "spec/legacy/v2/caption_style.json",
@@ -445,12 +490,12 @@
     {
       "path": "spec/narrative_retention.json",
       "bytes": 7516,
-      "sha256": "5368aa4d14fadaaaced5563ee64f85a14c3daf70fb5d5eee7628db8337cd210f"
+      "sha256": "2a8f4440c7110526ee7191f64aefcf7ce97330a6d7a87c5953aee1c31caab1ba"
     },
     {
       "path": "spec/operations_handoff.md",
       "bytes": 9564,
-      "sha256": "0e93ef55c52a8ab2dfd2284cea76ab7846753c93a259cb69ce4edbe39b76e080"
+      "sha256": "53a9f23d69ad66264905725536393a7fcd6477ac661ecc8b7dbd2bcc52405924"
     },
     {
       "path": "spec/operations_script_review.md",
@@ -465,17 +510,32 @@
     {
       "path": "spec/program_editorial.json",
       "bytes": 4723,
-      "sha256": "beff5df332030d20442c06962fd9e0c25c045dc2b3793f136f9529cea26c0d43"
+      "sha256": "fc35432f467e41b4402572b6a646a6a9824a41149cf8d47714d368f82fc5c456"
     },
     {
       "path": "spec/program_visuals.json",
       "bytes": 9999,
-      "sha256": "a84555eba318f013db8eda6ff713cd16f18317ec40c53620c1cfe4e59ef3d33d"
+      "sha256": "239b3ef0e5c5213fd14af5ea33457000cd692a7125d599135917ee11ff111fe5"
     },
     {
       "path": "spec/template.json",
       "bytes": 28129,
-      "sha256": "1d21e556b8f541f61ed19ef8a4b52c88532aacccb62f507743b7dc2b85b11245"
+      "sha256": "3dbea784271e0dc9d4bc1f86bfb917ff166ce6302beccda43067910cf75c24be"
+    },
+    {
+      "path": "tools/render_cover.py",
+      "bytes": 10928,
+      "sha256": "1cc6011c5fd3397177a529331ea65a92272bcd741827d7e05d10730949677b42"
+    },
+    {
+      "path": "tools/requirements.txt",
+      "bytes": 167,
+      "sha256": "24586f0703ebdc8f0bc6c50632f01dda2805757a7e8f8b6e24d7d9b468a1bbba"
+    },
+    {
+      "path": "tools/test_cover_pipeline.py",
+      "bytes": 5701,
+      "sha256": "147969285f0255a932b8a8f732e7fc5bbcfa5c4245a8dfa3b85f09b73e5cee13"
     },
     {
       "path": "tools/test_validate_caption_pages.py",
@@ -498,9 +558,14 @@
       "sha256": "7a49728d70a420c7ddb2dd1f272b185d4c001b23f6541463b15854759814391d"
     },
     {
+      "path": "tools/validate_cover.py",
+      "bytes": 14073,
+      "sha256": "e91cab2af8ffdda29eef5533b8ef166ac16b41df6bea2eff8ad66390f206c034"
+    },
+    {
       "path": "tools/validate_handoff.py",
-      "bytes": 26264,
-      "sha256": "361c73ea9c61fa54d31e3229fcd3af94300a3b45dd10c42ee43d620917008b67"
+      "bytes": 27009,
+      "sha256": "ce740a7f1cb579ace15437f9f8d15b5317d69fb808bfd09aadf1263ab3b48ce9"
     },
     {
       "path": "tools/validate_host_overlay.py",
@@ -533,5 +598,7 @@
   "script_review_system_version": "1.1",
   "script_review_spec": "spec/operations_script_review.md",
   "script_review_history": "spec/operations_script_review_history.md",
-  "narrative_rule_revision": "1.1"
+  "narrative_rule_revision": "1.1",
+  "cover_profile_id": "COVER_DUAL_RATIO_FIXED_V1",
+  "cover_template_revision": "1.0.0"
 }
