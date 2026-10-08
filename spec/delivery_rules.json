@@ -1,5 +1,5 @@
 {
-  "prd_version": "7.14",
+  "prd_version": "7.15",
   "root_relative": "交付",
   "topic_directory": "{topic_id}_{topic_short_name}",
   "part_directory": "{part_number:02d}_第{part_number:02d}集_{part_short_title}",
@@ -225,5 +225,22 @@
   "decorative_actor_ui_risk_region_allowed": true,
   "caption_delivery_requirement": "FINAL_PNG_WITH_CAPTIONS_ONLY_V1",
   "cover_spec": "spec/cover_delivery.json",
-  "cover_profile_id": "COVER_DUAL_RATIO_V1"
+  "cover_profile_id": "COVER_DUAL_RATIO_V1",
+  "narrative_rule_revision": "1.1",
+  "narrative_revision_requirements": {
+    "record_in_instruction": [
+      "narrative_profile_id=RETENTION_INFO_V1",
+      "narrative_rule_revision=1.1",
+      "script_lock_and_rewrite_scope"
+    ],
+    "record_in_existing_local_brief": [
+      "opening_promise",
+      "early_fact_payoff",
+      "later_new_fact"
+    ],
+    "actual_rendered_first_frame_internal_review": true,
+    "production_score_or_platform_metric_gate_required": false,
+    "user_role_confirmation_required": false,
+    "keep_current_template_caption_cover_identity_and_two_column_mapping": true
+  }
 }

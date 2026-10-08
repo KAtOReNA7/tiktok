@@ -1,5 +1,5 @@
 # 空白任务模板。下一选题尚未由本包确定。
-prd_version: '7.14'
+prd_version: '7.15'
 episode_id: null
 topic: null
 core_claim: null
@@ -12,6 +12,12 @@ scope: null
 human_editor: user
 template_id: RYP_STORY_MAIN_V3_2
 narrative_profile_id: RETENTION_INFO_V1
+narrative_rule_revision: '1.1'
+# 以下是新稿与授权改写的内部事实检查，未填不代表通过；不进入两列CSV。
+opening_promise: null
+early_fact_payoff: null
+later_new_fact: null
+actual_first_frame_review: null
 narrative_spec: spec/narrative_retention.json
 # 25–30秒仅为可撤销试验参考；按需填写，不覆盖40秒默认上限。
 trial_target_duration_s: null

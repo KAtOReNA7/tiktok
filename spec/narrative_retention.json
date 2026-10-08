@@ -1,8 +1,8 @@
 {
   "schema_version": "1.0",
-  "prd_version": "7.14",
+  "prd_version": "7.15",
   "profile_id": "RETENTION_INFO_V1",
-  "updated_date": "2026-10-05",
+  "updated_date": "2026-10-08",
   "purpose": "正文持续提供事实、因果、证据和代价，让观众获得标题尚未讲完的信息。",
   "basis": "2026-10-04重新审计中的完播率建议；2026-10-05用户授权纳入后续文稿与执行指令。",
   "trial": {
@@ -105,7 +105,7 @@
     "fixed_image_count": null,
     "template_id": "RYP_STORY_MAIN_V3_2",
     "all_template_variants_required": false,
-    "captions_and_template_geometry_unchanged": false,
+    "captions_and_template_geometry_unchanged": true,
     "no_extra_motion_music_or_sound_effects": true,
     "caption_profile_id": "STATIC_CAPTION_PAGES_V1",
     "static_caption_page_split_is_new_story_information": false,
@@ -128,5 +128,45 @@
     "operations_table_or_automation_change_required": false,
     "program_editorial_spec": "spec/program_editorial.json",
     "operations_trial_boundary": "文案规则本身不自动修改运营；用户授权的栏目／验证任务按PRD 20.5和现行运营工作流执行。"
+  },
+  "rule_revision": "1.1",
+  "revision_scope": "writing_and_internal_visual_QA_only; template_geometry_caption_delivery_and_character_identity_unchanged_from_7.14",
+  "topic_and_promise_review": {
+    "applies_to": [
+      "new_unlocked_drafts",
+      "explicitly_authorized_rewrites"
+    ],
+    "selection_questions": [
+      "recognized_actor_or_clear_relationship",
+      "unfamiliar_verified_concrete_action",
+      "clear_recipient_and_cost",
+      "real_followup_or_new_evidence_beyond_title"
+    ],
+    "person_recognition_or_death_count_alone_is_not_sufficient": true,
+    "record_in_existing_local_brief": [
+      "opening_promise",
+      "early_fact_payoff",
+      "later_new_fact"
+    ],
+    "fixed_number_of_twists_or_discoveries": null,
+    "apply_program_specific_structure": true,
+    "cold_names_first_mention": "state_name_and_necessary_role_or_relationship; do_not_replace_key_name_with_vague_big_person",
+    "necessary_context_and_source_nature_must_survive_compression": true,
+    "unknown_historical_motives_or_unverified_dialogue_as_fact": false,
+    "locked_or_scheduled_scripts_auto_rewrite": false
+  },
+  "internal_delivery_review": {
+    "inspect_actual_rendered_first_png": [
+      "recognizable_action_and_recipient",
+      "opening_sentence_matches_action",
+      "theme_caption_source_readable_at_phone_scale",
+      "no_unrelated_simultaneous_reading_tasks"
+    ],
+    "inspect_story_beats": "each main beat adds action_choice_evidence_or_consequence; subtitle_pages_and_repeated_hospitality_or_judgments_are_not_new_story_facts",
+    "voice_review": "inspect_actual_final_voice_only_when_available; estimates_are_not_measured_two_second_playback_or_timing",
+    "record": "existing_local_production_log; include actual_paths_evidence_checked_and_missing_items",
+    "new_user_confirmation": false,
+    "extra_user_csv_columns": false,
+    "performance_threshold_or_predicted_score_as_production_gate": false
   }
 }

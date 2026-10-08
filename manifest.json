@@ -1,7 +1,7 @@
 {
   "package": "history_review_git_handoff",
   "format": "git_repository",
-  "prd_version": "7.14",
+  "prd_version": "7.15",
   "layout_template": "RYP_STORY_MAIN_V3_2",
   "created_date": "2026-09-17",
   "remote_figma_updated": true,
@@ -19,38 +19,38 @@
     },
     {
       "path": "AGENTS.md",
-      "bytes": 10052,
-      "sha256": "b31784a3d3e6c7a3992da2a2291dc2692264a8e73320b7acfbf6c5b035484595"
+      "bytes": 10808,
+      "sha256": "176b7c4cfa679272d80f892ce51a3d0fa3c63e1a2adfa26e945f1f51e93b47ed"
     },
     {
       "path": "CHANGELOG.md",
-      "bytes": 15181,
-      "sha256": "bb0ddc1f4b2ce124bf1318cfdcdc7c3abfb9cad8c2eb818c48caeb1e1540bebe"
+      "bytes": 16356,
+      "sha256": "6a9726996e3cd381921e2ab60e1fe05e99cf13b197135c4c274d3184e833ef4f"
     },
     {
       "path": "CHAT_HANDOFF.md",
-      "bytes": 16576,
-      "sha256": "4b4197a048d8810b14be7d24621d208d858ae0025a1432c5139f8330a9c0b058"
+      "bytes": 17648,
+      "sha256": "f93b5b5fd88d42727bb0e826dbebc9f3ac0ad86053b7db707fbb85088f940581"
     },
     {
       "path": "PRD_V7.md",
-      "bytes": 105405,
-      "sha256": "b69ce52a848e1dca19a2af0bcd990a7ded58d0ffcb89359082cc58b2da6ef5a9"
+      "bytes": 109081,
+      "sha256": "7fd127c3607aadf6066fb8041d544bee004042f9552610151ca1be94ce36abc4"
     },
     {
       "path": "PROJECT_STATE.md",
-      "bytes": 7417,
-      "sha256": "83408e8404670a17bceeac1b9c515755c03ea101e6a72c4ce0b7ff5146ae72a3"
+      "bytes": 8397,
+      "sha256": "0b28dac282438cb0dfad71596326dd198fa6162df8dc32e2ef1d64945c08eea0"
     },
     {
       "path": "README.md",
-      "bytes": 8810,
-      "sha256": "c67f5735639645b6d51d224ebf8201c2675f86538497800eb75ab951dba6badb"
+      "bytes": 9708,
+      "sha256": "7cbac73f1ce98d41f05a56a2c839e8b377e0c523853c59b270f509491d9e0462"
     },
     {
       "path": "START_HERE.md",
-      "bytes": 9910,
-      "sha256": "dcfaedb128163b07eec63df50c8d9d9a1aee0a9b7ca88742ea990400440ee5d1"
+      "bytes": 10905,
+      "sha256": "61543a682064e42c52e1a5277ede27ffa78684019155908168cff146bc82cca2"
     },
     {
       "path": "assets/hosts_qin_reference/doro_qin_edge.png",
@@ -304,13 +304,13 @@
     },
     {
       "path": "episode/README.md",
-      "bytes": 6933,
-      "sha256": "eb219490f11f71ef80625268ac31cbb471c453e189234ac501c5acca0a47f863"
+      "bytes": 7830,
+      "sha256": "719137b1d26141ffd5ffa12bdb97f78b783f6f506b0d6792d12875ed8294dd76"
     },
     {
       "path": "episode/brief.yaml",
-      "bytes": 3309,
-      "sha256": "90b2efe050e57cdfffb92b7c7adcede041463b7dc135d58d4e12c2cd2eb19391"
+      "bytes": 3541,
+      "sha256": "9f6b67505006e27b493947cbbcd1ab63af104646132a693194cb94b302cc45aa"
     },
     {
       "path": "episode/parts.csv",
@@ -380,22 +380,22 @@
     {
       "path": "spec/caption_style.json",
       "bytes": 3941,
-      "sha256": "31d5e58c14e8bd89f2a422ad6e293d660779911d26d5c117b7a6ae98235d5f3b"
+      "sha256": "2bbe5cd04b018da005e0f9a51be6e992953467f4b878e1b436a377cb05688f81"
     },
     {
       "path": "spec/character_identity.json",
       "bytes": 3725,
-      "sha256": "56537f9dedf0444b5756791e3d10ecd13fdca2b829ef5719302e1ed6739dd319"
+      "sha256": "f16f042b4f4e6f0bc19f586f0b5bdf78620c8529301a1288b68fd5e4c870d0a7"
     },
     {
       "path": "spec/cover_delivery.json",
       "bytes": 2613,
-      "sha256": "53f64eda2a618910413619d8551bcad940f0e1f64917492fa8f5a9fb9300f47e"
+      "sha256": "ac448b602dc4a587b5f1feb6c8d8a2c169e1ba365f3bd7213f7dbabd48031b54"
     },
     {
       "path": "spec/delivery_rules.json",
-      "bytes": 9032,
-      "sha256": "c0e9edf8726fac2a4ab98571bedb78f84499430dd5453f78ef920070705400a5"
+      "bytes": 9642,
+      "sha256": "56510030c5e8306b8a070780fda26d39e542f85f85bbaeb2e2e4565b37079f28"
     },
     {
       "path": "spec/legacy/v2/caption_style.json",
@@ -444,38 +444,38 @@
     },
     {
       "path": "spec/narrative_retention.json",
-      "bytes": 5572,
-      "sha256": "55b47073753737e317f5a9b9708fa5783cc9a77c906243ab12a8dd8963ace30f"
+      "bytes": 7516,
+      "sha256": "5368aa4d14fadaaaced5563ee64f85a14c3daf70fb5d5eee7628db8337cd210f"
     },
     {
       "path": "spec/operations_handoff.md",
-      "bytes": 7083,
-      "sha256": "cfa9163123be602d49ec6c20e1a43a0a77a134932142607add8b1fc6fa2e257b"
+      "bytes": 9564,
+      "sha256": "0e93ef55c52a8ab2dfd2284cea76ab7846753c93a259cb69ce4edbe39b76e080"
     },
     {
       "path": "spec/operations_script_review.md",
-      "bytes": 16121,
-      "sha256": "b250e7c6606b51f5ff088436173afefd27f3b1420bc595e65dd70a537e7faecb"
+      "bytes": 22662,
+      "sha256": "de8db92eaa9e07d5799e041d6fde3dd4af7ae16aac27ad2313c728c411bdf7f3"
     },
     {
       "path": "spec/operations_script_review_history.md",
-      "bytes": 4122,
-      "sha256": "e445e04bedc46a48019f568f91818e185c68b7c0ace8dbc0953b0960b59d3777"
+      "bytes": 8335,
+      "sha256": "dadd2fcb930b7639c1f8a780cc4c3348e213b0384f1e779720716f07d755c4ec"
     },
     {
       "path": "spec/program_editorial.json",
       "bytes": 4723,
-      "sha256": "e5077a9c68421232b594c0ccd8ee8c44468410d4edd2d237203f7c1236abc9c5"
+      "sha256": "beff5df332030d20442c06962fd9e0c25c045dc2b3793f136f9529cea26c0d43"
     },
     {
       "path": "spec/program_visuals.json",
       "bytes": 9999,
-      "sha256": "12a8d609cd8533bb6e663e47d398fe2c88cb45f56b5a758d59ebf1dd9a7dd155"
+      "sha256": "a84555eba318f013db8eda6ff713cd16f18317ec40c53620c1cfe4e59ef3d33d"
     },
     {
       "path": "spec/template.json",
       "bytes": 28129,
-      "sha256": "f4766dda3f24a43fef7d255d78741c84aabd69f5fa796a982e3448041a844b51"
+      "sha256": "1d21e556b8f541f61ed19ef8a4b52c88532aacccb62f507743b7dc2b85b11245"
     },
     {
       "path": "tools/test_validate_caption_pages.py",
@@ -530,7 +530,8 @@
   "caption_profile_id": "STATIC_CAPTION_PAGES_V1",
   "template_revision": "3.2.1",
   "script_review_system_id": "SCRIPT_REVIEW_LOOP",
-  "script_review_system_version": "1.0",
+  "script_review_system_version": "1.1",
   "script_review_spec": "spec/operations_script_review.md",
-  "script_review_history": "spec/operations_script_review_history.md"
+  "script_review_history": "spec/operations_script_review_history.md",
+  "narrative_rule_revision": "1.1"
 }
