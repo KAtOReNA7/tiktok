@@ -13,7 +13,8 @@ from pathlib import Path
 from PIL import Image, ImageDraw, ImageFont, features
 import PIL
 
-from validate_cover import validate_cover_spec, validate_render_record
+from validate_cover import (validate_cover_spec, validate_render_record,
+                            validate_highlight_line_indices)
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -45,7 +46,7 @@ def ensure_supported_text(font, text):
             raise ValueError("Bundled cover font lacks glyph %r; no font fallback is allowed" % character)
 
 
-def draw_title(canvas, title, lines, layout, font_path):
+def draw_title(canvas, title, lines, highlight_line_indices, layout, font_path):
     if (not isinstance(lines, list) or not lines
             or any(not isinstance(line, str) or not line or "\n" in line or "\r" in line for line in lines)
             or "".join(lines) != title):
@@ -53,33 +54,38 @@ def draw_title(canvas, title, lines, layout, font_path):
     title_style = layout["title"]
     if len(lines) > title_style["max_lines"]:
         raise ValueError("Too many cover-title lines; do not resize the title or move its frame")
+    validate_highlight_line_indices(highlight_line_indices, len(lines))
     font = ImageFont.truetype(str(font_path), title_style["font_size_px"],
                               layout_engine=ImageFont.Layout.BASIC)
     ensure_supported_text(font, title)
     x, y, width, height = title_style["bounds"]
     line_height = title_style["line_height_px"]
+    stack_top = y + (height - len(lines) * line_height) // 2
     draw = ImageDraw.Draw(canvas)
     measurements = []
     highlight = title_style.get("highlight", {})
-    highlight_lines = ([len(lines) - 1] if highlight.get("mode") == "last_nonempty_line"
-                       else highlight.get("line_indices", []))
-    right_padding = highlight.get("right_padding_px", 0)
-    ascent, descent = font.getmetrics()
+    highlight_lines = highlight_line_indices
+    # Center visible glyphs rather than font-wide ascender/descender leading.
+    # Noto's metrics include unused leading that otherwise pushes CJK punctuation
+    # below the approved line slot. One title-wide offset keeps every line's
+    # baseline aligned, including when the two ratios use different line breaks.
+    _, title_top, _, title_bottom = draw.textbbox((0, 0), title, font=font, anchor="ls")
+    baseline_offset = -title_top + (line_height - (title_bottom - title_top)) // 2
     for index, line in enumerate(lines):
         left, top, right, bottom = draw.textbbox((0, 0), line, font=font, anchor="ls")
         measured_width, measured_height = right - left, bottom - top
-        line_top = y + index * line_height
-        baseline = line_top + ascent + (line_height - ascent - descent) // 2
+        line_top = stack_top + index * line_height
+        baseline = line_top + baseline_offset
         ink_bounds = [x + left, baseline + top, measured_width, measured_height]
         if (left < 0 or right > width or measured_height > line_height
                 or baseline + top < line_top or baseline + bottom > line_top + line_height
                 or line_top + line_height > y + height):
             raise ValueError("Cover title overflows its fixed frame on line %d; use another lossless line break" % (index + 1))
         if index in highlight_lines:
-            background_width = min(width, int(draw.textlength(line, font=font) + 0.5) + right_padding)
-            draw.rectangle((x, line_top, x + background_width - 1,
+            draw.rectangle((x, line_top, x + width - 1,
                             line_top + line_height - 1), fill=highlight["fill"])
-        draw.text((x, baseline), line, font=font, fill=title_style["fill"], anchor="ls")
+        fill = highlight["text_fill"] if index in highlight_lines else title_style["fill"]
+        draw.text((x, baseline), line, font=font, fill=fill, anchor="ls")
         measurements.append({"text": line, "bounds": ink_bounds, "baseline_y": baseline,
                              "line_bounds": [x, line_top, width, line_height]})
     return measurements
@@ -139,7 +145,7 @@ def render_covers(job_path, output_dir):
         raise ValueError("Missing local episode art: " + str(art_path))
     output_dir = Path(output_dir).resolve()
     output_dir.mkdir(parents=True, exist_ok=True)
-    record = {"schema_version": "1.0", "profile_id": spec["profile_id"],
+    record = {"schema_version": "2.0", "profile_id": spec["profile_id"],
               "cover_template_revision": spec["cover_template_revision"], "title": title,
               "job_path": str(job_path), "job_sha256": sha256(job_path),
               "spec_sha256": sha256(spec_path), "art_path": str(art_path),
@@ -153,25 +159,34 @@ def render_covers(job_path, output_dir):
         options = variants[name]
         if not isinstance(options, dict):
             raise ValueError("Each cover variant must supply an object with explicit title_lines")
-        if set(options) - {"title_lines", "art_fit", "crop_reviewed", "crop_anchor"}:
-            raise ValueError("Cover jobs may replace only title lines and artwork placement; fixed chrome/hosts/font cannot be overridden")
+        if set(options) - {"title_lines", "highlight_line_indices", "art_path",
+                           "art_fit", "crop_reviewed", "crop_anchor"}:
+            raise ValueError("Cover jobs may replace only lossless title lines, explicit highlight lines and artwork placement; fixed chrome/hosts/font cannot be overridden")
         layout = variant["layout"]
+        variant_art_path = resolve_job_path(job_path, options.get("art_path", job["art_path"]))
+        if not variant_art_path.is_file():
+            raise ValueError("Missing local episode art for %s: %s" % (name, variant_art_path))
         with Image.open(ROOT / variant["base_plate"]) as base:
             canvas = base.convert("RGBA")
-        art_info = paste_art(canvas, art_path, layout["story_bounds"], options,
+        art_info = paste_art(canvas, variant_art_path, layout["story_bounds"], options,
                              spec["composition"]["art_letterbox_fill"])
-        text_info = draw_title(canvas, title, options.get("title_lines"), layout, font_path)
+        art_info.update({"source_path": str(variant_art_path),
+                         "source_sha256": sha256(variant_art_path)})
+        text_info = draw_title(canvas, title, options.get("title_lines"),
+                               options.get("highlight_line_indices"), layout, font_path)
         with Image.open(ROOT / variant["hosts_overlay"]) as image:
             hosts = image.convert("RGBA")
         canvas.alpha_composite(hosts)
         filename = variant["filename_pattern"].format(topic_id=topic_id, part_number=part,
                                                        revision=revision)
         output = output_dir / filename
-        rendered.append((name, canvas, output, art_info, text_info))
-    for name, canvas, output, art_info, text_info in rendered:
+        rendered.append((name, canvas, output, art_info, text_info,
+                         options["highlight_line_indices"]))
+    for name, canvas, output, art_info, text_info, highlight_lines in rendered:
         canvas.save(output, format="PNG", optimize=False, compress_level=9)
         record["covers"][name] = {"path": str(output), "sha256": sha256(output),
                                   "canvas": list(canvas.size), "title_lines": text_info,
+                                  "highlight_line_indices": highlight_lines,
                                   "art": art_info}
     record_path = output_dir / ("%s_P%02d_封面渲染记录_v%02d.json" % (topic_id, part, revision))
     record_path.write_text(json.dumps(record, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")

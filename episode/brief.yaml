@@ -1,5 +1,5 @@
 # 空白任务模板。下一选题尚未由本包确定。
-prd_version: '7.16'
+prd_version: '7.17'
 episode_id: null
 topic: null
 core_claim: null
@@ -72,8 +72,8 @@ shared_intro_text_path: null
 shared_intro_asset_path: null
 outro_per_part: true
 cover_per_part: true
-cover_profile_id: COVER_DUAL_RATIO_FIXED_V1
-cover_template_revision: '1.0.0'
+cover_profile_id: COVER_DUAL_RATIO_FIXED_V2
+cover_template_revision: '2.0.0'
 cover_spec: spec/cover_delivery.json
 cover_count_per_part: 2
 # 两套固定封面母版、字体与几何均来自cover_spec；null不代表本机／本期已验收。

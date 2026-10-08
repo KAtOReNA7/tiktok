@@ -14,22 +14,37 @@ from pathlib import Path
 from validate_host_overlay import read_rgba_alpha, validate_host_overlay
 
 ROOT = Path(__file__).resolve().parents[1]
-PROFILE = "COVER_DUAL_RATIO_FIXED_V1"
+PROFILE = "COVER_DUAL_RATIO_FIXED_V2"
 EXPECTED = {"cover_3x4": ("3:4", 1080, 1440, "cover_3x4_path"),
             "cover_4x3": ("4:3", 1440, 1080, "cover_4x3_path")}
 FIXED_GEOMETRY = {
-    "cover_3x4": {"story": [180, 464, 800, 800], "title": [72, 116, 800, 306],
-                  "font": 86, "line": 102, "lines": 3, "seal": [76, 486, 72, 88],
-                  "hosts": {"doro": [896, 8, 168, 168], "gugu": [8, 620, 168, 168],
-                            "mambo": [808, 1264, 168, 168]}},
-    "cover_4x3": {"story": [688, 184, 680, 680], "title": [72, 180, 576, 352],
-                  "font": 72, "line": 88, "lines": 4, "seal": [72, 600, 72, 88],
-                  "hosts": {"doro": [1264, 8, 168, 168], "gugu": [8, 760, 168, 168],
-                            "mambo": [1192, 896, 168, 168]}},
+    "cover_3x4": {"story": [160, 16, 744, 1008], "title": [64, 1060, 840, 312],
+                  "font": 92, "line": 104, "lines": 3, "seal": [24, 36, 64, 80],
+                  "hosts": {"doro": [920, 8, 144, 144], "gugu": [8, 572, 144, 144],
+                            "mambo": [920, 1292, 144, 144]}},
+    "cover_4x3": {"story": [160, 16, 1112, 712], "title": [72, 764, 1200, 208],
+                  "font": 92, "line": 104, "lines": 2, "seal": [24, 36, 64, 80],
+                  "hosts": {"doro": [1288, 8, 144, 144], "gugu": [8, 424, 144, 144],
+                            "mambo": [1288, 928, 144, 144]}},
 }
 FIXED_FONT_FILE = "assets/fonts/NotoSansSC-Black.otf"
 FIXED_FONT_SHA256 = "ccb496022356b7dd14d117538a472ae40feff8f6e8f3fe8bffc5616785d2f3f9"
 _ASSET_VALIDATION_CACHE = {}
+
+
+def validate_highlight_line_indices(value, line_count, label="highlight_line_indices"):
+    """Require deliberate emphasis on one or two existing, distinct title lines."""
+    if (not isinstance(value, list) or not 1 <= len(value) <= 2
+            or any(type(index) is not int or not 0 <= index < line_count for index in value)
+            or len(set(value)) != len(value)):
+        raise ValueError(label + " must explicitly select one or two distinct 0-based title-line indices")
+
+
+def _resolve_job_art(job_path, value):
+    if not isinstance(value, str) or not value:
+        raise ValueError("Local cover art sources must be explicit nonempty paths")
+    path = Path(value).expanduser()
+    return path.resolve() if path.is_absolute() else (job_path.parent / path).resolve()
 
 
 def _safe_asset(root, name):
@@ -56,10 +71,10 @@ def _intersects(first, second):
 
 def validate_cover_spec(spec, root=ROOT):
     root = Path(root).resolve()
-    if (spec["profile_id"] != PROFILE or spec["cover_template_revision"] != "1.0.0"
+    if (spec["profile_id"] != PROFILE or spec["cover_template_revision"] != "2.0.0"
             or spec["required_per_part"] != 2 or spec["format"] != "PNG"
             or set(spec["variants"]) != set(EXPECTED)):
-        raise ValueError("Two fixed V1 publishing-cover masters are required")
+        raise ValueError("Two fixed V2 publishing-cover masters are required")
     composition, delivery, assets = spec["composition"], spec["delivery"], spec["assets"]
     if (composition["independent_layout_per_ratio"]
             or not composition["fixed_master_per_ratio"]
@@ -93,7 +108,7 @@ def validate_cover_spec(spec, root=ROOT):
         if len(raw) != entry["bytes"] or hashlib.sha256(raw).hexdigest() != entry["sha256"]:
             raise ValueError("Fixed cover asset differs from approved export: " + name)
         if name == FIXED_FONT_FILE and entry["sha256"] != FIXED_FONT_SHA256:
-            raise ValueError("Fixed V1 covers cannot change their bundled font bytes")
+            raise ValueError("Fixed V2 covers cannot change their bundled font bytes")
         paths[name] = path
     for key in ("font_file", "license_file"):
         if typography[key] not in names:
@@ -124,11 +139,13 @@ def validate_cover_spec(spec, root=ROOT):
                 or title["font_size_px"] != frozen["font"]
                 or title["line_height_px"] != frozen["line"]
                 or title["max_lines"] != frozen["lines"]
+                or title.get("vertical_alignment") != "center"
                 or {host: slot["bounds"] for host, slot in layout["host_slots"].items()} != frozen["hosts"]
-                or title["fill"] != "#161616"
-                or title["highlight"] != {"mode": "last_nonempty_line", "fill": "#F2FA00",
-                                          "right_padding_px": 16, "full_line_height": True}):
-            raise ValueError("Fixed cover 1.0.0 geometry, typography or host anchors changed without a new design revision: " + name)
+                or title["fill"] != "#FFFFFF"
+                or title["highlight"] != {"mode": "explicit_line_indices", "fill": "#F2FA00",
+                                          "text_fill": "#161616", "right_padding_px": 16,
+                                          "full_line_height": True, "full_width": True}):
+            raise ValueError("Fixed cover 2.0.0 geometry, typography or host anchors changed without a new design revision: " + name)
         for label, bounds in (("story_bounds", layout["story_bounds"]),
                               ("title.bounds", title["bounds"]),
                               ("seal_bounds", layout["seal_bounds"])):
@@ -160,7 +177,8 @@ def validate_render_record(record_path, spec=None, root=ROOT):
     spec = spec or json.loads(spec_path.read_text(encoding="utf-8"))
     validate_cover_spec(spec, root)
     record = json.loads(Path(record_path).read_text(encoding="utf-8", errors="strict"))
-    if (record["profile_id"] != PROFILE or record["cover_template_revision"] != spec["cover_template_revision"]
+    if (record.get("schema_version") != "2.0"
+            or record["profile_id"] != PROFILE or record["cover_template_revision"] != spec["cover_template_revision"]
             or set(record["covers"]) != set(EXPECTED)
             or record["renderer"]["font_fallback"] or record["renderer"]["auto_shrink"]):
         raise ValueError("Render record does not describe the current fixed cover pair")
@@ -172,16 +190,30 @@ def validate_render_record(record_path, spec=None, root=ROOT):
         if not path.is_file() or hashlib.sha256(path.read_bytes()).hexdigest() != expected_hash:
             raise ValueError("Actual local cover %s changed or is missing; re-render before delivery" % label)
     job = json.loads(job_path.read_text(encoding="utf-8-sig", errors="strict"))
-    job_art_path = Path(job["art_path"]).expanduser()
-    if not job_art_path.is_absolute():
-        job_art_path = job_path.parent / job_art_path
+    job_art_path = _resolve_job_art(job_path, job["art_path"])
     if (job.get("title") != record["title"] or job_art_path.resolve() != art_path.resolve()
             or set(job.get("variants", {})) != set(EXPECTED)):
         raise ValueError("Render record loses its approved local title, art or ratio source")
     for name, entry in record["covers"].items():
-        if job["variants"][name].get("title_lines") != [line["text"] for line in entry["title_lines"]]:
+        options = job["variants"][name]
+        lines = [line["text"] for line in entry["title_lines"]]
+        if options.get("title_lines") != lines:
             raise ValueError("Render record title lines differ from the approved local cover job: " + name)
-    from PIL import Image, ImageChops, ImageDraw
+        validate_highlight_line_indices(options.get("highlight_line_indices"), len(lines), name + ".highlight_line_indices")
+        if options["highlight_line_indices"] != entry.get("highlight_line_indices"):
+            raise ValueError("Render record highlight lines differ from the approved local cover job: " + name)
+        source = entry["art"]
+        variant_art_path = _resolve_job_art(job_path, options.get("art_path", job["art_path"]))
+        recorded_art_path = Path(source["source_path"]).resolve()
+        if variant_art_path != recorded_art_path:
+            raise ValueError("Render record per-ratio art source differs from the approved local cover job: " + name)
+        if (not recorded_art_path.is_file()
+                or hashlib.sha256(recorded_art_path.read_bytes()).hexdigest() != source["source_sha256"]):
+            raise ValueError("Actual local cover per-ratio art changed or is missing; re-render before delivery: " + name)
+        if (source["fit"] != options.get("art_fit", "contain")
+                or source["crop_reviewed"] != options.get("crop_reviewed", False)):
+            raise ValueError("Render record art-fit review differs from the approved local cover job: " + name)
+    from PIL import Image, ImageChops, ImageDraw, ImageFont
     for name, entry in record["covers"].items():
         variant = spec["variants"][name]
         layout = variant["layout"]
@@ -194,6 +226,26 @@ def validate_render_record(record_path, spec=None, root=ROOT):
         if (tuple(entry["canvas"]) != expected
                 or "".join(line["text"] for line in entry["title_lines"]) != record["title"]):
             raise ValueError("Actual cover record loses approved title text or canvas")
+        title_style = layout["title"]
+        lines = entry["title_lines"]
+        if not 1 <= len(lines) <= title_style["max_lines"]:
+            raise ValueError("Actual cover title exceeds its fixed line count: " + name)
+        font = ImageFont.truetype(str(root / spec["typography"]["font_file"]),
+                                  title_style["font_size_px"], layout_engine=ImageFont.Layout.BASIC)
+        x, y, width, height = title_style["bounds"]
+        line_height = title_style["line_height_px"]
+        stack_top = y + (height - len(lines) * line_height) // 2
+        measure = ImageDraw.Draw(Image.new("L", (1, 1)))
+        _, title_top, _, title_bottom = measure.textbbox((0, 0), record["title"], font=font, anchor="ls")
+        baseline_offset = -title_top + (line_height - (title_bottom - title_top)) // 2
+        for index, line in enumerate(lines):
+            line_top = stack_top + index * line_height
+            baseline = line_top + baseline_offset
+            left, top, right, bottom = measure.textbbox((0, 0), line["text"], font=font, anchor="ls")
+            bounds = [x + left, baseline + top, right - left, bottom - top]
+            if (line["baseline_y"] != baseline or line["line_bounds"] != [x, line_top, width, line_height]
+                    or line["bounds"] != bounds):
+                raise ValueError("Actual cover title record drifts from its vertically centered fixed line stack: " + name)
         if entry["art"]["fit"] not in ("contain", "cover") or (entry["art"]["fit"] == "cover" and not entry["art"]["crop_reviewed"]):
             raise ValueError("Actual cover art uses stretching or an unchecked crop")
         with Image.open(root / variant["base_plate"]) as image:

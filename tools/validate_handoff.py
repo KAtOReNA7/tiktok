@@ -169,7 +169,7 @@ def main():
     cover = json.loads((ROOT / "spec/cover_delivery.json").read_text(encoding="utf-8"))
     expected_covers = {"cover_3x4": ("3:4", 1080, 1440, "cover_3x4_path"),
                        "cover_4x3": ("4:3", 1440, 1080, "cover_4x3_path")}
-    if (cover["profile_id"] != "COVER_DUAL_RATIO_FIXED_V1" or cover["prd_version"] != rules["prd_version"]
+    if (cover["profile_id"] != "COVER_DUAL_RATIO_FIXED_V2" or cover["prd_version"] != rules["prd_version"]
             or rules["cover_profile_id"] != cover["profile_id"]
             or rules["cover_spec"] != "spec/cover_delivery.json"
             or template["cover_spec"] != rules["cover_spec"]
