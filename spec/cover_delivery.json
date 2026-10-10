@@ -1,7 +1,7 @@
 {
   "schema_version": "3.0",
-  "prd_version": "7.17",
-  "updated_date": "2026-10-08",
+  "prd_version": "7.18",
+  "updated_date": "2026-10-10",
   "profile_id": "COVER_DUAL_RATIO_FIXED_V2",
   "scope": "independent_publishing_covers_each_episode_not_video_frames",
   "required_per_part": 2,
@@ -179,7 +179,9 @@
     "narration_paragraph_required": false,
     "empty_video_caption_slot_required": false,
     "fixed_master_per_ratio": true,
-    "art_letterbox_fill": "#161616"
+    "art_letterbox_fill": "#161616",
+    "story_casting_policy_id": "DORO_MAIN_CRITICIZED_V1",
+    "story_primary_actor": "doro"
   },
   "delivery": {
     "separate_from_video_frames": true,
@@ -193,7 +195,10 @@
       "approved_title_exact_lossless_line_breaks_and_bundled_font_no_shrink",
       "contain_by_default_or_reviewed_crop_no_stretch",
       "fixed_chrome_host_pixels_outside_editable_story_title_regions",
-      "readable_title_complete_faces_hands_props_and_original_Q_identity"
+      "readable_title_complete_faces_hands_props_and_original_Q_identity",
+      "story_main_criticized_role_is_doro_actual_visual_review_not_border_overlay",
+      "actual_180_and_360px_thumbnail_review_title_event_and_doro_readable",
+      "contain_projected_art_occupancy_trial_warning_is_not_acceptance_gate"
     ],
     "renderer": "tools/render_cover.py",
     "actual_output_validation_tool": "tools/validate_cover.py",
@@ -345,6 +350,21 @@
       180,
       360
     ],
-    "visual_content_rule": "Use the episode actual event, action, close-up or opposition; do not reuse a generic pose across topics. If contain produces excessive dead space or a tiny event, select another approved same-episode scene or prepare cover-specific raw art; never stretch or blind-crop."
+    "visual_content_rule": "Use the episode actual event, action, close-up or opposition; do not reuse a generic pose across topics. If contain produces excessive dead space or a tiny event, select another approved same-episode scene or prepare cover-specific raw art; never stretch or blind-crop.",
+    "contain_occupancy_review": {
+      "record_in": "existing_local_production_log",
+      "metric": "contain_projected_art_rectangle_area_divided_by_fixed_story_window_area",
+      "formula": "scale=min(window_width/art_width,window_height/art_height); occupancy=(art_width*scale)*(art_height*scale)/(window_width*window_height)",
+      "trial_manual_review_warning_below": 0.85,
+      "warning_is_hard_acceptance_threshold": false,
+      "warning_is_platform_or_scientific_threshold": false,
+      "metric_measures_subject_size_or_visual_readability": false,
+      "review_actual_outputs_at_widths_px": [
+        180,
+        360
+      ],
+      "excessive_dead_space_or_tiny_event_behavior": "choose_another_same_episode_scene_or_ratio_matched_cover_art; preserve_faces_hands_actions_and_props; do_not_stretch_or_blind_crop",
+      "dimensions_or_contain_fit_is_visual_qa": false
+    }
   }
 }

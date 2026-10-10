@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "prd_version": "7.17",
-  "updated_date": "2026-10-05",
+  "prd_version": "7.18",
+  "updated_date": "2026-10-10",
   "principle": "三位原有Q版角色本人演故事；剧情身份只改变服饰、道具和表演",
   "all_hosts_must_be_chibi": true,
   "preserve_actor_identity_and_body_structure": true,
@@ -93,5 +93,36 @@
     "separate_calibration_artifact_required": false,
     "continue_after_internal_pass": true,
     "adult_body_fix": "重绘整个人物及必要接触、遮挡和投影，不能仅换脸或缩放成人"
+  },
+  "casting_policy_id": "DORO_MAIN_CRITICIZED_V1",
+  "primary_actor": "doro",
+  "casting_policy": {
+    "criticized_role_field": "criticized_role",
+    "required_role": "本集被批判、反讽或核心评价的具体人物；夸反派也由Doro出演核心评价对象",
+    "doro_cast_equals_criticized_role": true,
+    "doro_performs_core_plot_actions": true,
+    "supporting_actors": [
+      "gugu",
+      "mambo"
+    ],
+    "supporting_role_assignment": "freely_choose_other_roles_preserving_original_chibi_identity",
+    "all_three_in_every_story_scene_required": false,
+    "edge_overlay_can_replace_plot_lead": false,
+    "cover_story_main_actor": "doro",
+    "fixed_cover_border_hosts_change_required": false,
+    "mambo_narration_and_supporting_roles_allowed": true,
+    "multiple_evaluation_targets": "record_primary_criticized_role_locally_before_storyboard; keep_role_mapping_stable",
+    "record_in": "existing_local_brief_and_production_log",
+    "automatic_rework_of_completed_or_locked_work": false,
+    "qa": {
+      "inspect_actual_story_and_both_covers": true,
+      "check_actor_role_action_not_only_labels_or_overlays": true,
+      "field_match_is_visual_pass": false,
+      "rejected_status": "REJECTED_CASTING",
+      "unchecked_status": "UNVERIFIED_CASTING",
+      "rejected_or_unverified_deliverable": false,
+      "user_confirmation_required": false,
+      "new_user_delivery_table_required": false
+    }
   }
 }

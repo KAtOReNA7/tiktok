@@ -1,5 +1,5 @@
 {
-  "prd_version": "7.17",
+  "prd_version": "7.18",
   "root_relative": "交付",
   "topic_directory": "{topic_id}_{topic_short_name}",
   "part_directory": "{part_number:02d}_第{part_number:02d}集_{part_short_title}",
@@ -135,7 +135,10 @@
         "page_plan_and_mapping_lossless_reassembly",
         "persistent_title_and_three_spread_hosts",
         "caption_delivery_requirement_matches_both_specs_and_chinese_goal_first",
-        "two_fixed_cover_masters_bundled_font_actual_png_and_render_record_validation"
+        "two_fixed_cover_masters_bundled_font_actual_png_and_render_record_validation",
+        "casting_policy_id_primary_actor_and_criticized_role_match_doro_cast",
+        "actual_plot_and_both_cover_story_main_actor_doro_internal_visual_review",
+        "cover_contain_occupancy_trial_warning_and_180_360px_actual_thumbnail_review"
       ],
       "end_marker_is_narration": false,
       "caption_goal_first_in_chinese": "直接交付含口播字幕的最终图片；长段拆连续多图；不留空字幕槽，不做单独字幕视频，不要求用户先发成片再补字幕。"
@@ -186,7 +189,10 @@
     "rating_rules_file": "三只不服_运营评级规则.md",
     "runtime_state_file": "三只不服_定时运行状态.json",
     "character_first_selection": "trial_revocable_by_user",
-    "selection_rule_reference": "PRD_V7.md section 2.4"
+    "selection_rule_reference": "PRD_V7.md section 2.4",
+    "topic_selection_mode": "human_daily_selection",
+    "user_selection_required_before_production": true,
+    "automation_topic_role": "provide_leads_evidence_data_and_candidate_priorities_only"
   },
   "character_identity_spec": "spec/character_identity.json",
   "character_acceptance": {
@@ -205,7 +211,12 @@
     "unchecked_status": "UNVERIFIED_IDENTITY",
     "rejected_or_unverified_as_ready": false,
     "identity_qa_location": "existing_local_production_log",
-    "mapping_columns_unchanged": true
+    "mapping_columns_unchanged": true,
+    "core_criticized_role_played_by_doro": true,
+    "actual_story_and_both_cover_casting_visual_review": true,
+    "edge_doro_presence_is_plot_casting_pass": false,
+    "casting_record_location": "existing_local_production_log",
+    "rejected_casting_as_ready": false
   },
   "template_spec": "spec/template.json",
   "default_template_id": "RYP_STORY_MAIN_V3_2",
@@ -245,5 +256,9 @@
   },
   "cover_template_revision": "2.0.0",
   "cover_renderer": "tools/render_cover.py",
-  "cover_validation_tool": "tools/validate_cover.py"
+  "cover_validation_tool": "tools/validate_cover.py",
+  "casting_policy_id": "DORO_MAIN_CRITICIZED_V1",
+  "primary_actor": "doro",
+  "criticized_role_required_in_local_brief": true,
+  "casting_spec": "spec/character_identity.json"
 }

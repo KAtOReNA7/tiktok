@@ -1,10 +1,11 @@
 # 空白任务模板。下一选题尚未由本包确定。
-prd_version: '7.17'
+prd_version: '7.18'
 episode_id: null
 topic: null
 core_claim: null
 title: null
 format: single_claim
+topic_approved_by_user: false # 用户已明确选定才进入本期投产；自动候选不是批准
 script_approved: false
 script_version: null
 part_count: null
@@ -47,6 +48,10 @@ rate_already_applied: null
 final_voice_path: null
 timing_reference_file: null
 figma_working_node: null
+casting_policy_id: DORO_MAIN_CRITICIZED_V1
+primary_actor: doro
+criticized_role: null # 填具体核心评价人物；hosts_cast.doro必须同值，null不是已通过
+# 以下固定Q版演员→本期角色；Doro核心行动须实际出演，扒边不替代正文。
 hosts_cast:
   doro: null
   gugu: null
@@ -60,6 +65,8 @@ cast_calibration_file: null
 identity_correction_required: null
 identity_correction_internal_status: null
 identity_qa_log: null
+casting_qa_log: null # 本地逐图正文与两张封面主图选角检查；字段一致不能代替看图
+casting_internal_status: null # REJECTED_CASTING/UNVERIFIED_CASTING不能作为合格交付
 user_locked_items: []
 requested_deliverables: []
 missing_dependencies: []
@@ -80,6 +87,7 @@ cover_count_per_part: 2
 local_cover_template_verified: null
 cover_missing_dependencies: []
 cover_delivery_validation: null
+cover_thumbnail_review: null # 实际180/360px看图与图窗占用率试行警报，不能以尺寸通过代替
 one_sentence_description_per_part: true
 caption_delivery: static_caption_baked_final_png
 srt_only_delivery: false

@@ -48,6 +48,7 @@ CAPTION_PROFILE = "STATIC_CAPTION_PAGES_V1"
 EDGE_HOSTS = {"doro": [884, 24, 180, 180], "gugu": [-8, 1416, 180, 180],
               "mambo": [580, 1702, 180, 180]}
 EDGE_ZONES = {"doro": "top_right", "gugu": "left_lower", "mambo": "bottom_center"}
+CASTING_POLICY = "DORO_MAIN_CRITICIZED_V1"
 
 
 def paths_for_manifest():
@@ -162,11 +163,63 @@ def main():
     if not (correction["continue_after_internal_pass"]
             and rules["character_acceptance"]["continue_after_internal_identity_pass"]):
         raise ValueError("Continue production after internal character validation")
+    casting = identity["casting_policy"]
+    casting_qa = casting["qa"]
+    if (identity["casting_policy_id"] != CASTING_POLICY
+            or rules["casting_policy_id"] != CASTING_POLICY
+            or identity["primary_actor"] != "doro" or rules["primary_actor"] != "doro"
+            or rules["casting_spec"] != "spec/character_identity.json"
+            or not rules["criticized_role_required_in_local_brief"]
+            or not casting["doro_cast_equals_criticized_role"]
+            or not casting["doro_performs_core_plot_actions"]
+            or casting["cover_story_main_actor"] != "doro"
+            or casting["edge_overlay_can_replace_plot_lead"]
+            or casting["all_three_in_every_story_scene_required"]
+            or casting["fixed_cover_border_hosts_change_required"]
+            or not casting["mambo_narration_and_supporting_roles_allowed"]
+            or casting["automatic_rework_of_completed_or_locked_work"]):
+        raise ValueError("Doro must play the core evaluated plot role and cover story lead; overlays do not substitute")
+    if (not casting_qa["inspect_actual_story_and_both_covers"]
+            or not casting_qa["check_actor_role_action_not_only_labels_or_overlays"]
+            or casting_qa["field_match_is_visual_pass"]
+            or casting_qa["rejected_or_unverified_deliverable"]
+            or casting_qa["user_confirmation_required"]
+            or casting_qa["new_user_delivery_table_required"]
+            or casting_qa["rejected_status"] != "REJECTED_CASTING"
+            or casting_qa["unchecked_status"] != "UNVERIFIED_CASTING"):
+        raise ValueError("Actual casting requires internal visual QA without user approval or extra delivery tables")
+    acceptance = rules["character_acceptance"]
+    if (not acceptance["core_criticized_role_played_by_doro"]
+            or not acceptance["actual_story_and_both_cover_casting_visual_review"]
+            or acceptance["edge_doro_presence_is_plot_casting_pass"]
+            or acceptance["rejected_casting_as_ready"]):
+        raise ValueError("Delivery casting acceptance disagrees with the Doro lead rule")
+    blank_brief = (ROOT / "episode/brief.yaml").read_text(encoding="utf-8")
+    for expression in (
+            r"(?m)^casting_policy_id: DORO_MAIN_CRITICIZED_V1$",
+            r"(?m)^primary_actor: doro$", r"(?m)^criticized_role: null(?:\s|$)",
+            r"(?m)^casting_qa_log: null(?:\s|$)", r"(?m)^topic_approved_by_user: false(?:\s|$)"):
+        if not re.search(expression, blank_brief):
+            raise ValueError("Blank brief must retain Doro casting fields and unapproved manual-topic state")
+    if (rules["operations"]["topic_selection_mode"] != "human_daily_selection"
+            or not rules["operations"]["user_selection_required_before_production"]):
+        raise ValueError("Automated candidates do not authorize production; users select daily topics")
     template = json.loads((ROOT / "spec/template.json").read_text(encoding="utf-8"))
     caption = json.loads((ROOT / "spec/caption_style.json").read_text(encoding="utf-8"))
     if template["template_id"] != caption["template_id"] or template["template_id"] != rules["default_template_id"]:
         raise ValueError("Template, caption and delivery defaults disagree")
     cover = json.loads((ROOT / "spec/cover_delivery.json").read_text(encoding="utf-8"))
+    occupancy = cover["workflow"]["contain_occupancy_review"]
+    if (cover["composition"]["story_casting_policy_id"] != CASTING_POLICY
+            or cover["composition"]["story_primary_actor"] != "doro"
+            or cover["workflow"]["thumbnail_review_widths_px"] != [180, 360]
+            or occupancy["review_actual_outputs_at_widths_px"] != [180, 360]
+            or occupancy["trial_manual_review_warning_below"] != 0.85
+            or occupancy["warning_is_hard_acceptance_threshold"]
+            or occupancy["warning_is_platform_or_scientific_threshold"]
+            or occupancy["metric_measures_subject_size_or_visual_readability"]
+            or occupancy["dimensions_or_contain_fit_is_visual_qa"]):
+        raise ValueError("Actual covers need Doro plot-lead and thumbnail review; occupancy is a trial warning, not a gate")
     expected_covers = {"cover_3x4": ("3:4", 1080, 1440, "cover_3x4_path"),
                        "cover_4x3": ("4:3", 1440, 1080, "cover_4x3_path")}
     if (cover["profile_id"] != "COVER_DUAL_RATIO_FIXED_V2" or cover["prd_version"] != rules["prd_version"]
@@ -356,6 +409,10 @@ def main():
     if (data["layout_template"] != template["template_id"]
             or data["caption_profile_id"] != CAPTION_PROFILE):
         raise ValueError("Manifest points at the wrong default template")
+    if (data["casting_policy_id"] != CASTING_POLICY or data["primary_actor"] != "doro"
+            or data["cover_profile_id"] != cover["profile_id"]
+            or data["cover_template_revision"] != cover["cover_template_revision"]):
+        raise ValueError("Manifest casting and current publishing-cover metadata must match active specifications")
     if {data["template_revision"], template["version"], template["template_revision"],
             program_visuals["version"], program_visuals["template_revision"]} != {"3.2.1"}:
         raise ValueError("Template revision must match 3.2.1 independently of the unchanged PRD version")
@@ -395,7 +452,7 @@ def main():
         raise ValueError("Manifest omits current template assets")
     if any(asset["file"] not in seen for asset in cover["assets"]["asset_inventory"]):
         raise ValueError("Manifest omits fixed publishing-cover assets or the bundled font/license")
-    print("PASS: %d files, PRD version, three V3.2 programs, ten bases and spread-host overlay, decoded RGBA assets, persistent title/static-caption geometry, actual actor alpha in three surrounding regions with story/text intersection zero, two fixed publishing-cover masters and bundled font/license, legacy V2/V3/V3.1 compatibility, asset hashes and BOM/CRLF mapping template verified. Validate actual page plans/CSV/cover render records separately; rendered text, likeness and phone-preview safety require visual QA." % len(data["files"]))
+    print("PASS: %d files, PRD version, Doro plot-lead policy and manual-topic selection metadata, three V3.2 programs, ten bases and spread-host overlay, decoded RGBA assets, persistent title/static-caption geometry, actual actor alpha in three surrounding regions with story/text intersection zero, two fixed publishing-cover masters and bundled font/license, legacy V2/V3/V3.1 compatibility, asset hashes and BOM/CRLF mapping template verified. Validate actual page plans/CSV/cover render records separately; actor-to-role casting, rendered text, likeness, cover occupancy and phone-preview safety still require actual visual QA." % len(data["files"]))
 
 
 if __name__ == "__main__":
