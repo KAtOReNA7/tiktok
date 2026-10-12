@@ -1,13 +1,13 @@
-# 古今人物锐评短视频｜统一 PRD V7.18
+# 古今人物锐评短视频｜统一 PRD V7.19
 
-制作基础版本日期：2026-10-10；内容方向修订：2026-10-12（EDITORIAL_COGNITION_V1）。本版固定Doro出演每集被锐评的核心人物，并恢复用户每日人工选题：自动化提供线索、数据和候选，未经用户选定不进入投产。选角同时落实到正文、两比例封面事件主图与内部看图验收，页边三位装饰不能代替Doro实际演主角。角色仍为原有Q版本人，不增加形象确认节点。沿用RYP_STORY_MAIN_V3_2／3.2.1、STATIC_CAPTION_PAGES_V1、RETENTION_INFO_V1修订1.2与COVER_DUAL_RATIO_FIXED_V2／2.0.0；本次不改变模板颜色、几何或固定装饰资产。静态字幕直接合成进最终PNG、两列保真CSV、40秒及一次1.25倍速等现行规则保持；已完成作品与已锁稿不自动返工。
+版本日期：2026-10-12。V7.19将2026-10-10已交付的纸白封面V3正式并入规范仓库：COVER_DUAL_RATIO_FIXED_V3／3.0.0，纸白#FAFAFA、墨黑#161616、荧光黄#F2FA00，固定双比例几何、字体及144px三位装饰保持。同步保留当天的EDITORIAL_COGNITION_V1与RETENTION_INFO_V1修订1.2：先挑战大众对人物的根本评价，再用故事支撑；标题自然直接，不强制正话反说或固定句式。Doro出演核心评价人物、用户人工选题、正文RYP_STORY_MAIN_V3_2／3.2.1、STATIC_CAPTION_PAGES_V1、静态含字幕PNG、两列保真CSV、40秒及一次1.25倍速继续有效。已完成作品与已锁稿不因规范升级自动返工。
 
 文档用途：新电脑初始化与老电脑后续制作的统一依据；新 Codex 会话不等于新电脑。
 
 当前主流程：**大众根本评价 → 一句反向观点 → 支撑材料与候选 → 用户人工选定 → 有信息推进的40秒内分集口播（未锁定新稿先试25—30秒）→ Doro演核心锐评人物的漫画分镜 → 按语义拆页的含字幕PNG、每集封面与一句话简介 → 用户按原配音安排图片顺序和时长 → 局部审修。**
 当前口播配置：`RETENTION_INFO_V1`，规则修订`1.2`（2026-10-12），参数见`spec/narrative_retention.json`，适用范围与锁稿边界见第3—4节。
-当前发布封面：`COVER_DUAL_RATIO_FIXED_V2`，`cover_template_revision=2.0.0`；3:4与4:3各自的固定母版、几何、字体和本地发布资产见`spec/cover_delivery.json`，不允许每机重新排版。
-当前画面模板：`RYP_STORY_MAIN_V3_2`，字幕配置`STATIC_CAPTION_PAGES_V1`，PRD版本V7.18，模板修订3.2.1（三位装饰统一180×180）。新制作默认V3.2；只有本轮明确授权的在制任务切版，已完成作品不重做。旧V3.1保留在spec/legacy/v3_1/和assets/template/v3_1/；旧V3几何与资产保留在spec/legacy/v3/和assets/template/v3/；旧V2仍在spec/legacy/v2/和assets/template/v2/，仅兼容旧工程。
+当前发布封面：`COVER_DUAL_RATIO_FIXED_V3`，`cover_template_revision=3.0.0`；3:4与4:3各自的固定母版、几何、字体和本地发布资产见`spec/cover_delivery.json`，不允许每机重新排版。
+当前画面模板：`RYP_STORY_MAIN_V3_2`，字幕配置`STATIC_CAPTION_PAGES_V1`，PRD版本V7.19，模板修订3.2.1（三位装饰统一180×180）。新制作默认V3.2；只有本轮明确授权的在制任务切版，已完成作品不重做。旧V3.1保留在spec/legacy/v3_1/和assets/template/v3_1/；旧V3几何与资产保留在spec/legacy/v3/和assets/template/v3/；旧V2仍在spec/legacy/v2/和assets/template/v2/，仅兼容旧工程。
 
 > 现行入口规则：新电脑首次初始化才执行第13.1节；老电脑继续制作执行第13.1.1节，默认只读本地资料，不访问GitHub。换对话、换选题、换集数不触发同步。用户要求更新规范／接续时，单独执行第13.1.2节。独立运营任务按第20节接续，不成为单集制作的前置步骤。
 
@@ -56,7 +56,7 @@
 ## 1. 权威顺序与版本管理
 
 1. 用户本轮明确指令、用户确认的定稿和当前成片版本优先。
-2. 本 PRD V7.18为统一主规范，文件名仍为PRD_V7.md；规范发布源为GitHub仓库 `KAtOReNA7/tiktok` 的 `main`。老电脑制作使用已经取得的本地规范和用户本轮明确修订，不因“main是发布源”而自动联网检查。首次初始化或用户明确要求更新规范时才取得远端版本；普通制作不设“必须最新main”的开工门槛，不恢复本地废止流程。
+2. 本 PRD V7.19为统一主规范，文件名仍为PRD_V7.md；规范发布源为GitHub仓库 `KAtOReNA7/tiktok` 的 `main`。老电脑制作使用已经取得的本地规范和用户本轮明确修订，不因“main是发布源”而自动联网检查。首次初始化或用户明确要求更新规范时才取得远端版本；普通制作不设“必须最新main”的开工门槛，不恢复本地废止流程。
 3. 当前选题的 `episode/brief.yaml`、定稿、分镜及明确限定范围的任务单补充本版。
 4. `spec/template.json` 定义目前继承的画面尺寸与颜色；如用户提供更新模板，以其为准并记录差异。
 5. 本地旧归档、秦始皇旧稿、旧PRD与旧SOP只用于追溯，不进入规范仓库，不能自动恢复旧任务。
@@ -485,16 +485,16 @@ V3.2漫画目标画窗1000×1000，1:1比例。优先生成足够分辨率、构
 
 ### 11.1 每集必交两套固定母版封面
 
-包括只有一集的选题，每集都交两张实际PNG：竖封面3:4为1080×1440，横封面4:3为1440×1080。机器可读配置为`spec/cover_delivery.json`：`cover_profile_id=COVER_DUAL_RATIO_FIXED_V2`，`cover_template_revision=2.0.0`。这两套是固定Figma母版及其本地发布资产，不能把尺寸一致、风格相近当作模板一致。各比例的模板ID、Figma节点、底板与角色资产、漫画窗、标题文字框、字体文件／字重／字号／行距、朱印和图层顺序均以该spec为准。3:4与4:3有各自批准几何，不把正文坐标缩放到封面，也不允许各台电脑自由重排。
+包括只有一集的选题，每集都交两张实际PNG：竖封面3:4为1080×1440，横封面4:3为1440×1080。机器可读配置为`spec/cover_delivery.json`：`cover_profile_id=COVER_DUAL_RATIO_FIXED_V3`，`cover_template_revision=3.0.0`。这两套是固定Figma母版及其本地发布资产，不能把尺寸一致、风格相近当作模板一致。各比例的模板ID、Figma节点、底板与角色资产、漫画窗、标题文字框、字体文件／字重／字号／行距、朱印和图层顺序均以该spec为准。3:4与4:3有各自批准几何，不把正文坐标缩放到封面，也不允许各台电脑自由重排。
 
-V2固定品牌框架，不把每集都画成同一张通用站姿图。公开封面观察、设计决策与效果判断边界见 `spec/cover_design_rationale.md`。两套母版使用同一发布字体Noto Sans SC Black，统一字号92px／行距104px；标题行组在框内垂直居中，强调行使用固定整行宽黄底黑字，其余白字。精确值仍由spec及实际发布资产共同验收。
+V3固定品牌框架使用纸白#FAFAFA、墨黑#161616与荧光黄#F2FA00，不把每集都画成同一张通用站姿图。公开封面观察、设计决策与效果判断边界见 `spec/cover_design_rationale.md`。两套母版使用同一发布字体Noto Sans SC Black，统一字号92px／行距104px；标题行组在框内垂直居中，强调行使用固定整行宽黄底黑字，其余墨黑字。精确值仍由spec及实际发布资产共同验收。
 
 | 比例 | 事件主图窗（x,y,w,h） | 标题框（x,y,w,h） | 最多行数 |
 | --- | --- | --- | --- |
 | 3:4／1080×1440 | 160,16,744,1008 | 64,1060,840,312 | 3 |
 | 4:3／1440×1080 | 160,16,1112,712 | 72,764,1200,208 | 2 |
 
-三位封面Q版装饰各144×144、在画窗与核心文字外环抱；正文三位180×180的配置不受本次封面更新影响。取消横版孤立左栏、大白留空和无意义刻度，固定位置的朱印保留。`COVER_DUAL_RATIO_FIXED_V1`／1.0.0及其资产只作历史兼容，不是现行母版；不要求重做已完成封面。
+三位封面Q版装饰各144×144、在画窗与核心文字外环抱；正文三位180×180的配置不受本次封面更新影响。取消横版孤立左栏、大白留空和无意义刻度，固定位置的朱印保留。`COVER_DUAL_RATIO_FIXED_V1`／1.0.0与`COVER_DUAL_RATIO_FIXED_V2`／2.0.0及其资产只作历史兼容，不是现行母版；不要求重做已完成封面。
 
 Figma是规范设计源；正常生产复用已取得的本地母版发布包及确定性合成规则，不每集访问Figma或重新设计组件。原`COVER_DUAL_RATIO_V1`只固定尺寸／风格、不固定母版的自由排版入口废止；现有9:16 cover_opening资产与旧Figma cover节点仅作视频开场／历史参考，不是本版发布封面。正文及含字幕PNG仍为1080×1920，RYP_STORY_MAIN_V3_2、3.2.1修订及字幕交付规则不变。
 
@@ -503,7 +503,7 @@ Figma是规范设计源；正常生产复用已取得的本地母版发布包及
 ### 11.2 每集内容替换与实际验收
 
 - 固定外层品牌UI、图窗、标题框、字形、三位Q版锚点与144×144尺寸、朱印、颜色和层序。每集动态替换批准标题、本集事件图、取景与表情；封面三位原Q版装饰直接复用指定hosts_overlay，不逐期换装、重新生图或改姿态。不得自行挪位、改字形、加小标签／额外标语或重画另一套UI；正文故事内演员的本期换装不受这一封面装饰规则影响。
-- 标题由可编辑文字层按母版字体和有限排版规则确定性合成，禁止imagegen绘制准确标题。必须使用发布包指定字体文件与字重，不依赖当前电脑的同名字体或静默回退。每种比例必须填写`highlight_line_indices`：选择1—2个0起始有效行号，强调本集关键行动、冲突或后果，不默认永远高亮末行。换行／强调须遵循spec允许的规则；超出支持边界时先找本地合适标题配置，仍不支持则说明具体溢出与所需内容决定，不能为塞入版面静默改锁定标题、缩成不可读小字或扩大文字框。
+- 标题由可编辑文字层按母版字体和有限排版规则确定性合成，禁止imagegen绘制准确标题。必须使用发布包指定字体文件与字重，不依赖当前电脑的同名字体或静默回退。每种比例必须填写`highlight_line_indices`：选择1—2个0起始有效行号，强调本集核心观点、冲突或关键证据，不默认永远高亮末行。换行／强调须遵循spec允许的规则；超出支持边界时先找本地合适标题配置，仍不支持则说明具体溢出与所需内容决定，不能为塞入版面静默改锁定标题、缩成不可读小字或扩大文字框。
 - 漫画窗口内的取景为本集服务，一眼识别人物、动作与矛盾；可复用本集有张力的原画，按固定窗口的批准适配方式处理；两比例允许选用同集不同原画／镜头。两比例事件主图的核心评价人物均按6.1.1由Doro本人出演，不能只在装饰层有Doro、主图却改用曼波；不因此改固定装饰或母版。画面应体现该集行动、对象或后果，禁止无关通用站姿或跨题旧图机械替代。禁止拉伸9:16截图、机械截首帧或盲目居中裁切；关键脸、手、道具与关系须完整。需要补足取景时按当次制作授权编辑／另生成窗口内漫画，外层母版仍不改变，构图不得捏造事件。
 - 封面三位原Q版装饰使用发布包指定的完整透明层，保留固定锚点、尺寸及环抱布局，不重生、不换装、不用本期正文扒边替代，也不能把9:16坐标套来或缩裁角色掩盖碰撞。窗口内故事演员仍按第6节真实输入身份图并可按剧情换装；逐图内部核对脸与可见身体，不新增逐张用户确认。
 - 独立发布封面显示本集主题及母版固定装饰，不添加整段口播、空字幕槽、播放器按钮或虚构时间码。两张封面不纳入字幕分页／两列映射，不插入成片开头；首个9:16正文承接被质疑的人物及关键证据，并含本页口播。
@@ -511,7 +511,7 @@ Figma是规范设计源；正常生产复用已取得的本地母版发布包及
 - 缺母版、字体、参数或角色资产时先查本地目录与已有发布包，报告具体缺件／版本，继续不受影响的独立步骤；封面保持明确未完成，不退回自由设计、不用正文截图或系统字体冒充合格。首次初始化或明确`rules_update`才安全取得完整发布包，之后恢复`local_continue`；不因新集缺件自行联网。已完成封面和已锁稿不因本版自动返工。
 
 
-本期`cover_job.json`只保存在本地：写完整批准标题、实际原画路径，以及每种比例明确的`title_lines`和必填`highlight_line_indices`。各自逐行拼接必须完整还原标题，不删字、不改稿、不缩小字；3:4最多三行，4:3最多两行，均用92px字与104px行距，实际行组在固定标题框内垂直居中。强调索引为0起始的有效行号，选择1—2行承载本集关键冲突，不机械高亮末行；强调行使用固定整行宽黄底黑字，其余白字。实际字体测量溢出时先调整断行，仍放不下则说明具体溢出，不缩字或扩框。每种比例可用`art_path`覆盖顶层路径，但只能选择同集事件的不同构图。默认等比contain仅是兼容适配：实际缩略图若出现大面积留空或事件过小，须另选同集镜头／原画，不能机械接受；使用cover裁切须在本地实际审过动作、脸、手与道具并记录。
+本期`cover_job.json`只保存在本地：写完整批准标题、实际原画路径，以及每种比例明确的`title_lines`和必填`highlight_line_indices`。各自逐行拼接必须完整还原标题，不删字、不改稿、不缩小字；3:4最多三行，4:3最多两行，均用92px字与104px行距，实际行组在固定标题框内垂直居中。强调索引为0起始的有效行号，选择1—2行承载本集关键冲突，不机械高亮末行；强调行使用固定整行宽黄底黑字，其余墨黑字。实际字体测量溢出时先调整断行，仍放不下则说明具体溢出，不缩字或扩框。每种比例可用`art_path`覆盖顶层路径，但只能选择同集事件的不同构图。默认等比contain仅是兼容适配：实际缩略图若出现大面积留空或事件过小，须另选同集镜头／原画，不能机械接受；使用cover裁切须在本地实际审过动作、脸、手与道具并记录。
 
 `cover_job.json`使用以下字段结构；示例仅说明接口，不是本期采用稿，实际逐集填入真实ID、批准标题和存在的原画路径：
 
@@ -549,7 +549,7 @@ python tools/validate_cover.py --render-record /绝对路径/交付/本期ID_P01
 镜头：{景别与夸张透视}，通过{大小反差/对峙/动作方向}形成张力。
 背景简化，手机缩小后先看到主体与冲突。真实输入出镜者身份图，仍是Q版本人。
 不要在插画里重画外层UI、准确标题或装饰角色。
-分别套用本地spec/cover_delivery.json的COVER_DUAL_RATIO_FIXED_V2／2.0.0两套固定母版，可为两比例选同集不同构图；每种比例显式填写title_lines与highlight_line_indices，按指定字体和文字规则合成完整批准标题，封面三位固定原Q版透明装饰层与印章直接复用；交1080×1440及1440×1080两张PNG。
+分别套用本地spec/cover_delivery.json的COVER_DUAL_RATIO_FIXED_V3／3.0.0两套固定母版，可为两比例选同集不同构图；每种比例显式填写title_lines与highlight_line_indices，按指定字体和文字规则合成完整批准标题，封面三位固定原Q版透明装饰层与印章直接复用；交1080×1440及1440×1080两张PNG。
 ```
 
 封面检查以180px与360px宽的实际缩略图辅助：先辨认人物、动作或对象，再读清主题与关键冲突；大面积留空、主体过小、图文互相割裂应回到同集选图／取景修正。封面主要影响主页、搜索等可选择入口，不能把优化封面直接解释为自然推荐流、两秒跳出或完播改善。后续效果复核分清流量来源及曝光／点击口径；取不到相关指标则标无法判定，不将封面质量的内部检查冒充平台效果。
@@ -593,7 +593,7 @@ python tools/validate_cover.py --render-record /绝对路径/交付/本期ID_P01
 
 输出给Codex的指令必须在开头写明模式，并使用不同文件名：`{选题ID}_{集号}_Codex_新电脑首次执行指令_vXX.txt` 或 `{选题ID}_{集号}_Codex_老电脑继续制作指令_vXX.txt`。两类文件均是本期本地资料，不进Git；各自包含完整本期任务，不能让老电脑拼接新电脑的同步步骤。未明确要求首次初始化且本地已有项目时，默认交付老电脑版。
 
-交付完成条件：实际创建可下载的完整TXT文件，也可按需用同命名结构的MD文件；核对执行模式、完整定稿、全部章节和文件结尾后给可点击下载链接。新生成的逐集指令须明示PRD V7.18、`template_id=RYP_STORY_MAIN_V3_2`、`narrative_profile_id=RETENTION_INFO_V1`、`narrative_rule_revision=1.2`、`cover_profile_id=COVER_DUAL_RATIO_FIXED_V2`、`cover_template_revision=2.0.0`与`casting_policy_id=DORO_MAIN_CRITICIZED_V1`、`primary_actor=doro`、本期`criticized_role`及`hosts_cast.doro`一致关系、本期稿件锁定／改写授权范围，并包含本期`program_id`、所用栏目视觉资产、开头行动、正文新证据、中段信息回报、结尾具体代价及画面对应要求；并将开头承诺、早段兑现、后段新发现写进既有brief，实际检查首张最终PNG与正文镜头的信息推进；锁定稿只记录核验，未经授权不重写。不能仅写“提高完播率”或靠模型记住前文。正文不得依赖从前文或网页代码块补齐，不以“同上”、省略号或占位稿替代已确认内容。网页全文仅作可选预览，不能代替文件交付。文件末尾设清楚的结束标记，便于发现截断；结束标记不进入口播。
+交付完成条件：实际创建可下载的完整TXT文件，也可按需用同命名结构的MD文件；核对执行模式、完整定稿、全部章节和文件结尾后给可点击下载链接。新生成的逐集指令须明示PRD V7.19、`template_id=RYP_STORY_MAIN_V3_2`、`narrative_profile_id=RETENTION_INFO_V1`、`narrative_rule_revision=1.2`、`cover_profile_id=COVER_DUAL_RATIO_FIXED_V3`、`cover_template_revision=3.0.0`与`casting_policy_id=DORO_MAIN_CRITICIZED_V1`、`primary_actor=doro`、本期`criticized_role`及`hosts_cast.doro`一致关系、本期稿件锁定／改写授权范围，并包含本期`program_id`、所用栏目视觉资产、开头核心观点、正文新证据、中段信息回报、结尾具体代价及画面对应要求；并将开头承诺、早段兑现、后段新发现写进既有brief，实际检查首张最终PNG与正文镜头的信息推进；锁定稿只记录核验，未经授权不重写。不能仅写“提高完播率”或靠模型记住前文。正文不得依赖从前文或网页代码块补齐，不以“同上”、省略号或占位稿替代已确认内容。网页全文仅作可选预览，不能代替文件交付。文件末尾设清楚的结束标记，便于发现截断；结束标记不进入口播。
 
 GitHub限制仅针对日常制作中的仓库访问，不禁止任务本身已授权的生图、史料检索或其他必要在线工具。规范更新与内容制作分开执行，不把一次规范更新授权解释为以后每集都可自动同步。
 
@@ -742,7 +742,7 @@ V3.2分页另对本期实际`page_plan.json`运行`python tools/validate_caption
 | 映射CSV编码与保真 | 实际交付CSV通过CSV_EXCEL_UTF8_BOM_V1字节及结构校验：单个UTF-8 BOM、CRLF记录边界、标准转义、两列和唯一非空编号；再逐格核对采用稿，不以网页预览或空模板通过替代 |
 | 分集完整性 | 默认每集含头尾不超过40秒；每集独立结尾，独立或已说明共用片头 |
 | 分页保真 | 每个父镜头的子页及全稿逐字符拼回完全一致，CSV每行与最终PNG一一对应；不以忽略标点／空白的比较放行 |
-| 封面 | 每集实际交1080×1440（3:4）与1440×1080（4:3）两张PNG，核COVER_DUAL_RATIO_FIXED_V2／2.0.0、实际母版／字体／固定几何与本期生成记录；标题可读、关键脸手道具完整，三位环抱不遮挡；不加口播字幕、不进素材映射或成片开头 |
+| 封面 | 每集实际交1080×1440（3:4）与1440×1080（4:3）两张PNG，核COVER_DUAL_RATIO_FIXED_V3／3.0.0、实际母版／字体／固定几何与本期生成记录；标题可读、关键脸手道具完整，三位环抱不遮挡；不加口播字幕、不进素材映射或成片开头 |
 | 一句话简介 | 每集各一条可粘贴文本，不以角色名单代替 |
 | 文件夹交付 | 同一选题文件集中在统一目录，命名含选题／集号／用途／版本，无压缩包 |
 
@@ -830,13 +830,13 @@ V3.2白黑黄UI、字级与文字面板、朱印、每图常驻主题、三位�
 ### 19.1 新电脑首次执行
 
 ```text
-执行模式：first_setup（新电脑首次初始化）。仅这次按PRD第13.1节克隆或安全同步 https://github.com/KAtOReNA7/tiktok 的main分支，读取AGENTS.md、CHAT_HANDOFF.md、START_HERE.md、PRD_V7.md、PROJECT_STATE.md及当前任务需要的spec，核对V3.2所需底板、参数与三位身份图，并按spec/cover_delivery.json核对两比例固定封面母版、字体和几何，记录本地路径、PRD V7.18、template_id=RYP_STORY_MAIN_V3_2、narrative_profile_id=RETENTION_INFO_V1、narrative_rule_revision=1.2、cover_profile_id=COVER_DUAL_RATIO_FIXED_V2、cover_template_revision=2.0.0及本期program_id，读取spec/program_editorial.json和spec/program_visuals.json中本期栏目所需内容。已有本机初始化记录且资产可用时跳过同步，转为local_continue。日后新会话或制作新集默认本地续作，不重复访问GitHub。用户当前任务与完整采用稿优先，不把提案当定稿。本期必填casting_policy_id=DORO_MAIN_CRITICIZED_V1、primary_actor=doro与criticized_role，hosts_cast.doro须等于核心评价人物；正文核心行动和两比例封面事件主角都由原Q版Doro出演，不能用页边Doro代替剧情主角。曼波与咕咕嘎嘎自由演其他角色，曼波配音与固定三位扒边照常。实际看图内部验收，不增加用户确认。单集内容只在本地，不commit或push。
+执行模式：first_setup（新电脑首次初始化）。仅这次按PRD第13.1节克隆或安全同步 https://github.com/KAtOReNA7/tiktok 的main分支，读取AGENTS.md、CHAT_HANDOFF.md、START_HERE.md、PRD_V7.md、PROJECT_STATE.md及当前任务需要的spec，核对V3.2所需底板、参数与三位身份图，并按spec/cover_delivery.json核对两比例固定封面母版、字体和几何，记录本地路径、PRD V7.19、template_id=RYP_STORY_MAIN_V3_2、narrative_profile_id=RETENTION_INFO_V1、narrative_rule_revision=1.2、cover_profile_id=COVER_DUAL_RATIO_FIXED_V3、cover_template_revision=3.0.0及本期program_id，读取spec/program_editorial.json和spec/program_visuals.json中本期栏目所需内容。已有本机初始化记录且资产可用时跳过同步，转为local_continue。日后新会话或制作新集默认本地续作，不重复访问GitHub。用户当前任务与完整采用稿优先，不把提案当定稿。本期必填casting_policy_id=DORO_MAIN_CRITICIZED_V1、primary_actor=doro与criticized_role，hosts_cast.doro须等于核心评价人物；正文核心行动和两比例封面事件主角都由原Q版Doro出演，不能用页边Doro代替剧情主角。曼波与咕咕嘎嘎自由演其他角色，曼波配音与固定三位扒边照常。实际看图内部验收，不增加用户确认。单集内容只在本地，不commit或push。
 ```
 
 ### 19.2 老电脑继续制作（默认日常入口）
 
 ```text
-执行模式：local_continue（老电脑继续制作）。本机已完成项目初始化。只读取本地PRD V7.18、相关spec（含spec/narrative_retention.json）、本期完整采用稿、制作记录和交付清单，记录narrative_profile_id=RETENTION_INFO_V1、narrative_rule_revision=1.2、本期program_id及稿件锁定状态，读取本地栏目编辑与视觉spec以及实际所需资产；封面固定COVER_DUAL_RATIO_FIXED_V2／2.0.0，按spec/cover_delivery.json复用两套本地母版与字体，不自由排版。2026-10-05起新制作使用本机已取得的RYP_STORY_MAIN_V3_2模板；已完成内容不重做，在制V1.1除用户指示外保留原版。复用相应版本的角色与合格素材，从未完成处继续本次任务。本期必填casting_policy_id=DORO_MAIN_CRITICIZED_V1、primary_actor=doro与criticized_role，hosts_cast.doro须等于核心评价人物；正文核心行动和两比例封面事件主角都由原Q版Doro出演，不能用页边Doro代替剧情主角。曼波与咕咕嘎嘎自由演其他角色，曼波配音与固定三位扒边照常。实际看图内部验收，不增加用户确认。
+执行模式：local_continue（老电脑继续制作）。本机已完成项目初始化。只读取本地PRD V7.19、相关spec（含spec/narrative_retention.json）、本期完整采用稿、制作记录和交付清单，记录narrative_profile_id=RETENTION_INFO_V1、narrative_rule_revision=1.2、本期program_id及稿件锁定状态，读取本地栏目编辑与视觉spec以及实际所需资产；封面固定COVER_DUAL_RATIO_FIXED_V3／3.0.0，按spec/cover_delivery.json复用两套本地母版与字体，不自由排版。2026-10-05起新制作使用本机已取得的RYP_STORY_MAIN_V3_2模板；已完成内容不重做，在制V1.1除用户指示外保留原版。复用相应版本的角色与合格素材，从未完成处继续本次任务。本期必填casting_policy_id=DORO_MAIN_CRITICIZED_V1、primary_actor=doro与criticized_role，hosts_cast.doro须等于核心评价人物；正文核心行动和两比例封面事件主角都由原Q版Doro出演，不能用页边Doro代替剧情主角。曼波与咕咕嘎嘎自由演其他角色，曼波配音与固定三位扒边照常。实际看图内部验收，不增加用户确认。
 本轮不要访问GitHub，不clone、fetch、pull、ls-remote，也不通过浏览器、API或连接器检查远端版本与登录；不要求最新main，不重跑首次全量校验。换对话或换集数不改变这个模式。本条覆盖旧制作指令中例行先同步的要求。
 本地缺件先检查路径，只报具体缺件并继续不受影响的工作；缺V3.2资产不能静默退回V2／V1.1。首次模板升级单独按已授权的rules_update取得规范与资产，之后仍按local_continue，不自动转成新电脑初始化，不去规范仓库找单集稿件或素材。所有产物和制作记录只放本地，不commit、不push。开始时只简短说明本地工作目录和本轮范围。
 ```
@@ -846,7 +846,7 @@ V3.2白黑黄UI、字级与文字面板、朱印、每图常驻主题、三位�
 以下为完整单集指令必含的制作约束；实际文件仍须附本期完整采用稿和真实任务范围，不能用此通用段落代替定稿。
 
 ```text
-执行PRD V7.18、template_id=RYP_STORY_MAIN_V3_2、template_revision=3.2.1、caption_profile_id=STATIC_CAPTION_PAGES_V1、caption_delivery_requirement=FINAL_PNG_WITH_CAPTIONS_ONLY_V1、narrative_profile_id=RETENTION_INFO_V1、narrative_rule_revision=1.2、cover_profile_id=COVER_DUAL_RATIO_FIXED_V2、cover_template_revision=2.0.0，并记录本期program_id。核对本地caption_style.json与delivery_rules.json顶层交付要求一致。读取本地template、caption_style、program_visuals、character_identity及cover_delivery；本机缺件先报告具体路径，不在local_continue里暗中访问GitHub或Figma。
+执行PRD V7.19、template_id=RYP_STORY_MAIN_V3_2、template_revision=3.2.1、caption_profile_id=STATIC_CAPTION_PAGES_V1、caption_delivery_requirement=FINAL_PNG_WITH_CAPTIONS_ONLY_V1、narrative_profile_id=RETENTION_INFO_V1、narrative_rule_revision=1.2、cover_profile_id=COVER_DUAL_RATIO_FIXED_V3、cover_template_revision=3.0.0，并记录本期program_id。核对本地caption_style.json与delivery_rules.json顶层交付要求一致。读取本地template、caption_style、program_visuals、character_identity及cover_delivery；本机缺件先报告具体路径，不在local_continue里暗中访问GitHub或Figma。
 
 本期必填casting_policy_id=DORO_MAIN_CRITICIZED_V1、primary_actor=doro与criticized_role，hosts_cast.doro须等于核心评价人物；正文核心行动和两比例封面事件主角都由原Q版Doro出演，不能用页边Doro代替剧情主角。曼波与咕咕嘎嘎自由演其他角色，曼波配音与固定三位扒边照常。实际看图内部验收，不增加用户确认。在已有brief先写具体核心评价人物，再锁定Doro与该角色的对应；涉及该人物的主要行动、决定与反应由Doro完成，其他镜头依情节安排，不强制三只每镜同框。每张实际正文与两张封面主图连同脸、可见身体一起检查选角：REJECTED_CASTING或UNVERIFIED_CASTING不得交付，字段／标签正确不代表画面合格。已完成作品、已锁稿和仅重排范围不自动返工。
 
@@ -860,7 +860,7 @@ V3.2白黑黄UI、字级与文字面板、朱印、每图常驻主题、三位�
 
 每集含头尾默认40秒以内；25—30秒只是可撤销写稿试验。显式记录narrative_profile_id=RETENTION_INFO_V1、narrative_rule_revision=1.2。RETENTION_INFO_V1修订1.2要求主线观点开头、及时给事实、必要前因、正文新证据／因果／后果与回应同一评价的结尾，保持尖锐、不编事实，已锁稿不因改模板而改写。新增图片页数不等于新增故事信息，不为增加切图频率补重复判词。新稿与授权改稿按3.2.1在本地brief写明开头承诺、早段事实兑现和后段新发现；内部查看实际首张最终PNG，核对动作与受损者是否清楚、首句是否对应、手机尺度下主题／字幕／证据是否共同服务同一信息。没有实际人声只标估计，不伪称测过前两秒；缺人声不阻止本来仅交图片的任务。锁定稿与只重排任务不自动改稿。
 
-保留独立原画与可编辑层，交9:16含字幕最终PNG、每集3:4与4:3两张发布封面（读取spec/cover_delivery.json，COVER_DUAL_RATIO_FIXED_V2／2.0.0，分别1080×1440和1440×1080；按对应固定母版／字体／几何仅替换批准标题与漫画，封面三位固定原Q版透明层直接复用、不换装不重生，不自由排版，不套正文锚点、不加口播字幕、不纳入素材映射或成片开头）、一句话简介、纯口播、两列映射、交付清单及必要源文件。实际最终图做联系表与手机缩略图检查；正文核对标题、最长两行口播、三位脸、证据和出处，发布封面另按固定母版3:4最多三行／4:3最多两行标题、各比例必填highlight_line_indices及本期实际渲染记录验收，实际字体测量溢出先调断行不缩字；两比例可用同集不同art_path，若contain产生大留空或事件过小须改选同集取景；实际两张封面按180px／360px宽检查，记录contain投影图像占用率；低于85%仅试行人工复核警报，事件过小或留空过大应换同集同比例构图，不能拉伸或盲裁关键人物动作；尺寸通过不能代替审片。无示例残字、错页字幕或重复角色层。不做AI视频、音效、配乐、轻动效或其建议，素材集中本地、不压缩，不commit、不push、不自动发布。
+保留独立原画与可编辑层，交9:16含字幕最终PNG、每集3:4与4:3两张发布封面（读取spec/cover_delivery.json，COVER_DUAL_RATIO_FIXED_V3／3.0.0，分别1080×1440和1440×1080；按对应固定母版／字体／几何仅替换批准标题与漫画，封面三位固定原Q版透明层直接复用、不换装不重生，不自由排版，不套正文锚点、不加口播字幕、不纳入素材映射或成片开头）、一句话简介、纯口播、两列映射、交付清单及必要源文件。实际最终图做联系表与手机缩略图检查；正文核对标题、最长两行口播、三位脸、证据和出处，发布封面另按固定母版3:4最多三行／4:3最多两行标题、各比例必填highlight_line_indices及本期实际渲染记录验收，实际字体测量溢出先调断行不缩字；两比例可用同集不同art_path，若contain产生大留空或事件过小须改选同集取景；实际两张封面按180px／360px宽检查，记录contain投影图像占用率；低于85%仅试行人工复核警报，事件过小或留空过大应换同集同比例构图，不能拉伸或盲裁关键人物动作；尺寸通过不能代替审片。无示例残字、错页字幕或重复角色层。不做AI视频、音效、配乐、轻动效或其建议，素材集中本地、不压缩，不commit、不push、不自动发布。
 ```
 
 ## 20. 独立运营复盘与选题反馈

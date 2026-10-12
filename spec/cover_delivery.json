@@ -1,8 +1,8 @@
 {
   "schema_version": "3.0",
-  "prd_version": "7.18",
+  "prd_version": "7.19",
   "updated_date": "2026-10-10",
-  "profile_id": "COVER_DUAL_RATIO_FIXED_V2",
+  "profile_id": "COVER_DUAL_RATIO_FIXED_V3",
   "scope": "independent_publishing_covers_each_episode_not_video_frames",
   "required_per_part": 2,
   "format": "PNG",
@@ -13,10 +13,10 @@
       "height": 1440,
       "filename_pattern": "{topic_id}_P{part_number:02d}_封面_3x4_v{revision:02d}.png",
       "parts_csv_column": "cover_3x4_path",
-      "template_id": "RYP_PUBLISH_COVER_3X4_V2",
-      "base_plate": "assets/templates/cover_fixed_v2/cover_3x4_base.png",
-      "hosts_overlay": "assets/templates/cover_fixed_v2/cover_3x4_hosts.png",
-      "editable_master_svg": "assets/templates/cover_fixed_v2/cover_3x4_master.svg",
+      "template_id": "RYP_PUBLISH_COVER_3X4_V3",
+      "base_plate": "assets/templates/cover_fixed_v3/cover_3x4_base.png",
+      "hosts_overlay": "assets/templates/cover_fixed_v3/cover_3x4_hosts.png",
+      "editable_master_svg": "assets/templates/cover_fixed_v3/cover_3x4_master.svg",
       "layout": {
         "story_bounds": [
           160,
@@ -41,7 +41,7 @@
           "line_height_px": 104,
           "max_lines": 3,
           "anchor": "left_top",
-          "fill": "#FFFFFF",
+          "fill": "#161616",
           "highlight": {
             "mode": "explicit_line_indices",
             "fill": "#F2FA00",
@@ -89,10 +89,10 @@
       "height": 1080,
       "filename_pattern": "{topic_id}_P{part_number:02d}_封面_4x3_v{revision:02d}.png",
       "parts_csv_column": "cover_4x3_path",
-      "template_id": "RYP_PUBLISH_COVER_4X3_V2",
-      "base_plate": "assets/templates/cover_fixed_v2/cover_4x3_base.png",
-      "hosts_overlay": "assets/templates/cover_fixed_v2/cover_4x3_hosts.png",
-      "editable_master_svg": "assets/templates/cover_fixed_v2/cover_4x3_master.svg",
+      "template_id": "RYP_PUBLISH_COVER_4X3_V3",
+      "base_plate": "assets/templates/cover_fixed_v3/cover_4x3_base.png",
+      "hosts_overlay": "assets/templates/cover_fixed_v3/cover_4x3_hosts.png",
+      "editable_master_svg": "assets/templates/cover_fixed_v3/cover_4x3_master.svg",
       "layout": {
         "story_bounds": [
           160,
@@ -117,7 +117,7 @@
           "line_height_px": 104,
           "max_lines": 2,
           "anchor": "left_top",
-          "fill": "#FFFFFF",
+          "fill": "#161616",
           "highlight": {
             "mode": "explicit_line_indices",
             "fill": "#F2FA00",
@@ -164,7 +164,7 @@
     "independent_layout_per_ratio": false,
     "inherit_visual_style_from": "RYP_STORY_MAIN_V3_2",
     "visual_elements": [
-      "white_black_fluorescent_yellow",
+      "paper_white_ink_black_fluorescent_yellow",
       "red_seal",
       "three_original_chibi_hosts_surrounding_template"
     ],
@@ -179,7 +179,7 @@
     "narration_paragraph_required": false,
     "empty_video_caption_slot_required": false,
     "fixed_master_per_ratio": true,
-    "art_letterbox_fill": "#161616",
+    "art_letterbox_fill": "#FAFAFA",
     "story_casting_policy_id": "DORO_MAIN_CRITICIZED_V1",
     "story_primary_actor": "doro"
   },
@@ -198,7 +198,8 @@
       "readable_title_complete_faces_hands_props_and_original_Q_identity",
       "story_main_criticized_role_is_doro_actual_visual_review_not_border_overlay",
       "actual_180_and_360px_thumbnail_review_title_event_and_doro_readable",
-      "contain_projected_art_occupancy_trial_warning_is_not_acceptance_gate"
+      "contain_projected_art_occupancy_trial_warning_is_not_acceptance_gate",
+      "actual_v3_paper_ink_highlight_palette_and_deterministic_title_pixels"
     ],
     "renderer": "tools/render_cover.py",
     "actual_output_validation_tool": "tools/validate_cover.py",
@@ -207,72 +208,62 @@
   "assets": {
     "new_ratio_baseplates_status": "FIGMA_FIXED_MASTER_EXPORTED",
     "new_ratio_baseplates": {
-      "cover_3x4": "assets/templates/cover_fixed_v2/cover_3x4_base.png",
-      "cover_4x3": "assets/templates/cover_fixed_v2/cover_4x3_base.png"
+      "cover_3x4": "assets/templates/cover_fixed_v3/cover_3x4_base.png",
+      "cover_4x3": "assets/templates/cover_fixed_v3/cover_4x3_base.png"
     },
     "new_ratio_figma_nodes": {
-      "cover_3x4": "132:3",
-      "cover_4x3": "132:4"
+      "cover_3x4": "147:262",
+      "cover_4x3": "147:285"
     },
     "can_produce_without_prebuilt_baseplate": false,
     "production_method": "offline_fill_versioned_fixed_Figma_exports_and_bundled_font_with_tools/render_cover.py; preserve_lossless_title_lines; validate_actual_PNG_pair_and_local_render_record; internal_visual_QA_then_complete_delivery",
     "legacy_1080x1920_cover_role": "video_opening_or_historical_reference_only_not_publishing_cover",
     "asset_inventory": [
       {
-        "file": "assets/templates/cover_fixed_v2/cover_3x4_base.png",
-        "bytes": 11797,
-        "sha256": "6d944dc4483f6c9ee6a6a3d65740e3eb67a042e1312cb64bce106eb2e250f8e0",
+        "file": "assets/templates/cover_fixed_v3/cover_3x4_base.png",
+        "bytes": 11749,
+        "sha256": "ba35f232defd46015d93f9214678ad5fa1d36fed8dc8d9af7b0448f53ef3ad3b",
         "canvas": [
           1080,
           1440
         ]
       },
       {
-        "file": "assets/templates/cover_fixed_v2/cover_3x4_hosts.png",
-        "bytes": 97956,
-        "sha256": "b0717a50f47814eb92fb73af1f23150dded5b1028bb302aab439bb733c28ba4d",
+        "file": "assets/templates/cover_fixed_v3/cover_3x4_hosts.png",
+        "bytes": 98869,
+        "sha256": "658f8ddaca128eca06e36107a498e1d0855b676f82e1b75799f461af16cc0bc3",
         "canvas": [
           1080,
           1440
         ]
       },
       {
-        "file": "assets/templates/cover_fixed_v2/cover_3x4_master.svg",
-        "bytes": 8412,
-        "sha256": "3ce15c9b3b7527a69aa9853d28dbac8173f9cb15fc0d53ead2ebe825d705dbd9"
+        "file": "assets/templates/cover_fixed_v3/cover_3x4_master.svg",
+        "bytes": 1681,
+        "sha256": "8a8ba047c246de955f729b4dd3ce5923be6da5e93482c95f0374257dd0fcf774"
       },
       {
-        "file": "assets/templates/cover_fixed_v2/cover_4x3_base.png",
-        "bytes": 10960,
-        "sha256": "3c8b8e8c616df518af443bacaba40acd3bab034f2921dbdc72ba3819b0f3fb87",
+        "file": "assets/templates/cover_fixed_v3/cover_4x3_base.png",
+        "bytes": 10954,
+        "sha256": "ba6c3aa0358eedc18d343487e8d95989f181da368396d0a8e2f837fe0f66d9de",
         "canvas": [
           1440,
           1080
         ]
       },
       {
-        "file": "assets/templates/cover_fixed_v2/cover_4x3_hosts.png",
-        "bytes": 98043,
-        "sha256": "e3a75bb1d30ddd9bd46027a6ba47fca30b50fb9e220a030543335030d703f6ff",
+        "file": "assets/templates/cover_fixed_v3/cover_4x3_hosts.png",
+        "bytes": 99107,
+        "sha256": "43a0fd0f254ccd5a3c1ecc7b620a612eb9ce0746f49d24b012f9471ab9b23320",
         "canvas": [
           1440,
           1080
         ]
       },
       {
-        "file": "assets/templates/cover_fixed_v2/cover_4x3_master.svg",
-        "bytes": 8428,
-        "sha256": "556ed6be82cd663bb74c3969b9a5ee2f3e26996667aba97fbafc2bf69bb4ae28"
-      },
-      {
-        "file": "assets/templates/cover_fixed_v2/cover_fixed_v2_preview.png",
-        "bytes": 827571,
-        "sha256": "86ff8137d96c20d9cc9624a462e606ab12724cf94136a704d79f87e1559d62e3",
-        "canvas": [
-          1600,
-          893
-        ],
-        "role": "layout_and_title_capacity_test_using_generic_court_placeholder_not_episode_output"
+        "file": "assets/templates/cover_fixed_v3/cover_4x3_master.svg",
+        "bytes": 1547,
+        "sha256": "6b461b79b7d4fbffb50eb2ba9fcf85b9e6e6f9af46ee0fe00243720613d1a17d"
       },
       {
         "file": "assets/fonts/NotoSansSC-Black.otf",
@@ -285,13 +276,13 @@
         "sha256": "6a73f9541c2de74158c0e7cf6b0a58ef774f5a780bf191f2d7ec9cc53efe2bf2"
       }
     ],
-    "svg_master_portability": "Each outlined blank master SVG references its same-ratio hosts PNG by relative filename; keep the SVG and sibling hosts PNG together. Episode title remains separately editable in local cover_job.json; renderer uses fixed PNG bases plus bundled font, not SVG text guessing."
+    "svg_master_portability": "Locally assembled editable SVG wraps exact Figma V3 PNG exports and empty editable text nodes; not a native Figma SVG export. Keep same-ratio base/hosts PNGs beside SVG. Final approved title remains editable in local cover_job.json and deterministically rendered with the unchanged bundled font."
   },
   "unchanged_video_canvas": [
     1080,
     1920
   ],
-  "cover_template_revision": "2.0.0",
+  "cover_template_revision": "3.0.0",
   "typography": {
     "font_family": "Noto Sans SC",
     "font_style": "Black",
@@ -307,29 +298,29 @@
   "figma": {
     "file_key": "gc9VEwuG01X8ZsMTHg7HsQ",
     "ordinary_production_requires_remote_access": false,
-    "source_of_geometry": "fixed_cover_v2_story_first_frames",
+    "source_of_geometry": "fixed_cover_v3_paper_same_geometry_as_v2",
     "variants": {
       "cover_3x4": {
-        "master": "132:3",
-        "base": "132:7",
-        "hosts": "132:26",
-        "title": "132:18",
-        "art": "132:17",
-        "preview": "135:44"
+        "master": "147:262",
+        "base": "147:263",
+        "hosts": "147:281",
+        "blank": "147:311",
+        "title": "147:271",
+        "art": "147:270"
       },
       "cover_4x3": {
-        "master": "132:4",
-        "base": "132:30",
-        "hosts": "132:47",
-        "title": "132:41",
-        "art": "132:40",
-        "preview": "135:70"
+        "master": "147:285",
+        "base": "147:286",
+        "hosts": "147:301",
+        "blank": "147:323",
+        "title": "147:294",
+        "art": "147:293"
       }
     },
     "page_id": "132:2",
-    "component_set_id": "132:5",
-    "review_board_id": "135:42",
-    "review_url": "https://www.figma.com/design/gc9VEwuG01X8ZsMTHg7HsQ?node-id=135-42"
+    "component_set_id": "147:261",
+    "review_board_id": "148:193",
+    "review_url": "https://www.figma.com/design/gc9VEwuG01X8ZsMTHg7HsQ?node-id=148-193"
   },
   "workflow": {
     "local_job_file": "cover_job.json",
@@ -365,6 +356,12 @@
       ],
       "excessive_dead_space_or_tiny_event_behavior": "choose_another_same_episode_scene_or_ratio_matched_cover_art; preserve_faces_hands_actions_and_props; do_not_stretch_or_blind_crop",
       "dimensions_or_contain_fit_is_visual_qa": false
-    }
+    },
+    "legacy_v2": "historical_compatibility_only_not_current_default"
+  },
+  "palette": {
+    "paper": "#FAFAFA",
+    "ink": "#161616",
+    "highlight": "#F2FA00"
   }
 }

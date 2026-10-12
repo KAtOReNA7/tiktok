@@ -147,6 +147,7 @@ def render_covers(job_path, output_dir):
     output_dir.mkdir(parents=True, exist_ok=True)
     record = {"schema_version": "2.0", "profile_id": spec["profile_id"],
               "cover_template_revision": spec["cover_template_revision"], "title": title,
+              "palette": spec["palette"],
               "job_path": str(job_path), "job_sha256": sha256(job_path),
               "spec_sha256": sha256(spec_path), "art_path": str(art_path),
               "art_sha256": sha256(art_path), "renderer": {

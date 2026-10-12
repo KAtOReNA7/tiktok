@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1080" height="1440" viewBox="0 0 1080 1440">
+<title>三只不服 发布封面 V3 3:4 可编辑装配母版</title>
+<metadata>Local SVG assembly of exact Figma V3 exported PNG layers; not a native Figma SVG export. Fixed geometry remains in spec/cover_delivery.json. Precise final title is rendered from cover_job.json with the bundled NotoSansSC-Black.otf, not these empty authoring text nodes.</metadata>
+<defs><clipPath id="story-window"><rect x="160" y="16" width="744" height="1008"/></clipPath></defs>
+<image id="fixed-figma-base" width="1080" height="1440" xlink:href="cover_3x4_base.png"/>
+<g id="editable-episode-art" clip-path="url(#story-window)"><rect id="story-placeholder" x="160" y="16" width="744" height="1008" fill="#FAFAFA"/><!-- Insert ratio-matched episode artwork here; do not stretch. --></g>
+<g id="editable-title" data-title-bounds="64,1060,840,312" data-font-file="../../fonts/NotoSansSC-Black.otf" data-line-height="104"><rect id="editable-highlight-line" x="64" y="1060" width="840" height="104" fill="#F2FA00" display="none"/><text id="editable-title-line-1" x="64" y="1152" font-family="Noto Sans SC" font-weight="900" font-size="92" fill="#161616"></text>
+<text id="editable-title-line-2" x="64" y="1256" font-family="Noto Sans SC" font-weight="900" font-size="92" fill="#161616"></text>
+<text id="editable-title-line-3" x="64" y="1360" font-family="Noto Sans SC" font-weight="900" font-size="92" fill="#161616"></text></g>
+<image id="fixed-figma-hosts" width="1080" height="1440" xlink:href="cover_3x4_hosts.png"/>
+</svg>

@@ -54,7 +54,7 @@ class FixedCoverPipelineTests(unittest.TestCase):
             self.assertFalse(item["art"]["crop_reviewed"])
             x, y, width, height = self.spec["variants"][name]["layout"]["story_bounds"]
             with Image.open(item["path"]) as image:
-                self.assertEqual(image.getpixel((x + width // 2, y + 2)), (22, 22, 22, 255))
+                self.assertEqual(image.getpixel((x + width // 2, y + 2)), (250, 250, 250, 255))
 
     def test_locked_title_overflow_stops_before_either_png(self):
         self.job["title"] = "李" * 100
@@ -144,7 +144,7 @@ class FixedCoverPipelineTests(unittest.TestCase):
             point = (x + 2, y + 3 * title["line_height_px"] - 1)
             self.assertEqual(actual.getpixel(point), base.convert("RGBA").getpixel(point))
             band = actual.crop((x, y + 2 * title["line_height_px"], x + width, y + 3 * title["line_height_px"]))
-            self.assertIn((255, 255, 255, 255),
+            self.assertIn((22, 22, 22, 255),
                           {color for _, color in band.getcolors(width * title["line_height_px"])})
         entry["highlight_line_indices"] = [2]
         record_path.write_text(json.dumps(record, ensure_ascii=False), encoding="utf-8")

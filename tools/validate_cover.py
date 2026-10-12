@@ -9,12 +9,15 @@ import copy
 import hashlib
 import json
 import sys
+import struct
+import zlib
 from pathlib import Path
 
 from validate_host_overlay import read_rgba_alpha, validate_host_overlay
 
 ROOT = Path(__file__).resolve().parents[1]
-PROFILE = "COVER_DUAL_RATIO_FIXED_V2"
+PROFILE = "COVER_DUAL_RATIO_FIXED_V3"
+PALETTE = {"paper": "#FAFAFA", "ink": "#161616", "highlight": "#F2FA00"}
 EXPECTED = {"cover_3x4": ("3:4", 1080, 1440, "cover_3x4_path"),
             "cover_4x3": ("4:3", 1440, 1080, "cover_4x3_path")}
 FIXED_GEOMETRY = {
@@ -69,12 +72,74 @@ def _intersects(first, second):
             and first[1] < second[1] + second[3] and second[1] < first[1] + first[3])
 
 
+def _png_rgba_samples(path, points):
+    """Read approved RGBA PNG color samples without a Pillow dependency."""
+    raw = Path(path).read_bytes()
+    if raw[:8] != b"\x89PNG\r\n\x1a\n":
+        raise ValueError("Invalid V3 palette PNG")
+    offset, compressed, size = 8, bytearray(), None
+    while offset < len(raw):
+        length = struct.unpack(">I", raw[offset:offset + 4])[0]
+        kind = raw[offset + 4:offset + 8]
+        payload = raw[offset + 8:offset + 8 + length]
+        end = offset + 12 + length
+        if end > len(raw) or zlib.crc32(kind + payload) & 0xffffffff != struct.unpack(">I", raw[end - 4:end])[0]:
+            raise ValueError("Invalid V3 PNG chunk")
+        if kind == b"IHDR":
+            width, height, depth, color, compression, filtering, interlace = struct.unpack(">IIBBBBB", payload)
+            if (depth, color, compression, filtering, interlace) != (8, 6, 0, 0, 0):
+                raise ValueError("V3 palette samples require exact 8-bit RGBA export")
+            size = (width, height)
+        if kind == b"IDAT":
+            compressed.extend(payload)
+        offset = end
+        if kind == b"IEND":
+            break
+    if not size or any(not 0 <= x < size[0] or not 0 <= y < size[1] for x, y in points):
+        raise ValueError("V3 palette samples are outside the PNG")
+    scanlines = zlib.decompress(compressed)
+    stride = width * 4
+    if len(scanlines) != height * (stride + 1):
+        raise ValueError("V3 PNG scanline length mismatch")
+    wanted, result, previous = set(points), {}, bytearray(stride)
+    for y in range(max(point[1] for point in points) + 1):
+        row_start = y * (stride + 1)
+        mode = scanlines[row_start]
+        row = bytearray(scanlines[row_start + 1:row_start + 1 + stride])
+        if mode not in (0, 1, 2, 3, 4):
+            raise ValueError("Unsupported V3 PNG filter")
+        for index in range(stride):
+            left = row[index - 4] if index >= 4 else 0
+            up = previous[index]
+            upper_left = previous[index - 4] if index >= 4 else 0
+            if mode == 1:
+                predictor = left
+            elif mode == 2:
+                predictor = up
+            elif mode == 3:
+                predictor = (left + up) // 2
+            elif mode == 4:
+                p = left + up - upper_left
+                a, b, c = abs(p - left), abs(p - up), abs(p - upper_left)
+                predictor = left if a <= b and a <= c else up if b <= c else upper_left
+            else:
+                predictor = 0
+            row[index] = (row[index] + predictor) & 255
+        for x, yy in wanted:
+            if yy == y:
+                result[(x, y)] = tuple(row[x * 4:x * 4 + 4])
+        previous = row
+    return result
+
+
 def validate_cover_spec(spec, root=ROOT):
     root = Path(root).resolve()
-    if (spec["profile_id"] != PROFILE or spec["cover_template_revision"] != "2.0.0"
+    if (spec["profile_id"] != PROFILE or spec["cover_template_revision"] != "3.0.0"
             or spec["required_per_part"] != 2 or spec["format"] != "PNG"
             or set(spec["variants"]) != set(EXPECTED)):
-        raise ValueError("Two fixed V2 publishing-cover masters are required")
+        raise ValueError("Two fixed V3 publishing-cover masters are required")
+    if spec.get("palette") != PALETTE or spec["composition"].get("art_letterbox_fill") != PALETTE["paper"]:
+        raise ValueError("V3 requires paper #FAFAFA, ink #161616 and highlight #F2FA00")
     composition, delivery, assets = spec["composition"], spec["delivery"], spec["assets"]
     if (composition["independent_layout_per_ratio"]
             or not composition["fixed_master_per_ratio"]
@@ -108,7 +173,7 @@ def validate_cover_spec(spec, root=ROOT):
         if len(raw) != entry["bytes"] or hashlib.sha256(raw).hexdigest() != entry["sha256"]:
             raise ValueError("Fixed cover asset differs from approved export: " + name)
         if name == FIXED_FONT_FILE and entry["sha256"] != FIXED_FONT_SHA256:
-            raise ValueError("Fixed V2 covers cannot change their bundled font bytes")
+            raise ValueError("Fixed V3 covers cannot change their bundled font bytes")
         paths[name] = path
     for key in ("font_file", "license_file"):
         if typography[key] not in names:
@@ -141,11 +206,16 @@ def validate_cover_spec(spec, root=ROOT):
                 or title["max_lines"] != frozen["lines"]
                 or title.get("vertical_alignment") != "center"
                 or {host: slot["bounds"] for host, slot in layout["host_slots"].items()} != frozen["hosts"]
-                or title["fill"] != "#FFFFFF"
+                or title["fill"] != PALETTE["ink"]
                 or title["highlight"] != {"mode": "explicit_line_indices", "fill": "#F2FA00",
                                           "text_fill": "#161616", "right_padding_px": 16,
                                           "full_line_height": True, "full_width": True}):
-            raise ValueError("Fixed cover 2.0.0 geometry, typography or host anchors changed without a new design revision: " + name)
+            raise ValueError("Fixed cover 3.0.0 geometry, typography or host anchors changed without a new design revision: " + name)
+        samples = [(0, 0), (canvas[0] - 1, canvas[1] - 1),
+                   tuple(title["bounds"][:2])]
+        if any(value != (250, 250, 250, 255) for value in
+               _png_rgba_samples(paths[variant["base_plate"]], samples).values()):
+            raise ValueError("V3 baseplate palette is not the approved paper white: " + name)
         for label, bounds in (("story_bounds", layout["story_bounds"]),
                               ("title.bounds", title["bounds"]),
                               ("seal_bounds", layout["seal_bounds"])):
@@ -182,6 +252,8 @@ def validate_render_record(record_path, spec=None, root=ROOT):
             or set(record["covers"]) != set(EXPECTED)
             or record["renderer"]["font_fallback"] or record["renderer"]["auto_shrink"]):
         raise ValueError("Render record does not describe the current fixed cover pair")
+    if record.get("palette") != PALETTE:
+        raise ValueError("Actual V3 render record must retain the approved paper/ink/highlight palette")
     if record["spec_sha256"] != hashlib.sha256(spec_path.read_bytes()).hexdigest():
         raise ValueError("Render record was generated against another cover specification")
     job_path, art_path = Path(record["job_path"]), Path(record["art_path"])
@@ -261,6 +333,20 @@ def validate_render_record(record_path, spec=None, root=ROOT):
             padding = layout["title"].get("highlight", {}).get("padding_px", 0) if bounds == layout["title"]["bounds"] else 0
             mask_draw.rectangle((x - padding, y - padding, x + width + padding - 1,
                                  y + height + padding - 1), fill=0)
+        # Reconstruct the exact deterministic title pixels too. A forged PNG hash
+        # must not hide a white title, wrong highlight or missing approved glyphs.
+        from render_cover import draw_title
+        expected_title = reference.copy()
+        draw_title(expected_title, record["title"],
+                   [line["text"] for line in entry["title_lines"]],
+                   entry["highlight_line_indices"], layout,
+                   root / spec["typography"]["font_file"])
+        tx, ty, tw, th = layout["title"]["bounds"]
+        title_difference = ImageChops.difference(
+            actual.crop((tx, ty, tx + tw, ty + th)),
+            expected_title.crop((tx, ty, tx + tw, ty + th)))
+        if any(channel.getbbox() for channel in title_difference.split()):
+            raise ValueError("Actual V3 title pixels differ from approved ink/highlight/text: " + name)
         differences = ImageChops.difference(actual, reference)
         # Compare all RGBA channels; getbbox() on RGBA alone can ignore RGB-only changes.
         for channel in differences.split():

@@ -222,7 +222,7 @@ def main():
         raise ValueError("Actual covers need Doro plot-lead and thumbnail review; occupancy is a trial warning, not a gate")
     expected_covers = {"cover_3x4": ("3:4", 1080, 1440, "cover_3x4_path"),
                        "cover_4x3": ("4:3", 1440, 1080, "cover_4x3_path")}
-    if (cover["profile_id"] != "COVER_DUAL_RATIO_FIXED_V2" or cover["prd_version"] != rules["prd_version"]
+    if (cover["profile_id"] != "COVER_DUAL_RATIO_FIXED_V3" or cover["prd_version"] != rules["prd_version"]
             or rules["cover_profile_id"] != cover["profile_id"]
             or rules["cover_spec"] != "spec/cover_delivery.json"
             or template["cover_spec"] != rules["cover_spec"]
@@ -257,6 +257,12 @@ def main():
             or rules["cover_validation_tool"] != "tools/validate_cover.py"):
         raise ValueError("Delivery instructions must use the fixed cover renderer and actual-output validator")
     validate_cover_spec(cover, ROOT)
+    for document in ("PRD_V7.md", "AGENTS.md", "START_HERE.md", "CHAT_HANDOFF.md",
+                     "README.md", "PROJECT_STATE.md", "episode/README.md"):
+        text = (ROOT / document).read_text(encoding="utf-8")
+        if any(stale in text for stale in ("其余白字", "V2固定品牌框架",
+                   "COVER_DUAL_RATIO_FIXED_V3（修订2.0.0）")):
+            raise ValueError("Current cover V3 documentation contradicts its palette or revision: " + document)
     fields = template["fields"]
     canvas = (template["canvas"]["width"], template["canvas"]["height"])
     shared = program_visuals["shared"]

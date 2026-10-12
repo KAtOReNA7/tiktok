@@ -1,8 +1,10 @@
 # 新对话迁移与沟通接续
 
+> 当前完整发布：PRD V7.19（2026-10-12）；发布封面 `COVER_DUAL_RATIO_FIXED_V3`／`3.0.0`，纸白#FAFAFA、墨黑#161616、荧光黄#F2FA00。正文仍用 `RYP_STORY_MAIN_V3_2`／`3.2.1`，内容方向按 `EDITORIAL_COGNITION_V1`、叙事修订1.2。封面规范见[cover_delivery.json](spec/cover_delivery.json)，实际母版见[V3资产](assets/templates/cover_fixed_v3/)。
+
 > 内容方向已按2026-10-12用户纠正更新：先挑战大众对人物的根本评价，再讲支撑事实。先读[账号核心与中文写作规则](spec/editorial_cognition.md)（EDITORIAL_COGNITION_V1）；叙事现行修订1.2。该内容修订独立于制作版本，不回退本机已批准的较新封面或资产。
 
-更新日期：2026-10-12。本文件用于接续工作窗口中的策划讨论；执行制作时同时读取本地主PRD V7.18。仓库main是规范发布源，不要求老电脑每次联网检查。新对话不等于新电脑。
+更新日期：2026-10-12。本文件用于接续工作窗口中的策划讨论；执行制作时同时读取本地主PRD V7.19。仓库main是规范发布源，不要求老电脑每次联网检查。新对话不等于新电脑。
 
 ## 老电脑新对话／继续制作（默认使用）
 
@@ -11,13 +13,13 @@
 
 本轮不例行访问GitHub或Figma，不clone／fetch／pull／ls-remote，不通过浏览器、API或连接器检查远端版本、登录或仓库可用性。换对话、换选题、换集数不触发同步；这条覆盖旧指令中的例行同步要求。缺件先找本地副本，报告具体缺口并继续独立步骤，不自动转成首次初始化。
 
-武松原版已完成；2026-10-12用户已提出原条轻改复投，保留原版并另记版本；商鞅提案未批准生图。按本机当前任务的完整采用稿和实际制作记录接着做，本期必填casting_policy_id=DORO_MAIN_CRITICIZED_V1、primary_actor=doro与criticized_role，hosts_cast.doro须等于核心评价人物；正文核心行动和两比例封面事件主角都由原Q版Doro出演，不能用页边Doro代替剧情主角。曼波与咕咕嘎嘎自由演其他角色，曼波配音与固定三位扒边照常。实际看图内部验收，不增加用户确认。不从摘要推断某集已完成或尚未制作，也不默认恢复李白旧任务。新制作任务要求PRD V7.18／RYP_STORY_MAIN_V3_2／STATIC_CAPTION_PAGES_V1／RETENTION_INFO_V1，读取本地spec/template.json、spec/narrative_retention.json、spec/cover_delivery.json与对应发布资产，固定使用COVER_DUAL_RATIO_FIXED_V2／2.0.0；不能沿用旧底板冒充V3.2。本地版本或资产不足时查找并报告具体缺件，不自行联网升级。已完成作品不重做，在制旧版按用户当前指示处理。先简短确认本地工作目录和当前进度，再承接我的新要求。完整调研、稿件与素材放本地，不commit、不push；规范更新与运营复盘是独立任务。
+武松原版已完成；2026-10-12用户已提出原条轻改复投，保留原版并另记版本；商鞅提案未批准生图。按本机当前任务的完整采用稿和实际制作记录接着做，本期必填casting_policy_id=DORO_MAIN_CRITICIZED_V1、primary_actor=doro与criticized_role，hosts_cast.doro须等于核心评价人物；正文核心行动和两比例封面事件主角都由原Q版Doro出演，不能用页边Doro代替剧情主角。曼波与咕咕嘎嘎自由演其他角色，曼波配音与固定三位扒边照常。实际看图内部验收，不增加用户确认。不从摘要推断某集已完成或尚未制作，也不默认恢复李白旧任务。新制作任务要求PRD V7.19／RYP_STORY_MAIN_V3_2／STATIC_CAPTION_PAGES_V1／RETENTION_INFO_V1，读取本地spec/template.json、spec/narrative_retention.json、spec/cover_delivery.json与对应发布资产，固定使用COVER_DUAL_RATIO_FIXED_V3／3.0.0；不能沿用旧底板冒充V3.2。本地版本或资产不足时查找并报告具体缺件，不自行联网升级。已完成作品不重做，在制旧版按用户当前指示处理。先简短确认本地工作目录和当前进度，再承接我的新要求。完整调研、稿件与素材放本地，不commit、不push；规范更新与运营复盘是独立任务。
 ```
 
 ## 新电脑首次接续（仅初始化时使用）
 
 ```text
-执行模式：first_setup（新电脑首次初始化）。内容方向按EDITORIAL_COGNITION_V1／叙事修订1.2，取得规范后先读spec/editorial_cognition.md。请通过 https://github.com/KAtOReNA7/tiktok 接续历史锐评短视频项目。先检查这台电脑是否已有可用规范、模板和初始化记录；已有则跳过同步，按local_continue执行。尚未初始化时按PRD安全克隆／同步main，读取AGENTS.md、CHAT_HANDOFF.md、PROJECT_STATE.md、START_HERE.md、PRD_V7.md和所需spec，读取spec/narrative_retention.json的RETENTION_INFO_V1，实际查看V7.18／RYP_STORY_MAIN_V3_2模板与角色参考，核对assets/template/v3_2/实际底板和三个独立扒边层，并核对spec/cover_delivery.json的COVER_DUAL_RATIO_FIXED_V2／2.0.0两套封面母版、字体及资产，记录本地目录、PRD版本及取得的提交号。本期必填casting_policy_id=DORO_MAIN_CRITICIZED_V1、primary_actor=doro与criticized_role，hosts_cast.doro须等于核心评价人物；正文核心行动和两比例封面事件主角都由原Q版Doro出演，不能用页边Doro代替剧情主角。曼波与咕咕嘎嘎自由演其他角色，曼波配音与固定三位扒边照常。实际看图内部验收，不增加用户确认。
+执行模式：first_setup（新电脑首次初始化）。内容方向按EDITORIAL_COGNITION_V1／叙事修订1.2，取得规范后先读spec/editorial_cognition.md。请通过 https://github.com/KAtOReNA7/tiktok 接续历史锐评短视频项目。先检查这台电脑是否已有可用规范、模板和初始化记录；已有则跳过同步，按local_continue执行。尚未初始化时按PRD安全克隆／同步main，读取AGENTS.md、CHAT_HANDOFF.md、PROJECT_STATE.md、START_HERE.md、PRD_V7.md和所需spec，读取spec/narrative_retention.json的RETENTION_INFO_V1，实际查看V7.19／RYP_STORY_MAIN_V3_2模板与角色参考，核对assets/template/v3_2/实际底板和三个独立扒边层，并核对spec/cover_delivery.json的COVER_DUAL_RATIO_FIXED_V3／3.0.0两套封面母版、字体及资产，记录本地目录、PRD版本及取得的提交号。本期必填casting_policy_id=DORO_MAIN_CRITICIZED_V1、primary_actor=doro与criticized_role，hosts_cast.doro须等于核心评价人物；正文核心行动和两比例封面事件主角都由原Q版Doro出演，不能用页边Doro代替剧情主角。曼波与咕咕嘎嘎自由演其他角色，曼波配音与固定三位扒边照常。实际看图内部验收，不增加用户确认。
 
 仓库只放PRD、接续说明、必要状态摘要和通用资产；完整本期稿件与素材在本地，不会随clone取得。只补齐当前任务需要的文件，不要求搬运全部历史聊天。武松原版已完成；2026-10-12用户已提出原条轻改复投，保留原版并另记版本；商鞅仍未批准生图；其他内容按用户提供的完整当前任务执行，不从Git旧稿恢复。
 
@@ -38,7 +40,7 @@
 
 ## 现行制作路线
 
-发布封面固定为spec/cover_delivery.json的`COVER_DUAL_RATIO_FIXED_V2`，`cover_template_revision=2.0.0`：每集使用同一发布包中的3:4（1080×1440）与4:3（1440×1080）两套Figma母版及本地资产。各比例的母版ID、节点、底板、标题框与字形、漫画窗口、三位Q版锚点、朱印位置及图层顺序以该spec为准，禁止各电脑自行重新排版。固定的是两比例品牌框架、字形、几何与演员身份，动态的是本集事件图、取景和表情；批准标题逐字保留，按固定文字规则合成。横版取消左右分栏，改为大故事主图与下方整宽标题；三位原Q版装饰统一144×144并环抱外缘，直接复用指定hosts_overlay，不逐期换装或重新生图；不得挪动窗口、角色锚点或印章，不得用系统字体静默替代。封面不套9:16正文锚点、不加口播字幕、不进素材映射或成片开头。缺件先查本地并报告具体文件／版本，继续不受影响的工作；不得退回自由设计封面，也不得在local_continue里访问GitHub或Figma。
+发布封面固定为spec/cover_delivery.json的`COVER_DUAL_RATIO_FIXED_V3`，`cover_template_revision=3.0.0`：每集使用同一发布包中的3:4（1080×1440）与4:3（1440×1080）两套Figma母版及本地资产。各比例的母版ID、节点、底板、标题框与字形、漫画窗口、三位Q版锚点、朱印位置及图层顺序以该spec为准，禁止各电脑自行重新排版。固定的是两比例品牌框架、字形、几何与演员身份，动态的是本集事件图、取景和表情；批准标题逐字保留，按固定文字规则合成。横版取消左右分栏，改为大故事主图与下方整宽标题；三位原Q版装饰统一144×144并环抱外缘，直接复用指定hosts_overlay，不逐期换装或重新生图；不得挪动窗口、角色锚点或印章，不得用系统字体静默替代。封面不套9:16正文锚点、不加口播字幕、不进素材映射或成片开头。缺件先查本地并报告具体文件／版本，继续不受影响的工作；不得退回自由设计封面，也不得在local_continue里访问GitHub或Figma。
 
 
 选题与采用稿 → 原画／分镜 → 语义字幕拆页与V3.2确定性套版 → 正文最终PNG、两比例固定母版发布封面、简介与两列CSV → 用户按原配音安排图长 → 局部审片。
@@ -74,7 +76,7 @@
 
 ## 当前进度与下一步
 
-- 当前V7.18恢复用户每日人工选题，自动化只做线索、核验、候选和复盘；新增Doro固定演核心评价人物的正文与封面选角及内部看图验收。继续使用V7.17发布的封面事件主图与强调行，保留新稿事实兑现与实际首图检查，沿用V3.2扒边零遮挡、暗板内出处和静态语义字幕PNG，CSV_EXCEL_UTF8_BOM_V1继续有效。复盘协议1.1已接入原任务与运营工作流；单集实际制作／发布按本机与后台记录，配置不等于效果已验证。
+- 当前PRD V7.19已接入纸白发布封面V3／3.0.0及全部通用资产；内容方向按EDITORIAL_COGNITION_V1与叙事修订1.2，先亮对人物大众评价的反向观点，再用故事支撑。用户每日人工选题、Doro出演核心评价人物、正文V3.2扒边零遮挡、暗板内出处、静态含字幕PNG及CSV_EXCEL_UTF8_BOM_V1继续有效。复盘协议1.1已接入原任务与运营工作流；单集实际制作／发布按本机与后台记录，配置不等于效果已验证。
 
 - 账号“三只不服”已发布作品并进入真实数据复盘阶段，主页装修已完成。秦始皇已有用户剪辑版本，暂无返修；武松27.3秒原版已完成；2026-10-12已获轻改复投授权，另记版本。动态指标与评论以当次运营台账为准，不在此固定作品数量。
 - 商鞅仍是本地待确认提案，不自动生图。
@@ -89,7 +91,7 @@
 | 内容 | 仓库位置 |
 | --- | --- |
 | 沟通接续与粘贴指令 | CHAT_HANDOFF.md |
-| 主规范 | PRD_V7.md（内部版本V7.18） |
+| 主规范 | PRD_V7.md（内部版本V7.19） |
 | 首次初始化／老电脑续作入口 | START_HERE.md、AGENTS.md、README.md |
 | 最新任务状态 | PROJECT_STATE.md |
 | 版本变化与校验 | CHANGELOG.md、manifest.json、tools/validate_handoff.py |
@@ -112,7 +114,7 @@ GitHub仅作为PRD、项目方向及新机器接续资料的发布源。老电�
 
 只有规范／接续实际更新时才刷新清单、校验、正常提交推送并读回远端，之后报告提交号。普通内容交付只给本地文件。无法写GitHub时说明阻塞，不假装上传成功。不另做接续压缩包，不宣称后台自动同步。
 
-未来制作指令必须明示PRD V7.18／RYP_STORY_MAIN_V3_2／STATIC_CAPTION_PAGES_V1／RETENTION_INFO_V1，并读取本地spec/narrative_retention.json。新电脑只在首次初始化取得完整通用资料；老电脑需要升级时由用户明确发起一次 `rules_update`，之后继续本地工作。当前电脑更新不代表其他电脑自动更新；遇本地旧版或缺件，查找并报告具体缺口，不能静默回退旧底板或自行联网补齐。
+未来制作指令必须明示PRD V7.19／RYP_STORY_MAIN_V3_2／STATIC_CAPTION_PAGES_V1／RETENTION_INFO_V1，并读取本地spec/narrative_retention.json。新电脑只在首次初始化取得完整通用资料；老电脑需要升级时由用户明确发起一次 `rules_update`，之后继续本地工作。当前电脑更新不代表其他电脑自动更新；遇本地旧版或缺件，查找并报告具体缺口，不能静默回退旧底板或自行联网补齐。
 
 
 ## V7.15制作规则修订｜2026-10-08（历史记录）
