@@ -237,17 +237,23 @@
   "caption_delivery_requirement": "FINAL_PNG_WITH_CAPTIONS_ONLY_V1",
   "cover_spec": "spec/cover_delivery.json",
   "cover_profile_id": "COVER_DUAL_RATIO_FIXED_V2",
-  "narrative_rule_revision": "1.1",
+  "narrative_rule_revision": "1.2",
   "narrative_revision_requirements": {
     "record_in_instruction": [
       "narrative_profile_id=RETENTION_INFO_V1",
-      "narrative_rule_revision=1.1",
-      "script_lock_and_rewrite_scope"
+      "narrative_rule_revision=1.2",
+      "script_lock_and_rewrite_scope",
+      "editorial_profile_id=EDITORIAL_COGNITION_V1"
     ],
     "record_in_existing_local_brief": [
       "opening_promise",
       "early_fact_payoff",
-      "later_new_fact"
+      "later_new_fact",
+      "popular_belief",
+      "belief_basis",
+      "counter_claim",
+      "evidence_for_claim",
+      "natural_language_review"
     ],
     "actual_rendered_first_frame_internal_review": true,
     "production_score_or_platform_metric_gate_required": false,
@@ -260,5 +266,6 @@
   "casting_policy_id": "DORO_MAIN_CRITICIZED_V1",
   "primary_actor": "doro",
   "criticized_role_required_in_local_brief": true,
-  "casting_spec": "spec/character_identity.json"
+  "casting_spec": "spec/character_identity.json",
+  "editorial_spec": "spec/editorial_cognition.md"
 }

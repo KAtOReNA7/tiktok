@@ -2,9 +2,9 @@
   "schema_version": "1.0",
   "prd_version": "7.18",
   "profile_id": "RETENTION_INFO_V1",
-  "updated_date": "2026-10-08",
-  "purpose": "正文持续提供事实、因果、证据和代价，让观众获得标题尚未讲完的信息。",
-  "basis": "2026-10-04重新审计中的完播率建议；2026-10-05用户授权纳入后续文稿与执行指令。",
+  "updated_date": "2026-10-12",
+  "purpose": "先用反向观点挑战熟悉人物的根本评价，再以事实、因果、证据和后果持续兑现。",
+  "basis": "2026-10-04重新审计中的完播率建议；2026-10-05用户授权纳入后续文稿与执行指令。；2026-10-12用户明确纠正为根本认知冲突优先，事实随后支撑。",
   "trial": {
     "status": "active_revocable",
     "duration_target_s": [
@@ -27,12 +27,12 @@
   },
   "reference_structure": [
     {
-      "stage": "action_conflict",
+      "stage": "counter_claim",
       "suggested_window_s": [
         0,
         2
       ],
-      "function": "具体人物／受损者＋正在发生的行动冲突；首句不能只是复读标题判词。"
+      "function": "主线首句挑战大众对熟悉人物最认定的评价；允许标题核心句作为首句，随后及时给事实。"
     },
     {
       "stage": "necessary_context",
@@ -64,11 +64,11 @@
         20,
         28
       ],
-      "function": "回答开头冲突，落到具体人物得失、后果或已由事实建立的未解之账；不再复述开头判词或强要互动。"
+      "function": "在证据基础上回应同一人物评价；可呼应开头，删无推进的同义空骂，不强要互动。"
     }
   ],
   "writing_rules": {
-    "title_opening_and_ending_have_distinct_functions": true,
+    "title_opening_and_ending_have_distinct_functions": false,
     "new_verified_information_beyond_title": true,
     "review_every_content_segment_for_information_gain": true,
     "information_gain_types": [
@@ -79,7 +79,7 @@
       "相关最强反方及事实回应",
       "改变责任判断的限定条件"
     ],
-    "remove_repetition_test": "删掉这句话若不损失事实、因果、人物关系、证据或结论推导，它是否只是换词重复谴责？是则删减或与相邻句合并。",
+    "remove_repetition_test": "本句是否推进证据、关系、因果、观点或有证据后的收束？只删无推进的同义空骂；首句与标题相同、结尾呼应观点不自动判重复。",
     "connective_or_brief_explanation_allowed": true,
     "fixed_number_of_facts_or_twists": false,
     "counterargument_required_in_every_episode": false,
@@ -90,14 +90,17 @@
       "用“更离谱的还在后面”代替真实信息",
       "虚构证据、引文、数字、反转或动机",
       "为制造争议删去改变责任判断的前因",
-      "结尾再次完整复读标题或强行要求评论"
+      "用无推进的重复判断凑时长或强行要求评论"
     ],
     "second_person_audience_address_default": false,
     "source_categories_must_remain_distinct": true,
-    "voice_script_contains_only_narration": true
+    "voice_script_contains_only_narration": true,
+    "core_title_may_be_opening": true,
+    "evidence_based_ending_may_revisit_core_claim": true,
+    "ironic_praise_required": false
   },
   "visual_execution": {
-    "first_image_depicts_opening_action_conflict": true,
+    "first_image_depicts_opening_action_conflict": false,
     "first_character_identity_clear_without_knowing_actor": true,
     "visual_change_follows_information_or_story_beat": true,
     "angle_changes_alone_count_as_new_information": false,
@@ -109,14 +112,15 @@
     "no_extra_motion_music_or_sound_effects": true,
     "caption_profile_id": "STATIC_CAPTION_PAGES_V1",
     "static_caption_page_split_is_new_story_information": false,
-    "same_art_may_be_reused_for_caption_pages": true
+    "same_art_may_be_reused_for_caption_pages": true,
+    "first_image_depicts_character_and_key_evidence": true
   },
   "workflow": {
     "applies_to": "后续新写稿件、用户授权修改的稿件和相应生产指令；不自动重做已完成内容。",
     "locked_script_auto_rewrite": false,
     "production_instruction_includes_complete_approved_script": true,
     "production_instruction_names_profile_and_version": true,
-    "draft_review_before_lock": "复核必要前因、每段信息增量、中段新发现或反方回应、结尾兑现。",
+    "draft_review_before_lock": "先核对大众评价、反向观点与论据是否对应，再查必要前因、信息推进、首尾呼应与自然口语。",
     "after_lock": "按锁定稿完善画面及必要内部说明；发现内容问题报告具体句段，不静默改词或添新口播。",
     "internal_record": "沿用本地brief、storyboard的visual_task/change_from_previous及production_log；不另建复杂评分或要求用户逐镜确认。",
     "user_mapping_columns": [
@@ -129,24 +133,29 @@
     "program_editorial_spec": "spec/program_editorial.json",
     "operations_trial_boundary": "文案规则本身不自动修改运营；用户授权的栏目／验证任务按PRD 20.5和现行运营工作流执行。"
   },
-  "rule_revision": "1.1",
-  "revision_scope": "writing_and_internal_visual_QA_only; template_geometry_caption_delivery_and_character_identity_unchanged_from_7.14",
+  "rule_revision": "1.2",
+  "revision_scope": "editorial_direction_and_writing_only; preserve_approved_production_assets",
   "topic_and_promise_review": {
     "applies_to": [
       "new_unlocked_drafts",
       "explicitly_authorized_rewrites"
     ],
     "selection_questions": [
-      "recognized_actor_or_clear_relationship",
-      "unfamiliar_verified_concrete_action",
-      "clear_recipient_and_cost",
-      "real_followup_or_new_evidence_beyond_title"
+      "strong_recognizable_popular_belief",
+      "direct_counter_claim_about_same_evaluation",
+      "concrete_evidence_supporting_claim",
+      "understandable_context_and_further_evidence"
     ],
     "person_recognition_or_death_count_alone_is_not_sufficient": true,
     "record_in_existing_local_brief": [
       "opening_promise",
       "early_fact_payoff",
-      "later_new_fact"
+      "later_new_fact",
+      "popular_belief",
+      "belief_basis",
+      "counter_claim",
+      "evidence_for_claim",
+      "natural_language_review"
     ],
     "fixed_number_of_twists_or_discoveries": null,
     "apply_program_specific_structure": true,
@@ -157,8 +166,8 @@
   },
   "internal_delivery_review": {
     "inspect_actual_rendered_first_png": [
-      "recognizable_action_and_recipient",
-      "opening_sentence_matches_action",
+      "recognizable_evaluated_character_and_key_evidence",
+      "image_supports_counter_claim_or_following_fact",
       "theme_caption_source_readable_at_phone_scale",
       "no_unrelated_simultaneous_reading_tasks"
     ],
@@ -168,5 +177,7 @@
     "new_user_confirmation": false,
     "extra_user_csv_columns": false,
     "performance_threshold_or_predicted_score_as_production_gate": false
-  }
+  },
+  "editorial_profile_id": "EDITORIAL_COGNITION_V1",
+  "editorial_spec": "spec/editorial_cognition.md"
 }

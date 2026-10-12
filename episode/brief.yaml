@@ -13,7 +13,15 @@ scope: null
 human_editor: user
 template_id: RYP_STORY_MAIN_V3_2
 narrative_profile_id: RETENTION_INFO_V1
-narrative_rule_revision: '1.1'
+narrative_rule_revision: '1.2'
+editorial_profile_id: EDITORIAL_COGNITION_V1
+editorial_spec: spec/editorial_cognition.md
+# 内部编辑记录；不增加用户两列CSV或自动批准制作。
+popular_belief: null
+belief_basis: null
+counter_claim: null
+evidence_for_claim: null
+natural_language_review: null
 # 以下是新稿与授权改写的内部事实检查，未填不代表通过；不进入两列CSV。
 opening_promise: null
 early_fact_payoff: null

@@ -2,10 +2,10 @@
   "schema_version": "1.0",
   "prd_version": "7.18",
   "profile_id": "PROGRAM_FAMILY_V1",
-  "updated_date": "2026-10-05",
+  "updated_date": "2026-10-12",
   "status": "active_revocable",
-  "account_promise": "熟悉的故事，算清主角得到什么、别人付出什么；有争议，回原文。",
-  "profile_copy_ready": "三只Q版演熟悉故事，算清主角的收获与别人的代价。有争议，回原文。",
+  "account_promise": "把观众对熟悉人物最认定的评价拿出来质疑，再用具体故事撑住这个判断。",
+  "profile_copy_ready": "熟悉的人物，凭什么这么夸？三只不服，先说不服哪句，再把故事讲清。",
   "profile_edit_requires_current_site_task": true,
   "fixed_release_frequency": null,
   "fixed_program_ratio": null,
@@ -15,13 +15,13 @@
   "base_layout_variants_are_programs": false,
   "programs": {
     "MAIN_ACCOUNT": {
-      "name": "名场面算账",
-      "viewer_reward": "熟悉事件中具体人物的所得、行为责任与他人的代价。",
+      "name": "主线锐评",
+      "viewer_reward": "重新判断一个原本深信的人物评价，听到反向观点及支撑它的故事。",
       "structure": [
-        "行动冲突",
-        "必要前因与关系",
-        "真实证据或新增发现",
-        "具体受损者与未结之账"
+        "挑战根本评价的一句观点",
+        "支撑事实及必要前因",
+        "进一步证据或后果",
+        "回应同一人物评价"
       ],
       "requires_real_comment": false,
       "forbidden": [
@@ -89,7 +89,12 @@
       "source_type_and_boundary",
       "new_information_vs_recent_similar_episode",
       "actual_visual_assets",
-      "script_lock_and_authorized_change_scope"
+      "script_lock_and_authorized_change_scope",
+      "popular_belief",
+      "belief_basis",
+      "counter_claim",
+      "evidence_for_claim",
+      "natural_language_review"
     ],
     "add_to_voice_script": false,
     "add_to_user_scene_map": false
@@ -136,5 +141,7 @@
     "next_episode_promise": "仅预告已有材料的具体问题，本集仍完整回答，不强要关注。",
     "intent_is_actual_conversion": false
   },
-  "caption_profile_id": "STATIC_CAPTION_PAGES_V1"
+  "caption_profile_id": "STATIC_CAPTION_PAGES_V1",
+  "editorial_profile_id": "EDITORIAL_COGNITION_V1",
+  "editorial_spec": "spec/editorial_cognition.md"
 }

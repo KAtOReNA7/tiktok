@@ -156,7 +156,7 @@
   },
   "programs": {
     "MAIN_ACCOUNT": {
-      "label": "名场面算账",
+      "label": "主线锐评",
       "template_id": "RYP_STORY_MAIN_V3_2",
       "spec_source": "spec/template.json",
       "base_directory": "assets/template/v3_2",

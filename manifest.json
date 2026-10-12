@@ -19,38 +19,38 @@
     },
     {
       "path": "AGENTS.md",
-      "bytes": 14173,
-      "sha256": "601767409aec517904b7361567edaa0afb1bd71123aaa01fab4fab584c53a5a9"
+      "bytes": 14837,
+      "sha256": "fa672210176ef795bbdc6cb47b3546ec09addc6951231819d2612f98c2de3a2f"
     },
     {
       "path": "CHANGELOG.md",
-      "bytes": 20187,
-      "sha256": "69da87c97fd266c2ccff79d03562d680b5311cf91d63bc1c1b8338d9210d0f45"
+      "bytes": 21312,
+      "sha256": "3f5a2f61d748e295c25416721bc1cce5d73bc2c4c0cb8a767b091ed0b87c5ca6"
     },
     {
       "path": "CHAT_HANDOFF.md",
-      "bytes": 22623,
-      "sha256": "665724fbc643f6a5089049e809aa1c9463e75523268023c0e214097a35c05774"
+      "bytes": 23503,
+      "sha256": "b072bc21263c91ed8e008922b64475ea272ccb1638356e1d6befec99dbe5789e"
     },
     {
       "path": "PRD_V7.md",
-      "bytes": 123210,
-      "sha256": "a79d74e97c4fabf3121d96959ee26671987d298310384728c4e5e2208fd2c3d8"
+      "bytes": 124331,
+      "sha256": "7cb33e38084a4ffe2b1c960313f096b7bcd593106f4e44d7a2eb8fc6349a62f1"
     },
     {
       "path": "PROJECT_STATE.md",
-      "bytes": 12550,
-      "sha256": "35427b383eb0b98082fa77a0661ecea4451d2c85ba8a4835ee42ae61cb15a788"
+      "bytes": 13057,
+      "sha256": "8b30b313c150c56f8c10cc1ed4316bdbe7264b2066ede76b8501e3d5c1126706"
     },
     {
       "path": "README.md",
-      "bytes": 16734,
-      "sha256": "d1b4ccc2a1a81f3812f5215971ef53fa3a16ad1b0aa38c3330070370b1df30fa"
+      "bytes": 17314,
+      "sha256": "127969380dbd802bbaf02dbb0cd435a6006b5fea51d4ca2595a8f8847f91c7d8"
     },
     {
       "path": "START_HERE.md",
-      "bytes": 15765,
-      "sha256": "8c06b2a5553194bc30edcce8fb995c985d45df9e523bce262407736c6cf04798"
+      "bytes": 16356,
+      "sha256": "17ef05354ff54d3e0b1bc5ac9989d02d704945501a157814368de978e011cd9e"
     },
     {
       "path": "assets/fonts/LICENSE.txt",
@@ -384,13 +384,13 @@
     },
     {
       "path": "episode/README.md",
-      "bytes": 14700,
-      "sha256": "358c73a1509b740f7e539fe61a1646e8d787a1f81ab757041ddc82a2c64b18df"
+      "bytes": 15099,
+      "sha256": "2185f92d26147865096615094c226ce4cced0bd58a81ff6fce5c7eb6d72ea020"
     },
     {
       "path": "episode/brief.yaml",
-      "bytes": 4494,
-      "sha256": "547ceff4c89ed4c02643c8f0f77ed66ab82c0c35da407e9db464bcdf809e9645"
+      "bytes": 4770,
+      "sha256": "ac278b900dbff965e22a200a34ec4c3556f0697529663b117c79f5ec9abbfaa9"
     },
     {
       "path": "episode/parts.csv",
@@ -479,8 +479,13 @@
     },
     {
       "path": "spec/delivery_rules.json",
-      "bytes": 10699,
-      "sha256": "634c2cb700c67cd7fbd6f017f2e1db34cfe5ee452de28673d6b908fc11359294"
+      "bytes": 10933,
+      "sha256": "a5ffee44c67efe3632091f7f471bc2a824b10602cf7a98c6e02f359d50bf63fd"
+    },
+    {
+      "path": "spec/editorial_cognition.md",
+      "bytes": 7852,
+      "sha256": "953037c906b8c1dae12752c6367763878ba590724f8b9cbabf4794e8327d3d78"
     },
     {
       "path": "spec/legacy/v2/caption_style.json",
@@ -529,38 +534,38 @@
     },
     {
       "path": "spec/narrative_retention.json",
-      "bytes": 7516,
-      "sha256": "96e925b0bf1405281568f6aa78e0b723c80b709753c7dd405362908d0e4f3ae2"
+      "bytes": 8098,
+      "sha256": "a0048553afdcb52b9f5c4fed50b8e7cf581a1952cef91e2b05be0aa84eec8af8"
     },
     {
       "path": "spec/operations_handoff.md",
-      "bytes": 10105,
-      "sha256": "d00a9f7eafbfcaf8bfd96f566b3fe3f3ab133692b05b215cba0caae0ef481b46"
+      "bytes": 10431,
+      "sha256": "d67c5b09b6a9d7b708bc3f428c8039e414a192d84608a5740685d0a652f7322a"
     },
     {
       "path": "spec/operations_manual_topic_selection.md",
-      "bytes": 7318,
-      "sha256": "0e2be94d4a7429ca2d4a58c93b6f1c7ba601e0f11bb2a5084101de93869df3d0"
+      "bytes": 7703,
+      "sha256": "0a82de43314ce2f5d299ea9665d7be8ef3d2ff9642c80fe93084ea1d94f90232"
     },
     {
       "path": "spec/operations_script_review.md",
-      "bytes": 22662,
-      "sha256": "de8db92eaa9e07d5799e041d6fde3dd4af7ae16aac27ad2313c728c411bdf7f3"
+      "bytes": 23026,
+      "sha256": "ed4e1073dd814e23d675a283b0b342cee0a718c9ac269c64ea25a30f8cea465b"
     },
     {
       "path": "spec/operations_script_review_history.md",
-      "bytes": 8335,
-      "sha256": "dadd2fcb930b7639c1f8a780cc4c3348e213b0384f1e779720716f07d755c4ec"
+      "bytes": 9459,
+      "sha256": "e4dca735d86faa4a84c0d5bcfe709f434973d41dde7584e7156068624c14a3ee"
     },
     {
       "path": "spec/program_editorial.json",
-      "bytes": 4723,
-      "sha256": "7ae881a96f23d77a0d1cb8e7ad727641b8b156c6030fa914bdee94241ac64a56"
+      "bytes": 5000,
+      "sha256": "7423c70aa6444651bf2fc63918d77433eee32ce21952d45e8370cbb924fb40a7"
     },
     {
       "path": "spec/program_visuals.json",
-      "bytes": 9999,
-      "sha256": "714c714c17faf0549fc867fb688a7ff655a91b2fbaf2b4c7c50a0d4e951354c1"
+      "bytes": 9996,
+      "sha256": "da2005b0505e3af24913c63f084b9ac5f5286d72a9072643b09d4351686df4a5"
     },
     {
       "path": "spec/template.json",
@@ -628,13 +633,13 @@
     "插图编号",
     "对应口播"
   ],
-  "handoff_updated_date": "2026-10-10",
+  "handoff_updated_date": "2026-10-12",
   "repository": "https://github.com/KAtOReNA7/tiktok",
   "branch": "main",
   "contains_completed_video": false,
   "scope": "project_rules_handoff_and_reusable_assets_only",
   "includes_episode_content": false,
-  "updated_date": "2026-10-10",
+  "updated_date": "2026-10-12",
   "remote_figma_verified_date": "2026-10-05",
   "narrative_profile_id": "RETENTION_INFO_V1",
   "caption_profile_id": "STATIC_CAPTION_PAGES_V1",
@@ -643,9 +648,12 @@
   "script_review_system_version": "1.1",
   "script_review_spec": "spec/operations_script_review.md",
   "script_review_history": "spec/operations_script_review_history.md",
-  "narrative_rule_revision": "1.1",
+  "narrative_rule_revision": "1.2",
   "cover_profile_id": "COVER_DUAL_RATIO_FIXED_V2",
   "cover_template_revision": "2.0.0",
   "casting_policy_id": "DORO_MAIN_CRITICIZED_V1",
-  "primary_actor": "doro"
+  "primary_actor": "doro",
+  "editorial_profile_id": "EDITORIAL_COGNITION_V1",
+  "editorial_spec": "spec/editorial_cognition.md",
+  "editorial_updated_date": "2026-10-12"
 }
